@@ -88,7 +88,7 @@ public class HeroManager{
         manager.test();
         System.out.println( "添加后的数量:" + manager.db.getCollection().count() + "条记录" );
         System.out.println( manager.getHeroById( 66 ) );
-        System.out.println( manager.getHeroById( 50 ) );
+        System.out.println( manager.getHeroById( 51 ) );
 
 //        System.out.println( manager.db.findBy( "name", "abcd" ) );
 //        Hero hero = manager.getHeroById( 50 );
