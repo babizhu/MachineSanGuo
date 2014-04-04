@@ -297,12 +297,14 @@ public class MongoDbTest{
     @Test
     /**
      * 或查询
-     * select * from table where name  = '12' or title = 'p'
+     * select * from table where name  = '12' or times = 5
      * @param coll
      */
     public void queryOr(){
+        insertData();
         QueryBuilder query = new QueryBuilder();
-        query.or( new BasicDBObject( "name", 12 ), new BasicDBObject( "title", "p" ) );
+        query.or( new BasicDBObject( "name", "bbz1" ), new BasicDBObject( "times", 5 ) );
+       // query.and( "id" ).is( 2 );
         try( DBCursor cursor = coll.find( query.get() ).addSpecial( "$returnKey", "" ) ) {
             while( cursor.hasNext() ) {
                 System.out.println( cursor.next() );
