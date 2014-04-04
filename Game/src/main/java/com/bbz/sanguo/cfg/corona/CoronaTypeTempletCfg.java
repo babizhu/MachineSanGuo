@@ -13,10 +13,10 @@ import java.util.Map;
 /**
  * 模版配置
  * @author liukun
- * 2014-4-2 19:39:46
+ * 2014-4-4 13:51:46
  */
 public class CoronaTypeTempletCfg {
-	private static final Map<Integer,CoronaTypeTemplet> coronaTypeTemplets = new HashMap<Integer, CoronaTypeTemplet>();
+	private static final Map<Integer,CoronaTypeTemplet> coronaTypeTemplets = new HashMap<>();
 
 
 	static{
@@ -44,11 +44,9 @@ public class CoronaTypeTempletCfg {
 				}
 
 			}
-		} catch (JDOMException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		} catch (JDOMException | IOException e) {
+		    e.printStackTrace();
+        }
 
 		System.out.println( "CoronaTypeTemplet xml配置文件解析完毕" );
 	}

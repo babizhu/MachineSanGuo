@@ -1,9 +1,6 @@
 package experiment.serialize.mongodb;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
-import com.mongodb.WriteResult;
+import com.mongodb.*;
 import util.db.MongoUtil;
 
 import java.net.UnknownHostException;
@@ -15,7 +12,7 @@ import java.net.UnknownHostException;
  * Mongo的一些功能的测试程序
  */
 
-public class MongoDbTest{
+public class MongoDb{
     private static String TABLE_NAME = "hero";
     private static DBCollection collection = MongoUtil.INSTANCE.getDB().getCollection( TABLE_NAME );
 
@@ -35,6 +32,7 @@ public class MongoDbTest{
         System.out.println( collection.count() );
         print();
     }
+
 
 
     static void test(){

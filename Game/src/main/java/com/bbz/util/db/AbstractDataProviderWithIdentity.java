@@ -1,9 +1,11 @@
 package com.bbz.util.db;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.mongodb.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * user         LIUKUN
@@ -49,17 +51,38 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
         collection.insert( encode( t ) );
     }
 
-    public List<T> getAll(){
+    public List<T> getListAll(){
         List<T> list = Lists.newArrayList();
 
         BasicDBObject condition = new BasicDBObject( "uname", uname );
 
-        DBCursor cursor = collection.find( condition );
-        while( cursor.hasNext() ) {
+        try( DBCursor cursor = collection.find( condition ) ) {
+            while( cursor.hasNext() ) {
 //            cursor.next();
-            list.add( decode( cursor.next() ) );
+                list.add( decode( cursor.next() ) );
+            }
         }
         return list;
+    }
+
+    /**
+     * 以id为key返回一个hashmap
+     *
+     * @return
+     */
+    public Map<Long, T> getMapAll(){
+        Map<Long, T> map = Maps.newHashMap();
+
+        BasicDBObject condition = new BasicDBObject( "uname", uname );
+
+        try( DBCursor cursor = collection.find( condition ) ) {
+            while( cursor.hasNext() ) {
+                T t = decode( cursor.next() );
+//            cursor.next();
+                map.put( t.getId(), t );
+            }
+        }
+        return map;
     }
 
     protected abstract T decode( DBObject object );
@@ -74,6 +97,19 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
     public void update( T t ){
         DBObject conditon = new BasicDBObject( "_id", t.getId() );
         collection.update( conditon, encode( t ) );
+    }
+
+    /**
+     * 更新一个对象的某个字段
+     *
+     * @param t          要更新的对象
+     * @param fieldName  要更新的列名
+     * @param fieldValue 要更新的内容
+     */
+    public void updateWithField( T t, String fieldName, Object fieldValue ){
+        BasicDBObject condition = new BasicDBObject( "_id", t.getId() );
+        BasicDBObject updateField = new BasicDBObject( "$set", new BasicDBObject( fieldName, fieldValue ) );
+        collection.updateMulti( condition, updateField );
     }
 
     /**

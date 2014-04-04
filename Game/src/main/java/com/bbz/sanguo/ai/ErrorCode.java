@@ -8,8 +8,8 @@ import java.util.Map;
  * time         14-3-26 下午7:50
  */
 public enum ErrorCode{
-    HERO_NOT_FOUND(1),
-            ;
+    HERO_NOT_FOUND(1000),
+    EQUPMENT_NOT_FOUND( 2000 );
 
             private final int number;
 

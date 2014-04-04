@@ -11,6 +11,6 @@ import org.slf4j.LoggerFactory;
 public class LogBackTest1{
     static Logger logger = LoggerFactory.getLogger( LogBackTest1.class );
     static void record1(){
-        logger.error( "来自LogBackTest1的记录" );
+        logger.debug( "来自LogBackTest1的记录" );
     }
 }

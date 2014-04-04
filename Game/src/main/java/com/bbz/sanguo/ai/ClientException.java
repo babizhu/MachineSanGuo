@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
  * 需要通知到到客户端的异常
  */
 
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @Data
 public class ClientException extends RuntimeException{

@@ -13,5 +13,6 @@ public class LogBackTest{
     public static void main( String[] args ){
         logger.info("This is a 中文 log");
         LogBackTest1.record1();
+        ClassWithoutLog.testWithoutLock();
     }
 }

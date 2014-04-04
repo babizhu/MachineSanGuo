@@ -5,7 +5,7 @@ import org.jdom2.Element;
 /**
  * 模版
  * @author liukun
- * 2014-4-2 19:39:46
+ * 2014-4-4 13:51:46
  */
 public class FighterTemplet {
 

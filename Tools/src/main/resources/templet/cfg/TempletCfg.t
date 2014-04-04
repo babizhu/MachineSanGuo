@@ -16,7 +16,7 @@ import java.util.Map;
  * #date
  */
 public class #className# {
-	private static final Map<Integer,#templetClassName#> #mapName#s = new HashMap<Integer, #templetClassName#>();
+	private static final Map<Integer,#templetClassName#> #mapName#s = new HashMap<>();
 
 
 	static{
@@ -44,11 +44,9 @@ public class #className# {
 				}
 
 			}
-		} catch (JDOMException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		} catch (JDOMException | IOException e) {
+		    e.printStackTrace();
+        }
 
 		System.out.println( "#templetClassName# xml配置文件解析完毕" );
 	}

@@ -32,7 +32,7 @@ public class HeroManager{
 
     public HeroManager( String uname ){
         db = new HeroDataProvider( uname );
-        heros = db.getAll();
+        heros = db.getListAll();
     }
 
     /**
@@ -68,8 +68,10 @@ public class HeroManager{
             Set<Equipment> equipments = Sets.newHashSet();
 
             for( int j = 0; j < 5; j++ ) {
-                Equipment e = new Equipment();
-                e.setId( j );
+                long equipmentId = 2;
+                int templetId = RandomUtil.getInt( 10 );
+                templetId += 151001;//151001--151011
+                Equipment e = new Equipment( equipmentId, templetId );
                 equipments.add( e );
             }
             hero.setEquipments( equipments );

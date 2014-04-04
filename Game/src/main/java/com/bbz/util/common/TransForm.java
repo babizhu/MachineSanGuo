@@ -33,6 +33,21 @@ public class TransForm{
             return ret;
         }
 
+        public static long[] toLong( String input ){
+            if( input == null ) {
+                throw new IllegalArgumentException();
+            }
+            if( input.isEmpty() ) {
+                return new long[0];
+            }
+            String[] arr = input.split( "," );
+            long ret[] = new long[arr.length];
+            for( int i = 0; i < arr.length; i++ ) {
+                ret[i] = Long.parseLong( arr[i] );
+            }
+            return ret;
+        }
+
     }
 
     public static class StringType{

@@ -1,6 +1,7 @@
 package com.bbz.sanguo.ai.fighters;
 
 import com.bbz.sanguo.ai.equipments.Equipment;
+import com.bbz.sanguo.ai.equipments.EquipmentManager;
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
 import com.bbz.sanguo.cfg.fighter.FighterTempletCfg;
 import com.bbz.util.common.TransForm;
@@ -29,16 +30,16 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
         Hero hero = new Hero( (Long) object.get( "_id" ) );
         hero.setName( (String) object.get( "name" ) );
         Set<Equipment> equipments = Sets.newHashSet();
-        int[] arr = TransForm.ArrayType.toInt( (String) object.get( "equipmentS" ) );
-        for( int id : arr ) {
-            Equipment e = new Equipment();
-            e.setId( id );
+        long[] arr = TransForm.ArrayType.toLong( (String) object.get( "equipmentS" ) );
+        EquipmentManager em = new EquipmentManager( "lk" );//TODO 需要考虑实际如何操作
+        for( long id : arr ) {
+            Equipment e = em.getEquipmentById( id );
             equipments.add( e );
         }
 
         hero.setEquipments( equipments );
-        hero.setPosition( (Integer) object.get( "position" ) );
-        int templetId = (Integer) object.get( "templetId" );
+        hero.setPosition( (int) object.get( "position" ) );
+        int templetId = (int) object.get( "templetId" );
         FighterTemplet templet = FighterTempletCfg.getFighterTempletById( templetId );
         hero.setTemplet( templet );
         return hero;

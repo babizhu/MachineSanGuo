@@ -22,5 +22,6 @@
     <root level="debug">
         <appender-ref ref="STDOUT" />
     </root>
+    <!--<logger name="experiment" level="ERROR" />-->
 
 </configuration>
