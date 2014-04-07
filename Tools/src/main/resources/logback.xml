@@ -1,6 +1,13 @@
 <configuration>
-
+    <property name="LOG_HOME" value="./log" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator> <!-- 默认为 ch.qos.logback.classic.boolex.JaninoEventEvaluator -->
+                <expression>return message.contains("is");</expression>
+            </evaluator>
+            <OnMatch>ACCEPT </OnMatch>
+            <OnMismatch>DENY</OnMismatch>
+        </filter>
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
@@ -8,7 +15,7 @@
         </encoder>
     </appender>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>testFile.log</file>
+        <file>${LOG_HOME}/testFile.log</file>
         <append>true</append>
         <encoder>
             <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
@@ -19,8 +26,9 @@
         <appender-ref ref="FILE" />
     </logger>
 
-    <root level="debug">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
+        <!--<appender-ref ref="FILE" />-->
     </root>
     <!--<logger name="experiment" level="ERROR" />-->
 
