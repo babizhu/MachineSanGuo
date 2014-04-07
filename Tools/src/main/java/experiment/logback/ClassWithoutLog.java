@@ -10,6 +10,6 @@ public class ClassWithoutLog{
 
 
     static void testWithoutLock(){
-        int i = 10 / 0;
+//        int i = 10 / 0;
     }
 }

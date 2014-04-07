@@ -1,7 +1,9 @@
 package experiment.logback;
 
+import ch.qos.logback.classic.LoggerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 /**
  * user         LIUKUN
@@ -10,13 +12,13 @@ import org.slf4j.LoggerFactory;
 
 public class LogBackTest{
     static Logger logger = LoggerFactory.getLogger( LogBackTest.class );
-    public static void runWithException(){
-        int i = 3 / 0;
-    }
     public static void main( String[] args ){
         logger.info("This is a 中文 log");
         LogBackTest1.record1();
-        //ClassWithoutLog.testWithoutLock();
-        runWithException();
+
+        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+        //将内部状态进行输出
+        //StatusPrinter.print( lc );
+        ClassWithoutLog.testWithoutLock();
     }
 }

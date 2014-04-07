@@ -145,5 +145,9 @@
                 </transformers> </configuration> </execution> </executions> </plugin> -->
         </plugins>
     </build>
+    <dependencies>
+
+    </dependencies>
+
 
 </project>

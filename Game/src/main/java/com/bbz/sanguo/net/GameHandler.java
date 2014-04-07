@@ -53,7 +53,7 @@ public class GameHandler implements IDataHandler, IConnectHandler,
 
     @Override
     public boolean onConnect(INonBlockingConnection con) throws BufferUnderflowException, MaxReadSizeExceededException {
-
+        logger.info( "{}:{} connect", con.getRemoteAddress(), con.getRemotePort() );
         //con = ConnectionUtils.synchronizedConnection(con);
         //System.out.println(con.getId() + " onConnect");
 
@@ -95,7 +95,7 @@ public class GameHandler implements IDataHandler, IConnectHandler,
                 con.resetToReadMark();
                 return true;
             }
-            if (!inputDataIsRight(head, foot)) {
+            if (!checkValid( head, foot )) {
                 con.close();
                 return true;
             }
@@ -114,7 +114,7 @@ public class GameHandler implements IDataHandler, IConnectHandler,
      * @param foot      包尾
      * @return true 首尾包号正确 false 错误
      */
-    private boolean inputDataIsRight(byte head, byte foot) {
+    private boolean checkValid( byte head, byte foot ) {
        // return !(head != EventBase.HEAD || foot != EventBase.FOOT);
         return true;
     }
@@ -125,8 +125,8 @@ public class GameHandler implements IDataHandler, IConnectHandler,
     @Override
     public boolean onDisconnect(INonBlockingConnection con) throws IOException {
         con = ConnectionUtils.synchronizedConnection(con);
-        System.out.println(con.getId() + " onDisconnect " + System.nanoTime() );
-//        gameLogic.userExit( con );
+        logger.info( "{} onDisconnect", con.getId() );
+//        gameLogic.userExift( con );
         return false;
     }
 }
