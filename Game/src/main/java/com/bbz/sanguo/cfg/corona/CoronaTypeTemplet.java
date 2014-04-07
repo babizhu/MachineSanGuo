@@ -5,7 +5,7 @@ import org.jdom2.Element;
 /**
  * 模版
  * @author liukun
- * 2014-4-4 13:51:46
+ * 2014-4-5 12:54:33
  */
 public class CoronaTypeTemplet {
 

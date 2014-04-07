@@ -438,9 +438,9 @@ public class MongoDbTest{
     @Test
     public void GroupByManyField() throws UnknownHostException{
         //此方法没有运行成功
-        Mongo mongo = new Mongo( "localhost", 27017 );
-        DB db = mongo.getDB( "libary" );
-        DBCollection books = db.getCollection( "books" );
+//        Mongo mongo = new Mongo( "localhost", 27017 );
+//        DB db = mongo.getDB( "libary" );
+//        DBCollection books = db.getCollection( "books" );
         BasicDBObject groupKeys = new BasicDBObject();
         groupKeys.put( "total", new BasicDBObject( "$sum", "pages" ) );
 
@@ -462,12 +462,12 @@ public class MongoDbTest{
          String reduce,        --每个分组都需要执行的Function
          String finial         --终结Funciton对结果进行最终的处理
          */
-        DBObject obj = books.group( groupKeys, condition, new BasicDBObject(), reduce );
+        DBObject obj = coll.group( groupKeys, condition, new BasicDBObject(), reduce );
         System.out.println( obj );
 
-        AggregationOutput ouput = books.aggregate( new BasicDBObject( "$group", groupKeys ) );
+        AggregationOutput ouput = coll.aggregate( new BasicDBObject( "$group", groupKeys ) );
         System.out.println( ouput.getCommandResult() );
-        System.out.println( books.find( new BasicDBObject( "$group", groupKeys ) ) );
+        System.out.println( coll.find( new BasicDBObject( "$group", groupKeys ) ) );
     }
 
 
@@ -487,7 +487,7 @@ public class MongoDbTest{
 
     @Test
     /**
-     * 模糊查询
+     * 模糊查询,利用正则表达式
      */
     public void likeQuery(){
         insertData();
