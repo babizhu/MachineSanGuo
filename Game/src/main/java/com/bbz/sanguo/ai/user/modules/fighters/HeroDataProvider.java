@@ -1,10 +1,10 @@
-package com.bbz.sanguo.ai.fighters;
+package com.bbz.sanguo.ai.user.modules.fighters;
 
-import com.bbz.sanguo.ai.equipments.Equipment;
-import com.bbz.sanguo.ai.equipments.EquipmentManager;
+import com.bbz.sanguo.ai.user.modules.equipments.Equipment;
+import com.bbz.sanguo.ai.user.modules.equipments.EquipmentManager;
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
 import com.bbz.sanguo.cfg.fighter.FighterTempletCfg;
-import com.bbz.util.common.TransForm;
+import com.bbz.util.common.Transform;
 import com.bbz.util.db.AbstractDataProviderWithIdentity;
 import com.google.common.collect.Sets;
 import com.mongodb.BasicDBObject;
@@ -30,7 +30,7 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
         Hero hero = new Hero( (Long) object.get( "_id" ) );
         hero.setName( (String) object.get( "name" ) );
         Set<Equipment> equipments = Sets.newHashSet();
-        long[] arr = TransForm.ArrayType.toLong( (String) object.get( "equipmentS" ) );
+        long[] arr = Transform.ArrayType.toLong( (String) object.get( "equipmentS" ) );
         EquipmentManager em = new EquipmentManager( "lk" );//TODO 需要考虑实际如何操作
         for( long id : arr ) {
             Equipment e = em.getEquipmentById( id );

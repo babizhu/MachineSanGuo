@@ -239,7 +239,7 @@ public class MongoDbTest{
 
     @Test
     /**
-     * 组合in和and select * from test_Table where (a=5 or b=6) and (c=5 or d = 6)
+     * 组合in和and,如 select * from test_Table where (a=5 or b=6) and (c=5 or d = 6)
      */
     public void queryMulti4(){
         BasicDBObject query11 = new BasicDBObject();
@@ -249,7 +249,8 @@ public class MongoDbTest{
         List<BasicDBObject> orQueryList1 = new ArrayList<>();
         orQueryList1.add( query11 );
         orQueryList1.add( query12 );
-        BasicDBObject orQuery1 = new BasicDBObject( "$or", orQueryList1 );
+//        BasicDBObject orQuery1 = new BasicDBObject( "$or", orQueryList1 );
+        BasicDBObject orQuery1 = new BasicDBObject( QueryOperators.OR, orQueryList1 );
 
         BasicDBObject query21 = new BasicDBObject();
         query21.put( "c", 5 );
@@ -420,7 +421,7 @@ public class MongoDbTest{
                     "values.forEach(function(doc) { " +
                     "sum += 1; " +
                     "}); " +
-                    "return {books: sum};} ";
+                    "return {bookss: sum};} ";
 
             MapReduceCommand cmd = new MapReduceCommand( coll, map, reduce,
                     null, MapReduceCommand.OutputType.INLINE, null );
@@ -434,6 +435,87 @@ public class MongoDbTest{
             e.printStackTrace();
         }
     }
+
+    /**
+     * 自己学习mapreduce的例子
+     * @throws UnknownHostException
+     */
+    @Test
+    public void mapReduce1() throws UnknownHostException{
+//
+        try {
+
+//            DBCollection books = db.getCollection( "books" );
+            coll.drop();
+            System.out.println( "总数量" + coll.count() );
+            BasicDBObject book = new BasicDBObject();
+            book.put( "name", "Understanding JAVA" );
+            book.put( "pages", 100 );
+            coll.insert( book );
+
+            book = new BasicDBObject();
+            book.put( "name", "Understanding JSON" );
+            book.put( "pages", 200 );
+            coll.insert( book );
+
+            book = new BasicDBObject();
+            book.put( "name", "Understanding XML" );
+            book.put( "pages", 300 );
+            coll.insert( book );
+
+            book = new BasicDBObject();
+            book.put( "name", "Understanding Web Services" );
+            book.put( "pages", 400 );
+            coll.insert( book );
+
+            book = new BasicDBObject();
+            book.put( "name", "Understanding Axis2" );
+            book.put( "pages", 150 );
+            coll.insert( book );
+
+            book = new BasicDBObject();
+            book.put( "name", "Effctive Java" );
+            book.put( "pages", 150 );
+            coll.insert( book );
+            book = new BasicDBObject();
+            book.put( "name", "Effctive Java1" );
+            book.put( "pages", 150 );
+            coll.insert( book );
+
+            String map = "function() { " +
+//                    "var category; " +
+//                    "if ( this.pages >= 250 ) " +
+//                    "category = 'Big Books'; " +
+//                    "else " +
+//                    "category = 'Small Books'; " +
+                    "emit(this.pages, {count: 10});}";
+
+            String reduce = "function(key, values) { " +
+                    "var total = {\"urls\":[], \"sum\":0};   " +
+//                    "values.forEach(function(doc) { " +
+//                    "sum += 1; " +
+//                    "}); " +
+                    "for ( var i=0; i<values.length; i++ ) {" +
+//                    "sum += values[i].count;" +
+                    "total.sum += 1;" +
+                    "total.urls.push(values[i])" +
+                    "}" +
+                    //"total.sum += values.length;" +
+                    "return {count: total};} ";
+
+            MapReduceCommand cmd = new MapReduceCommand( coll, map, reduce,
+                    null, MapReduceCommand.OutputType.INLINE, null );
+
+            MapReduceOutput out = coll.mapReduce( cmd );
+
+            for( DBObject o : out.results() ) {
+                System.out.println( o.toString() );
+            }
+        } catch( Exception e ) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Test
     public void GroupByManyField() throws UnknownHostException{

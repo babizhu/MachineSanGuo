@@ -7,6 +7,7 @@ import org.jdom2.Element;
  * @author liukun
  * 2014-4-5 12:54:34
  */
+@SuppressWarnings("UnusedDeclaration")
 public class FighterTemplet {
 
     /**

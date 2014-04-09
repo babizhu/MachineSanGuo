@@ -1,6 +1,6 @@
-package com.bbz.sanguo.ai.fighters;
+package com.bbz.sanguo.ai.user.modules.fighters;
 
-import com.bbz.sanguo.ai.equipments.Equipment;
+import com.bbz.sanguo.ai.user.modules.equipments.Equipment;
 import com.bbz.util.common.MiscUtil;
 import com.bbz.util.db.IdentityObj;
 import com.google.common.collect.Sets;

@@ -1,6 +1,7 @@
 package com.bbz.sanguo.lanch;
 
 import com.bbz.util.time.SystemTimer;
+import lombok.ToString;
 import org.joda.time.DateTime;
 
 /**
@@ -8,7 +9,7 @@ import org.joda.time.DateTime;
  * time         2014-4-7 14:25
  * 服务器的运行时信息
  */
-
+@ToString
 public class ServerRuntimeInfo{
     private final int   serverId;
     /**

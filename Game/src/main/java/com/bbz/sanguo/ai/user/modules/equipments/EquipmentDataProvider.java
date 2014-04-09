@@ -1,4 +1,4 @@
-package com.bbz.sanguo.ai.equipments;
+package com.bbz.sanguo.ai.user.modules.equipments;
 
 import com.bbz.util.db.AbstractDataProviderWithIdentity;
 import com.mongodb.BasicDBObject;

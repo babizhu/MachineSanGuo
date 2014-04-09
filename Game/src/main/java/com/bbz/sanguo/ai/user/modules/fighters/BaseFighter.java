@@ -1,4 +1,4 @@
-package com.bbz.sanguo.ai.fighters;
+package com.bbz.sanguo.ai.user.modules.fighters;
 
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
 import lombok.Data;

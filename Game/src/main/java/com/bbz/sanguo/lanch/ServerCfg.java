@@ -19,22 +19,22 @@ public class ServerCfg{
     /**
      * 监听ip
      */
-    public static final String     ip;
+    public static final String          IP;
 
     /**
      * 监听端口
      */
-    public static int              port;
+    public static final int             PORT;
 
     /**
      * 管理端口
      */
-    public static int              gmPort;
+    public static final int             GM_PORT;
 
     /**
      * 游戏区
      */
-    public static int              serverId;
+    public static final int             SERVER_ID;
 
     static {
         Properties prop = new Properties();
@@ -45,12 +45,11 @@ public class ServerCfg{
         } catch( IOException e ) {
             e.printStackTrace();
         }
+        IP = prop.getProperty( "ip" ).trim();
+        PORT = Integer.parseInt( prop.getProperty( "port" ).trim() );
+        GM_PORT = Integer.parseInt( prop.getProperty( "gmPort" ).trim() );
+        SERVER_ID = Integer.parseInt( prop.getProperty( "serverId" ).trim() );
 
-        ip = prop.getProperty( "ip" ).trim();
-        port = Integer.parseInt( prop.getProperty( "port" ).trim() );
-        gmPort = Integer.parseInt( prop.getProperty( "gmPort" ).trim() );
-        serverId = Integer.parseInt( prop.getProperty( "serverId" ).trim() );
     }
-
 }
 

@@ -1,8 +1,8 @@
-package com.bbz.sanguo.ai.fighters;
+package com.bbz.sanguo.ai.user.modules.fighters;
 
 import com.bbz.sanguo.ai.ClientException;
 import com.bbz.sanguo.ai.ErrorCode;
-import com.bbz.sanguo.ai.equipments.Equipment;
+import com.bbz.sanguo.ai.user.modules.equipments.Equipment;
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
 import com.bbz.sanguo.cfg.fighter.FighterTempletCfg;
 import com.bbz.util.common.RandomUtil;
@@ -21,7 +21,7 @@ import java.util.Set;
 
 @Data
 @ToString
-public class HeroManager{
+public class HeroModule{
 
     private final HeroDataProvider db;
 
@@ -30,7 +30,7 @@ public class HeroManager{
      */
     private List<Hero> heros;
 
-    public HeroManager( String uname ){
+    public HeroModule( String uname ){
         db = new HeroDataProvider( uname );
         heros = db.getListAll();
     }
@@ -83,7 +83,7 @@ public class HeroManager{
     }
 
     public static void main( String[] args ){
-        HeroManager manager = new HeroManager( "lk" );
+        HeroModule manager = new HeroModule( "lk" );
 
         manager.db.getCollection().drop();
         System.out.println( "当前数量:" + manager.db.getCollection().count() + "条记录" );

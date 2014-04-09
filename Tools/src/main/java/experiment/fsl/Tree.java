@@ -30,11 +30,11 @@ public class Tree<T> {
 
     private T head;
 
-    private ArrayList<Tree<T>> leafs = new ArrayList<Tree<T>>();
+    private ArrayList<Tree<T>> leafs = new ArrayList<>();
 
     private Tree<T> parent = null;
 
-    private HashMap<T, Tree<T>> locate = new HashMap<T, Tree<T>>();
+    private HashMap<T, Tree<T>> locate = new HashMap<>();
 
     public Tree(T head) {
         this.head = head;
@@ -50,7 +50,7 @@ public class Tree<T> {
     }
 
     public Tree<T> addLeaf(T leaf) {
-        Tree<T> t = new Tree<T>(leaf);
+        Tree<T> t = new Tree<>(leaf);
         leafs.add(t);
         t.parent = this;
         t.locate = this.locate;
@@ -59,7 +59,7 @@ public class Tree<T> {
     }
 
     public Tree<T> setAsParent(T parentRoot) {
-        Tree<T> t = new Tree<T>(parentRoot);
+        Tree<T> t = new Tree<>(parentRoot);
         t.leafs.add(this);
         this.parent = t;
         t.locate = this.locate;
@@ -81,7 +81,7 @@ public class Tree<T> {
     }
 
     public Collection<T> getSuccessors(T root) {
-        Collection<T> successors = new ArrayList<T>();
+        Collection<T> successors = new ArrayList<>();
         Tree<T> tree = getTree(root);
         if (null != tree) {
             for (Tree<T> leaf : tree.leafs) {
@@ -101,7 +101,7 @@ public class Tree<T> {
                 return tree.getSuccessors(of);
             }
         }
-        return new ArrayList<T>();
+        return new ArrayList<>();
     }
 
     @Override
@@ -112,7 +112,7 @@ public class Tree<T> {
     private static final int indent = 2;
 
     private String printTree(int increment) {
-        String s = "";
+        String s;
         String inc = "";
         for (int i = 0; i < increment; ++i) {
             inc = inc + " ";
@@ -125,7 +125,7 @@ public class Tree<T> {
     }
 
     public static void main(String[] args) {
-        Tree<Integer> tree = new Tree<Integer>(1);
+        Tree<Integer> tree = new Tree<>(1);
 
         tree.addLeaf(2).addLeaf(3).addLeaf(4).addLeaf(5);
         tree.getTree(2).addLeaf(10).addLeaf(11).addLeaf(12).addLeaf(13);
@@ -140,8 +140,8 @@ public class Tree<T> {
         String jsonString = JSON.toJSONString(tree);
         System.out.println(jsonString);
 
-        Tree<Integer> tree1 = JSON.parseObject(jsonString, Tree.class);
-        System.out.println(tree1);
+//        Tree<Integer> tree1 = JSON.parseObject(jsonString, Tree.class);
+//        System.out.println(tree1);
 
 
 //		tree.addLeaf( 2 );
