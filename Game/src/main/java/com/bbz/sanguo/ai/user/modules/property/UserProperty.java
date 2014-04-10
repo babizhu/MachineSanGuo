@@ -24,4 +24,6 @@ public class UserProperty{
      */
     private int                     level;
 
+    public void addGold( int changeValue ){
+    }
 }

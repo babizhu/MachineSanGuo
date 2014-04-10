@@ -129,7 +129,7 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
 //    }
 
     /**
-     * 如果数据库存在此数据(id为标准)，则更新此数据，否则添加此数据
+     * 如果数据库存在此数据("_id"为标准)，则更新此数据，否则添加此数据
      *
      * @param t 要更新的数据
      * @return true:替换</br>

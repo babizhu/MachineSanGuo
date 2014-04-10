@@ -1,6 +1,8 @@
 package com.bbz.sanguo.ai.user.modules.property;
 
 import com.bbz.sanguo.ai.user.ModuleManager;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 
 /**
  * user         LIUKUN
@@ -22,7 +24,8 @@ public class PropertyModule{
 
     public PropertyModule( ModuleManager moduleManager ){
         db = new PropertyFataProvider( moduleManager.getUserName() );
-        property = db.get();
+        DBObject condition = new BasicDBObject(  );
+        property = db.findOne( condition );
 
         //this.moduleManager = moduleManager;
     }
@@ -33,6 +36,7 @@ public class PropertyModule{
      * @param changeValue
      */
     public void changeGold( int changeValue ){
-        gold += changeValue;
+
+        property.addGold( changeValue );
     }
 }
