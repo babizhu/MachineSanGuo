@@ -27,7 +27,7 @@ public abstract class AbstractDataProviderWithUserName<T>{
 
     /**
      * 通过username进行查找
-     * @return
+     * @return  玩家信息
      */
     public T findOne( ){
         DBObject condition = new BasicDBObject( "_id", uname );
@@ -95,35 +95,36 @@ public abstract class AbstractDataProviderWithUserName<T>{
 
     protected abstract DBObject encode( T t );
 
+    /**
+     * 删除该用户下所有的信息
+     */
     public void remove(  ){
         DBObject conditon = new BasicDBObject( "_id", uname );
         collection.remove( conditon );
     }
 
-    public void update( T t ){
-        DBObject conditon = new BasicDBObject( "_id", uname );
-        collection.update( conditon, encode( t ) );
-    }
+//    public void update( T t ){
+//        DBObject conditon = new BasicDBObject( "_id", uname );
+//        collection.update( conditon, encode( t ) );
+//    }
 
     /**
      * 更新一个对象的某个字段
      *
-     * @param t          要更新的对象
      * @param fieldName  要更新的列名
      * @param fieldValue 要更新的内容
      */
-    public void updateWithField( T t, String fieldName, Object fieldValue ){
+    public void updateWithField( String fieldName, Object fieldValue ){
         BasicDBObject condition = new BasicDBObject( "_id", uname );
         BasicDBObject updateField = new BasicDBObject( "$set", new BasicDBObject( fieldName, fieldValue ) );
         collection.updateMulti( condition, updateField );
     }
 
     /**
-     * 删除玩家此表下的所有数据
+     * 删除此表下的所有数据,慎用！！！！！！！！！！！！！！！！！
      */
     public void removeAll(){
-        DBObject conditon = new BasicDBObject( "uname", uname );
-        collection.remove( conditon );
+        collection.drop();
     }
 
 //    /**

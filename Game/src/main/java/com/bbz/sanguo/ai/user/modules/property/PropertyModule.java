@@ -17,13 +17,12 @@ import com.mongodb.DBObject;
 
 public class PropertyModule{
 
-    private final PropertyFataProvider          db;
-
+    private final PropertyDataProvider          db;
     private final UserProperty                  property;
 
 
     public PropertyModule( ModuleManager moduleManager ){
-        db = new PropertyFataProvider( moduleManager.getUserName() );
+        db = new PropertyDataProvider( moduleManager.getUserName() );
         DBObject condition = new BasicDBObject(  );
         property = db.findOne( condition );
 

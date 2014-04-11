@@ -9,13 +9,13 @@ import com.mongodb.DBObject;
  * time         2014-4-9 20:29
  */
 
-public class PropertyFataProvider extends AbstractDataProviderWithUserName<UserProperty>{
+class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty>{
     private static final String TABLE_NAME = "property";
 
     /**
      * @param uname     玩家名称
      */
-    public PropertyFataProvider( String uname ){
+    public PropertyDataProvider( String uname ){
         super( TABLE_NAME, uname );
     }
 
