@@ -6,23 +6,19 @@ package gen.util;
  * Date: 13-11-5
  * Time: 下午5:04
  */
-public final class D {
+public final class D{
 
     public static final String GAME_BASE_DIR = "./Game/src/main";
+    public static final String SRC_DIR = GAME_BASE_DIR + "/java/";
     public static final String TOOLS_BASE_DIR = "./Tools/src/main";
     public static final String TOOLS_BASE_RESOURCES_DIR = TOOLS_BASE_DIR + "/resources";
-
-    public static final String OUTPUT_CFG_DIR = "com/bbz/sanguo/cfg/";
-    public static final String OUTPUT_DB_DTO_DIR = "com/bbz/game/db/gen";
-    public static final String OUTPUT_DB_PROVIDER_DIR = "com/bbz/game/db/gen";
-
-    public static final String SRC_DIR = GAME_BASE_DIR + "/java/";
-    public static final String XML_RESOURCE_DIR = "./resource/xml/";
     public static final String CFG_CLASS_TEMPLET_DIR = TOOLS_BASE_RESOURCES_DIR + "/templet/cfg/";
     public static final String DB_TEMPLET_DIR = TOOLS_BASE_RESOURCES_DIR + "/templet/db/";
     public static final String EXECEL_DIR = TOOLS_BASE_RESOURCES_DIR + "/excel";
-
-
+    public static final String OUTPUT_CFG_DIR = "com/bbz/sanguo/cfg/";
+    public static final String OUTPUT_DB_DTO_DIR = "com/bbz/game/db/gen";
+    public static final String OUTPUT_DB_PROVIDER_DIR = "com/bbz/game/db/gen";
+    public static final String XML_RESOURCE_DIR = "./resource/xml/";
     /**
      * *********************************TAG*****************************
      */
@@ -81,4 +77,5 @@ public final class D {
      */
     public static final int EXCEL_HEAD_COUNT = 4;
     public static final String MANUAL_WORK_END = "/*自定义代码结束*/";
+    public static final String TEST_DB = "test_db";
 }

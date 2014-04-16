@@ -13,8 +13,8 @@ import com.mongodb.WriteResult;
  */
 
 public abstract class AbstractDataProviderWithUserName<T>{
-    protected final String              uname;
-    protected final DBCollection        collection;
+    protected final String uname;
+    protected final DBCollection collection;
 
     /**
      * @param tableName 要处理的表名
@@ -27,12 +27,14 @@ public abstract class AbstractDataProviderWithUserName<T>{
 
     /**
      * 通过username进行查找
-     * @return  玩家信息
+     *
+     * @return 玩家信息
      */
-    public T findOne( ){
+    public T findOne(){
         DBObject condition = new BasicDBObject( "_id", uname );
         return decode( collection.findOne( condition ) );
     }
+
     public T findOne( DBObject condition ){
         return decode( collection.findOne( condition ) );
     }
@@ -98,7 +100,7 @@ public abstract class AbstractDataProviderWithUserName<T>{
     /**
      * 删除该用户下所有的信息
      */
-    public void remove(  ){
+    public void remove(){
         DBObject conditon = new BasicDBObject( "_id", uname );
         collection.remove( conditon );
     }
@@ -121,9 +123,11 @@ public abstract class AbstractDataProviderWithUserName<T>{
     }
 
     /**
-     * 删除此表下的所有数据,慎用！！！！！！！！！！！！！！！！！
+     * * 删除此表下的所有数据,慎用！！！！！！！！！！！！！！！！！
+     *
+     * @param isRemoveAllData 确定要删除整个表的内容吗？
      */
-    public void removeAll(){
+    public void removeAll( boolean isRemoveAllData ){
         collection.drop();
     }
 

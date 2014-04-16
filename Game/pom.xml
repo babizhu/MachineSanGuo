@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>MachineSanGuo</artifactId>
@@ -14,14 +14,22 @@
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <resources>
-
+            <!--用于maven的编译-->
             <resource>
                 <directory>../resource</directory>
-                <targetPath>${project.build.directory}/resource</targetPath>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
+                <targetPath>../../resource/</targetPath>
+                <!--<excludes>-->
+                <!--<exclude>**/*.java</exclude>-->
+                <!--</excludes>-->
             </resource>
+
+            <!--<resource>-->
+            <!--<directory>../Game/resource</directory>-->
+            <!--<targetPath>${project.build.directory}/resource</targetPath>-->
+            <!--<excludes>-->
+            <!--<exclude>**/*.java</exclude>-->
+            <!--</excludes>-->
+            <!--</resource>-->
             <!--<resource>
                 <directory>src/main/resources</directory>
                 <targetPath>${project.build.outputDirectory}</targetPath>
@@ -93,17 +101,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
-
                     <excludes>
-
                         <exclude>**/*.properties</exclude>
                         <!--<exclude>**/*.xml</exclude>-->
-
                     </excludes>
-
                     <archive>
-
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
@@ -136,6 +140,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <!-- 生成可执行JAR包命令 maven-jar-plugin end -->
             <!-- 生成可执行JAR包命令 maven-shade-plugin <plugin> <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId> <version>1.2.1</version> <executions>

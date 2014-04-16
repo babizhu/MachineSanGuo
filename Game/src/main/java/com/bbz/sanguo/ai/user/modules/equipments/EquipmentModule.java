@@ -15,16 +15,16 @@ import java.util.Map;
 
 @Data
 @ToString
-public class EquipmentManager{
+public class EquipmentModule{
 
     final EquipmentDataProvider db;
 
     /**
-     * 所有的英雄
+     * 所有的道具
      */
-    private Map<Long,Equipment> equipments;
+    private Map<Long, Equipment> equipments;
 
-    public EquipmentManager( String uname ){
+    public EquipmentModule( String uname ){
         db = new EquipmentDataProvider( uname );
         equipments = db.getMapAll();
     }
@@ -32,7 +32,7 @@ public class EquipmentManager{
     /**
      * 装备升级
      *
-     * @param equipmentId 要升级的英雄
+     * @param equipmentId 要升级的准备id
      */
     public void levelUp( long equipmentId ){
         Equipment equipment = getEquipmentById( equipmentId );
@@ -47,15 +47,10 @@ public class EquipmentManager{
     }
 
 
-
-
-    public static void main( String[] args ){
-    }
-
-
     /**
      * 添加一个道具
-     * @param equipment
+     *
+     * @param equipment 要添加的道具
      */
     public void add( Equipment equipment ){
         equipments.put( equipment.getId(), equipment );
@@ -72,11 +67,10 @@ public class EquipmentManager{
 
     public void addLevel( long equipmentId, int addValue ){
         Equipment equipment = equipments.get( equipmentId );
-        if( equipment == null ){
+        if( equipment == null ) {
             throw new ClientException( ErrorCode.EQUPMENT_NOT_FOUND, equipmentId + "不存在" );
         }
         equipment.addLevel( addValue );
         db.updateWithField( equipment, "level", equipment.getLevel() );
-
     }
 }

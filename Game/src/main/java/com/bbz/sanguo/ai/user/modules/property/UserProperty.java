@@ -10,27 +10,49 @@ import lombok.Data;
 
 @Data
 public class UserProperty{
+
+
+    /**
+     * 系统赠送的金元宝
+     */
+    //private int                     gold;
+
+
     /**
      * 金元宝
      */
-    private int                     gold;
+    private int gold;
 
     /**
      * 经验
      */
-    private int                     exp;
+    private int exp;
 
     /**
-     * 等级
+     * 铜钱
      */
-    private int                     level;
+    private int cash;
 
-    public void addGold( int changeValue ){
+    /**
+     * 是否成年
+     */
+    private boolean isAdult;
+
+    //private INonBlockingConnection  con;
+
+
+    public int changeGold( int changeValue ){
+        this.gold += changeValue;
+        return gold;
     }
 
     public int getLevel(){
-        int[] data = new int[]{1,10,100,100};
-        boolean beginWith1 = true;
-        return MiscUtil.getLevel( data, exp, beginWith1 );
+        int[] data = new int[]{1, 10, 100, 100};
+        return MiscUtil.calcLevel( data, exp, 1 );
+    }
+
+    public int changeCash( int changeValue ){
+        this.cash += changeValue;
+        return cash;
     }
 }

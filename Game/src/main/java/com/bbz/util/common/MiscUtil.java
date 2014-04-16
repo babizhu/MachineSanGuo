@@ -13,37 +13,28 @@ import java.nio.ByteBuffer;
 public class MiscUtil{
 
     /**
-     * 从一个数组中，找到输入相应的位置，典型应用是通过经验获取等级,允许输入数据超过数组的最大值<br/>
+     * 从一个数组中，找到输入相应的位置，典型应用是通过经验获取等级
      * 举例如下<br/>
-     * [0,10,20,50,100]，input=35
-     * beginWith1=true      return 3，即玩家拥有35经验的时候，等级为<b>3</><br/>
-     * beginWith1=false     return 2，即玩家拥有35经验的时候，等级为<b>2</><br/>
+     * [25, 30, 35, 40, 45]，input=5
+     * beginWith=1      return 0，即玩家拥有5经验的时候，等级为<b>0</><br/>
+     * beginWith=0      return -1，即玩家拥有5经验的时候，等级为<b>-1</><br/>,这种情况一般是配置表有问题，data数组应该从0开始
      *
-     * @param data       等级数组数据  例如[0,10,20,50,100]
-     * @param input      输入数据      例如   35
-     * @param beginWith1 等级从0还是从1开始计算
-     * @return 输入数据在数组中的位置
+     * @param data      等级数组数据  例如[0,10,20,50,100]
+     * @param input     输入数据      例如   35
+     * @param beginWith 开始等级，通常为1或者0
+     * @return 转换出来的位置
      */
-    public static int getLevel( int[] data, int input, boolean beginWith1 ){
+    public static int calcLevel( int[] data, int input, int beginWith ){
         if( data == null ) {
             throw new IllegalArgumentException();
         }
-        int level = 0;
-        if( input > data[data.length - 1] ) {
-            level = data.length;
-        } else {
-            for( int i = 0; i < data.length; i++ ) {
-                if( data[i] > input ) {
-                    level = i - 1;
-                    break;
-                }
+        int level = beginWith - 1;
+        for( int aData : data ) {
+            if( aData > input ) {
+                break;
             }
-        }
-
-        if( beginWith1 ) {
             level++;
         }
-
         return level;
     }
 
@@ -59,7 +50,7 @@ public class MiscUtil{
     /**
      * 把一个用秒数保存的时间值转换为易读的字符串
      *
-     * @param seconds   秒数
+     * @param seconds 秒数
      * @return 易读的字符串
      */
     public static String secondsToDateStr( int seconds ){
@@ -72,9 +63,8 @@ public class MiscUtil{
      * 外部无需考虑是否flip()，内部会自行处理
      * 不会影响外部的position,limit等信息
      *
-     * @param buf   数据
-     * @return      易读字符串
-     *
+     * @param buf 数据
+     * @return 易读字符串
      */
     public static String bufToString( ByteBuffer buf ){
         ByteBuffer copy = buf.asReadOnlyBuffer();

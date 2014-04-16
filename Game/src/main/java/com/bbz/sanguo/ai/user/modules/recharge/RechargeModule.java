@@ -1,6 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.recharge;
 
 import com.bbz.sanguo.ai.user.ModuleManager;
+import com.bbz.sanguo.ai.user.modules.property.AwardContent;
 import com.bbz.sanguo.ai.user.modules.property.PropertyModule;
 
 import java.util.List;
@@ -8,17 +9,17 @@ import java.util.List;
 /**
  * user         LIUKUN
  * time         2014-4-9 17:52
- *
+ * <p/>
  * 充值管理器
  */
 
 public class RechargeModule{
 
     //private final ModuleManager                 moduleManager;
-    private final PropertyModule                propModule;
-    private final RechargeDataProvider          db;
+    private final PropertyModule propModule;
+    private final RechargeDataProvider db;
 
-    private List<RechargeRecord>                rechargeRecordList;
+    private List<RechargeRecord> rechargeRecordList;
 
 
     public RechargeModule( ModuleManager moduleManager ){
@@ -30,7 +31,8 @@ public class RechargeModule{
 
     /**
      * 充值
-     * @param money     金钱
+     *
+     * @param money 金钱
      */
     public void recharge( int money ){
         long id = 4;
@@ -39,7 +41,7 @@ public class RechargeModule{
         db.add( record );
 
         int gold = money;//应该有个兑换比例
-        propModule.changeGold( gold );
+        propModule.changeAward( AwardContent.GOLD, gold, getClass().getName() + "recharge" );
 
     }
 }
