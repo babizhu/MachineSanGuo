@@ -11,22 +11,27 @@ import org.junit.Test;
  */
 
 public class PropertyModuleTest{
-
     private String uname = D.TEST_USER_NAME;
-    ModuleManager moduleManager = new ModuleManager( uname );
+    private ModuleManager moduleManager = new ModuleManager( uname );
+    private PropertyModule module = new PropertyModule( moduleManager );
+
 
     @Test
     public void testChangeGold() throws Exception{
 
-        PropertyModule module = new PropertyModule( moduleManager );
-        for( int i = 0; i < 100; i++ ) {
+        for( int i = 0; i < 2; i++ ) {
+            int amount = RandomUtil.getInt( 867 );
+            module.changeValue( UserPropertyType.GOLD, amount, "test" );
+            amount = RandomUtil.getInt( 67 );
+            module.changeValue( UserPropertyType.CASH, amount, "test" );
 
-            int amount = RandomUtil.getInt( 100008867 );
-            module.changeAward( AwardContent.GOLD, amount, "test" );
-            amount = RandomUtil.getInt( 100008867 );
-            module.changeAward( AwardContent.CASH, amount, "test" );
+
         }
+        int cash = module.getCash();
 
-
+        System.out.println( cash );
+//        assertEquals( true, module.isEnough( UserPropertyType.CASH, 100 ) );
     }
+
+
 }

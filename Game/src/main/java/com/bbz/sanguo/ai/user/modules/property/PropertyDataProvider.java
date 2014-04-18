@@ -28,6 +28,9 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
         property.setExp( (int) object.get( "exp" ) );
         property.setGold( (int) object.get( "gold" ) );
         property.setCash( (int) object.get( "cash" ) );
+        property.setExp( (int) object.get( "exp" ) );
+        property.setAdult( (boolean) object.get( "isAdult" ) );
+        property.setNickName( (String) object.get( "nickName" ) );
         return property;
     }
 
@@ -39,6 +42,8 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
         obj.put( "exp", property.getExp() );
         obj.put( "gold", property.getGold() );
         obj.put( "cash", property.getCash() );
+        obj.put( "isAdult", property.isAdult() );
+        obj.put( "nickName", property.getNickName() );
         return obj;
     }
 

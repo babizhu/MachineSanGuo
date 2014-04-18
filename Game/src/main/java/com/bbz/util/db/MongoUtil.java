@@ -37,7 +37,6 @@ public enum MongoUtil{
         try {
             MongoClientOptions options = init();
 
-            System.out.println( System.getProperty( "user.dir" ) );
             InputStream in = new BufferedInputStream( new FileInputStream( "resource/mongo.properties" ) );
             prop.load( in );
 
@@ -51,10 +50,6 @@ public enum MongoUtil{
         } catch( IOException e ) {
             e.printStackTrace();
         }
-    }
-
-    public static void main( String[] args ){
-        System.out.println( 1 );
     }
 
     public DB getDB(){

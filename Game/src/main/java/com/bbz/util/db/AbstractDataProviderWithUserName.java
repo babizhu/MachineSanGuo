@@ -35,9 +35,9 @@ public abstract class AbstractDataProviderWithUserName<T>{
         return decode( collection.findOne( condition ) );
     }
 
-    public T findOne( DBObject condition ){
-        return decode( collection.findOne( condition ) );
-    }
+//    public T findOne( DBObject condition ){
+//        return decode( collection.findOne( condition ) );
+//    }
 
 //    public List<T> findBy( String key, Object content ){
 //        BasicDBObject condition = new BasicDBObject( "uname", uname );
@@ -127,6 +127,7 @@ public abstract class AbstractDataProviderWithUserName<T>{
      *
      * @param isRemoveAllData 确定要删除整个表的内容吗？
      */
+    @SuppressWarnings("UnusedDeclaration")
     public void removeAll( boolean isRemoveAllData ){
         collection.drop();
     }
