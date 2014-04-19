@@ -13,7 +13,7 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
     private static final String TABLE_NAME = "property";
 
     /**
-     * @param uname     玩家名称
+     * @param uname 玩家名称
      */
     public PropertyDataProvider( String uname ){
         super( TABLE_NAME, uname );
@@ -22,8 +22,15 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
     @Override
     protected UserProperty decode( DBObject object ){
         UserProperty property = new UserProperty();
+        if( object == null ) {
+            return property;
+        }
         property.setExp( (int) object.get( "exp" ) );
-        property.setGold( (int) object.get("gold") );
+        property.setGold( (int) object.get( "gold" ) );
+        property.setCash( (int) object.get( "cash" ) );
+        property.setExp( (int) object.get( "exp" ) );
+        property.setAdult( (boolean) object.get( "isAdult" ) );
+        property.setNickName( (String) object.get( "nickName" ) );
         return property;
     }
 
@@ -34,6 +41,9 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
         obj.put( "_id", getUname() );
         obj.put( "exp", property.getExp() );
         obj.put( "gold", property.getGold() );
+        obj.put( "cash", property.getCash() );
+        obj.put( "isAdult", property.isAdult() );
+        obj.put( "nickName", property.getNickName() );
         return obj;
     }
 

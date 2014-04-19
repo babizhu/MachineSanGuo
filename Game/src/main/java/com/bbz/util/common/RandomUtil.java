@@ -23,9 +23,9 @@ public class RandomUtil{
     /**
      * 返回[min,max)之间的整数
      *
-     * @param min       下限（包括）
-     * @param max       上限（不包括）
-     * @return          随机返回的数字
+     * @param min 下限（包括）
+     * @param max 上限（不包括）
+     * @return 随机返回的数字
      */
     public static int getInt( int min, int max ){
         if( max <= min ) {
@@ -35,5 +35,21 @@ public class RandomUtil{
         temp = r.nextInt( temp );
         return temp + min;
 
+    }
+
+    /**
+     * 以一定几率发生某件事发生
+     *
+     * @param percent 发生的几率 如果大于等于1就一定发生，小于0肯定不发生
+     * @return true: 发生, false: 未发生
+     */
+    public static boolean isHappen( float percent ){
+        if( percent >= 1 ) {
+            return true;
+        }
+        if( percent < 0 ) {
+            return false;
+        }
+        return percent > r.nextFloat();
     }
 }

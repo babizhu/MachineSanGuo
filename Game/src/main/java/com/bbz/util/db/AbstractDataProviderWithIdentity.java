@@ -109,7 +109,8 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
     public void updateWithField( T t, String fieldName, Object fieldValue ){
         BasicDBObject condition = new BasicDBObject( "_id", t.getId() );
         BasicDBObject updateField = new BasicDBObject( "$set", new BasicDBObject( fieldName, fieldValue ) );
-        collection.updateMulti( condition, updateField );
+        //collection.updateMulti( condition, updateField );
+        collection.update( condition, updateField );
     }
 
     /**

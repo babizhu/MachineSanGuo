@@ -19,7 +19,7 @@ public class EquipmentDataProvider extends AbstractDataProviderWithIdentity<Equi
 
     @Override
     protected Equipment decode( DBObject object ){
-        int templetId = ( (int) object.get( "templetId" ) );
+        int templetId = ((int) object.get( "templetId" ));
         Equipment equipment = new Equipment( (long) object.get( "_id" ), templetId );
         equipment.setLevel( (int) object.get( "level" ) );
 
@@ -28,8 +28,7 @@ public class EquipmentDataProvider extends AbstractDataProviderWithIdentity<Equi
 
     @Override
     protected DBObject encode( Equipment equipment ){
-        DBObject obj = new BasicDBObject();
-        obj.put( "_id", equipment.getId() );
+        DBObject obj = new BasicDBObject( "_id", equipment.getId() );
         obj.put( "uname", getUname() );
         obj.put( "templetId", equipment.getTemplet().getId() );
         obj.put( "level", equipment.getLevel() );

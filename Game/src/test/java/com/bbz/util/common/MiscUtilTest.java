@@ -12,15 +12,25 @@ import static org.junit.Assert.assertEquals;
  */
 
 public class MiscUtilTest{
-    @Test
-    public void testGetLevel() throws Exception{
-        int[] expTolevel = new int[]{0, 10, 20, 50, 100};//经验到等级的数组
-        int currentExp = 35;
-        int level = MiscUtil.getLevel( expTolevel, currentExp, true );
-        assertEquals( 3, level );
-        level = MiscUtil.getLevel( expTolevel, currentExp, false );
-        assertEquals( 2, level );
 
+    @Test
+    public void testcalcLevel() throws Exception{
+        int[] expTolevel = new int[]{25, 30, 35, 40, 45};
+        int beginWith = 1;
+        int currentExp = 5;
+        assertEquals( 0, MiscUtil.calcLevel( expTolevel, currentExp, beginWith ) );
+        currentExp = 25;
+        assertEquals( 1, MiscUtil.calcLevel( expTolevel, currentExp, beginWith ) );
+        currentExp = 26;
+        assertEquals( 1, MiscUtil.calcLevel( expTolevel, currentExp, beginWith ) );
+        currentExp = 45;
+        assertEquals( 5, MiscUtil.calcLevel( expTolevel, currentExp, beginWith ) );
+        currentExp = 115;
+        assertEquals( 5, MiscUtil.calcLevel( expTolevel, currentExp, beginWith ) );
+
+        expTolevel = new int[]{25, 30, 35, 40, 45};
+        currentExp = 5;
+        System.out.println( MiscUtil.calcLevel( expTolevel, currentExp, 0 ) );
     }
 
     @Test
@@ -62,6 +72,7 @@ public class MiscUtilTest{
 
     /**
      * 字符串
+     *
      * @throws Exception
      */
     @Test

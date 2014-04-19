@@ -1,6 +1,7 @@
 package experiment.serialize.mongodb;
 
 import com.mongodb.*;
+import gen.util.D;
 import org.junit.Before;
 import org.junit.Test;
 import util.db.MongoUtil;
@@ -27,7 +28,7 @@ public class MongoDbTest{
     @Before
     public void setUp() throws Exception{
         client = MongoUtil.INSTANCE.getClient();
-        coll = MongoUtil.INSTANCE.getDB().getCollection( "test_db" );
+        coll = MongoUtil.INSTANCE.getDB().getCollection( D.TEST_DB );
 
     }
 
@@ -305,7 +306,7 @@ public class MongoDbTest{
         insertData();
         QueryBuilder query = new QueryBuilder();
         query.or( new BasicDBObject( "name", "bbz1" ), new BasicDBObject( "times", 5 ) );
-       // query.and( "id" ).is( 2 );
+        // query.and( "id" ).is( 2 );
         try( DBCursor cursor = coll.find( query.get() ).addSpecial( "$returnKey", "" ) ) {
             while( cursor.hasNext() ) {
                 System.out.println( cursor.next() );
@@ -438,6 +439,7 @@ public class MongoDbTest{
 
     /**
      * 自己学习mapreduce的例子
+     *
      * @throws UnknownHostException
      */
     @Test

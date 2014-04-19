@@ -1,13 +1,13 @@
 <configuration>
-    <property name="LOG_HOME" value="./log" />
+    <property name="LOG_HOME" value="./log"/>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
-            <evaluator> <!-- 默认为 ch.qos.logback.classic.boolex.JaninoEventEvaluator -->
-                <expression>return message.contains("is");</expression>
-            </evaluator>
-            <OnMatch>ACCEPT </OnMatch>
-            <OnMismatch>DENY</OnMismatch>
-        </filter>
+        <!--<filter class="ch.qos.logback.core.filter.EvaluatorFilter">-->
+        <!--<evaluator> &lt;!&ndash; 默认为 ch.qos.logback.classic.boolex.JaninoEventEvaluator &ndash;&gt;-->
+        <!--<expression>return message.contains("is");</expression>-->
+        <!--</evaluator>-->
+        <!--<OnMatch>ACCEPT </OnMatch>-->
+        <!--<OnMismatch>DENY</OnMismatch>-->
+        <!--</filter>-->
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
@@ -22,12 +22,12 @@
         </encoder>
     </appender>
 
-    <logger name="experiment.logback.LogBackTest1" level="debug" additivity="false" >
-        <appender-ref ref="FILE" />
+    <logger name="experiment.logback.LogBackTest1" level="debug" additivity="false">
+        <appender-ref ref="FILE"/>
     </logger>
 
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDOUT"/>
         <!--<appender-ref ref="FILE" />-->
     </root>
     <!--<logger name="experiment" level="ERROR" />-->

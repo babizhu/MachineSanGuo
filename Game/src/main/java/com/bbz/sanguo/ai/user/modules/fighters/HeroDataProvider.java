@@ -1,7 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.fighters;
 
 import com.bbz.sanguo.ai.user.modules.equipments.Equipment;
-import com.bbz.sanguo.ai.user.modules.equipments.EquipmentManager;
+import com.bbz.sanguo.ai.user.modules.equipments.EquipmentModule;
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
 import com.bbz.sanguo.cfg.fighter.FighterTempletCfg;
 import com.bbz.util.common.Transform;
@@ -27,11 +27,13 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
 
     @Override
     protected Hero decode( DBObject object ){
-        Hero hero = new Hero( (Long) object.get( "_id" ) );
+        int templetId = (int) object.get( "templetId" );
+        FighterTemplet templet = FighterTempletCfg.getFighterTempletById( templetId );
+        Hero hero = new Hero( (Long) object.get( "_id" ), templet );
         hero.setName( (String) object.get( "name" ) );
         Set<Equipment> equipments = Sets.newHashSet();
         long[] arr = Transform.ArrayType.toLong( (String) object.get( "equipmentS" ) );
-        EquipmentManager em = new EquipmentManager( "lk" );//TODO 需要考虑实际如何操作
+        EquipmentModule em = new EquipmentModule( "lk" );//TODO 需要考虑实际如何操作
         for( long id : arr ) {
             Equipment e = em.getEquipmentById( id );
             equipments.add( e );
@@ -39,9 +41,8 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
 
         hero.setEquipments( equipments );
         hero.setPosition( (int) object.get( "position" ) );
-        int templetId = (int) object.get( "templetId" );
-        FighterTemplet templet = FighterTempletCfg.getFighterTempletById( templetId );
-        hero.setTemplet( templet );
+
+
         return hero;
     }
 
