@@ -33,6 +33,7 @@ public class PropertyDataProviderTest{
     public void tearDown() throws Exception{
         db.remove();
         db.removeAll();
+        db.getCollection().drop();//清空所有的数据
     }
 
     @Test
