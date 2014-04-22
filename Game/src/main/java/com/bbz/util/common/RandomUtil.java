@@ -52,4 +52,8 @@ public class RandomUtil{
         }
         return percent > r.nextFloat();
     }
+
+    public static void main( String[] args ){
+        RandomUtil.isHappen( 0.2f );
+    }
 }

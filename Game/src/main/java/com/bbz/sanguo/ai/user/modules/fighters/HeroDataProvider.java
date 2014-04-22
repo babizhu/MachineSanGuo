@@ -25,6 +25,10 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
         super( TABLE_NAME, uname );
     }
 
+    public static void main( String[] args ){
+        System.out.println();
+    }
+
     @Override
     protected Hero decode( DBObject object ){
         int templetId = (int) object.get( "templetId" );
@@ -45,7 +49,6 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
 
         return hero;
     }
-
 
     @Override
     protected DBObject encode( Hero hero ){

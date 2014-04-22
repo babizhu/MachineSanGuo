@@ -17,6 +17,10 @@ public class EquipmentDataProvider extends AbstractDataProviderWithIdentity<Equi
         super( TABLE_NAME, uname );
     }
 
+    public static void main( String[] args ){
+        System.out.println();
+    }
+
     @Override
     protected Equipment decode( DBObject object ){
         int templetId = ((int) object.get( "templetId" ));

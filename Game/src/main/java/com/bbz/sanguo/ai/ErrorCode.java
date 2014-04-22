@@ -10,10 +10,7 @@ import java.util.Map;
 public enum ErrorCode{
     HERO_NOT_FOUND(1000),
     EQUPMENT_NOT_FOUND( 2000 );
-
-            private final int number;
-
-            private static final Map<Integer, ErrorCode> numToEnum = new HashMap<Integer, ErrorCode>();
+    private static final Map<Integer, ErrorCode> numToEnum = new HashMap<>();
             static{
                 for( ErrorCode t : values() ){
 
@@ -24,15 +21,18 @@ public enum ErrorCode{
                 }
             }
 
+    private final int number;
+
             ErrorCode( int number ){
                 this.number = number;
             }
 
+    public static ErrorCode fromNum( int n ){
+        return numToEnum.get( n );
+    }
+
             public int toNum() {
                 return number;
-            }
-            public static ErrorCode fromNum( int n ){
-                return numToEnum.get( n );
             }
 
 }
