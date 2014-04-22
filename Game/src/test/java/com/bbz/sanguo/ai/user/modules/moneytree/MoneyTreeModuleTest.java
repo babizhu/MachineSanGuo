@@ -17,9 +17,13 @@ public class MoneyTreeModuleTest{
         System.out.println( new DateTime( second * 1000l ) );
         ModuleManager manager = new ModuleManager( D.TEST_USER_NAME );
         MoneyTreeModule module = new MoneyTreeModule( manager );
-        for( int i = 0; i < 10; i++ ) {
+        try {
+            for( int i = 0; i < 10; i++ ) {
 
-            module.run();
+                module.run();
+            }
+        } catch( Exception e ) {
+            System.out.println( e.getMessage() );
         }
 
     }

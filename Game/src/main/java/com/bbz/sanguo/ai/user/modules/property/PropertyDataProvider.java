@@ -20,17 +20,17 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
     }
 
     @Override
-    protected UserProperty decode( DBObject object ){
+    protected UserProperty decode( DBObject obj ){
         UserProperty property = new UserProperty();
-        if( object == null ) {
+        if( obj == null ) {
             return property;
         }
-        property.setExp( (int) object.get( "exp" ) );
-        property.setGold( (int) object.get( "gold" ) );
-        property.setCash( (int) object.get( "cash" ) );
-        property.setExp( (int) object.get( "exp" ) );
-        property.setAdult( object.get( "isAdult" ) == null ? false : true );
-        property.setNickName( object.get( "nickName" ) == null ? "" : " " );
+        property.setExp( (int) obj.get( "exp" ) );
+        property.setGold( (int) obj.get( "gold" ) );
+        property.setCash( (int) obj.get( "cash" ) );
+        property.setExp( (int) obj.get( "exp" ) );
+        property.setAdult( (Boolean) obj.get( "isAdult" ) );
+        property.setNickName( (String) obj.get( "nickName" ) );
         return property;
     }
 

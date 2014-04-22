@@ -17,9 +17,8 @@ public class TimeUtil{
      * @return true     是今天
      */
     public static boolean isToday( int time ){
-        LocalDate localDate = new LocalDate();
         LocalDate compare = new LocalDate( time * 1000L );
-        return localDate.equals( compare );
+        return new LocalDate().equals( compare );
     }
 
     /**
@@ -53,5 +52,4 @@ public class TimeUtil{
         int ret = (int) (dt.getMillis() / 1000 - SystemTimer.currentTimeSecond());
         return Math.max( 0, ret );
     }
-
 }

@@ -1,23 +1,19 @@
 package com.bbz.sanguo.ai.user.modules.property;
 
 import com.bbz.util.common.MiscUtil;
+import lombok.Data;
 
 /**
  * user         LIUKUN
  * time         2014-4-9 20:30
  */
-
+@Data
 class UserProperty{
 
     /**
      * 昵称
      */
     private String nickName;
-    /**
-     * 系统赠送的金元宝
-     */
-    //private int                     gold;
-
 
     /**
      * 金元宝
@@ -57,43 +53,5 @@ class UserProperty{
         return cash;
     }
 
-    String getNickName(){
-        return nickName;
-    }
 
-    void setNickName( String nickName ){
-        this.nickName = nickName;
-    }
-
-    int getGold(){
-        return gold;
-    }
-
-    void setGold( int gold ){
-        this.gold = gold;
-    }
-
-    int getExp(){
-        return exp;
-    }
-
-    void setExp( int exp ){
-        this.exp = exp;
-    }
-
-    int getCash(){
-        return cash;
-    }
-
-    void setCash( int cash ){
-        this.cash = cash;
-    }
-
-    boolean isAdult(){
-        return isAdult;
-    }
-
-    void setAdult( boolean isAdult ){
-        this.isAdult = isAdult;
-    }
 }

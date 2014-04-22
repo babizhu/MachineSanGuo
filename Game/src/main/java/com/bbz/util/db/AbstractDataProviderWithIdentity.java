@@ -27,6 +27,96 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
         collection = MongoUtil.INSTANCE.getDB().getCollection( tableName );
     }
 
+    protected abstract T decode( DBObject object );
+
+    protected abstract DBObject encode( T t );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public T findOne( DBObject condition ){
         return decode( collection.findOne( condition ) );
     }
@@ -84,10 +174,6 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
         }
         return map;
     }
-
-    protected abstract T decode( DBObject object );
-
-    protected abstract DBObject encode( T t );
 
     public void remove( int id ){
         DBObject conditon = new BasicDBObject( "_id", id );

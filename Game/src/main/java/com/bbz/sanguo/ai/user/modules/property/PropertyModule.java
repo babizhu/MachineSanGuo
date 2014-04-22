@@ -19,13 +19,11 @@ public class PropertyModule{
     private static Logger logger = LoggerFactory.getLogger( PropertyModule.class );
 
     private final PropertyDataProvider          db;
-
     private final UserProperty                  property;
-
     private final String uname;
 
-    public PropertyModule( ModuleManager moduleManager ){
-        this.uname = moduleManager.getUserName();
+    public PropertyModule( ModuleManager manager ){
+        this.uname = manager.getUserName();
         db = new PropertyDataProvider( uname );
         property = db.findOne();
         //this.moduleManager = moduleManager;

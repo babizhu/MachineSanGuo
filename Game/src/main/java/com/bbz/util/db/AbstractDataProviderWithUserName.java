@@ -113,7 +113,7 @@ public abstract class AbstractDataProviderWithUserName<T>{
 //    }
 
     /**
-     * 更新一个对象的某个字段
+     * 更新一个对象的某个字段，如果不存在此记录，会添加
      *
      * @param fieldName  要更新的列名
      * @param fieldValue 要更新的内容
@@ -121,7 +121,8 @@ public abstract class AbstractDataProviderWithUserName<T>{
     public void updateWithField( String fieldName, Object fieldValue ){
         BasicDBObject condition = new BasicDBObject( "_id", uname );
         BasicDBObject updateField = new BasicDBObject( "$set", new BasicDBObject( fieldName, fieldValue ) );
-        collection.updateMulti( condition, updateField );
+//        collection.updateMulti( condition, updateField );
+        collection.update( condition, updateField, true, false );
     }
 
     /**
