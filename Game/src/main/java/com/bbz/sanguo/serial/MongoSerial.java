@@ -14,13 +14,13 @@ public class MongoSerial{
 
     public static final DBObject encode( Counter12 counter ){
         DBObject object = new BasicDBObject( "count", counter.getCount() );
-        object.put( "time", counter.getTime() );
+        object.put( "timeStamp", counter.getSimeStamp() );
         return object;
     }
 
     public static final Counter12 decode( Object object ){
         DBObject obj = (DBObject) object;
-        Counter12 counter = new Counter12( (int) obj.get( "count" ), (int) obj.get( "time" ) );
+        Counter12 counter = new Counter12( (int) obj.get( "count" ), (int) obj.get( "timeStamp" ) );
         return counter;
     }
 }

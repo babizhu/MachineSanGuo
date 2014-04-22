@@ -21,7 +21,7 @@ public class Counter12Test{
     @Test
     public void testAddCount() throws Exception{
         Counter12 counter = new Counter12( 20, SystemTimer.currentTimeSecond() );
-        counter.addCount( 5 );
+        counter.add( 5 );
         assertEquals( 25, counter.getCount() );
     }
 }

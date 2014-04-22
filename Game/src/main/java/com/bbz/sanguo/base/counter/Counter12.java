@@ -10,43 +10,43 @@ import com.bbz.util.time.TimeUtil;
  */
 public class Counter12{
     private int count;
-    private int time;
+    private int timeStamp;
 
     public Counter12(){
     }
 
-    public Counter12( int count, int time ){
+    public Counter12( int count, int timeStamp ){
         this.count = count;
-        this.time = time;
+        this.timeStamp = timeStamp;
     }
 
 
     public int getCount(){
-        if( TimeUtil.isToday( time ) ) {
+        if( TimeUtil.isToday( timeStamp ) ) {
             return count;
         } else {
             return 0;
         }
     }
 
-    public void setCount( int count ){
+    public void set( int count ){
         this.count = count;
-        time = SystemTimer.currentTimeSecond();
+        timeStamp = SystemTimer.currentTimeSecond();
     }
 
-    public int getTime(){
-        return time;
+    public int getSimeStamp(){
+        return timeStamp;
     }
 
-    public void addCount( int change ){
-        setCount( getCount() + change );
+    public void add( int change ){
+        set( getCount() + change );
     }
 
     @Override
     public String toString(){
         return "Counter12{" +
                 "count=" + count +
-                ", time=" + TimeUtil.secondsToDateStr( time ) +
+                ", time=" + TimeUtil.secondsToDateStr( timeStamp ) +
                 '}';
     }
 }

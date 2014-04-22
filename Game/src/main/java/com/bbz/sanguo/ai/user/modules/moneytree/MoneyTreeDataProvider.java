@@ -28,7 +28,6 @@ public class MoneyTreeDataProvider extends AbstractDataProviderWithUserName<Mone
         if( object != null ) {
 
             record.setTimes( MongoSerial.decode( object.get( "times" ) ) );
-            System.out.println( "decode: " + record.getTimes().getTime() );
             record.setResetTimes( MongoSerial.decode( object.get( "resetTimes" ) ) );
 
         } else {

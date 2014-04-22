@@ -26,7 +26,7 @@ public class UserCounterModuleTest{
 
     @After
     public void tearDown() throws Exception{
-        module.clear();
+        //module.clear();
     }
 
     @Test
@@ -47,7 +47,7 @@ public class UserCounterModuleTest{
     @Test
     public void testToString() throws Exception{
 
-        System.out.println(module.toString());
+        System.out.println( module.toString() );
     }
 
     @Test
@@ -63,16 +63,17 @@ public class UserCounterModuleTest{
     }
 
     /**
-     * 测试修改日期到第二天的执行情况
+     * 测试第二天的执行情况
+     *
      * @throws InterruptedException
      */
     @Test
     public void testTomorrow() throws InterruptedException{
         //!!修改当前时间到23:59:50，开始执行
-        int count = module.get( MiscDataKey.MOPPING_UP, 1,1 );
+        int count = module.get( MiscDataKey.MOPPING_UP, 1, 1 );
         assertEquals( count, 1 );
-        Thread.sleep( 20000 );//等候20秒，让系统时间跳到第二天
-        count = module.get( MiscDataKey.MOPPING_UP, 1,1 );
+        Thread.sleep( 3000 );//等候3秒，让系统时间跳到第二天
+        count = module.get( MiscDataKey.MOPPING_UP, 1, 1 );
         System.out.println( "MiscDataKey.MOPPING_UP value is " + count );//因为改了时间，因此expect 0，不用assertEquals是避免maven过不了
     }
 

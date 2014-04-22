@@ -1,5 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.property;
 
+import com.bbz.util.D;
 import com.bbz.util.common.RandomUtil;
 import org.junit.After;
 import org.junit.Before;
@@ -13,8 +14,8 @@ import static org.junit.Assert.assertEquals;
  */
 
 public class PropertyDataProviderTest{
-    private static final String USER_NAME = "test_bbz";
-    private static PropertyDataProvider db = new PropertyDataProvider( USER_NAME );
+
+    private static PropertyDataProvider db = new PropertyDataProvider( D.TEST_USER_NAME );
 
 
     @Before

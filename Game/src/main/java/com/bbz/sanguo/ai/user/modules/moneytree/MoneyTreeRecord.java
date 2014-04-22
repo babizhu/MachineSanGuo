@@ -19,12 +19,12 @@ public class MoneyTreeRecord{
     private Counter12 resetTimes;
 
     public void addTimesOne(){
-        times.addCount( 1 );
+        times.add( 1 );
     }
 
 
     public void addResetTimesOne(){
-        resetTimes.addCount( 1 );
+        resetTimes.add( 1 );
     }
 
 

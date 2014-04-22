@@ -1,7 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.misc;
 
 import com.bbz.sanguo.ai.user.ModuleManager;
-import com.google.common.base.Joiner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +24,7 @@ public class MiscDataModule{
     }
 
     public String getString( MiscDataKey key, Object... args ){
-        String buildKey = buildKey( key, args );
+        String buildKey = key.buildKey( args );
         String ret = (String) data.get( buildKey );
         if( ret == null ) {
             ret = "";
@@ -34,7 +33,7 @@ public class MiscDataModule{
     }
 
     public int getInt( MiscDataKey key, Object... args ){
-        String buildKey = buildKey( key, args );
+        String buildKey = key.buildKey( args );
         Integer ret = (Integer) data.get( buildKey );
         if( ret == null ) {
             ret = 0;
@@ -42,22 +41,9 @@ public class MiscDataModule{
         return ret;
     }
 
-    /**
-     * 为了性能考虑把key转为了数字，减少存储所需要的话费，劣势在于调试不变
-     * 可根据需要灵活变更
-     * @param key       key
-     * @param args      参数
-     * @return          完整的参数
-     */
-    private String buildKey( MiscDataKey key, Object[] args ){
-        String ret = key.toNum() + "_";//_为分隔符，防止1和11分不清楚
-        ret += Joiner.on( "_" ).join(args);
-
-        return ret;
-    }
 
     public void put( MiscDataKey key, Object value, Object... args ){
-        String buildKey = buildKey( key, args );
+        String buildKey = key.buildKey( args );
         data.put( buildKey, value );
         //db.replace( data );不用整体更新
         db.updateWithField( buildKey, value );

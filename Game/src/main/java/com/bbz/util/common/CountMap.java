@@ -17,9 +17,9 @@ import java.util.Set;
  * 如果是常规map,则map里面就是( "小明的玩具", 3)
  * 在此map中，则应该是( "小明的玩具", 4)，注意value的值
  * <p/>
- *
+ * <p/>
  * 如果key不存在则返回0
- * 如需同步，则需要另外一个同步map版本，此处暂时未处理
+ * 如需同步，则需要另外一个同步map版本，此处暂未处理
  */
 @ToString
 public class CountMap<K>{
@@ -27,9 +27,10 @@ public class CountMap<K>{
 
     /**
      * 添加数据，如果map内部存在此key，则累加数据
-     * @param key       key
-     * @param change    change
-     * @return          add之后的值
+     *
+     * @param key    key
+     * @param change change
+     * @return add之后的值
      */
     public Integer add( K key, int change ){
         int count = change;
@@ -74,12 +75,13 @@ public class CountMap<K>{
 
     /**
      * 如果key不存在则返回0
-     * @param key       要查询的key
-     * @return          不存在key则返回0，否则返回相应的值
+     *
+     * @param key 要查询的key
+     * @return 不存在key则返回0，否则返回相应的值
      */
     public Integer get( K key ){
         Integer count = map.get( key );
-        return  count == null ? 0 : count;
+        return count == null ? 0 : count;
     }
 
 
