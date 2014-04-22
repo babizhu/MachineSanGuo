@@ -8,6 +8,8 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * user         LIUKUN
  * time         2014-4-14 16:19
@@ -43,7 +45,8 @@ public class MongoUtilTest{
 
             collection.insert( new BasicDBObject( "content", hero ) );
         } catch( IllegalArgumentException e ) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            assertEquals( true, e instanceof IllegalArgumentException );
         }
     }
 

@@ -546,12 +546,12 @@ public class MongoDbTest{
          String reduce,        --每个分组都需要执行的Function
          String finial         --终结Funciton对结果进行最终的处理
          */
-        DBObject obj = coll.group( groupKeys, condition, new BasicDBObject(), reduce );
-        System.out.println( obj );
-
-        AggregationOutput ouput = coll.aggregate( new BasicDBObject( "$group", groupKeys ) );
-        System.out.println( ouput.getCommandResult() );
-        System.out.println( coll.find( new BasicDBObject( "$group", groupKeys ) ) );
+//        DBObject obj = coll.group( groupKeys, condition, new BasicDBObject(), reduce );
+//        System.out.println( obj );
+//
+//        AggregationOutput ouput = coll.aggregate( new BasicDBObject( "$group", groupKeys ) );
+//        System.out.println( ouput.getCommandResult() );
+//        System.out.println( coll.find( new BasicDBObject( "$group", groupKeys ) ) );
     }
 
 
@@ -608,6 +608,7 @@ public class MongoDbTest{
     public void update(){
         BasicDBObject query = new BasicDBObject();
         query.put( "name", "liu" );
+        coll.insert( query );
         DBObject stuFound = coll.findOne( query );
         stuFound.put( "name", stuFound.get( "name" ) + "update_1" );
         coll.update( query, stuFound );
