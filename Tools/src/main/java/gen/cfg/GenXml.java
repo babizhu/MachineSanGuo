@@ -23,8 +23,8 @@ class GenXml{
     private final String packageName;
     private final Sheet sheet;
 
-    public GenXml(String[] path, Sheet sheet){
-        fields = new FieldElimentManager(sheet).getFields();
+    public GenXml( String[] path, Sheet sheet ){
+        fields = new FieldElimentManager( sheet ).getFields();
         className = path[1];
         packageName = path[0];
         this.sheet = sheet;
@@ -32,26 +32,26 @@ class GenXml{
 
     void generate(){
 
-        StringBuilder sb = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
-        sb.append("<").append(className).append("s").append(">");
+        StringBuilder sb = new StringBuilder( "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" );
+        sb.append( "<" ).append( className ).append( "s" ).append( ">" );
         for( Row row : sheet ) {
             if( row.getRowNum() < D.EXCEL_HEAD_COUNT ) {
                 continue;
             }
 
-            if( row.getCell( 0 ) == null ){
+            if( row.getCell( 0 ) == null ) {
                 System.out.println( "以下空白，停止处理" );
                 break;
             }
 
-            sb.append("<").append(className).append(">").
-                    append(genContent(row)).append("</").append(className).append(">");
+            sb.append( "<" ).append( className ).append( ">" ).
+                    append( genContent( row ) ).append( "</" ).append( className ).append( ">" );
         }
-        sb.append("</").append(className).append("s").append(">");
+        sb.append( "</" ).append( className ).append( "s" ).append( ">" );
         //System.out.println( sb.toString() );
 
-        String path = D.XML_RESOURCE_DIR + packageName + "/" + Util.firstToLowCase(className) + ".xml";
-        FileUtil.writeTextFile(path, sb.toString());
+        String path = D.XML_RESOURCE_DIR + packageName + "/" + Util.firstToLowCase( className ) + ".xml";
+        FileUtil.writeTextFile( path, sb.toString() );
 //        06911523
 //
 //                主险保单号  51021173898000019940
@@ -71,24 +71,25 @@ class GenXml{
         System.out.println();
 
     }
-    private String genContent(Row row){
+
+    private String genContent( Row row ){
         printRow( row );
         StringBuilder sb = new StringBuilder();
         int i = 0;
         for( FieldElement element : fields ) {
-            sb.append("<").append(element.name).append(">");
+            sb.append( "<" ).append( element.name ).append( ">" );
 
-            String data = row.getCell(i++).toString();
-            if( element.type.equals("int") ) {
-                int pointPos = data.indexOf('.');
+            String data = row.getCell( i++ ).toString();
+            if( element.type.equals( "int" ) ) {
+                int pointPos = data.indexOf( '.' );
                 if( pointPos != -1 ) {
-                    data = data.substring(0, pointPos);//去掉末尾的.0
+                    data = data.substring( 0, pointPos );//去掉末尾的.0
                 }
             }
 
             //System.out.println( row.getCell(i++) );
-            sb.append(data);
-            sb.append("</").append(element.name).append(">");
+            sb.append( data );
+            sb.append( "</" ).append( element.name ).append( ">" );
 
         }
         return sb.toString();

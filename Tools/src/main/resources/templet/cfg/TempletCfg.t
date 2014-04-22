@@ -20,14 +20,14 @@ public class #className# {
 
 
 	static{
-		init();
+		//init();
 
 	}
 	private static final String FILE = "#xmlPath#";
 
 
 
-	private static void init(){
+	public static void init(){
 
 		SAXBuilder builder = new SAXBuilder();
 		Document document;

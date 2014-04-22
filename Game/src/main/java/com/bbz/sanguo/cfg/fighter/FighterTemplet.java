@@ -6,9 +6,8 @@ import org.jdom2.Element;
  * 模版
  *
  * @author liukun
- *         2014-4-5 12:54:34
+ *         2014-4-25 16:19:49
  */
-@SuppressWarnings("UnusedDeclaration")
 public class FighterTemplet{
 
     /**
@@ -109,6 +108,7 @@ public class FighterTemplet{
         return id;
     }
 
+
     /**
      * 神将名字
      */
@@ -122,6 +122,7 @@ public class FighterTemplet{
     public int getHp(){
         return hp;
     }
+
 
     /**
      * 初始攻击
@@ -137,6 +138,7 @@ public class FighterTemplet{
         return magicAttack;
     }
 
+
     /**
      * 初始防御
      */
@@ -150,6 +152,7 @@ public class FighterTemplet{
     public int getMagicDefend(){
         return magicDefend;
     }
+
 
     /**
      * 初始速度
@@ -165,6 +168,7 @@ public class FighterTemplet{
         return crit;
     }
 
+
     /**
      * 闪避
      */
@@ -179,6 +183,7 @@ public class FighterTemplet{
         return block;
     }
 
+
     /**
      * 抗暴
      */
@@ -192,6 +197,7 @@ public class FighterTemplet{
     public int getHit(){
         return hit;
     }
+
 
     /**
      * 破格

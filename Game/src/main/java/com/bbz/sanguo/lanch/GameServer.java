@@ -1,5 +1,6 @@
 package com.bbz.sanguo.lanch;
 
+import com.bbz.sanguo.cfg.CfgInit;
 import com.bbz.sanguo.net.GameHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,21 +26,23 @@ public class GameServer{
         server = new Server( ServerCfg.IP, ServerCfg.PORT, handler );
     }
 
+    public static void main( String[] args ) throws IOException{
+        GameServer server = new GameServer();
+        server.start();
+    }
+
     public void start() throws IOException{
         logger.info( "服务器[{}]开始启动", ServerCfg.SERVER_ID );
         logger.info( "服务器区id：\t\t{}", ServerCfg.SERVER_ID );
         logger.info( "服务器ip：\t\t{}", ServerCfg.IP );
         logger.info( "服务器监听端口：\t{}", ServerCfg.PORT );
         logger.info( "服务器管理端口：\t{}", ServerCfg.GM_PORT );
+        CfgInit.init();
+        logger.info( "服务器[{}]配置文件读取完毕......", ServerCfg.SERVER_ID );
         server.start();
         logger.info( "服务器[{}]启动完毕......", ServerCfg.SERVER_ID );
 
-        AtomicBoolean s = new AtomicBoolean(  );
+        AtomicBoolean s = new AtomicBoolean();
         s.set( false );
-    }
-
-    public static void main( String[] args ) throws IOException{
-        GameServer server = new GameServer();
-        server.start();
     }
 }
