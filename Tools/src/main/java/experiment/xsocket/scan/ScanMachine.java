@@ -1,11 +1,11 @@
 package experiment.xsocket.scan;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import org.xsocket.connection.BlockingConnectionPool;
 import org.xsocket.connection.IBlockingConnection;
 
 import java.io.IOException;
-import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -21,9 +21,13 @@ public class ScanMachine{
     private static final int THREAD_COUNT = 2000;
     private static final int DURATION = MAX_PORT / THREAD_COUNT;
     private static final int SCAN_MSECOND = 2000;
-    private Map<Integer, Boolean> result = Maps.newConcurrentMap();
+    private Set<Integer> result = Sets.newHashSet();
 
     public static void main( String[] args ) throws InterruptedException{
+//        BlockingConnectionPool pool = new BlockingConnectionPool();
+//        pool.setMaxActive( 10 );
+//        pool.getBlockingConnection( "localhost", 139, SCAN_MSECOND );
+
         long begin = System.nanoTime();
         new ScanMachine().doScan( "localhost" );
         System.out.println( "操作耗时：" + (System.nanoTime() - begin) / 1000000000f + "秒" );
@@ -36,7 +40,7 @@ public class ScanMachine{
         }
         service.shutdown();
         service.awaitTermination( 1000, TimeUnit.SECONDS );
-        for( Integer integer : result.keySet() ) {
+        for( Integer integer : result ) {
             System.out.print( integer + "," );
         }
         System.out.println();
@@ -66,7 +70,7 @@ public class ScanMachine{
                     System.out.println( Thread.currentThread().getName() + "正在扫描:" + port );
                     bc = pool.getBlockingConnection( host, port, SCAN_MSECOND );
                     bc.close();
-                    result.put( port, true );
+                    result.add( port );
                 } catch( IOException e ) {
 //                    result.put( port, false );
                     if( bc != null ) {

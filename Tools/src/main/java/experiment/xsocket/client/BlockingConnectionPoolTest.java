@@ -20,28 +20,26 @@ public class BlockingConnectionPoolTest{
         IBlockingConnection bc = null;
 
         String host = "localhost";
-        int port = 8000;
+        int port = 80;
         long begin = System.nanoTime();
         try {
             bc = pool.getBlockingConnection( host, port, 3000 );
-            bc.write( "Hello" );
-            bc.write( "刘老爷\r\n" );
+            bc.write( "GET /" );
+            bc.write( "\r\n\r\n" );
+            System.out.println( bc.readStringByDelimiter( "\r\n\r\n" ) );
+            System.out.println( bc.readStringByLength( 556 ) );
 
-            Thread.currentThread().sleep( 50000 );
             bc.close();
         } catch( IOException e ) {
             System.out.println( "操作耗时：" + (System.nanoTime() - begin) / 1000000000f + "秒" );
-//            e.printStackTrace();
             if( bc != null ) {
                 try {
                     pool.destroy( bc );
                     System.out.println( "pool.destroy( bc );" );
                 } catch( IOException e1 ) {
-
+                    e1.printStackTrace();
                 }
             }
-        } catch( InterruptedException e ) {
-            e.printStackTrace();
         }
     }
 
