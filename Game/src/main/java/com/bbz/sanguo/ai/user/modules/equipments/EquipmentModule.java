@@ -37,7 +37,7 @@ public class EquipmentModule{
     public void levelUp( long equipmentId ){
         Equipment equipment = getEquipmentById( equipmentId );
         if( equipment == null ) {
-            throw new ClientException( ErrorCode.EQUPMENT_NOT_FOUND, equipmentId + "不存在" );
+            throw new ClientException( ErrorCode.EQUPMENT_NOT_FOUND );
         }
         //equipment.levelUp();
     }
@@ -68,7 +68,7 @@ public class EquipmentModule{
     public void addLevel( long equipmentId, int addValue ){
         Equipment equipment = equipments.get( equipmentId );
         if( equipment == null ) {
-            throw new ClientException( ErrorCode.EQUPMENT_NOT_FOUND, equipmentId + "不存在" );
+            throw new ClientException( ErrorCode.EQUPMENT_NOT_FOUND );
         }
         equipment.addLevel( addValue );
         db.updateWithField( equipment, "level", equipment.getLevel() );

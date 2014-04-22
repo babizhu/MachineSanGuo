@@ -8,22 +8,24 @@ import java.net.Socket;
 
 /**
  * Created by Administrator on 14-1-16.
+ * guava中EventBus的测试代码，一个简单的聊天服务器
  */
-public class EventBusChat {
+public class EventBusChat{
 
 
-    public static void main(String[] args) {
+    @SuppressWarnings("InfiniteLoopStatement")
+    public static void main( String[] args ){
         EventBus channel = new EventBus();
         ServerSocket socket;
         try {
-            socket = new ServerSocket(4444);
-            while (true) {
+            socket = new ServerSocket( 4444 );
+            while( true ) {
                 Socket connection = socket.accept();
-                UserThread newUser = new UserThread(connection, channel);
-                channel.register(newUser);
+                UserThread newUser = new UserThread( connection, channel );
+                channel.register( newUser );
                 newUser.start();
             }
-        } catch (IOException e) {
+        } catch( IOException e ) {
             e.printStackTrace();
         }
     }

@@ -44,7 +44,7 @@ class WebServerHandler implements IHttpRequestHandler{
 
         resp.setHeader( "Server", "likun" );
         exchange.send( resp );
-        System.out.println( "resp.getServer():" + resp.getHeader( "Server" ) );
     }
+
 }
 

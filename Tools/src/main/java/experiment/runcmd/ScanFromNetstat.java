@@ -17,7 +17,7 @@ import java.util.Map;
  */
 
 public class ScanFromNetstat{
-    private static final String PORT_CMD = "cmd /c netstat -ano -p tcp|find /i \"listen\"";// + PORT_FILE;
+    private static final String PORT_CMD = "cmd /c netstat -ano -p tcp|find /i \"listen\"";
     private static final String TASK_CMD = "cmd /c tasklist";
 
     public static void main( String[] args ) throws IOException, InterruptedException{
@@ -49,12 +49,12 @@ public class ScanFromNetstat{
         Map<Integer, String> map = Maps.newHashMap();
         int i = 0;
         for( String s : list ) {
-            System.out.println( s );
+            //System.out.println( s );
             if( i++ < 3 ) {
                 continue;
             }
 //            Iterable<String> split = Splitter.on( "  " ).omitEmptyStrings().trimResults().split( s );//不支持文件名包含空格的情况
-            int nameLen = 27, pidLen = 35;//进程名和pid各自的列长度
+            int nameLen = 27, pidLen = 34;//进程名和pid各自的列长度
             String pName = s.substring( 0, nameLen );
             String temp = s.substring( nameLen, pidLen ).trim();
             int pid = Integer.parseInt( temp );

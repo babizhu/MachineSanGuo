@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
 public class ClientException extends RuntimeException{
 
     private final ErrorCode code;
-    private final String msg;
+
 
     public static void main( String[] args ){
         System.out.println();

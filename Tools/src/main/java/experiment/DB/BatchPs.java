@@ -15,9 +15,9 @@ import java.sql.SQLException;
  */
 public class BatchPs{
 
-    public static void main(String[] args){
+    public static void main( String[] args ){
         PreparedStatement pst = null;
-        PreparedStatement pst1 = null;
+        PreparedStatement pst1;
 
 
         String sql1 = "INSERT INTO test1 VALUES (?,?)";
@@ -25,18 +25,18 @@ public class BatchPs{
         Connection con = DatabaseUtil.INSTANCE.getConnection();
 
         try {
-            con.setAutoCommit(false);
+            con.setAutoCommit( false );
 
-            pst = con.prepareStatement(sql1);
-            pst.setString(1, "lk");
-            pst.setInt(2, 30);
+            pst = con.prepareStatement( sql1 );
+            pst.setString( 1, "lk" );
+            pst.setInt( 2, 30 );
             pst.executeUpdate();
             pst.addBatch();
 //            pst.a
             con.commit();
-            pst1 = con.prepareStatement(sql1);
-            pst1.setString(1, "lklk");
-            pst1.setInt(2, 3030);
+            pst1 = con.prepareStatement( sql1 );
+            pst1.setString( 1, "lklk" );
+            pst1.setInt( 2, 3030 );
 //            pst.executeUpdate();
 //            pst1.addBatch();
 
@@ -46,7 +46,7 @@ public class BatchPs{
         } catch( SQLException e ) {
             e.printStackTrace();
         } finally {
-            DatabaseUtil.INSTANCE.close(null, pst, con);
+            DatabaseUtil.INSTANCE.close( null, pst, con );
         }
 
     }

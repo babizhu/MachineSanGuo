@@ -9,7 +9,9 @@ import com.mongodb.WriteResult;
  * user         LIUKUN
  * time         14-3-27 下午3:51
  * <p/>
- * 负责处理具有唯一id的实体类,构造函数包括2个，一个用户名，一个表名
+ * 负责处理用户名为唯一标示符的数据结构，也就是说此数据在数据库中仅有一条记录，例如
+ * 玩家信息（体力、元宝等），
+ * 构造函数需要指定的参数包括2个，一个用户名，一个表名
  */
 
 public abstract class AbstractDataProviderWithUserName<T>{

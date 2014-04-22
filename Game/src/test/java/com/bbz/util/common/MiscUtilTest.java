@@ -39,14 +39,6 @@ public class MiscUtilTest{
         assertEquals( true, MiscUtil.isWindowsOS() );
     }
 
-    @Test
-    public void testSecondsToDateStr() throws Exception{
-        int second = 1397013038;
-        String str = MiscUtil.secondsToDateStr( second );
-        System.out.println( str );
-        assertEquals( "2014-04-09 11:10:38", str );
-
-    }
 
     @Test
     public void testBufToString() throws Exception{

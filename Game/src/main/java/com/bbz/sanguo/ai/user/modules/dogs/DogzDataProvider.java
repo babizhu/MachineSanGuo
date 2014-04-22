@@ -8,11 +8,11 @@ import com.mongodb.DBObject;
  * time         14-3-26 下午2:38
  */
 
-public class DogsDataProvider extends AbstractDataProviderWithIdentity<Dogz>{
+public class DogzDataProvider extends AbstractDataProviderWithIdentity<Dogz>{
 
-    private static final String TABLE_NAME = "dogs";
+    private static final String TABLE_NAME = "dogz";
 
-    public DogsDataProvider( String uname ){
+    public DogzDataProvider( String uname ){
         super( TABLE_NAME, uname );
     }
 

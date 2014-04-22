@@ -1,6 +1,8 @@
 package com.bbz.sanguo.ai.user.modules.equipments;
 
+import com.bbz.sanguo.cfg.equipment.EquipmentTempletCfg;
 import com.bbz.util.common.RandomUtil;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,6 +14,11 @@ import static org.junit.Assert.assertEquals;
 
 public class EquipmentManagerTest{
 
+    @Before
+    public void setUp() throws Exception{
+        EquipmentTempletCfg.init();
+
+    }
 
     @Test
     public void buildData() throws Exception{

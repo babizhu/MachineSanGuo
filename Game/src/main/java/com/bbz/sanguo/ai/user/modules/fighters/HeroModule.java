@@ -35,7 +35,7 @@ public class HeroModule{
     public void levelUp( int heroId ){
         Hero hero = getHeroById( heroId );
         if( hero == null ) {
-            throw new ClientException( ErrorCode.HERO_NOT_FOUND, heroId + "不存在" );
+            throw new ClientException( ErrorCode.HERO_NOT_FOUND );
         }
         hero.levelUp();
     }

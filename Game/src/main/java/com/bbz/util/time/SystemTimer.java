@@ -25,16 +25,30 @@ class DaemonThreadFactory implements ThreadFactory{
 
 public class SystemTimer{
     private static final ScheduledExecutorService s = Executors.newSingleThreadScheduledExecutor( new DaemonThreadFactory() );
+    /**
+     * 执行的时间间隔，也就是说没50ms取一次系统时间
+     */
+    private final static int TICK_UNIT = 50;
+    private volatile static long time = System.currentTimeMillis();
 
     private SystemTimer(){
 
     }
 
-    private volatile static long time = System.currentTimeMillis();
-    /**
-     * 执行的时间间隔，也就是说没50ms取一次系统时间
-     */
-    private final static int TICK_UNIT = 50;
+    public static long currentTimeMillis(){
+        return time;
+    }
+
+    public static int currentTimeSecond(){
+        return (int) (time / 1000);
+    }
+
+    public static void main( String[] args ) throws InterruptedException{
+        for( int i = 0; i < 10; i++ ) {
+            System.out.println( currentTimeMillis() );
+            Thread.sleep( 1000 );
+        }
+    }
 
     private static class TimerTicker implements Runnable{
 
@@ -52,25 +66,10 @@ public class SystemTimer{
         Runtime.getRuntime().addShutdownHook( new Thread(){
             @Override
             public void run(){
-                System.out.println( "system will down" );
+                System.out.println( "SystemTimer thread will down" );
                 s.shutdown();
 
             }
         } );
-    }
-
-    public static long currentTimeMillis(){
-        return time;
-    }
-
-    public static int currentTimeSecond(){
-        return (int) (time / 1000);
-    }
-
-    public static void main( String[] args ) throws InterruptedException{
-        for( int i = 0; i < 10; i++ ) {
-            System.out.println( currentTimeMillis() );
-            Thread.sleep( 1000 );
-        }
     }
 }

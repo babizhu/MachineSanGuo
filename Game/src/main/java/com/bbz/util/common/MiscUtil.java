@@ -1,8 +1,5 @@
 package com.bbz.util.common;
 
-import com.bbz.util.D;
-import org.joda.time.DateTime;
-
 import java.nio.ByteBuffer;
 
 /**
@@ -47,16 +44,6 @@ public class MiscUtil{
         return isWindowsOS;
     }
 
-    /**
-     * 把一个用秒数保存的时间值转换为易读的字符串
-     *
-     * @param seconds 秒数
-     * @return 易读的字符串
-     */
-    public static String secondsToDateStr( int seconds ){
-        DateTime dateTime = new DateTime( seconds * 1000l );
-        return dateTime.toString( D.DATA_FORMAT_STR );
-    }
 
     /**
      * 返回按字节为单位收到的客户端传来的数据信息

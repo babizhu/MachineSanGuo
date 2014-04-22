@@ -16,7 +16,7 @@ import java.util.List;
 
 public class RechargeModule{
 
-    //private final ModuleManager                 moduleManager;
+    //private final ModuleManager               moduleManager;
     private final PropertyModule propModule;
     private final RechargeDataProvider db;
     private List<RechargeRecord> rechargeRecordList;

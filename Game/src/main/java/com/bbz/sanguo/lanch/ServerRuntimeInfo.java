@@ -11,7 +11,7 @@ import org.joda.time.DateTime;
  */
 @ToString
 public class ServerRuntimeInfo{
-    private final int   serverId;
+    private final int serverId;
     /**
      * 启动时间,秒为单位
      */
@@ -22,24 +22,24 @@ public class ServerRuntimeInfo{
         startTime = SystemTimer.currentTimeSecond();
     }
 
-    /**
-     * 格式化启动时间
-     * @return 时间字符串
-     */
-    public String getStartTime(){
-        DateTime dateTime = new DateTime( startTime * 1000l );
-
-        return dateTime.toString("yyyy/MM/dd HH:mm:ss");
-    }
-
-    public int getServerId(){
-        return serverId;
-    }
-
     public static void main( String[] args ){
         ServerRuntimeInfo info = new ServerRuntimeInfo( 10002 );
         System.out.println( info.getServerId() );
         System.out.println( info );
         System.out.println( info.getStartTime() );
+    }
+
+    /**
+     * 格式化启动时间
+     *
+     * @return 时间字符串
+     */
+    public String getStartTime(){
+        DateTime dateTime = new DateTime( startTime * 1000l );
+        return dateTime.toString( "yyyy/MM/dd HH:mm:ss" );
+    }
+
+    public int getServerId(){
+        return serverId;
     }
 }

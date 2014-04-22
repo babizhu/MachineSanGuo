@@ -14,23 +14,24 @@ import java.util.List;
  * Time: 下午5:06
  * To change this template use File | Settings | File Templates.
  */
-public class FileTest {
+public class FileTest{
 
 
-    void readFile() {
-        File file = new File(getClass().getResource("/test.txt").getFile());
-        List<String> lines = null;
-        try {
-            lines = Files.readLines(file, Charsets.UTF_8);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(lines);
-        System.out.println(lines.size());
-
+    public static void main( String[] args ) throws IOException{
+        new FileTest().readFile();
     }
 
-    public static void main(String[] args) throws IOException {
-        new FileTest().readFile();
+    void readFile(){
+        File file = new File( getClass().getResource( "/test.txt" ).getFile() );
+        List<String> lines = null;
+        try {
+            lines = Files.readLines( file, Charsets.UTF_8 );
+        } catch( IOException e ) {
+            e.printStackTrace();
+        }
+        System.out.println( lines );
+        assert lines != null;
+        System.out.println( lines.size() );
+
     }
 }
