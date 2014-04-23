@@ -51,5 +51,9 @@ public class ServerCfg{
         SERVER_ID = Integer.parseInt( prop.getProperty( "serverId" ).trim() );
 
     }
+
+    public static void main( String[] args ){
+        System.out.println( ServerCfg.GM_PORT );
+    }
 }
 
