@@ -1,6 +1,5 @@
 package util;
 
-import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.google.common.io.Resources;
 
@@ -24,16 +23,31 @@ public class FileUtil{
      * @param path 要读取的文本路径
      * @return list
      */
-    public static List<String> readList(String path){
+    public static List<String> readList(String path, Charset charset ){
         File file = new File(path);
         List<String> lines = null;
         try {
-            lines = Files.readLines(file, Charsets.UTF_8);
+            lines = Files.readLines(file, charset);
         } catch( IOException e ) {
             e.printStackTrace();
         }
 
         return lines;
+    }
+
+    public static List<String> readList(String path){
+        return readList( path,Charset.defaultCharset() );
+    }
+
+    /**
+     * 根据文件名删除文件
+     * @param path
+     */
+    public static void delFile( String path ){
+        File file = new File( path );
+        if( file.exists() ){
+            file.delete();
+        }
     }
 
     /**
