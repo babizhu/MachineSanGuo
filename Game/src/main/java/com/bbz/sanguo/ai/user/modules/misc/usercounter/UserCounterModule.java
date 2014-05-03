@@ -2,7 +2,6 @@ package com.bbz.sanguo.ai.user.modules.misc.usercounter;
 
 import com.bbz.sanguo.ai.user.ModuleManager;
 import com.bbz.sanguo.ai.user.modules.misc.MiscDataKey;
-import com.bbz.util.D;
 import com.google.common.base.Joiner;
 
 /**
@@ -31,9 +30,8 @@ public class UserCounterModule{
 
     public int get( MiscDataKey key, Object... args ){
         String buildKey = buildKey( key, args );
-        int count = data.get( buildKey );
 
-        return count;
+        return data.get( buildKey );
     }
 
     public void put( MiscDataKey key, int value, Object... args ){
@@ -76,18 +74,4 @@ public class UserCounterModule{
                 '}';
     }
 
-    public static void main( String[] args ){
-        ModuleManager manager = new ModuleManager( D.TEST_USER_NAME );
-        UserCounterModule module = new UserCounterModule( manager );
-
-        System.out.println( module );
-        int count = module.get( MiscDataKey.MOPPING_UP, 1, 1 );
-        System.out.println( count );//expect 0
-//        module.put( MiscDataKey.MOPPING_UP, 1999,1,2 );
-        System.out.println( module.get( MiscDataKey.MOPPING_UP,1,2 ));//expect 1999
-
-
-
-
-    }
 }

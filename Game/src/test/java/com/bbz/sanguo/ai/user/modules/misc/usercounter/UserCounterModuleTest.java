@@ -3,32 +3,33 @@ package com.bbz.sanguo.ai.user.modules.misc.usercounter;
 import com.bbz.sanguo.ai.user.ModuleManager;
 import com.bbz.sanguo.ai.user.modules.misc.MiscDataKey;
 import com.bbz.util.D;
-import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
- * 当日计数器有个地方不太好测试，如何测试明天的情况呢
- * 解决方案：
- *      测试完毕之后，暂时不要删测试数据，修改系统时间后，去UserCounterModule中调用main方法，完成测试
- *      取消tearDown()中的注释后重新测试，清除数据
+ *
  *
  */
-public class UserCounterModuleTest extends TestCase{
+public class UserCounterModuleTest{
     private ModuleManager manager = new ModuleManager( D.TEST_USER_NAME );
     private UserCounterModule module = new UserCounterModule( manager );
 
-    @Override
+    @Before
     public void setUp() throws Exception{
-        super.setUp();
         for( int i = 0; i < 10; i++ ) {
             module.put( MiscDataKey.MOPPING_UP, i, i, i );
         }
     }
 
-    @Override
+    @After
     public void tearDown() throws Exception{
-//        module.clear();
+        module.clear();
     }
 
+    @Test
     public void testGet() throws Exception{
         int count;
 
@@ -36,16 +37,20 @@ public class UserCounterModuleTest extends TestCase{
         assertEquals( 1, count );
     }
 
+    @Test
     public void testPut() throws Exception{
         module.put( MiscDataKey.MOPPING_UP, 100, "Today" );
         int count = module.get( MiscDataKey.MOPPING_UP, "Today" );
         assertEquals( 100, count );
     }
 
+    @Test
     public void testToString() throws Exception{
 
         System.out.println(module.toString());
     }
+
+    @Test
     public void testAdd() throws Exception{
         module.put( MiscDataKey.MOPPING_UP, 100, "Today" );
         int count = module.get( MiscDataKey.MOPPING_UP, "Today" );
@@ -57,5 +62,18 @@ public class UserCounterModuleTest extends TestCase{
         assertEquals( 150, count );
     }
 
+    /**
+     * 测试修改日期到第二天的执行情况
+     * @throws InterruptedException
+     */
+    @Test
+    public void testTomorrow() throws InterruptedException{
+        //!!修改当前时间到23:59:50，开始执行
+        int count = module.get( MiscDataKey.MOPPING_UP, 1,1 );
+        assertEquals( count, 1 );
+        Thread.sleep( 20000 );//等候20秒，让系统时间跳到第二天
+        count = module.get( MiscDataKey.MOPPING_UP, 1,1 );
+        System.out.println( "MiscDataKey.MOPPING_UP value is " + count );//因为改了时间，因此expect 0，不用assertEquals是避免maven过不了
+    }
 
 }

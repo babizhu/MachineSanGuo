@@ -8,7 +8,7 @@ import com.bbz.sanguo.ai.user.modules.property.PropertyModule;
 /**
  * user         LIUKUN
  * time         2014-4-28 19:56
- * 摇钱树模块
+ * 摇钱树模块,内部记录当日摇钱次数以及重置次数版本，未采用UserCount
  */
 
 public class MoneyTreeModule{
@@ -22,7 +22,7 @@ public class MoneyTreeModule{
         db = new MoneyTreeDataProvider( moduleManager.getUserName() );
         propModule = moduleManager.getPropertyModule();
         record = db.findOne();
-        System.out.println( record );
+//        System.out.println( record );
     }
 
     /**
@@ -41,7 +41,7 @@ public class MoneyTreeModule{
     private void check(){
         int maxCount = 43;
         if( record.getTimes().getCount() > maxCount ) {
-            throw new ClientException( ErrorCode.EQUPMENT_NOT_FOUND );
+            throw new ClientException( ErrorCode.MONEY_TREE_RUN_UPPER_LIMIT );
         }
     }
 

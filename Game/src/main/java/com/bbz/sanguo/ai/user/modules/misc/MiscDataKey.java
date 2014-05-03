@@ -11,7 +11,12 @@ public enum MiscDataKey{
     ENEMY( 1 ), /**
      * 个关卡的扫荡次数
      */
-    MOPPING_UP( 2 );
+    MOPPING_UP( 2 ),
+
+    /**
+     * 摇钱树
+     */
+    MONEY_TREE(3);
 
     private final int number;
 

@@ -10,7 +10,12 @@ import java.util.Map;
 public enum ErrorCode{
     SUCCESS( 0 ),
     HERO_NOT_FOUND( 1000 ),
-    EQUPMENT_NOT_FOUND( 2000 );
+    EQUPMENT_NOT_FOUND( 2000 ),
+    /**
+     * 摇钱树今日运行次数超上限
+     */
+    MONEY_TREE_RUN_UPPER_LIMIT(3000);
+
     private static final Map<Integer, ErrorCode> numToEnum = new HashMap<>();
 
     static{

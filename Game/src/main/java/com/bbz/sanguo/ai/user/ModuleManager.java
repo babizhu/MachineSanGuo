@@ -1,5 +1,6 @@
 package com.bbz.sanguo.ai.user;
 
+import com.bbz.sanguo.ai.user.modules.misc.usercounter.UserCounterModule;
 import com.bbz.sanguo.ai.user.modules.property.PropertyModule;
 import com.bbz.sanguo.ai.user.modules.recharge.RechargeModule;
 
@@ -17,20 +18,28 @@ public class ModuleManager{
 
     private final String                    userName;
 
-    public PropertyModule getPropertyModule(){
-        return propertyModule;
-    }
-
     private final PropertyModule            propertyModule;
-    private RechargeModule                  rechargeModule;
+
+    private final UserCounterModule         userCounterModule;
 
     public ModuleManager( String uname ){
         this.userName = uname;
         propertyModule = new PropertyModule( this );
+        userCounterModule = new UserCounterModule( this );
 
     }
 
     public RechargeModule getRechargeModule(){
         return rechargeModule;
+    }
+
+    private RechargeModule                  rechargeModule;
+
+    public UserCounterModule getUserCounterModule(){
+        return userCounterModule;
+    }
+
+    public PropertyModule getPropertyModule(){
+        return propertyModule;
     }
 }
