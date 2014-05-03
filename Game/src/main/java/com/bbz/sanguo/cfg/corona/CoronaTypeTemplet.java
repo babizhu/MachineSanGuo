@@ -4,83 +4,86 @@ import org.jdom2.Element;
 
 /**
  * 模版
- *
  * @author liukun
- *         2014-4-25 16:19:49
+ * 2014-5-1 0:05:28
  */
-public class CoronaTypeTemplet{
+public class CoronaTypeTemplet {
 
     /**
-     * 类型id
-     */
+	 * 类型id
+	 */
     private final int id;
-    /**
-     * 类型名称
-     */
+
+
+
+	/**
+	 * 类型id
+	 */
+	public int getId() {
+		return id;
+	}/**
+	 * 类型名称
+	 */
     private final String typeNeame;
-    /**
-     * 权重
-     */
+
+
+
+	/**
+	 * 类型名称
+	 */
+	public String getTypeNeame() {
+		return typeNeame;
+	}/**
+	 * 权重
+	 */
     private final int weight;
-    /**
-     * 该类物品最大数量
-     */
+
+
+
+	/**
+	 * 权重
+	 */
+	public int getWeight() {
+		return weight;
+	}/**
+	 * 该类物品最大数量
+	 */
     private final int numberMax;
-    /**
-     * 获得该类物品权重
-     */
+
+
+
+	/**
+	 * 该类物品最大数量
+	 */
+	public int getNumberMax() {
+		return numberMax;
+	}/**
+	 * 获得该类物品权重
+	 */
     private final int getWeight;
 
 
-    public CoronaTypeTemplet( Element element ){
-        id = Integer.parseInt( element.getChildText( "id" ).trim() );
-        typeNeame = element.getChildText( "typeNeame" ).trim();
-        weight = Integer.parseInt( element.getChildText( "weight" ).trim() );
-        numberMax = Integer.parseInt( element.getChildText( "numberMax" ).trim() );
-        getWeight = Integer.parseInt( element.getChildText( "getWeight" ).trim() );
 
-    }
+	/**
+	 * 获得该类物品权重
+	 */
+	public int getGetWeight() {
+		return getWeight;
+	}
 
-    /**
-     * 类型id
-     */
-    public int getId(){
-        return id;
-    }
+	public CoronaTypeTemplet( Element element ) {
+		id = Integer.parseInt( element.getChildText("id").trim() );
+typeNeame = element.getChildText("typeNeame").trim();
+weight = Integer.parseInt( element.getChildText("weight").trim() );
+numberMax = Integer.parseInt( element.getChildText("numberMax").trim() );
+getWeight = Integer.parseInt( element.getChildText("getWeight").trim() );
 
+	}
 
-    /**
-     * 类型名称
-     */
-    public String getTypeNeame(){
-        return typeNeame;
-    }
-
-    /**
-     * 权重
-     */
-    public int getWeight(){
-        return weight;
-    }
-
-    /**
-     * 该类物品最大数量
-     */
-    public int getNumberMax(){
-        return numberMax;
-    }
-
-    /**
-     * 获得该类物品权重
-     */
-    public int getGetWeight(){
-        return getWeight;
-    }
-
-    @Override
-    public String toString(){
-        return "CoronaTypeTemplet [id = " + id + ",typeNeame = " + typeNeame + ",weight = " + weight + ",numberMax = " + numberMax + ",getWeight = " + getWeight + "]";
-    }
+	@Override
+	public String toString() {
+		return "CoronaTypeTemplet [id = " + id + ",typeNeame = " + typeNeame + ",weight = " + weight + ",numberMax = " + numberMax + ",getWeight = " + getWeight + "]";
+	}
 
 	/*自定义代码开始*//*自定义代码结束*/
 }

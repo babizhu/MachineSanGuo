@@ -12,62 +12,60 @@ import java.util.Map;
 
 /**
  * 模版配置
- *
  * @author liukun
- *         2014-4-25 16:19:49
+ * 2014-5-1 0:05:28
  */
-public class CoronaTypeTempletCfg{
-    private static final Map<Integer, CoronaTypeTemplet> coronaTypeTemplets = new HashMap<>();
+public class CoronaTypeTempletCfg {
+	private static final Map<Integer,CoronaTypeTemplet> coronaTypeTemplets = new HashMap<>();
 
 
-    static{
-        //init();
+	static{
+		//init();
 
-    }
+	}
+	private static final String FILE = "./resource/xml/corona/coronaType.xml";
 
-    private static final String FILE = "./resource/xml/corona/coronaType.xml";
 
 
-    public static void init(){
+	public static void init(){
 
-        SAXBuilder builder = new SAXBuilder();
-        Document document;
-        try {
-            document = builder.build( FILE );
-            Element root = document.getRootElement();
-            List<?> list = root.getChildren( "CoronaType" );
+		SAXBuilder builder = new SAXBuilder();
+		Document document;
+		try {
+			document = builder.build( FILE );
+			Element root = document.getRootElement();
+			List<?> list = root.getChildren( "CoronaType" );
 
-            for( Object o : list ) {
-                CoronaTypeTemplet templet = new CoronaTypeTemplet( (Element) o );
-                CoronaTypeTemplet temp = coronaTypeTemplets.put( templet.getId(), templet );
-                if( temp != null ) {
-                    throw new RuntimeException( "CoronaTypeTemplet id [" + temp.getId() + "] 重复了" );
-                }
+			for (Object o : list) {
+				CoronaTypeTemplet templet = new CoronaTypeTemplet( (Element) o );
+				CoronaTypeTemplet temp = coronaTypeTemplets.put( templet.getId(), templet );
+				if( temp != null ){
+					throw new RuntimeException( "CoronaTypeTemplet id [" + temp.getId() + "] 重复了" );
+				}
 
-            }
-        } catch( JDOMException | IOException e ) {
-            e.printStackTrace();
+			}
+		} catch (JDOMException | IOException e) {
+		    e.printStackTrace();
         }
 
-        System.out.println( "CoronaTypeTemplet xml配置文件解析完毕" );
-    }
+		System.out.println( "CoronaTypeTemplet xml配置文件解析完毕" );
+	}
 
 
-    /**
-     * 通过id获取CoronaTypeTemplet的引用
-     *
-     * @param templetId id
-     * @return 返回一个引用
-     */
-    public static CoronaTypeTemplet getCoronaTypeTempletById( int templetId ){
-        return coronaTypeTemplets.get( templetId );
-    }
+	/**
+	 * 通过id获取CoronaTypeTemplet的引用
+	 * @param   templetId   id
+	 * @return  返回一个引用
+	 */
+	public static CoronaTypeTemplet getCoronaTypeTempletById( int templetId ){
+		return coronaTypeTemplets.get( templetId );
+	}
 
 	/*自定义代码开始*//*自定义代码结束*/
 
-    public static void main( String[] args ){
+	public static void main(String[] args) {
 
-        int id = 100001;
-        System.out.println( getCoronaTypeTempletById( id ) );
-    }
+		int id = 100001;
+		System.out.println( getCoronaTypeTempletById( id ) );
+	}
 }

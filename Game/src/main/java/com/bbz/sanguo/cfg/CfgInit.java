@@ -15,10 +15,10 @@ import com.bbz.sanguo.cfg.fighter.FighterTempletCfg;
 public class CfgInit{
     public static void init(){
 
-        CoronaBankTempletCfg.init();
-        CoronaTypeTempletCfg.init();
-        EquipmentTempletCfg.init();
-        FighterTempletCfg.init();
+       CoronaBankTempletCfg.init();
+CoronaTypeTempletCfg.init();
+EquipmentTempletCfg.init();
+FighterTempletCfg.init();
 
     }
 }

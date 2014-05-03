@@ -34,47 +34,14 @@ class MiscDataProvider extends AbstractDataProviderWithUserName<Map<String, Obje
     }
 
     @Override
-    protected DBObject encode( Map<String, Object> stringObjectMap ){
+    protected DBObject encode( Map<String, Object> map ){
         DBObject obj = new BasicDBObject();
         obj.put( "_id", getUname() );
-        for( Map.Entry<String, Object> entry : stringObjectMap.entrySet() ) {
+        for( Map.Entry<String, Object> entry : map.entrySet() ) {
             obj.put( entry.getKey(), entry.getValue() );
         }
         return obj;
     }
 
-
-//    @Override
-//    protected UserProperty decode( DBObject object ){
-//        UserProperty property = new UserProperty();
-//        if( object == null ) {
-//            return property;
-//        }
-//        property.setExp( (int) object.get( "exp" ) );
-//        property.setGold( (int) object.get( "gold" ) );
-//        property.setCash( (int) object.get( "cash" ) );
-//        property.setExp( (int) object.get( "exp" ) );
-//        property.setAdult( (Boolean) object.get( "isAdult" ) );
-//        property.setNickName( (String) object.get( "nickName" ) );
-//        return property;
-//    }
-//
-//    @Override
-//    protected DBObject encode( Object o ){
-//        return null;
-//    }
-//
-//    @Override
-//    protected DBObject encode( UserProperty property ){
-//
-//        DBObject obj = new BasicDBObject();
-//        obj.put( "_id", getUname() );
-//        obj.put( "exp", property.getExp() );
-//        obj.put( "gold", property.getGold() );
-//        obj.put( "cash", property.getCash() );
-//        obj.put( "isAdult", property.isAdult() );
-//        obj.put( "nickName", property.getNickName() );
-//        return obj;
-//    }
 
 }

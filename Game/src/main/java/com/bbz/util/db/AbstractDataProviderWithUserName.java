@@ -95,7 +95,7 @@ public abstract class AbstractDataProviderWithUserName<T>{
 //        return map;
 //    }
 
-    protected abstract T decode( DBObject object );
+    protected abstract T decode( DBObject obj );
 
     protected abstract DBObject encode( T t );
 
@@ -113,14 +113,29 @@ public abstract class AbstractDataProviderWithUserName<T>{
 //    }
 
     /**
-     * 更新一个对象的某个字段，如果不存在此记录，会添加
+     * 更新一个对象的某个字段，
+     * 如果不存在此记录，会添加
+     *
+     * 如果有合乎条件的多条记录，则仅会更新第一条记录
      *
      * @param fieldName  要更新的列名
      * @param fieldValue 要更新的内容
      */
     public void updateWithField( String fieldName, Object fieldValue ){
-        BasicDBObject condition = new BasicDBObject( "_id", uname );
-        BasicDBObject updateField = new BasicDBObject( "$set", new BasicDBObject( fieldName, fieldValue ) );
+        updateWithField(new BasicDBObject( fieldName, fieldValue ) );
+    }
+
+    /**
+     * 可以同时更新多个字段，只要在obj中存放多个字段值
+     * 如果不存在此记录，会添加
+     *
+     * 如果有合乎条件的多条记录，则仅会更新第一条记录
+     *
+     * @param obj           要更新的字段-值（支持多个）
+     */
+    public void updateWithField( DBObject obj ){
+        DBObject condition = new BasicDBObject( "_id", uname );
+        DBObject updateField = new BasicDBObject( "$set", obj );
 //        collection.updateMulti( condition, updateField );
         collection.update( condition, updateField, true, false );
     }

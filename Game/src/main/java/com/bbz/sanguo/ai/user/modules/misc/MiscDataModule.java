@@ -1,6 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.misc;
 
 import com.bbz.sanguo.ai.user.ModuleManager;
+import com.google.common.base.Joiner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,37 +24,43 @@ public class MiscDataModule{
         data = db.findOne();
     }
 
-    public String getString( DataKey key, Object... args ){
-        String keyStr = buildKey( key, args );
-        String ret = (String) data.get( keyStr );
+    public String getString( MiscDataKey key, Object... args ){
+        String buildKey = buildKey( key, args );
+        String ret = (String) data.get( buildKey );
         if( ret == null ) {
             ret = "";
         }
         return ret;
     }
 
-    public int getInt( DataKey key, Object... args ){
-        String keyStr = buildKey( key, args );
-        Integer ret = (Integer) data.get( keyStr );
+    public int getInt( MiscDataKey key, Object... args ){
+        String buildKey = buildKey( key, args );
+        Integer ret = (Integer) data.get( buildKey );
         if( ret == null ) {
             ret = 0;
         }
         return ret;
     }
 
-    private String buildKey( DataKey key, Object[] args ){
-        String ret = key.toString();
-        for( Object arg : args ) {
-            ret += arg;
-        }
+    /**
+     * 为了性能考虑把key转为了数字，减少存储所需要的话费，劣势在于调试不变
+     * 可根据需要灵活变更
+     * @param key       key
+     * @param args      参数
+     * @return          完整的参数
+     */
+    private String buildKey( MiscDataKey key, Object[] args ){
+        String ret = key.toNum() + "_";//_为分隔符，防止1和11分不清楚
+        ret += Joiner.on( "_" ).join(args);
+
         return ret;
     }
 
-    public void put( DataKey key, Object value, Object... args ){
-        String keyStr = buildKey( key, args );
-        data.put( keyStr, value );
+    public void put( MiscDataKey key, Object value, Object... args ){
+        String buildKey = buildKey( key, args );
+        data.put( buildKey, value );
         //db.replace( data );不用整体更新
-        db.updateWithField( keyStr, value );
+        db.updateWithField( buildKey, value );
     }
 
     /**

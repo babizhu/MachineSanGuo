@@ -298,7 +298,7 @@ public class MongoDbTest{
 
     @Test
     /**
-     * 或查询
+     * "或"查询
      * select * from table where name  = '12' or times = 5
      * @param coll
      */

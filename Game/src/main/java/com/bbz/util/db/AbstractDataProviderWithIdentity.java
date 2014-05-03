@@ -27,95 +27,9 @@ public abstract class AbstractDataProviderWithIdentity<T extends IdentityObj>{
         collection = MongoUtil.INSTANCE.getDB().getCollection( tableName );
     }
 
-    protected abstract T decode( DBObject object );
+    protected abstract T decode( DBObject obj );
 
     protected abstract DBObject encode( T t );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public T findOne( DBObject condition ){
         return decode( collection.findOne( condition ) );

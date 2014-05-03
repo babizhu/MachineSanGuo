@@ -22,24 +22,24 @@ public class MiscDataModuleTest{
 
         for( int i = 0; i < 10; i++ ) {
 
-            module.put( DataKey.MOPPING_UP, i, i );
+            module.put( MiscDataKey.MOPPING_UP, i, i );
         }
-        module.put( DataKey.ENEMY, "大英雄" );
+        module.put( MiscDataKey.ENEMY, "大英雄" );
 
     }
 
     @Test
     public void testGetString() throws Exception{
-        String str = module.getString( DataKey.ENEMY );
+        String str = module.getString( MiscDataKey.ENEMY );
         assertEquals( "大英雄", str );
     }
 
     @Test
     public void testGetInt() throws Exception{
-        int count = module.getInt( DataKey.MOPPING_UP, 1 );
+        int count = module.getInt( MiscDataKey.MOPPING_UP, 1 );
         assertEquals( 1, count );
 
-        count = module.getInt( DataKey.MOPPING_UP, 20 );
+        count = module.getInt( MiscDataKey.MOPPING_UP, 20 );
         assertEquals( 0, count );
     }
 

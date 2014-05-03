@@ -13,20 +13,21 @@ import java.util.Map;
 /**
  * 模版配置
  * @author liukun
- * 2014-4-25 16:19:49
+ * 2014-5-1 0:05:28
  */
 public class CoronaBankTempletCfg {
 	private static final Map<Integer,CoronaBankTemplet> coronaBankTemplets = new HashMap<>();
 
 
 	static{
-        //init();
+		//init();
 
 	}
 	private static final String FILE = "./resource/xml/corona/coronaBank.xml";
 
 
-    public static void init(){
+
+	public static void init(){
 
 		SAXBuilder builder = new SAXBuilder();
 		Document document;
