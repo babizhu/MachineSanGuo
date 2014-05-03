@@ -24,7 +24,11 @@ public class UserCounterModule{
 
     public int get( MiscDataKey key, Object... args ){
         String buildKey = buildKey( key, args );
-        return data.get( buildKey );
+        int count = data.get( buildKey );
+        if( !data.isToday() ){
+            clear();
+        }
+        return count;
     }
 
     public void put( MiscDataKey key, int value, Object... args ){

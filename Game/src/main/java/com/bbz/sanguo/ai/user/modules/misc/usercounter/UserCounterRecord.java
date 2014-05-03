@@ -31,8 +31,9 @@ class UserCounterRecord{
      * @return          数量
      */
     int get( String  key ){
-        if( !TimeUtil.isToday( timeStamp ) ){
+        if( !isToday() ){
             data.clear();
+            timeStamp = SystemTimer.currentTimeSecond();//防止外层反复调用数据库
             return 0;
         }
         return data.get( key );
@@ -70,5 +71,9 @@ class UserCounterRecord{
     void clear(){
         data.clear();
         timeStamp = 0;
+    }
+
+    boolean isToday(){
+        return TimeUtil.isToday( timeStamp );
     }
 }
