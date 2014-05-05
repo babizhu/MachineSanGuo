@@ -1,6 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.property;
 
-import com.bbz.util.db.AbstractDataProviderWithUserName;
+import com.bbz.tool.db.AbstractDataProviderWithUserName;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 

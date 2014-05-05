@@ -1,6 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.dogs;
 
-import com.bbz.util.db.AbstractDataProviderWithIdentity;
+import com.bbz.tool.db.AbstractDataProviderWithIdentity;
 import com.mongodb.DBObject;
 
 /**

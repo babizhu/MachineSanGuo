@@ -1,6 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.property;
 
-import com.bbz.util.common.MiscUtil;
+import com.bbz.tool.common.MiscUtil;
 import lombok.Data;
 
 /**

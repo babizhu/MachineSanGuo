@@ -6,6 +6,7 @@ import com.bbz.sanguo.ai.user.ModuleManager;
 import com.bbz.sanguo.ai.user.modules.misc.MiscDataKey;
 import com.bbz.sanguo.ai.user.modules.misc.usercounter.UserCounterModule;
 import com.bbz.sanguo.ai.user.modules.property.PropertyModule;
+import com.bbz.sanguo.ai.user.modules.property.UserPropertyType;
 
 /**
  * user         LIUKUN
@@ -14,12 +15,13 @@ import com.bbz.sanguo.ai.user.modules.property.PropertyModule;
  */
 
 public class MoneyTreeSpecialModule{
-    public final UserCounterModule          userCounterModule;
-    private final PropertyModule            propModule;
+    public static final String FUNC_NAME = MoneyTreeSpecialModule.class + "recharge";
+    public final UserCounterModule userCounterModule;
+    private final PropertyModule propModule;
 
     public MoneyTreeSpecialModule( ModuleManager moduleManager ){
         this.userCounterModule = moduleManager.getUserCounterModule();
-        this.propModule = moduleManager.getPropertyModule();;
+        this.propModule = moduleManager.getPropertyModule();
     }
 
     /**
@@ -31,13 +33,14 @@ public class MoneyTreeSpecialModule{
         int money = 100;
 
         userCounterModule.add( MiscDataKey.MONEY_TREE, 1 );//今日摇钱次数加1
+        propModule.changeValue( UserPropertyType.CASH, money, FUNC_NAME );
         return money;
     }
 
     private void check(){
         int maxCount = 20;
-        int runCount =userCounterModule.get( MiscDataKey.MONEY_TREE );
-        if( runCount > maxCount ){
+        int runCount = userCounterModule.get( MiscDataKey.MONEY_TREE );
+        if( runCount > maxCount ) {
             throw new ClientException( ErrorCode.MONEY_TREE_RUN_UPPER_LIMIT );
         }
     }

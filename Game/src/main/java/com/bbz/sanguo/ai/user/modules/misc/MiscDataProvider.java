@@ -1,6 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.misc;
 
-import com.bbz.util.db.AbstractDataProviderWithUserName;
+import com.bbz.tool.db.AbstractDataProviderWithUserName;
 import com.google.common.collect.Maps;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;

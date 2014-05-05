@@ -1,6 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.recharge;
 
-import com.bbz.util.db.AbstractDataProviderWithIdentity;
+import com.bbz.tool.db.AbstractDataProviderWithIdentity;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 
@@ -21,7 +21,7 @@ public class RechargeDataProvider extends AbstractDataProviderWithIdentity<Recha
     protected RechargeRecord decode( DBObject object ){
         RechargeRecord record = new RechargeRecord( (Long) object.get( "_id" ) );
         record.setMoney( (int) object.get( "money" ) );
-        record.setTime( (Integer) object.get("time") );
+        record.setTime( (Integer) object.get( "time" ) );
         return record;
     }
 

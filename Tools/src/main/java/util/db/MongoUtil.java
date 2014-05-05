@@ -1,6 +1,9 @@
 package util.db;
 
-import com.mongodb.*;
+import com.mongodb.DB;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientOptions;
+import com.mongodb.ServerAddress;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -11,17 +14,16 @@ import java.util.Properties;
 /**
  * user         LIUKUN
  * time         14-3-25 下午7:47
- *
+ * <p/>
  * to see:http://www.mongodb.org/display/DOCS/Java+Driver+Concurrency
  * Mongo工具类:设计为单例模式，每当月份发生变化，数据库连接名称就会发生变化，这是业务规则
  * 因 MongoDB的Java驱动是线程安全的，对于一般的应用，只要一个Mongo实例即可，Mongo有个内置的连接池（池大小默认为10个）。
  * 对于有大量写和读的环境中，为了确保在一个Session中使用同一个DB时，我们可以用以下方式保证一致性：
- *   DB mdb = mongo.getDB('dbname');
- *   mdb.requestStart();
- *   // 业务代码
- *   mdb.requestDone();
+ * DB mdb = mongo.getDB('dbname');
+ * mdb.requestStart();
+ * // 业务代码
+ * mdb.requestDone();
  * DB和DBCollection是绝对线程安全的
- *
  */
 public enum MongoUtil{
     INSTANCE;
@@ -47,6 +49,10 @@ public enum MongoUtil{
         } catch( IOException e ) {
             e.printStackTrace();
         }
+    }
+
+    public static void main( String[] args ){
+        System.out.println( 1 );
     }
 
     public DB getDB(){
@@ -79,10 +85,6 @@ public enum MongoUtil{
 
     public MongoClient getClient(){
         return client;
-    }
-
-    public static void main( String[] args ){
-        System.out.println( 1 );
     }
 
 }

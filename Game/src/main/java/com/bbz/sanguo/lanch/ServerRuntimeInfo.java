@@ -1,6 +1,6 @@
 package com.bbz.sanguo.lanch;
 
-import com.bbz.util.time.SystemTimer;
+import com.bbz.tool.time.SystemTimer;
 import lombok.ToString;
 import org.joda.time.DateTime;
 

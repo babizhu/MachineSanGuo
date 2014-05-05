@@ -1,7 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.equipments;
 
 import com.bbz.sanguo.cfg.equipment.EquipmentTempletCfg;
-import com.bbz.util.common.RandomUtil;
+import com.bbz.tool.common.RandomUtil;
 import org.junit.Before;
 import org.junit.Test;
 

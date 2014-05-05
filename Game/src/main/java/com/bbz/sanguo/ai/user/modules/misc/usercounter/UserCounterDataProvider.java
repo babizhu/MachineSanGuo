@@ -1,8 +1,8 @@
 package com.bbz.sanguo.ai.user.modules.misc.usercounter;
 
-import com.bbz.util.common.CountMap;
-import com.bbz.util.db.AbstractDataProviderWithUserName;
-import com.bbz.util.time.SystemTimer;
+import com.bbz.tool.common.CountMap;
+import com.bbz.tool.db.AbstractDataProviderWithUserName;
+import com.bbz.tool.time.SystemTimer;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 
@@ -11,20 +11,14 @@ import java.util.Map;
 /**
  * user         LIUKUN
  * time         2014/5/2 0002 13:06
- *
  */
 
 class UserCounterDataProvider extends AbstractDataProviderWithUserName<UserCounterRecord>{
 
-    private static final String TABLE_NAME = "userCounter";
     public static final String TIME_STAMP_FIELD = "timeStamp";
+    private static final String TABLE_NAME = "userCounter";
 
 
-    @Override
-    public UserCounterRecord findOne(){
-        DBObject condition = new BasicDBObject( "_id", uname );
-        return decode( collection.findOne( condition ) );
-    }
     /**
      * @param uname 玩家名称
      */
@@ -32,10 +26,17 @@ class UserCounterDataProvider extends AbstractDataProviderWithUserName<UserCount
         super( TABLE_NAME, uname );
     }
 
+    @Override
+    public UserCounterRecord findOne(){
+        DBObject condition = new BasicDBObject( "_id", uname );
+        return decode( collection.findOne( condition ) );
+    }
+
     /**
      * 更新某个字段的值，更新数据字段的时候要同时更新时间戳
-     * @param key               key
-     * @param value             value
+     *
+     * @param key   key
+     * @param value value
      */
     public void update( String key, int value ){
 //        System.out.println(new Exception().getStackTrace()[1].getMethodName());

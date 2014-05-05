@@ -2,8 +2,8 @@ package com.bbz.sanguo.ai.user.modules.fighters;
 
 import com.bbz.sanguo.ai.user.modules.equipments.Equipment;
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
-import com.bbz.util.common.MiscUtil;
-import com.bbz.util.db.IdentityObj;
+import com.bbz.tool.common.MiscUtil;
+import com.bbz.tool.db.IdentityObj;
 import com.google.common.collect.Sets;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

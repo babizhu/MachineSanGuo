@@ -1,7 +1,8 @@
 package com.bbz.sanguo.base.counter;
 
-import com.bbz.util.time.SystemTimer;
-import com.bbz.util.time.TimeUtil;
+
+import com.bbz.tool.time.SystemTimer;
+import com.bbz.tool.time.TimeUtil;
 
 /**
  * user         LIUKUN

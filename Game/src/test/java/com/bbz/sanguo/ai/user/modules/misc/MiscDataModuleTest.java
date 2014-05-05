@@ -46,7 +46,7 @@ public class MiscDataModuleTest{
 
     @After
     public void tearDown() throws Exception{
-        module.clear();
+//        module.clear();
 
     }
 

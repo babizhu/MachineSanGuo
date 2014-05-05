@@ -1,6 +1,9 @@
 package experiment.serialize.mongodb;
 
-import com.mongodb.*;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+import com.mongodb.WriteResult;
 import util.db.MongoUtil;
 
 import java.net.UnknownHostException;
@@ -32,7 +35,6 @@ public class MongoDb{
         System.out.println( collection.count() );
         print();
     }
-
 
 
     static void test(){

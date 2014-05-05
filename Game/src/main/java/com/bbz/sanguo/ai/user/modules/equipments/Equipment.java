@@ -2,7 +2,7 @@ package com.bbz.sanguo.ai.user.modules.equipments;
 
 import com.bbz.sanguo.cfg.equipment.EquipmentTemplet;
 import com.bbz.sanguo.cfg.equipment.EquipmentTempletCfg;
-import com.bbz.util.db.IdentityObj;
+import com.bbz.tool.db.IdentityObj;
 import lombok.Data;
 
 /**
@@ -16,10 +16,10 @@ public class Equipment implements IdentityObj{
     /**
      * 唯一标识
      */
-    private final long                  id;
+    private final long id;
 
-    private final EquipmentTemplet      templet;
-    private int                         level;
+    private final EquipmentTemplet templet;
+    private int level;
 
     public Equipment( long id, int templetId ){
         this.id = id;

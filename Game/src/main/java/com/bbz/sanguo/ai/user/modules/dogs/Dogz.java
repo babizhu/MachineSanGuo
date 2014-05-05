@@ -1,6 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.dogs;
 
-import com.bbz.util.db.IdentityObj;
+import com.bbz.tool.db.IdentityObj;
 import lombok.Data;
 
 /**

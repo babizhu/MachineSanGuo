@@ -29,6 +29,7 @@
     <bytecodeTargetLevel>
       <module name="Game" target="1.7" />
       <module name="MachineSanGuo" target="1.7" />
+      <module name="ToolBox" target="1.7" />
       <module name="Tools" target="1.7" />
     </bytecodeTargetLevel>
   </component>

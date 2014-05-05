@@ -38,6 +38,7 @@ public class MoneyTreeModule{
         return money;
     }
 
+
     private void check(){
         int maxCount = 43;
         if( record.getTimes().getCount() > maxCount ) {

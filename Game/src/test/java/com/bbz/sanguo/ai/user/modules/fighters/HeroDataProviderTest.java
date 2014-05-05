@@ -3,8 +3,8 @@ package com.bbz.sanguo.ai.user.modules.fighters;
 import com.bbz.sanguo.ai.user.modules.equipments.Equipment;
 import com.bbz.sanguo.cfg.fighter.FighterTemplet;
 import com.bbz.sanguo.cfg.fighter.FighterTempletCfg;
+import com.bbz.tool.common.RandomUtil;
 import com.bbz.util.D;
-import com.bbz.util.common.RandomUtil;
 import com.google.common.collect.Sets;
 import org.junit.Before;
 

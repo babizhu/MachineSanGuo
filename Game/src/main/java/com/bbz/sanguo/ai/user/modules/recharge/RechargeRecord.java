@@ -1,7 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.recharge;
 
-import com.bbz.util.db.IdentityObj;
-import com.bbz.util.time.SystemTimer;
+import com.bbz.tool.db.IdentityObj;
+import com.bbz.tool.time.SystemTimer;
 import lombok.Data;
 
 /**
@@ -16,16 +16,16 @@ public class RechargeRecord implements IdentityObj{
     /**
      * 充值流水号
      */
-    private final long                  id;
+    private final long id;
     /**
      * 充值的钱数，rmb or dollar
      */
-    private int                         money;
+    private int money;
 
     /**
      * 充值时间
      */
-    private int                         time;
+    private int time;
 
     public RechargeRecord( long id, int money ){
         this.id = id;

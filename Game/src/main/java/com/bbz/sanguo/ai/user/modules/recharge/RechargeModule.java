@@ -3,20 +3,19 @@ package com.bbz.sanguo.ai.user.modules.recharge;
 import com.bbz.sanguo.ai.user.ModuleManager;
 import com.bbz.sanguo.ai.user.modules.property.PropertyModule;
 import com.bbz.sanguo.ai.user.modules.property.UserPropertyType;
-import com.bbz.util.identity.IdentityGen;
+import com.bbz.tool.identity.IdentityGen;
 
 import java.util.List;
 
 /**
  * user         LIUKUN
  * time         2014-4-9 17:52
- * <p/>
  * 充值管理器
  */
 
 public class RechargeModule{
 
-    //private final ModuleManager               moduleManager;
+    public static final String FUNC_NAME = RechargeModule.class + "recharge";
     private final PropertyModule propModule;
     private final RechargeDataProvider db;
     private List<RechargeRecord> rechargeRecordList;
@@ -25,14 +24,16 @@ public class RechargeModule{
      */
     private int money;
 
-
     public RechargeModule( ModuleManager moduleManager ){
+
+        String funcName = getClass().getName() + "recharge";
 //        this.moduleManager = moduleManager;
         propModule = moduleManager.getPropertyModule();
         db = new RechargeDataProvider( moduleManager.getUserName() );
         rechargeRecordList = db.getListAll();
         for( RechargeRecord record : rechargeRecordList ) {
             money += record.getMoney();
+
         }
     }
 
@@ -48,14 +49,13 @@ public class RechargeModule{
         db.add( record );
 
         int gold = money;//应该有个兑换比例
-        String funcName = getClass().getName() + "recharge";
-        propModule.changeValue( UserPropertyType.GOLD, gold, funcName );
+
+        propModule.changeValue( UserPropertyType.GOLD, gold, FUNC_NAME );
         this.money += money;
     }
 
     public int getMoney(){
         return money;
     }
-
 
 }

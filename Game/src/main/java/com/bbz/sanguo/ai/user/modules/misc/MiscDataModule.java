@@ -44,6 +44,7 @@ public class MiscDataModule{
 
     public void put( MiscDataKey key, Object value, Object... args ){
         String buildKey = key.buildKey( args );
+        System.out.println( buildKey );
         data.put( buildKey, value );
         //db.replace( data );不用整体更新
         db.updateWithField( buildKey, value );

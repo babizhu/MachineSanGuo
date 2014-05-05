@@ -1,7 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.property;
 
+import com.bbz.tool.common.RandomUtil;
 import com.bbz.util.D;
-import com.bbz.util.common.RandomUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
