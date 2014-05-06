@@ -1,5 +1,7 @@
 package com.bbz.sanguo.ai.user.modules.moneytree;
 
+import com.bbz.sanguo.ai.user.User;
+
 /**
  * user         LIUKUN
  * time         2014-5-5 13:50
@@ -19,5 +21,5 @@ public interface IMoneyTreeService{
      *
      * @return int[0] = 今日摇钱次数 int[1] = 今日重置次数
      */
-    public int[] getData();
+    public int[] getData( User user );
 }

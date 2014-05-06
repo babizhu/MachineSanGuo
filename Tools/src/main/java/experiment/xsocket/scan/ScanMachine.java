@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * user         LIUKUN
  * time         2014-4-22 15:34
+ * 通过conncet()获取目标机器打开的端口
  */
 
 

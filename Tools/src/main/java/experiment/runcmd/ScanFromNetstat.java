@@ -14,6 +14,7 @@ import java.util.Map;
 /**
  * user         LIUKUN
  * time         2014/4/23 0023 22:20
+ * 通过调用系统命令netstat和tasklist来获取当前计算机打开的端口
  */
 
 public class ScanFromNetstat{

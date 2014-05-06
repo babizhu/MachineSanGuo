@@ -115,7 +115,7 @@
 
 
         <dependency>
-            <groupId>com.bbz.plugin</groupId>
+            <groupId>com.bbz.misc</groupId>
             <artifactId>tool</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

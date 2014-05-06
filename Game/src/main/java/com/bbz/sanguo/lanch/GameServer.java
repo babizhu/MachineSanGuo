@@ -8,7 +8,6 @@ import org.xsocket.connection.IServer;
 import org.xsocket.connection.Server;
 
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * user         LIUKUN
@@ -26,11 +25,6 @@ public class GameServer{
         server = new Server( ServerCfg.IP, ServerCfg.PORT, handler );
     }
 
-    public static void main( String[] args ) throws IOException{
-        GameServer server = new GameServer();
-        server.start();
-    }
-
     public void start() throws IOException{
         logger.info( "服务器[{}]开始启动", ServerCfg.SERVER_ID );
         logger.info( "服务器区id：\t\t{}", ServerCfg.SERVER_ID );
@@ -42,7 +36,5 @@ public class GameServer{
         server.start();
         logger.info( "服务器[{}]启动完毕......", ServerCfg.SERVER_ID );
 
-        AtomicBoolean s = new AtomicBoolean();
-        s.set( false );
     }
 }

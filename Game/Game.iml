@@ -36,7 +36,7 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.6" level="project" />
     <orderEntry type="library" name="Maven: janino:janino:2.5.10" level="project" />
     <orderEntry type="library" name="Maven: org.xlightweb:xlightweb:2.13.2" level="project" />
-    <orderEntry type="library" name="Maven: com.bbz.plugin:tool:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.bbz.misc:tool:1.0-SNAPSHOT" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
