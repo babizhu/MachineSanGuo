@@ -50,6 +50,7 @@ class TenThousandConHandler implements IDataHandler, IConnectHandler, IConnectio
 public class TenThousandConServer{
     public static void main( String[] args ) throws IOException{
         IServer server = new Server( "localhost", 8000, new TenThousandConHandler() );
+
         server.start();
     }
 }
