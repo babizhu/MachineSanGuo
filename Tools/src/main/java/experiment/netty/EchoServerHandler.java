@@ -1,5 +1,6 @@
 package experiment.netty;
 
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -26,16 +27,12 @@ public class EchoServerHandler extends ChannelHandlerAdapter{
         ctx.writeAndFlush( msg );
     }
 
-    @Override
-    public void channelReadComplete( ChannelHandlerContext ctx ) throws Exception{
-//        ctx.flush();
-    }
 
     @Override
     public void exceptionCaught( ChannelHandlerContext ctx, Throwable cause ){
         // Close the connection when an exception is raised.
         logger.log( Level.WARNING, "Unexpected exception from downstream.", cause );
-        ctx.close();
+        ChannelFuture close = ctx.close();
     }
 
     @Override
