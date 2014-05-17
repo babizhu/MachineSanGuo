@@ -20,6 +20,7 @@ public class UserCounterModule{
     public UserCounterModule( ModuleManager manager ){
         db = new UserCounterDataProvider( manager.getUserName() );
         data = db.findOne();
+
     }
 
     public int get( MiscDataKey key, Object... args ){

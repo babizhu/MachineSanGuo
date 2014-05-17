@@ -19,6 +19,12 @@ class UserCounterDataProvider extends AbstractDataProviderWithUserName<UserCount
     private static final String TABLE_NAME = "userCounter";
     public static final String TIME_STAMP_FIELD = "timeStamp";
 
+
+    @Override
+    public UserCounterRecord findOne(){
+        DBObject condition = new BasicDBObject( "_id", uname );
+        return decode( collection.findOne( condition ) );
+    }
     /**
      * @param uname 玩家名称
      */
