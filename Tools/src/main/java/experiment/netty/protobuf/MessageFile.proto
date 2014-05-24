@@ -1,0 +1,24 @@
+package experiment.netty.protobuf; //生成文件至com.djyou.protoBufModel;
+//令生成java文件名称为 Message
+option java_outer_classname = "Message";
+//此段代码是令 生成的java代码 继承GeneratedMessageLite
+//继承GeneratedMessageLite的好处是 可以使用jboss提供的 编解码器
+//可以认为是 比写项
+option optimize_for = LITE_RUNTIME;
+//创建一个装载消息的对象
+message MessageInfo {
+    // required 必须为成员变量赋值
+    // optional int32 opt = 1[default = 10] 这种写法为成员变量设置默认值
+    // optional int32 opt =1 的意思不是为 这个变量赋值为1 而是代表的生成代码顺序
+    //repeated 集合
+    optional int32 header = 1;
+
+    //    repeated Body body = 2;
+    //
+    //    optional int32 stateCoede = 3;
+}
+
+message Body {
+    optional string key = 1;
+    optional string value = 2;
+}

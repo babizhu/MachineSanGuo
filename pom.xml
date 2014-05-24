@@ -125,6 +125,11 @@
             <artifactId>netty-all</artifactId>
             <version>5.0.0.Alpha1</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>2.4.1</version>
+        </dependency>
 
     </dependencies>
 
@@ -134,6 +139,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
+                    <optimize>true</optimize>
                     <source>1.7</source>
                     <target>1.7</target>
                     <encoding>UTF-8</encoding>

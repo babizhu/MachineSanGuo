@@ -1,4 +1,4 @@
-package experiment.netty.telnet;
+package experiment.netty.web;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.EventLoopGroup;
@@ -7,13 +7,15 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * user         LIUKUN
- * time         2014-5-8 14:59
+ * time         2014-5-20 16:14
+ * <p/>
+ * 学习用Netty实现http server
  */
 
-public class TelnetServer{
+public class WebServer{
     private final int port;
 
-    public TelnetServer( int port ){
+    public WebServer( int port ){
         this.port = port;
     }
 
@@ -24,7 +26,7 @@ public class TelnetServer{
         } else {
             port = 8000;
         }
-        new TelnetServer( port ).run();
+        new WebServer( port ).run();
     }
 
     public void run() throws Exception{
@@ -34,11 +36,13 @@ public class TelnetServer{
             ServerBootstrap b = new ServerBootstrap();
             b.group( bossGroup, workerGroup )
                     .channel( NioServerSocketChannel.class )
-                    .childHandler( new TelnetServerInitializer() );
+                    .childHandler( new WebServerInitializer() );
+
             b.bind( port ).sync().channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
     }
+
 }

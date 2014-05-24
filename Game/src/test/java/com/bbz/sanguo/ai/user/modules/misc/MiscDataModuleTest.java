@@ -25,6 +25,7 @@ public class MiscDataModuleTest{
             module.put( MiscDataKey.MOPPING_UP, i, i );
         }
         module.put( MiscDataKey.ENEMY, "大英雄" );
+        module.put( MiscDataKey.MAX_MISSION_ID, 4 );
 
     }
 
@@ -32,6 +33,7 @@ public class MiscDataModuleTest{
     public void testGetString() throws Exception{
         String str = module.getString( MiscDataKey.ENEMY );
         assertEquals( "大英雄", str );
+
     }
 
     @Test
@@ -41,8 +43,10 @@ public class MiscDataModuleTest{
 
         count = module.getInt( MiscDataKey.MOPPING_UP, 20 );
         assertEquals( 0, count );
-    }
 
+        int maxMissionId = module.getInt( MiscDataKey.MAX_MISSION_ID );
+        assertEquals( 4, maxMissionId );
+    }
 
     @After
     public void tearDown() throws Exception{

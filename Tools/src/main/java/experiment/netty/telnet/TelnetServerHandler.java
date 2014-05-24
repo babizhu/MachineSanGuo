@@ -46,6 +46,11 @@ public class TelnetServerHandler extends SimpleChannelInboundHandler<String>{
     }
 
     @Override
+    public void channelInactive( ChannelHandlerContext ctx ) throws Exception{
+        System.out.println( ctx.channel().remoteAddress() + " is disconnect!" );
+    }
+
+    @Override
     public void channelReadComplete( ChannelHandlerContext ctx ) throws Exception{
         ctx.flush();
     }
@@ -54,5 +59,6 @@ public class TelnetServerHandler extends SimpleChannelInboundHandler<String>{
     public void exceptionCaught( ChannelHandlerContext ctx, Throwable cause ) throws Exception{
         logger.warn( "Unexpected exception from downstream.", cause );
         ctx.close();
+//        ChannelInvoker
     }
 }

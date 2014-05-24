@@ -21,7 +21,11 @@ public enum MiscDataKey{
     /**
      * 摇钱树
      */
-    MONEY_TREE( 3 );
+    MONEY_TREE( 3 ),
+    /**
+     * 最大闯关数
+     */
+    MAX_MISSION_ID( 4 );
     private static final Map<Integer, MiscDataKey> numToEnum = new HashMap<>();
 
     static{

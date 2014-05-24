@@ -15,6 +15,7 @@ import java.util.concurrent.Executors;
 public class TenThousandConClient{
     private static final int MAX_COUNT = 1000;
 
+
     public static void main( String[] args ) throws IOException{
         new TenThousandConClient().run();
     }
