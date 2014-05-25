@@ -30,7 +30,7 @@ public class ScanMachine{
 //        pool.getBlockingConnection( "localhost", 139, SCAN_MSECOND );
 
         long begin = System.nanoTime();
-        new ScanMachine().doScan( "localhost" );
+        new ScanMachine().doScan( "192.168.31.1" );
         System.out.println( "操作耗时：" + (System.nanoTime() - begin) / 1000000000f + "秒" );
     }
 
