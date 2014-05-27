@@ -1,5 +1,6 @@
 package experiment.netty.protobuf.test;
 
+import experiment.netty.protobuf.test.handler.LoginHandler;
 import experiment.protocolgen.MsgProtocol;
 
 /**
@@ -19,7 +20,7 @@ public class MessageTest{
         MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
         MsgProtocol.Response.Builder builder1 = MsgProtocol.Response.newBuilder();
         MsgProtocol.LoginResponse.Builder builder2 = MsgProtocol.LoginResponse.newBuilder();
-        builder2.setCompany( 32 );
+        builder2.setRet( 32 );
         builder1.setLogin( builder2.build() );
         builder.setResponse( builder1.build() );
     }
@@ -36,7 +37,7 @@ public class MessageTest{
                     mb = new ProtoMessageHandler();
                     mb.SetType( item );
                     //mMessageTbl.put(item.getSimpleName(), mb);
-                    System.out.println( item );
+                    System.out.println( item.getSimpleName() );
                 }
             }
         } catch( Exception e ) {
@@ -46,13 +47,37 @@ public class MessageTest{
 
     }
 
-    private Object dispatch( MsgProtocol.Message msg ){
-        switch( msg.getType() ) {
-            case Login_Request:
-                break;
+    private void excute(){
+        MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
+        builder.setResponse( dispatch( null ) );
+        builder.setSequence( 120 );
+        builder.setType( MsgProtocol.MSG.Login_Response );
 
+
+    }
+
+    private MsgProtocol.Response.Builder dispatch( MsgProtocol.Message msg ){
+        MsgProtocol.Response.Builder result = MsgProtocol.Response.newBuilder();
+
+
+        try {
+            switch( msg.getType() ) {
+                case Login_Request:
+                    result.setLogin( (MsgProtocol.LoginResponse) new LoginHandler().run( msg.getRequest().getLogin() ) );
+                    break;
+                case Login_Response:
+                    break;
+                //case
+
+            }
+            result.setResult( true );
+        } catch( Exception e ) {
+            result.setResult( false );
+            result.setErrorDescription( "出错啦" );
         }
-        return null;
+
+        msg.getType().getDescriptorForType();
+        return result;
     }
 
 }

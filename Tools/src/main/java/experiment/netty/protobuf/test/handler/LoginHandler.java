@@ -1,29 +1,31 @@
 package experiment.netty.protobuf.test.handler;
 
 import com.google.protobuf.GeneratedMessage;
+import experiment.protocolgen.MsgProtocol;
 
-import static experiment.protocolgen.MsgProtocol.*;
+import static experiment.protocolgen.MsgProtocol.LoginRequest;
+import static experiment.protocolgen.MsgProtocol.MSG;
 
 /**
  * user         LIUKUN
  * time         2014-5-26 18:44
  */
 
-public class LoginHandler extends AbstractHandler{
+public class LoginHandler extends AbstractHandler<LoginRequest>{
 
     MSG msg = MSG.Login_Request;
 
+
     @Override
-    GeneratedMessage run( GeneratedMessage param ){
-        LoginRequest p = (LoginRequest) param;
-        p.getPassword();
-        p.getUsername();
+    public GeneratedMessage run( LoginRequest request ){
+        request.getPassword();
+        request.getUsername();
 
         //run logic
 
-        LoginResponse.Builder builder = LoginResponse.newBuilder();
-        builder.setCompany( 32 );
-        return builder.build();
+        MsgProtocol.LoginResponse.Builder builder = MsgProtocol.LoginResponse.newBuilder();
+        builder.setRet( 32 );
 
+        return builder.build();
     }
 }

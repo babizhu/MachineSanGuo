@@ -7,7 +7,7 @@ import com.google.protobuf.GeneratedMessage;
  * time         2014-5-26 18:44
  */
 
-public abstract class AbstractHandler{
+public abstract class AbstractHandler<T extends GeneratedMessage>{
 
-    abstract GeneratedMessage run( GeneratedMessage param );
+    public abstract GeneratedMessage run( T request );
 }

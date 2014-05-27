@@ -54,12 +54,12 @@ enum MSG {
 //    required bytes log_record = 1;
 //}
 message LoginRequest {
-    required bytes username = 1;
-    required bytes password = 2;
+    required string username = 1;
+    required string password = 2;
 }
 
 message LoginResponse {
-    optional int32 company = 6;
+    optional int32 ret = 6;
 }
 
 message MissionDataRequest {
@@ -67,7 +67,11 @@ message MissionDataRequest {
 }
 
 message MissionDataResponse {
-    optional string content = 1;
+    required int32 protectCount = 1; //总的保护的次数（最大8次，即3+5）
+    required bool isProtect = 2; //今日是否已保护
+    required int32 cd = 3; //剩余冷却时间（秒）
+    required int32 currentMission = 4; //当前关卡
+
 }
 
 //message EntityRequest
@@ -194,7 +198,7 @@ message Command
 
 message Message {
     required MSG type = 1;
-    required fixed32 sequence = 2;
+    required int32 sequence = 2;
     optional Request request = 3;
     optional Response response = 4;
     //optional Command  command = 5;
