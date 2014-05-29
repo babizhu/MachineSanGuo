@@ -26,7 +26,7 @@ public class GameClientHandler extends SimpleChannelInboundHandler<Message>{
 
     public int login( String uname, String password ){
         Message.Builder builder = Message.newBuilder();
-        builder.setType( MsgProtocol.MSG.Login_Response );
+        builder.setType( MsgProtocol.MSG.Login );
         builder.setSequence( 12121 );
 
         MsgProtocol.LoginRequest.Builder reqeustBuilder = MsgProtocol.LoginRequest.newBuilder();

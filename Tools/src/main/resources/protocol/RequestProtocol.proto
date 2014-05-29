@@ -1,0 +1,3 @@
+message LoginRequest {
+    optional int32 login = 1;
+}

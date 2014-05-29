@@ -1,8 +1,12 @@
 package experiment.netty.protowithgame.server;
 
+import experiment.netty.protowithgame.server.handler.AbstractHandler;
+import experiment.netty.protowithgame.server.handler.HandlerManager;
 import experiment.protocolgen.MsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+
+import static experiment.protocolgen.MsgProtocol.Response;
 
 /**
  * user         LIUKUN
@@ -12,23 +16,25 @@ import io.netty.channel.SimpleChannelInboundHandler;
 public class GameServerHandler extends SimpleChannelInboundHandler<MsgProtocol.Message>{
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, MsgProtocol.Message msg ) throws Exception{
-        String uname = msg.getRequest().getLogin().getUsername();
-        String password = msg.getRequest().getLogin().getPassword();
-
-        System.out.println( "uname " + uname + " password " + password );
 
 
         MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
-        builder.setType( MsgProtocol.MSG.Login_Response );
+        builder.setType( msg.getType() );
         builder.setSequence( msg.getSequence() );
 
-        MsgProtocol.Response.Builder builder1 = MsgProtocol.Response.newBuilder();
-        MsgProtocol.LoginResponse.Builder responseBuilder = MsgProtocol.LoginResponse.newBuilder();
-        responseBuilder.setRet( 999 );
-        builder1.setResult( true );
-        builder1.setLogin( responseBuilder.build() );
-        builder.setResponse( builder1.build() );
+        Response.Builder responseBuilder = Response.newBuilder();
+        try {
+            AbstractHandler handler = HandlerManager.INSTANCE.getHandler( msg.getType() );
+            handler.run( msg.getRequest(), responseBuilder );
+            responseBuilder.setResult( true );
 
+        } catch( Exception e ) {
+            responseBuilder.setResult( false );
+            responseBuilder.setErrorDescription( "error" );
+            e.printStackTrace();
+        }
+
+        builder.setResponse( responseBuilder );
         ctx.writeAndFlush( builder.build() );
 
     }

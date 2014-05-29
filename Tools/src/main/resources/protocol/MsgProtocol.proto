@@ -12,9 +12,12 @@ option optimize_for = SPEED;
 
 
 enum MSG {
-    Login_Request = 1001;
-    Login_Response = 1002;
+    Login = 1001;
 
+    /**
+    * 查看闯关信息
+    */
+    MissionShow = 1002;
 }
 
 //message EntityData
@@ -62,11 +65,12 @@ message LoginResponse {
     optional int32 ret = 6;
 }
 
-message MissionDataRequest {
+message MissionShowRequest {
     required int32 missionId = 1;
 }
 
-message MissionDataResponse {
+
+message MissionShowResponse {
     required int32 protectCount = 1; //总的保护的次数（最大8次，即3+5）
     required bool isProtect = 2; //今日是否已保护
     required int32 cd = 3; //剩余冷却时间（秒）
@@ -163,7 +167,7 @@ message MissionDataResponse {
 //}
 message Request {
     optional LoginRequest login = 1;
-    optional MissionDataRequest mission = 2;
+    optional MissionShowRequest missionSow = 2;
 }
 
 message Response {
@@ -171,8 +175,9 @@ message Response {
     optional string error_description = 2;
     //required bool last_block = 3;
 
+
     optional LoginResponse login = 3;
-    optional MissionDataResponse mission = 4;
+    optional MissionShowResponse missionShow = 4;
 }
 /*
 message Command
