@@ -9,6 +9,9 @@ import com.google.common.base.Joiner;
  * user         LIUKUN
  * time         2014/5/1 0001 11:45
  * 午夜12点到期的计数器
+ * 数据库中的过期数据在构造函数中清除
+ * 那么如果程序连续运行两天的话，就会出现数据库数据和内存数据不统一的情况
+ * 只要保证内存数据逻辑正确即可
  */
 public class UserCounterModule{
 //    private static Logger                   logger = LoggerFactory.getLogger( UserCounterModule.class );
