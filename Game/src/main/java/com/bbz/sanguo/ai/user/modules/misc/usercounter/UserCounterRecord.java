@@ -33,7 +33,6 @@ class UserCounterRecord{
     int get( String  key ){
         if( !isToday() ){
             data.clear();
-//            timeStamp = SystemTimer.currentTimeSecond();//防止外层反复调用数据库
             return 0;
         }
         return data.get( key );

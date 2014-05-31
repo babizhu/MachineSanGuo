@@ -20,15 +20,16 @@ public class UserCounterModule{
     public UserCounterModule( ModuleManager manager ){
         db = new UserCounterDataProvider( manager.getUserName() );
         data = db.findOne();
+        if( !data.isToday() ){
+            clear();
+        }
 
     }
 
     public int get( MiscDataKey key, Object... args ){
         String buildKey = buildKey( key, args );
         int count = data.get( buildKey );
-        if( !data.isToday() ){
-            clear();
-        }
+
         return count;
     }
 
