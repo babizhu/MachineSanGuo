@@ -25,6 +25,7 @@ public class TestServerHandler extends SimpleChannelInboundHandler<Object>{
     @Override
     public void channelRead( final ChannelHandlerContext ctx, Object msg ) throws Exception{
         System.out.println( ctx.channel().remoteAddress() + " read" );
+        ctx.close();
 
 //        System.out.println( 23 );
 //        ByteBuf buffer = ctx.alloc().buffer();

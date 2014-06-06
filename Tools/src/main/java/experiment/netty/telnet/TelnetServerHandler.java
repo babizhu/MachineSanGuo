@@ -15,19 +15,23 @@ import java.util.Date;
 public class TelnetServerHandler extends SimpleChannelInboundHandler<String>{
     public static final Logger logger = LoggerFactory.getLogger( TelnetServerHandler.class );
 
-    public TelnetServerHandler(){
-        System.out.println( getClass() );
+    public static void main( String[] args ){
+        byte[] bytes = "1".getBytes();
+        System.out.println( bytes[0] );
+        System.out.println( bytes.length );
     }
 
     @Override
     public void channelActive( ChannelHandlerContext ctx ) throws Exception{
-        ctx.write( "Welcome to " + InetAddress.getLocalHost().getHostName() + "!\r\n" );
+        ctx.write( "Welcome to " + InetAddress.getLocalHost().getHostName() + "\r\n" );
         ctx.write( "It is " + new Date() + " now.\r\n" );
+        ctx.write( (byte) 101 );
         ctx.flush();
     }
 
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, String msg ) throws Exception{
+        System.out.println( msg );
         String response;
         boolean close = false;
         if( msg.isEmpty() ) {

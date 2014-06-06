@@ -15,7 +15,9 @@ import static experiment.protocolgen.MsgProtocol.Response;
 
 public class GameServerHandler extends SimpleChannelInboundHandler<MsgProtocol.Message>{
     @Override
-    protected void messageReceived( ChannelHandlerContext ctx, MsgProtocol.Message msg ) throws Exception{
+    protected void messageReceive
+
+    d( ChannelHandlerContext ctx, MsgProtocol.Message msg ) throws Exception{
 
 
         MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
@@ -23,9 +25,17 @@ public class GameServerHandler extends SimpleChannelInboundHandler<MsgProtocol.M
         builder.setSequence( msg.getSequence() );
 
         Response.Builder responseBuilder = Response.newBuilder();
+        AbstractHandler handler = HandlerManager.INSTANCE.getHandler( msg.getType() );
+
+//        if( msg.getType(). == MsgProtocol.MSG.Login ){
+//            instanceof
+//        }
         try {
-            AbstractHandler handler = HandlerManager.INSTANCE.getHandler( msg.getType() );
-            handler.run( msg.getRequest(), responseBuilder );
+            if( true ) {
+                handler.run( msg.getRequest(), responseBuilder );
+            } else {
+
+            }
             responseBuilder.setResult( true );
 
         } catch( Exception e ) {
@@ -38,4 +48,5 @@ public class GameServerHandler extends SimpleChannelInboundHandler<MsgProtocol.M
         ctx.writeAndFlush( builder.build() );
 
     }
+
 }

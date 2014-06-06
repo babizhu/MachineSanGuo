@@ -18,6 +18,10 @@ enum MSG {
     * 查看闯关信息
     */
     MissionShow = 1002;
+    /**
+    * 检测昵称是否重复
+    */
+    NickNameCheck = 1003;
 }
 
 //message EntityData
@@ -57,12 +61,20 @@ enum MSG {
 //    required bytes log_record = 1;
 //}
 message LoginRequest {
-    required string username = 1;
+    required string userName = 1;
     required string password = 2;
 }
 
 message LoginResponse {
     optional int32 ret = 6;
+}
+
+message NickNameCheckRequest {
+    required string nickName = 1; //昵称
+}
+
+message NickNameCheckResponse {
+    required bool isDuplicate = 1; //昵称是否重复
 }
 
 message MissionShowRequest {
@@ -168,6 +180,7 @@ message MissionShowResponse {
 message Request {
     optional LoginRequest login = 1;
     optional MissionShowRequest missionSow = 2;
+    optional NickNameCheckRequest nickNameCheck = 3;
 }
 
 message Response {
@@ -178,6 +191,7 @@ message Response {
 
     optional LoginResponse login = 3;
     optional MissionShowResponse missionShow = 4;
+    optional NickNameCheckResponse nickNameCheck = 5;
 }
 /*
 message Command

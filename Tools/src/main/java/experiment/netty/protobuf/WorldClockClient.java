@@ -16,7 +16,7 @@ import java.util.List;
 
 public class WorldClockClient{
 
-//    static final boolean SSL = System.getProperty( "ssl" ) != null;
+    //    static final boolean SSL = System.getProperty( "ssl" ) != null;
 //    static final String HOST = System.getProperty( "host", "127.0.0.1" );
 //    static final int PORT = Integer.parseInt( System.getProperty( "port", "8463" ) );
     static final List<String> CITIES = Arrays.asList( System.getProperty(
@@ -32,18 +32,18 @@ public class WorldClockClient{
 
             Channel channel = bootstrap.connect( "localhost", 8000 ).sync().channel();
 
+
             WorldClockClientHandler handler = channel.pipeline().get( WorldClockClientHandler.class );
 
             List<String> response = handler.getLocalTimes( CITIES );
             channel.close();
-            for (int i = 0; i < CITIES.size(); i ++) {
+            for( int i = 0; i < CITIES.size(); i++ ) {
                 System.out.format( "%28s: %s%n", CITIES.get( i ), response.get( i ) );
             }
 
         } catch( InterruptedException e ) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             worker.shutdownGracefully();
         }
     }

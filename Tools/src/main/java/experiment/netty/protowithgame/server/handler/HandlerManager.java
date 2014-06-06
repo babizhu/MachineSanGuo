@@ -2,6 +2,7 @@ package experiment.netty.protowithgame.server.handler;
 
 import com.bbz.tool.common.StrUtil;
 import com.google.common.collect.Maps;
+import experiment.protocolgen.MsgProtocol;
 
 import java.util.Map;
 
@@ -26,15 +27,29 @@ public enum HandlerManager{
      */
     public static final String HANDLER_PACKAGE = "experiment.netty.protowithgame.server.handler.";
 
-    private Map<MSG, AbstractHandler> map = Maps.newHashMap();
+    /**
+     * 无需用户登录就能执行的handler
+     */
+    private Map<MSG, IHandlerWithoutUser> map1 = Maps.newHashMap();
+
+    /**
+     * 必须要用户登录才能执行的handler
+     */
+    private Map<MSG, IHandlerWithUser> map2 = Maps.newHashMap();
 
     HandlerManager(){
+
         for( MSG msg : MSG.values() ) {
-            map.put( msg, buildHandler( msg ) );
+            IHandler handler = buildHandler( msg );
+            if( handler instanceof IHandlerWithoutUser ) {
+                map1.put( msg, (IHandlerWithoutUser) handler );
+            } else {
+                map2.put( msg, (IHandlerWithUser) handler );
+            }
         }
 
         System.out.println( "消息——句柄对应信息：" );
-        System.out.println( map );
+//        System.out.println( map );
     }
 
     public static void main( String[] args ){
@@ -47,19 +62,26 @@ public enum HandlerManager{
      * @param msg   通信包标示符，来自proto文件定义
      * @return 相应的的handler类实例
      */
-    private AbstractHandler buildHandler( MSG msg ){
-        AbstractHandler handler = null;
+    private IHandler buildHandler( MSG msg ){
+
+        IHandler handler = null;
         String className = String.format( "%s%sHandler", HANDLER_PACKAGE, StrUtil.firstCharacterToUpper( msg.toString() ) );
 
         try {
-            handler = (AbstractHandler) Class.forName( className ).newInstance();
+            handler = (IHandler) Class.forName( className ).newInstance();
         } catch( ClassNotFoundException | InstantiationException | IllegalAccessException e ) {
             e.printStackTrace();
         }
         return handler;
     }
 
-    public AbstractHandler getHandler( MSG msg ){
-        return map.get( msg );
+    public IHandlerWithUser getHandlerWithUser( MSG msg ){
+        return map2.get( msg );
     }
+
+    public IHandlerWithoutUser getHandlerWithoutUser( MsgProtocol.Message msg ){
+        return map1.get( msg );
+    }
+
+
 }

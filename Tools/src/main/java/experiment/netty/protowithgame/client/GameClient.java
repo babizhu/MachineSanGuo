@@ -30,12 +30,22 @@ public class GameClient{
             Channel channel = bootstrap.connect( "localhost", PORT ).sync().channel();
 
             GameClientHandler handler = channel.pipeline().get( GameClientHandler.class );
-            int ret = handler.login( "bbzsssss", "pass123" );
+            handler.MissionShow();
 
-            System.out.println( "登录的结果 " + ret );
+
+//            int ret = handler.login( "bbz"+ RandomUtil.getInt( 1000 ), "pass123" );
+
+            //System.out.println( "登录的结果 " + ret );
+
+
+            for( int i = 0; i < 50000; i++ ) {
+                System.out.println( i );
+                Thread.sleep( 1 );
+                handler.MissionShow();
+            }
             channel.close();
 
-        } catch( InterruptedException e ) {
+        } catch( Exception e ) {
             e.printStackTrace();
         } finally {
             worker.shutdownGracefully();

@@ -82,6 +82,7 @@ public class WorldClockClientHandler extends SimpleChannelInboundHandler<LocalTi
     @Override
     public void channelRegistered( ChannelHandlerContext ctx ){
         channel = ctx.channel();
+
     }
 
     @Override

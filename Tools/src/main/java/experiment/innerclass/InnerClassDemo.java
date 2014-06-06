@@ -9,22 +9,27 @@ public class InnerClassDemo{
     private static int staticVar = 100;
     int var1;
 
-    void f(){
-        System.out.println();
+    static void staticFunc(){
+        System.out.println( "InnerClassDemo.staticFunc" );
     }
 
-    static void staticFunc(){
+    public static void main( String[] args ){
+        InnerClassDemo.StaticInnerClass.func2();
+        new InnerClassDemo.StaticInnerClass().func1();
+
+        InnerClassDemo.NonStaticInnerClass tool = new InnerClassDemo().new NonStaticInnerClass();
+        tool.func1();
+    }
+
+    void f(){
         System.out.println();
     }
 
     static class StaticInnerClass{
         static int staticInnerVar1;//静态内部类可以拥有静态内部变量
 
-        void func1(){
-            System.out.println("StaticInnerClass.func1()");
-        }
+        public static void func2(){
 
-        void func2(){
             //不能够从静态内部类的对象中访问外部类的非静态成员(包括成员变量与成员方法)
             //所以下面两句会出错
             //int n = var1;
@@ -34,9 +39,20 @@ public class InnerClassDemo{
             int n = staticVar;
             staticFunc();
         }
+
+        void func1(){
+//            int n = var1;
+            System.out.println( "StaticInnerClass.func1()" );
+        }
     }
 
     class NonStaticInnerClass{
-        //static int n;// FEI 静态内部类 BU 可以拥有静态内部变量
+        //static int n;// 非 静态内部类 不 可以拥有静态内部变量
+        public void func1(){
+            int n = var1;
+            n = staticVar;
+            staticFunc();
+
+        }
     }
 }

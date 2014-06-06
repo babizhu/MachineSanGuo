@@ -1,9 +1,7 @@
 package experiment.netty.protowithgame.client;
 
 import experiment.protocolgen.MsgProtocol;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.channel.*;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -24,6 +22,28 @@ public class GameClientHandler extends SimpleChannelInboundHandler<Message>{
         answer.add( msg );
     }
 
+    public void MissionShow(){
+        Message.Builder builder = Message.newBuilder();
+        builder.setType( MsgProtocol.MSG.MissionShow );
+        builder.setSequence( 123333 );
+
+        MsgProtocol.MissionShowRequest.Builder reqeustBuilder = MsgProtocol.MissionShowRequest.newBuilder();
+
+        reqeustBuilder.setMissionId( 5 );
+
+        builder.setRequest( MsgProtocol.Request.newBuilder().setMissionSow( reqeustBuilder.build() ) );
+
+
+        System.out.println( "channel.isOpen() " + channel.isOpen() );
+        channel.writeAndFlush( builder.build() ).addListener( new ChannelFutureListener(){
+            @Override
+            public void operationComplete( ChannelFuture future ) throws Exception{
+                System.out.println( future.isSuccess() );
+                System.out.println( future.cause() );
+            }
+        } );
+    }
+
     public int login( String uname, String password ){
         Message.Builder builder = Message.newBuilder();
         builder.setType( MsgProtocol.MSG.Login );
@@ -38,10 +58,11 @@ public class GameClientHandler extends SimpleChannelInboundHandler<Message>{
 
         channel.writeAndFlush( builder.build() );
 
-        int ret = -1;
+        int ret;
         boolean interrupted = false;
         for(; ; ) {
             try {
+                System.out.println( "等待login的结果" );
                 Message msg = answer.take();
                 ret = msg.getResponse().getLogin().getRet();
                 System.out.println( "结果" + msg.getResponse().getResult() );
@@ -65,4 +86,9 @@ public class GameClientHandler extends SimpleChannelInboundHandler<Message>{
         channel = ctx.channel();
     }
 
+    @Override
+    public void exceptionCaught( ChannelHandlerContext ctx, Throwable cause ) throws Exception{
+        super.exceptionCaught( ctx, cause );
+        cause.printStackTrace();
+    }
 }

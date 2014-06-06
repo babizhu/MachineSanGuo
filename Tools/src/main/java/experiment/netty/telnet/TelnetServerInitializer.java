@@ -21,7 +21,7 @@ public class TelnetServerInitializer extends ChannelInitializer<SocketChannel>{
 
     @Override
     protected void initChannel( SocketChannel ch ) throws Exception{
-        System.out.println( "initChannel" );
+
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast( "framer", new DelimiterBasedFrameDecoder( 8192, Delimiters.lineDelimiter() ) );
         pipeline.addLast( "decoder", DECODER );
