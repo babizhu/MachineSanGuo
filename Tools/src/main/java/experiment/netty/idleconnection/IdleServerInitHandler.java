@@ -23,6 +23,11 @@ public class IdleServerInitHandler extends ChannelInitializer<SocketChannel>{
         pipeline.addLast( new HeartbeatHandler() );
     }
 
+    @Override
+    public void channelInactive( ChannelHandlerContext ctx ) throws Exception{
+        System.out.println( ctx.channel().remoteAddress() + "disconnect" );
+    }
+
     public static final class HeartbeatHandler extends ChannelHandlerAdapter{
         private static final ByteBuf HEARTBEAT_SEQUENCE =
                 Unpooled.unreleasableBuffer( Unpooled.copiedBuffer(

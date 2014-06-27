@@ -36,7 +36,7 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
         Hero hero = new Hero( (Long) object.get( "_id" ), templet );
         hero.setName( (String) object.get( "name" ) );
         Set<Equipment> equipments = Sets.newHashSet();
-        long[] arr = Transform.ArrayType.toLong( (String) object.get( "equipmentS" ) );
+        long[] arr = Transform.ArrayType.toLongs( (String) object.get( "equipmentS" ) );
         EquipmentModule em = new EquipmentModule( "lk" );//TODO 需要考虑实际如何操作
         for( long id : arr ) {
             Equipment e = em.getEquipmentById( id );
@@ -54,7 +54,7 @@ public class HeroDataProvider extends AbstractDataProviderWithIdentity<Hero>{
     protected DBObject encode( Hero hero ){
         DBObject obj = new BasicDBObject();
         obj.put( "_id", hero.getId() );
-        obj.put( "uname", getUname() );
+        //obj.put( "uname", getUname() );
         obj.put( "name", hero.getName() );
         obj.put( "position", hero.getPosition() );
         String equipmentStr = "";

@@ -24,7 +24,7 @@ public class WebServer{
         if( args.length > 0 ) {
             port = Integer.parseInt( args[0] );
         } else {
-            port = 8000;
+            port = 80;
         }
         new WebServer( port ).run();
     }
@@ -39,6 +39,7 @@ public class WebServer{
                     .childHandler( new WebServerInitializer() );
 
             b.bind( port ).sync().channel().closeFuture().sync();
+
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();

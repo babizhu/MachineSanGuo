@@ -1,8 +1,6 @@
 package com.bbz.sanguo.ai.user.modules.misc;
 
 import com.bbz.sanguo.ai.user.ModuleManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -13,7 +11,7 @@ import java.util.Map;
  */
 
 public class MiscDataModule{
-    private static Logger logger = LoggerFactory.getLogger( MiscDataModule.class );
+//    private static Logger logger = LoggerFactory.getLogger( MiscDataModule.class );
 
     private final Map<String, Object> data;
     private final MiscDataProvider db;
@@ -23,6 +21,13 @@ public class MiscDataModule{
         data = db.findOne();
     }
 
+    /**
+     * 返回内容，如果不存在返回""
+     *
+     * @param key  key
+     * @param args 参数
+     * @return 返回字符串结果
+     */
     public String getString( MiscDataKey key, Object... args ){
         String buildKey = key.buildKey( args );
         String ret = (String) data.get( buildKey );
@@ -32,6 +37,13 @@ public class MiscDataModule{
         return ret;
     }
 
+    /**
+     * 返回内容，如果不存在返回0
+     *
+     * @param key  key
+     * @param args 参数
+     * @return 返回整型值的结果
+     */
     public int getInt( MiscDataKey key, Object... args ){
         String buildKey = key.buildKey( args );
         Integer ret = (Integer) data.get( buildKey );
@@ -53,6 +65,7 @@ public class MiscDataModule{
     /**
      * 目前是测试用的代码
      */
+    @SuppressWarnings("UnusedDeclaration")
     void clear(){
         data.clear();
         db.remove();

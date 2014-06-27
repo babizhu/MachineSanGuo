@@ -38,12 +38,12 @@ public class GameClient{
             //System.out.println( "登录的结果 " + ret );
 
 
-            for( int i = 0; i < 50000; i++ ) {
-                System.out.println( i );
-                Thread.sleep( 1 );
-                handler.MissionShow();
+            for( int i = 0; i < 0; i++ ) {
+                Thread.sleep( 10 );
+                //handler.MissionShow();
+                handler.login( "bbz", "pass" );
             }
-            channel.close();
+            //channel.close();
 
         } catch( Exception e ) {
             e.printStackTrace();

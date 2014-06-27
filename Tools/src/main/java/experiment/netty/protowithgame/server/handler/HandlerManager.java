@@ -2,7 +2,6 @@ package experiment.netty.protowithgame.server.handler;
 
 import com.bbz.tool.common.StrUtil;
 import com.google.common.collect.Maps;
-import experiment.protocolgen.MsgProtocol;
 
 import java.util.Map;
 
@@ -48,8 +47,9 @@ public enum HandlerManager{
             }
         }
 
-        System.out.println( "消息——句柄对应信息：" );
-//        System.out.println( map );
+//        System.out.println( "消息——句柄对应信息：" );
+//        System.out.println( map1 );
+//        System.out.println( map2 );
     }
 
     public static void main( String[] args ){
@@ -59,7 +59,7 @@ public enum HandlerManager{
     /**
      * 通过MSG，利用反射生成相应的处理句柄的实例
      *
-     * @param msg   通信包标示符，来自proto文件定义
+     * @param msg 通信包标示符，来自proto文件定义
      * @return 相应的的handler类实例
      */
     private IHandler buildHandler( MSG msg ){
@@ -79,9 +79,7 @@ public enum HandlerManager{
         return map2.get( msg );
     }
 
-    public IHandlerWithoutUser getHandlerWithoutUser( MsgProtocol.Message msg ){
+    public IHandlerWithoutUser getHandlerWithoutUser( MSG msg ){
         return map1.get( msg );
     }
-
-
 }

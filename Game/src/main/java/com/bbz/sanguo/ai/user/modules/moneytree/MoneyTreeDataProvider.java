@@ -42,7 +42,6 @@ public class MoneyTreeDataProvider extends AbstractDataProviderWithUserName<Mone
         DBObject obj = new BasicDBObject();
         obj.put( "times", MongoSerial.encode( record.getTimes() ) );
         obj.put( "resetTimes", MongoSerial.encode( record.getResetTimes() ) );
-        obj.put( "_id", getUname() );
         return obj;
     }
 }

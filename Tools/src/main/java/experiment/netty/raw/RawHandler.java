@@ -20,13 +20,13 @@ public class RawHandler extends ChannelHandlerAdapter{
         ByteBuf buf = (ByteBuf) msg;
         byte[] bytes = new byte[buf.readableBytes()];
         buf.readBytes( bytes );
-        System.out.println( bytes[0] );
+//        System.out.println( bytes[0] );
         System.out.println( new String( bytes ) );
 
 
-        buf.release();
+        //buf.release();
 
-        ctx.close();
+        //ctx.close();
     }
 
     @Override
@@ -35,7 +35,8 @@ public class RawHandler extends ChannelHandlerAdapter{
         ByteBuf buffer = ctx.alloc().buffer();
         buffer.writeByte( 97 );
         buffer.writeBytes( "you are the one!!!!!!!,wow kakakakka".getBytes() );
-        channel.writeAndFlush( "dsdsada" );
+//        channel.writeAndFlush( "dsdsada" );
+        ctx.writeAndFlush( buffer );
     }
 
     @Override

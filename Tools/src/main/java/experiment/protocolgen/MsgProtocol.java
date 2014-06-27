@@ -62,24 +62,24 @@ public final class MsgProtocol{
                         "plicate\030\001 \002(\010\"\'\n\022MissionShowRequest\022\021\n\tm" +
                         "issionId\030\001 \002(\005\"b\n\023MissionShowResponse\022\024\n" +
                         "\014protectCount\030\001 \002(\005\022\021\n\tisProtect\030\002 \002(\010\022\n" +
-                        "\n\002cd\030\003 \002(\005\022\026\n\016currentMission\030\004 \002(\005\"\303\001\n\007R" +
+                        "\n\002cd\030\003 \002(\005\022\026\n\016currentMission\030\004 \002(\005\"\304\001\n\007R" +
                         "equest\0223\n\005login\030\001 \001(\0132$.experiment.proto",
-                "colgen.LoginRequest\022>\n\nmissionSow\030\002 \001(\0132" +
-                        "*.experiment.protocolgen.MissionShowRequ" +
-                        "est\022C\n\rnickNameCheck\030\003 \001(\0132,.experiment." +
-                        "protocolgen.NickNameCheckRequest\"\363\001\n\010Res" +
-                        "ponse\022\016\n\006result\030\001 \002(\010\022\031\n\021error_descripti" +
-                        "on\030\002 \001(\t\0224\n\005login\030\003 \001(\0132%.experiment.pro" +
-                        "tocolgen.LoginResponse\022@\n\013missionShow\030\004 " +
-                        "\001(\0132+.experiment.protocolgen.MissionShow" +
-                        "Response\022D\n\rnickNameCheck\030\005 \001(\0132-.experi" +
-                        "ment.protocolgen.NickNameCheckResponse\"\254",
-                "\001\n\007Message\022)\n\004type\030\001 \002(\0162\033.experiment.pr" +
-                        "otocolgen.MSG\022\020\n\010sequence\030\002 \002(\005\0220\n\007reque" +
-                        "st\030\003 \001(\0132\037.experiment.protocolgen.Reques" +
-                        "t\0222\n\010response\030\004 \001(\0132 .experiment.protoco" +
-                        "lgen.Response*7\n\003MSG\022\n\n\005Login\020\351\007\022\020\n\013Miss" +
-                        "ionShow\020\352\007\022\022\n\rNickNameCheck\020\353\007B\002H\001"
+                "colgen.LoginRequest\022?\n\013missionShow\030\002 \001(\013" +
+                        "2*.experiment.protocolgen.MissionShowReq" +
+                        "uest\022C\n\rnickNameCheck\030\003 \001(\0132,.experiment" +
+                        ".protocolgen.NickNameCheckRequest\"\363\001\n\010Re" +
+                        "sponse\022\016\n\006result\030\001 \002(\010\022\031\n\021error_descript" +
+                        "ion\030\002 \001(\t\0224\n\005login\030\003 \001(\0132%.experiment.pr" +
+                        "otocolgen.LoginResponse\022@\n\013missionShow\030\004" +
+                        " \001(\0132+.experiment.protocolgen.MissionSho" +
+                        "wResponse\022D\n\rnickNameCheck\030\005 \001(\0132-.exper" +
+                        "iment.protocolgen.NickNameCheckResponse\"",
+                "\254\001\n\007Message\022)\n\004type\030\001 \002(\0162\033.experiment.p" +
+                        "rotocolgen.MSG\022\020\n\010sequence\030\002 \002(\005\0220\n\007requ" +
+                        "est\030\003 \001(\0132\037.experiment.protocolgen.Reque" +
+                        "st\0222\n\010response\030\004 \001(\0132 .experiment.protoc" +
+                        "olgen.Response*7\n\003MSG\022\n\n\005Login\020\351\007\022\020\n\013Mis" +
+                        "sionShow\020\352\007\022\022\n\rNickNameCheck\020\353\007B\002H\001"
         };
         com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
                 new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner(){
@@ -127,7 +127,7 @@ public final class MsgProtocol{
                         internal_static_experiment_protocolgen_Request_fieldAccessorTable = new
                                 com.google.protobuf.GeneratedMessage.FieldAccessorTable(
                                 internal_static_experiment_protocolgen_Request_descriptor,
-                                new java.lang.String[]{"Login", "MissionSow", "NickNameCheck",} );
+                                new java.lang.String[]{"Login", "MissionShow", "NickNameCheck",} );
                         internal_static_experiment_protocolgen_Response_descriptor =
                                 getDescriptor().getMessageTypes().get( 7 );
                         internal_static_experiment_protocolgen_Response_fieldAccessorTable = new
@@ -510,22 +510,22 @@ public final class MsgProtocol{
          */
         experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder();
 
-        // optional .experiment.protocolgen.MissionShowRequest missionSow = 2;
+        // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
 
         /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
          */
-        boolean hasMissionSow();
+        boolean hasMissionShow();
 
         /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
          */
-        experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionSow();
+        experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow();
 
         /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
          */
-        experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionSowOrBuilder();
+        experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder();
 
         // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
 
@@ -4133,8 +4133,8 @@ public final class MsgProtocol{
             implements RequestOrBuilder{
         // optional .experiment.protocolgen.LoginRequest login = 1;
         public static final int LOGIN_FIELD_NUMBER = 1;
-        // optional .experiment.protocolgen.MissionShowRequest missionSow = 2;
-        public static final int MISSIONSOW_FIELD_NUMBER = 2;
+        // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
+        public static final int MISSIONSHOW_FIELD_NUMBER = 2;
         // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
         public static final int NICKNAMECHECK_FIELD_NUMBER = 3;
         private static final Request defaultInstance;
@@ -4151,7 +4151,7 @@ public final class MsgProtocol{
         private final com.google.protobuf.UnknownFieldSet unknownFields;
         private int bitField0_;
         private experiment.protocolgen.MsgProtocol.LoginRequest login_;
-        private experiment.protocolgen.MsgProtocol.MissionShowRequest missionSow_;
+        private experiment.protocolgen.MsgProtocol.MissionShowRequest missionShow_;
         private experiment.protocolgen.MsgProtocol.NickNameCheckRequest nickNameCheck_;
         private byte memoizedIsInitialized = -1;
         private int memoizedSerializedSize = -1;
@@ -4205,12 +4205,12 @@ public final class MsgProtocol{
                         case 18: {
                             experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder subBuilder = null;
                             if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                                subBuilder = missionSow_.toBuilder();
+                                subBuilder = missionShow_.toBuilder();
                             }
-                            missionSow_ = input.readMessage( experiment.protocolgen.MsgProtocol.MissionShowRequest.PARSER, extensionRegistry );
+                            missionShow_ = input.readMessage( experiment.protocolgen.MsgProtocol.MissionShowRequest.PARSER, extensionRegistry );
                             if( subBuilder != null ) {
-                                subBuilder.mergeFrom( missionSow_ );
-                                missionSow_ = subBuilder.buildPartial();
+                                subBuilder.mergeFrom( missionShow_ );
+                                missionShow_ = subBuilder.buildPartial();
                             }
                             bitField0_ |= 0x00000002;
                             break;
@@ -4364,24 +4364,24 @@ public final class MsgProtocol{
         }
 
         /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
          */
-        public boolean hasMissionSow(){
+        public boolean hasMissionShow(){
             return ((bitField0_ & 0x00000002) == 0x00000002);
         }
 
         /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
          */
-        public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionSow(){
-            return missionSow_;
+        public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow(){
+            return missionShow_;
         }
 
         /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
          */
-        public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionSowOrBuilder(){
-            return missionSow_;
+        public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder(){
+            return missionShow_;
         }
 
         /**
@@ -4407,7 +4407,7 @@ public final class MsgProtocol{
 
         private void initFields(){
             login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
-            missionSow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+            missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
             nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
         }
 
@@ -4421,8 +4421,8 @@ public final class MsgProtocol{
                     return false;
                 }
             }
-            if( hasMissionSow() ) {
-                if( !getMissionSow().isInitialized() ) {
+            if( hasMissionShow() ) {
+                if( !getMissionShow().isInitialized() ) {
                     memoizedIsInitialized = 0;
                     return false;
                 }
@@ -4444,7 +4444,7 @@ public final class MsgProtocol{
                 output.writeMessage( 1, login_ );
             }
             if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeMessage( 2, missionSow_ );
+                output.writeMessage( 2, missionShow_ );
             }
             if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
                 output.writeMessage( 3, nickNameCheck_ );
@@ -4463,7 +4463,7 @@ public final class MsgProtocol{
             }
             if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
                 size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 2, missionSow_ );
+                        .computeMessageSize( 2, missionShow_ );
             }
             if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
                 size += com.google.protobuf.CodedOutputStream
@@ -4596,10 +4596,10 @@ public final class MsgProtocol{
             private experiment.protocolgen.MsgProtocol.LoginRequest login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
             private com.google.protobuf.SingleFieldBuilder<
                     experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder> loginBuilder_;
-            // optional .experiment.protocolgen.MissionShowRequest missionSow = 2;
-            private experiment.protocolgen.MsgProtocol.MissionShowRequest missionSow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+            // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
+            private experiment.protocolgen.MsgProtocol.MissionShowRequest missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
             private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder> missionSowBuilder_;
+                    experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder> missionShowBuilder_;
             // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
             private experiment.protocolgen.MsgProtocol.NickNameCheckRequest nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
             private com.google.protobuf.SingleFieldBuilder<
@@ -4635,7 +4635,7 @@ public final class MsgProtocol{
             private void maybeForceBuilderInitialization(){
                 if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
                     getLoginFieldBuilder();
-                    getMissionSowFieldBuilder();
+                    getMissionShowFieldBuilder();
                     getNickNameCheckFieldBuilder();
                 }
             }
@@ -4648,10 +4648,10 @@ public final class MsgProtocol{
                     loginBuilder_.clear();
                 }
                 bitField0_ = (bitField0_ & ~0x00000001);
-                if( missionSowBuilder_ == null ) {
-                    missionSow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+                if( missionShowBuilder_ == null ) {
+                    missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
                 } else {
-                    missionSowBuilder_.clear();
+                    missionShowBuilder_.clear();
                 }
                 bitField0_ = (bitField0_ & ~0x00000002);
                 if( nickNameCheckBuilder_ == null ) {
@@ -4699,10 +4699,10 @@ public final class MsgProtocol{
                 if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
                     to_bitField0_ |= 0x00000002;
                 }
-                if( missionSowBuilder_ == null ) {
-                    result.missionSow_ = missionSow_;
+                if( missionShowBuilder_ == null ) {
+                    result.missionShow_ = missionShow_;
                 } else {
-                    result.missionSow_ = missionSowBuilder_.build();
+                    result.missionShow_ = missionShowBuilder_.build();
                 }
                 if( ((from_bitField0_ & 0x00000004) == 0x00000004) ) {
                     to_bitField0_ |= 0x00000004;
@@ -4731,8 +4731,8 @@ public final class MsgProtocol{
                 if( other.hasLogin() ) {
                     mergeLogin( other.getLogin() );
                 }
-                if( other.hasMissionSow() ) {
-                    mergeMissionSow( other.getMissionSow() );
+                if( other.hasMissionShow() ) {
+                    mergeMissionShow( other.getMissionShow() );
                 }
                 if( other.hasNickNameCheck() ) {
                     mergeNickNameCheck( other.getNickNameCheck() );
@@ -4748,8 +4748,8 @@ public final class MsgProtocol{
                         return false;
                     }
                 }
-                if( hasMissionSow() ) {
-                    if( !getMissionSow().isInitialized() ) {
+                if( hasMissionShow() ) {
+                    if( !getMissionShow().isInitialized() ) {
 
                         return false;
                     }
@@ -4903,124 +4903,124 @@ public final class MsgProtocol{
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public boolean hasMissionSow(){
+            public boolean hasMissionShow(){
                 return ((bitField0_ & 0x00000002) == 0x00000002);
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionSow(){
-                if( missionSowBuilder_ == null ) {
-                    return missionSow_;
+            public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow(){
+                if( missionShowBuilder_ == null ) {
+                    return missionShow_;
                 } else {
-                    return missionSowBuilder_.getMessage();
+                    return missionShowBuilder_.getMessage();
                 }
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public Builder setMissionSow(
+            public Builder setMissionShow(
                     experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder builderForValue ){
-                if( missionSowBuilder_ == null ) {
-                    missionSow_ = builderForValue.build();
+                if( missionShowBuilder_ == null ) {
+                    missionShow_ = builderForValue.build();
                     onChanged();
                 } else {
-                    missionSowBuilder_.setMessage( builderForValue.build() );
+                    missionShowBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000002;
                 return this;
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public Builder setMissionSow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
-                if( missionSowBuilder_ == null ) {
+            public Builder setMissionShow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
+                if( missionShowBuilder_ == null ) {
                     if( value == null ) {
                         throw new NullPointerException();
                     }
-                    missionSow_ = value;
+                    missionShow_ = value;
                     onChanged();
                 } else {
-                    missionSowBuilder_.setMessage( value );
+                    missionShowBuilder_.setMessage( value );
                 }
                 bitField0_ |= 0x00000002;
                 return this;
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public Builder mergeMissionSow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
-                if( missionSowBuilder_ == null ) {
+            public Builder mergeMissionShow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
+                if( missionShowBuilder_ == null ) {
                     if( ((bitField0_ & 0x00000002) == 0x00000002) &&
-                            missionSow_ != experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance() ) {
-                        missionSow_ =
-                                experiment.protocolgen.MsgProtocol.MissionShowRequest.newBuilder( missionSow_ ).mergeFrom( value ).buildPartial();
+                            missionShow_ != experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance() ) {
+                        missionShow_ =
+                                experiment.protocolgen.MsgProtocol.MissionShowRequest.newBuilder( missionShow_ ).mergeFrom( value ).buildPartial();
                     } else {
-                        missionSow_ = value;
+                        missionShow_ = value;
                     }
                     onChanged();
                 } else {
-                    missionSowBuilder_.mergeFrom( value );
+                    missionShowBuilder_.mergeFrom( value );
                 }
                 bitField0_ |= 0x00000002;
                 return this;
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public Builder clearMissionSow(){
-                if( missionSowBuilder_ == null ) {
-                    missionSow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+            public Builder clearMissionShow(){
+                if( missionShowBuilder_ == null ) {
+                    missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
                     onChanged();
                 } else {
-                    missionSowBuilder_.clear();
+                    missionShowBuilder_.clear();
                 }
                 bitField0_ = (bitField0_ & ~0x00000002);
                 return this;
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder getMissionSowBuilder(){
+            public experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder getMissionShowBuilder(){
                 bitField0_ |= 0x00000002;
                 onChanged();
-                return getMissionSowFieldBuilder().getBuilder();
+                return getMissionShowFieldBuilder().getBuilder();
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionSowOrBuilder(){
-                if( missionSowBuilder_ != null ) {
-                    return missionSowBuilder_.getMessageOrBuilder();
+            public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder(){
+                if( missionShowBuilder_ != null ) {
+                    return missionShowBuilder_.getMessageOrBuilder();
                 } else {
-                    return missionSow_;
+                    return missionShow_;
                 }
             }
 
             /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionSow = 2;</code>
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
             private com.google.protobuf.SingleFieldBuilder<
                     experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder>
-            getMissionSowFieldBuilder(){
-                if( missionSowBuilder_ == null ) {
-                    missionSowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            getMissionShowFieldBuilder(){
+                if( missionShowBuilder_ == null ) {
+                    missionShowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
                             experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder>(
-                            missionSow_,
+                            missionShow_,
                             getParentForChildren(),
                             isClean() );
-                    missionSow_ = null;
+                    missionShow_ = null;
                 }
-                return missionSowBuilder_;
+                return missionShowBuilder_;
             }
 
             /**

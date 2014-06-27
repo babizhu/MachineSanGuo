@@ -38,7 +38,6 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
     protected DBObject encode( UserProperty property ){
 
         DBObject obj = new BasicDBObject();
-        obj.put( "_id", getUname() );
         obj.put( "exp", property.getExp() );
         obj.put( "gold", property.getGold() );
         obj.put( "cash", property.getCash() );

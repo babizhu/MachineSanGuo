@@ -8,10 +8,12 @@ import experiment.protocolgen.MsgProtocol;
  * time         2014-5-29 14:57
  */
 
-public class MissionShowHandler extends AbstractHandler{
+public class MissionShowHandler implements IHandlerWithUser{
+
+
     @Override
-    public void run( MsgProtocol.Request request, MsgProtocol.Response.Builder responseBuilder ){
-        int missionId = request.getMissionSow().getMissionId();
+    public void run( MsgProtocol.Request request, MsgProtocol.Response.Builder responseBuilder, Object user ){
+        int missionId = request.getMissionShow().getMissionId();
 
         /****************************逻辑处理***************************/
         MsgProtocol.MissionShowResponse.Builder builder = MsgProtocol.MissionShowResponse.newBuilder();
@@ -20,6 +22,5 @@ public class MissionShowHandler extends AbstractHandler{
         /****************************设返回值***************************/
 
         responseBuilder.setMissionShow( builder );
-
     }
 }

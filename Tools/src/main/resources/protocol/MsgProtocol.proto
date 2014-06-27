@@ -179,7 +179,7 @@ message MissionShowResponse {
 //}
 message Request {
     optional LoginRequest login = 1;
-    optional MissionShowRequest missionSow = 2;
+    optional MissionShowRequest missionShow = 2;
     optional NickNameCheckRequest nickNameCheck = 3;
 }
 

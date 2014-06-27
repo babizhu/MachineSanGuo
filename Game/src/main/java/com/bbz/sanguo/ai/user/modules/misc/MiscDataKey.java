@@ -14,7 +14,7 @@ import java.util.Map;
 public enum MiscDataKey{
 
     ENEMY( 1 ), /**
-     * 个关卡的扫荡次数
+     * 关卡的扫荡次数
      */
     MOPPING_UP( 2 ),
 
@@ -49,7 +49,7 @@ public enum MiscDataKey{
     }
 
     public String buildKey( Object[] args ){
-        String ret = number + "|"; //_为分隔符，防止1和11分不清楚
+        String ret = number + "|"; //|为分隔符，防止1和11分不清楚
         // (例如两个key为a和a1，a带个参数1，a1不带参数，则生成的key相同)
         ret += Joiner.on( "|" ).join( args );
         return ret;

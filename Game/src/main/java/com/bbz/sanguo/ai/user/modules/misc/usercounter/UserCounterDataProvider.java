@@ -64,7 +64,6 @@ class UserCounterDataProvider extends AbstractDataProviderWithUserName<UserCount
     @Override
     protected DBObject encode( UserCounterRecord record ){
         DBObject obj = new BasicDBObject();
-        obj.put( "_id", getUname() );
         obj.put( TIME_STAMP_FIELD, record.getTimeStamp() );
 
         for( Map.Entry<String, Integer> entry : record.getData().entrySet() ) {

@@ -36,7 +36,7 @@ class MiscDataProvider extends AbstractDataProviderWithUserName<Map<String, Obje
     @Override
     protected DBObject encode( Map<String, Object> map ){
         DBObject obj = new BasicDBObject();
-        obj.put( "_id", getUname() );
+
         for( Map.Entry<String, Object> entry : map.entrySet() ) {
             obj.put( entry.getKey(), entry.getValue() );
         }

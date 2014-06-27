@@ -1,12 +1,10 @@
 package experiment.netty.protowithgame.server;
 
-import experiment.netty.protowithgame.server.handler.AbstractHandler;
 import experiment.netty.protowithgame.server.handler.HandlerManager;
+import experiment.netty.protowithgame.server.handler.IHandlerWithUser;
 import experiment.protocolgen.MsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-
-import static experiment.protocolgen.MsgProtocol.Response;
 
 /**
  * user         LIUKUN
@@ -14,28 +12,25 @@ import static experiment.protocolgen.MsgProtocol.Response;
  */
 
 public class GameServerHandler extends SimpleChannelInboundHandler<MsgProtocol.Message>{
+    MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
+    MsgProtocol.Response.Builder responseBuilder = MsgProtocol.Response.newBuilder();
+    Object user = null;
+
+    public GameServerHandler(){
+        System.out.println( "GameServerHandler.GameServerHandler" );
+        ;
+    }
+
     @Override
-    protected void messageReceive
+    protected void messageReceived( ChannelHandlerContext ctx, MsgProtocol.Message msg ) throws Exception{
 
-    d( ChannelHandlerContext ctx, MsgProtocol.Message msg ) throws Exception{
-
-
-        MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
+        System.out.println( msg.getType() );
         builder.setType( msg.getType() );
         builder.setSequence( msg.getSequence() );
+        IHandlerWithUser handler = HandlerManager.INSTANCE.getHandlerWithUser( msg.getType() );
 
-        Response.Builder responseBuilder = Response.newBuilder();
-        AbstractHandler handler = HandlerManager.INSTANCE.getHandler( msg.getType() );
-
-//        if( msg.getType(). == MsgProtocol.MSG.Login ){
-//            instanceof
-//        }
         try {
-            if( true ) {
-                handler.run( msg.getRequest(), responseBuilder );
-            } else {
-
-            }
+            handler.run( msg.getRequest(), responseBuilder, user );
             responseBuilder.setResult( true );
 
         } catch( Exception e ) {
@@ -49,4 +44,8 @@ public class GameServerHandler extends SimpleChannelInboundHandler<MsgProtocol.M
 
     }
 
+    @Override
+    public void exceptionCaught( ChannelHandlerContext ctx, Throwable cause ) throws Exception{
+        System.out.println( "cause:" + cause );
+    }
 }

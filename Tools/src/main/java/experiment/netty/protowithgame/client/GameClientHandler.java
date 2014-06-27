@@ -31,15 +31,15 @@ public class GameClientHandler extends SimpleChannelInboundHandler<Message>{
 
         reqeustBuilder.setMissionId( 5 );
 
-        builder.setRequest( MsgProtocol.Request.newBuilder().setMissionSow( reqeustBuilder.build() ) );
+        builder.setRequest( MsgProtocol.Request.newBuilder().setMissionShow( reqeustBuilder.build() ) );
 
 
-        System.out.println( "channel.isOpen() " + channel.isOpen() );
-        channel.writeAndFlush( builder.build() ).addListener( new ChannelFutureListener(){
+//        System.out.println( "channel.isOpen() " + channel.isOpen() );
+        channel.writeAndFlush( builder ).addListener( new ChannelFutureListener(){
             @Override
             public void operationComplete( ChannelFuture future ) throws Exception{
-                System.out.println( future.isSuccess() );
-                System.out.println( future.cause() );
+//                System.out.println( future.isSuccess() );
+//                System.out.println( future.cause() );
             }
         } );
     }
@@ -50,7 +50,7 @@ public class GameClientHandler extends SimpleChannelInboundHandler<Message>{
         builder.setSequence( 12121 );
 
         MsgProtocol.LoginRequest.Builder reqeustBuilder = MsgProtocol.LoginRequest.newBuilder();
-        reqeustBuilder.setUsername( uname );
+        reqeustBuilder.setUserName( uname );
         reqeustBuilder.setPassword( password );
 
         builder.setRequest( MsgProtocol.Request.newBuilder().setLogin( reqeustBuilder.build() ) );
