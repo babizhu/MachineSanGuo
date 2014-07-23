@@ -1,5 +1,6 @@
 package experiment.netty;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
@@ -39,9 +40,12 @@ public class EchoServerHandler extends ChannelHandlerAdapter{
     public void channelActive( ChannelHandlerContext ctx ) throws Exception{
 
         System.out.println( "RemoteAddress : " + ctx.channel().remoteAddress() + " active !" );
+        ByteBuf buffer = ctx.alloc().buffer();
+        buffer.writeBytes( ("Welcome to " + InetAddress.getLocalHost().getHostName() + " service!\n").getBytes() );
+        ctx.writeAndFlush( buffer );
 
-        ctx.writeAndFlush( "Welcome to " + InetAddress.getLocalHost().getHostName() + " service!\n" );
-        ctx.write( 65 );
+//        ctx.writeAndFlush( "Welcome to " + InetAddress.getLocalHost().getHostName() + " service!\n" );
+//        ctx.write( 65 );
         super.channelActive( ctx );
     }
 

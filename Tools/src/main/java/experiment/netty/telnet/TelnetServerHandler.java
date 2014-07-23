@@ -24,8 +24,8 @@ public class TelnetServerHandler extends SimpleChannelInboundHandler<String>{
     @Override
     public void channelActive( ChannelHandlerContext ctx ) throws Exception{
         ctx.write( "Welcome to " + InetAddress.getLocalHost().getHostName() + "\r\n" );
-        ctx.write( "It is " + new Date() + " now.\r\n" );
-        ctx.write( (byte) 101 );
+        ctx.write( "It dis " + new Date() + " now.\r\n" );
+        ctx.write( "a" );
         ctx.flush();
     }
 

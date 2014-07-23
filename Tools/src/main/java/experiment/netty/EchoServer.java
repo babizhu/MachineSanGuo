@@ -52,7 +52,9 @@ public class EchoServer{
                         public void initChannel( SocketChannel ch ) throws Exception{
                             ch.pipeline().addLast(
 //                                    new LoggingHandler(LogLevel.TRACE),
+
                                     new EchoServerHandler() );
+
                         }
                     } );
 

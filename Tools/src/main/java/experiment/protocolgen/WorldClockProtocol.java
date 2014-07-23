@@ -1059,14 +1059,14 @@ public final class WorldClockProtocol{
                 return this;
             }      // required .experiment.protocolgen.Continent continent = 1;
 
-            private experiment.protocolgen.WorldClockProtocol.Continent continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
-
             /**
              * <code>required .experiment.protocolgen.Continent continent = 1;</code>
              */
             public boolean hasContinent(){
                 return ((bitField0_ & 0x00000001) == 0x00000001);
             }
+
+            private experiment.protocolgen.WorldClockProtocol.Continent continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
 
             /**
              * <code>required .experiment.protocolgen.Continent continent = 1;</code>

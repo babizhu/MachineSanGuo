@@ -4802,21 +4802,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
              */
-            public Builder setLogin(
-                    experiment.protocolgen.MsgProtocol.LoginRequest.Builder builderForValue ){
-                if( loginBuilder_ == null ) {
-                    login_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    loginBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000001;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
             public Builder setLogin( experiment.protocolgen.MsgProtocol.LoginRequest value ){
                 if( loginBuilder_ == null ) {
                     if( value == null ) {
@@ -4826,6 +4811,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     loginBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000001;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+             */
+            public Builder setLogin(
+                    experiment.protocolgen.MsgProtocol.LoginRequest.Builder builderForValue ){
+                if( loginBuilder_ == null ) {
+                    login_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    loginBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000001;
                 return this;
@@ -4923,21 +4923,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
              */
-            public Builder setMissionShow(
-                    experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder builderForValue ){
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    missionShowBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000002;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
             public Builder setMissionShow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
                 if( missionShowBuilder_ == null ) {
                     if( value == null ) {
@@ -4947,6 +4932,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     missionShowBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+             */
+            public Builder setMissionShow(
+                    experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder builderForValue ){
+                if( missionShowBuilder_ == null ) {
+                    missionShow_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    missionShowBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000002;
                 return this;
@@ -5044,21 +5044,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
              */
-            public Builder setNickNameCheck(
-                    experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder builderForValue ){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
             public Builder setNickNameCheck( experiment.protocolgen.MsgProtocol.NickNameCheckRequest value ){
                 if( nickNameCheckBuilder_ == null ) {
                     if( value == null ) {
@@ -5068,6 +5053,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     nickNameCheckBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000004;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+             */
+            public Builder setNickNameCheck(
+                    experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder builderForValue ){
+                if( nickNameCheckBuilder_ == null ) {
+                    nickNameCheck_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    nickNameCheckBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000004;
                 return this;
@@ -5997,21 +5997,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
              */
-            public Builder setLogin(
-                    experiment.protocolgen.MsgProtocol.LoginResponse.Builder builderForValue ){
-                if( loginBuilder_ == null ) {
-                    login_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    loginBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
             public Builder setLogin( experiment.protocolgen.MsgProtocol.LoginResponse value ){
                 if( loginBuilder_ == null ) {
                     if( value == null ) {
@@ -6021,6 +6006,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     loginBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000004;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+             */
+            public Builder setLogin(
+                    experiment.protocolgen.MsgProtocol.LoginResponse.Builder builderForValue ){
+                if( loginBuilder_ == null ) {
+                    login_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    loginBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000004;
                 return this;
@@ -6118,21 +6118,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
              */
-            public Builder setMissionShow(
-                    experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder builderForValue ){
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    missionShowBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
             public Builder setMissionShow( experiment.protocolgen.MsgProtocol.MissionShowResponse value ){
                 if( missionShowBuilder_ == null ) {
                     if( value == null ) {
@@ -6142,6 +6127,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     missionShowBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000008;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+             */
+            public Builder setMissionShow(
+                    experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder builderForValue ){
+                if( missionShowBuilder_ == null ) {
+                    missionShow_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    missionShowBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000008;
                 return this;
@@ -6239,21 +6239,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
              */
-            public Builder setNickNameCheck(
-                    experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder builderForValue ){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000010;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
             public Builder setNickNameCheck( experiment.protocolgen.MsgProtocol.NickNameCheckResponse value ){
                 if( nickNameCheckBuilder_ == null ) {
                     if( value == null ) {
@@ -6263,6 +6248,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     nickNameCheckBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000010;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+             */
+            public Builder setNickNameCheck(
+                    experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder builderForValue ){
+                if( nickNameCheckBuilder_ == null ) {
+                    nickNameCheck_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    nickNameCheckBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000010;
                 return this;
@@ -6885,8 +6885,6 @@ public final class MsgProtocol{
                 return result;
             }      // required .experiment.protocolgen.MSG type = 1;
 
-            private experiment.protocolgen.MsgProtocol.MSG type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
-
             public Builder mergeFrom( com.google.protobuf.Message other ){
                 if( other instanceof experiment.protocolgen.MsgProtocol.Message ) {
                     return mergeFrom( (experiment.protocolgen.MsgProtocol.Message) other );
@@ -6895,6 +6893,8 @@ public final class MsgProtocol{
                     return this;
                 }
             }
+
+            private experiment.protocolgen.MsgProtocol.MSG type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
 
             public Builder mergeFrom( experiment.protocolgen.MsgProtocol.Message other ){
                 if( other == experiment.protocolgen.MsgProtocol.Message.getDefaultInstance() ) return this;
@@ -7048,21 +7048,6 @@ public final class MsgProtocol{
             /**
              * <code>optional .experiment.protocolgen.Request request = 3;</code>
              */
-            public Builder setRequest(
-                    experiment.protocolgen.MsgProtocol.Request.Builder builderForValue ){
-                if( requestBuilder_ == null ) {
-                    request_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    requestBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
             public Builder setRequest( experiment.protocolgen.MsgProtocol.Request value ){
                 if( requestBuilder_ == null ) {
                     if( value == null ) {
@@ -7072,6 +7057,21 @@ public final class MsgProtocol{
                     onChanged();
                 } else {
                     requestBuilder_.setMessage( value );
+                }
+                bitField0_ |= 0x00000004;
+                return this;
+            }
+
+            /**
+             * <code>optional .experiment.protocolgen.Request request = 3;</code>
+             */
+            public Builder setRequest(
+                    experiment.protocolgen.MsgProtocol.Request.Builder builderForValue ){
+                if( requestBuilder_ == null ) {
+                    request_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    requestBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000004;
                 return this;
@@ -7184,13 +7184,15 @@ public final class MsgProtocol{
              * optional Indication indication = 6;
              * </pre>
              */
-            public Builder setResponse(
-                    experiment.protocolgen.MsgProtocol.Response.Builder builderForValue ){
+            public Builder setResponse( experiment.protocolgen.MsgProtocol.Response value ){
                 if( responseBuilder_ == null ) {
-                    response_ = builderForValue.build();
+                    if( value == null ) {
+                        throw new NullPointerException();
+                    }
+                    response_ = value;
                     onChanged();
                 } else {
-                    responseBuilder_.setMessage( builderForValue.build() );
+                    responseBuilder_.setMessage( value );
                 }
                 bitField0_ |= 0x00000008;
                 return this;
@@ -7204,15 +7206,13 @@ public final class MsgProtocol{
              * optional Indication indication = 6;
              * </pre>
              */
-            public Builder setResponse( experiment.protocolgen.MsgProtocol.Response value ){
+            public Builder setResponse(
+                    experiment.protocolgen.MsgProtocol.Response.Builder builderForValue ){
                 if( responseBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    response_ = value;
+                    response_ = builderForValue.build();
                     onChanged();
                 } else {
-                    responseBuilder_.setMessage( value );
+                    responseBuilder_.setMessage( builderForValue.build() );
                 }
                 bitField0_ |= 0x00000008;
                 return this;
