@@ -79,7 +79,7 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
     public static final int HTTP_CACHE_SECONDS = 60;
     private static final String BASE_DIR = "C:\\Users\\Administrator\\Desktop";
     private static final Pattern INSECURE_URI = Pattern.compile( ".*[<>&\"].*" );
-    private static final Pattern ALLOWED_FILE_NAME = Pattern.compile( "[A-Za-z0-9][-_A-Za-z0-9\\.]*" );
+//    private static final Pattern ALLOWED_FILE_NAME = Pattern.compile( "[A-Za-z0-9][-_A-Za-z0-9\\.]*" );
 
     private static String sanitizeUri( String uri ){
         // Decode the path.
@@ -130,21 +130,25 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
         buf.append( "<ul>" );
         buf.append( "<li><a href=\"../\">..</a></li>\r\n" );
 
-        for( File f : dir.listFiles() ) {
-            if( f.isHidden() || !f.canRead() ) {
-                continue;
-            }
+        File[] files = dir.listFiles();
+        if( files != null ) {
+            for( File f : files ) {
 
-            String name = f.getName();
+                if( f.isHidden() || !f.canRead() ) {
+                    continue;
+                }
+
+                String name = f.getName();
 //            if (!ALLOWED_FILE_NAME.matcher(name).matches()) {
 //                continue;
 //            }
 
-            buf.append( "<li><a href=\"" );
-            buf.append( name );
-            buf.append( "\">" );
-            buf.append( name );
-            buf.append( "</a></li>\r\n" );
+                buf.append( "<li><a href=\"" );
+                buf.append( name );
+                buf.append( "\">" );
+                buf.append( name );
+                buf.append( "</a></li>\r\n" );
+            }
         }
 
         buf.append( "</ul></body></html>\r\n" );
