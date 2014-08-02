@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class SortCollection{
 
-    private Comparator<Student> ageComparator = new Comparator<Student>(){
+    private static final Comparator<Student> ageComparator = new Comparator<Student>(){
         @Override
         public int compare( Student o1, Student o2 ){
             return o1.getAge() - o2.getAge();

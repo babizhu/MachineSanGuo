@@ -78,7 +78,7 @@ public class MulThreadTest{
             System.out.println( "xxxxxxxxxxx" );
             buffer.writeBytes( content );
             buffer.writeBytes( "__ccdd\r\n".getBytes() );
-            //ctx.writeAndFlush( buffer );
+            ctx.writeAndFlush( buffer );
         }
 
         @Override

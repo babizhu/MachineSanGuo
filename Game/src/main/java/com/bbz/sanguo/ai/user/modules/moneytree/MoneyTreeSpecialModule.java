@@ -39,8 +39,8 @@ public class MoneyTreeSpecialModule{
 
     private void check(){
         int maxCount = 20;
-        int runCount = userCounterModule.get( MiscDataKey.MONEY_TREE );
-        if( runCount > maxCount ) {
+        int runCountToday = userCounterModule.get( MiscDataKey.MONEY_TREE );
+        if( runCountToday > maxCount ) {
             throw new ClientException( ErrorCode.MONEY_TREE_RUN_UPPER_LIMIT );
         }
     }

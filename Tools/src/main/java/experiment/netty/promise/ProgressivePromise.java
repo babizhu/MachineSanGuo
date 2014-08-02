@@ -36,6 +36,7 @@ public class ProgressivePromise{
     }
 
     void future2( ChannelHandlerContext ctx ){
+//        ctx.newFailedFuture(  )
         ChannelFuture future = ctx.writeAndFlush( "future2", ctx.newProgressivePromise() );
         future.addListener( new ChannelProgressiveFutureListener(){
 
