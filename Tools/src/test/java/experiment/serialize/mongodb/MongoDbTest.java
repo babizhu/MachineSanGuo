@@ -50,7 +50,7 @@ public class MongoDbTest{
      * 删除数据库
      */
     public void dropDatabase(){
-        client.dropDatabase( "test_db" );
+        client.dropDatabase( D.TEST_DB );
     }
 
     @Test

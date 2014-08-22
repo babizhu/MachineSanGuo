@@ -3,151 +3,154 @@
 
 package experiment.protocolgen;
 
-public final class MsgProtocol {
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_experiment_protocolgen_LoginRequest_descriptor;
-  private static
+public final class MsgProtocol{
+    private static com.google.protobuf.Descriptors.Descriptor
+            internal_static_experiment_protocolgen_LoginRequest_descriptor;
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_experiment_protocolgen_LoginResponse_descriptor;
-  private static
+            internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.Descriptor
+            internal_static_experiment_protocolgen_LoginResponse_descriptor;
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
-  private static
+            internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.Descriptor
+            internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable;
+            internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.Descriptor
             internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
-  private static
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable;
+            internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.Descriptor
             internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
-  private static
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable;
+            internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.Descriptor
             internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
-  private static
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable;
+            internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.Descriptor
             internal_static_experiment_protocolgen_Request_descriptor;
-  private static
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_Request_fieldAccessorTable;
+            internal_static_experiment_protocolgen_Request_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.Descriptor
             internal_static_experiment_protocolgen_Response_descriptor;
-  private static
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_Response_fieldAccessorTable;
+            internal_static_experiment_protocolgen_Response_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.Descriptor
             internal_static_experiment_protocolgen_Message_descriptor;
-  private static
+    private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_experiment_protocolgen_Message_fieldAccessorTable;
+            internal_static_experiment_protocolgen_Message_fieldAccessorTable;
     private static com.google.protobuf.Descriptors.FileDescriptor
             descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\021MsgProtocol.proto\022\026experiment.protocol" +
-      "gen\"2\n\014LoginRequest\022\020\n\010userName\030\001 \002(\t\022\020\n" +
-      "\010password\030\002 \002(\t\"\034\n\rLoginResponse\022\013\n\003ret\030" +
-      "\006 \001(\005\"(\n\024NickNameCheckRequest\022\020\n\010nickNam" +
-      "e\030\001 \002(\t\",\n\025NickNameCheckResponse\022\023\n\013isDu" +
-      "plicate\030\001 \002(\010\"\'\n\022MissionShowRequest\022\021\n\tm" +
-      "issionId\030\001 \002(\005\"b\n\023MissionShowResponse\022\024\n" +
-      "\014protectCount\030\001 \002(\005\022\021\n\tisProtect\030\002 \002(\010\022\n" +
-      "\n\002cd\030\003 \002(\005\022\026\n\016currentMission\030\004 \002(\005\"\304\001\n\007R" +
-      "equest\0223\n\005login\030\001 \001(\0132$.experiment.proto",
-      "colgen.LoginRequest\022?\n\013missionShow\030\002 \001(\013" +
-      "2*.experiment.protocolgen.MissionShowReq" +
-      "uest\022C\n\rnickNameCheck\030\003 \001(\0132,.experiment" +
-      ".protocolgen.NickNameCheckRequest\"\363\001\n\010Re" +
-      "sponse\022\016\n\006result\030\001 \002(\010\022\031\n\021error_descript" +
-      "ion\030\002 \001(\t\0224\n\005login\030\003 \001(\0132%.experiment.pr" +
-      "otocolgen.LoginResponse\022@\n\013missionShow\030\004" +
-      " \001(\0132+.experiment.protocolgen.MissionSho" +
-      "wResponse\022D\n\rnickNameCheck\030\005 \001(\0132-.exper" +
-      "iment.protocolgen.NickNameCheckResponse\"",
-      "\254\001\n\007Message\022)\n\004type\030\001 \002(\0162\033.experiment.p" +
-      "rotocolgen.MSG\022\020\n\010sequence\030\002 \002(\005\0220\n\007requ" +
-      "est\030\003 \001(\0132\037.experiment.protocolgen.Reque" +
-      "st\0222\n\010response\030\004 \001(\0132 .experiment.protoc" +
-      "olgen.Response*7\n\003MSG\022\n\n\005Login\020\351\007\022\020\n\013Mis" +
-      "sionShow\020\352\007\022\022\n\rNickNameCheck\020\353\007B\002H\001"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_experiment_protocolgen_LoginRequest_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_LoginRequest_descriptor,
-              new java.lang.String[] { "UserName", "Password", });
-          internal_static_experiment_protocolgen_LoginResponse_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_LoginResponse_descriptor,
-              new java.lang.String[] { "Ret", });
-          internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor,
-              new java.lang.String[] { "NickName", });
-          internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor,
-              new java.lang.String[] { "IsDuplicate", });
-          internal_static_experiment_protocolgen_MissionShowRequest_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_MissionShowRequest_descriptor,
-              new java.lang.String[] { "MissionId", });
-          internal_static_experiment_protocolgen_MissionShowResponse_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_MissionShowResponse_descriptor,
-              new java.lang.String[] { "ProtectCount", "IsProtect", "Cd", "CurrentMission", });
-          internal_static_experiment_protocolgen_Request_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_experiment_protocolgen_Request_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_Request_descriptor,
-              new java.lang.String[] { "Login", "MissionShow", "NickNameCheck", });
-          internal_static_experiment_protocolgen_Response_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_experiment_protocolgen_Response_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_Response_descriptor,
-              new java.lang.String[] { "Result", "ErrorDescription", "Login", "MissionShow", "NickNameCheck", });
-          internal_static_experiment_protocolgen_Message_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_experiment_protocolgen_Message_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_experiment_protocolgen_Message_descriptor,
-              new java.lang.String[] { "Type", "Sequence", "Request", "Response", });
-          return null;
-        }
-      };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-  }
-  private MsgProtocol() {}
+
+    static{
+        java.lang.String[] descriptorData = {
+                "\n\021MsgProtocol.proto\022\026experiment.protocol" +
+                        "gen\"2\n\014LoginRequest\022\020\n\010userName\030\001 \002(\t\022\020\n" +
+                        "\010password\030\002 \002(\t\"\034\n\rLoginResponse\022\013\n\003ret\030" +
+                        "\006 \001(\005\"(\n\024NickNameCheckRequest\022\020\n\010nickNam" +
+                        "e\030\001 \002(\t\",\n\025NickNameCheckResponse\022\023\n\013isDu" +
+                        "plicate\030\001 \002(\010\"\'\n\022MissionShowRequest\022\021\n\tm" +
+                        "issionId\030\001 \002(\005\"b\n\023MissionShowResponse\022\024\n" +
+                        "\014protectCount\030\001 \002(\005\022\021\n\tisProtect\030\002 \002(\010\022\n" +
+                        "\n\002cd\030\003 \002(\005\022\026\n\016currentMission\030\004 \002(\005\"\304\001\n\007R" +
+                        "equest\0223\n\005login\030\001 \001(\0132$.experiment.proto",
+                "colgen.LoginRequest\022?\n\013missionShow\030\002 \001(\013" +
+                        "2*.experiment.protocolgen.MissionShowReq" +
+                        "uest\022C\n\rnickNameCheck\030\003 \001(\0132,.experiment" +
+                        ".protocolgen.NickNameCheckRequest\"\363\001\n\010Re" +
+                        "sponse\022\016\n\006result\030\001 \002(\010\022\031\n\021error_descript" +
+                        "ion\030\002 \001(\t\0224\n\005login\030\003 \001(\0132%.experiment.pr" +
+                        "otocolgen.LoginResponse\022@\n\013missionShow\030\004" +
+                        " \001(\0132+.experiment.protocolgen.MissionSho" +
+                        "wResponse\022D\n\rnickNameCheck\030\005 \001(\0132-.exper" +
+                        "iment.protocolgen.NickNameCheckResponse\"",
+                "\254\001\n\007Message\022)\n\004type\030\001 \002(\0162\033.experiment.p" +
+                        "rotocolgen.MSG\022\020\n\010sequence\030\002 \002(\005\0220\n\007requ" +
+                        "est\030\003 \001(\0132\037.experiment.protocolgen.Reque" +
+                        "st\0222\n\010response\030\004 \001(\0132 .experiment.protoc" +
+                        "olgen.Response*7\n\003MSG\022\n\n\005Login\020\351\007\022\020\n\013Mis" +
+                        "sionShow\020\352\007\022\022\n\rNickNameCheck\020\353\007B\002H\001"
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+                new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner(){
+                    public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                            com.google.protobuf.Descriptors.FileDescriptor root ){
+                        descriptor = root;
+                        internal_static_experiment_protocolgen_LoginRequest_descriptor =
+                                getDescriptor().getMessageTypes().get( 0 );
+                        internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_LoginRequest_descriptor,
+                                new java.lang.String[]{"UserName", "Password",} );
+                        internal_static_experiment_protocolgen_LoginResponse_descriptor =
+                                getDescriptor().getMessageTypes().get( 1 );
+                        internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_LoginResponse_descriptor,
+                                new java.lang.String[]{"Ret",} );
+                        internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor =
+                                getDescriptor().getMessageTypes().get( 2 );
+                        internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor,
+                                new java.lang.String[]{"NickName",} );
+                        internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor =
+                                getDescriptor().getMessageTypes().get( 3 );
+                        internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor,
+                                new java.lang.String[]{"IsDuplicate",} );
+                        internal_static_experiment_protocolgen_MissionShowRequest_descriptor =
+                                getDescriptor().getMessageTypes().get( 4 );
+                        internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_MissionShowRequest_descriptor,
+                                new java.lang.String[]{"MissionId",} );
+                        internal_static_experiment_protocolgen_MissionShowResponse_descriptor =
+                                getDescriptor().getMessageTypes().get( 5 );
+                        internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_MissionShowResponse_descriptor,
+                                new java.lang.String[]{"ProtectCount", "IsProtect", "Cd", "CurrentMission",} );
+                        internal_static_experiment_protocolgen_Request_descriptor =
+                                getDescriptor().getMessageTypes().get( 6 );
+                        internal_static_experiment_protocolgen_Request_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_Request_descriptor,
+                                new java.lang.String[]{"Login", "MissionShow", "NickNameCheck",} );
+                        internal_static_experiment_protocolgen_Response_descriptor =
+                                getDescriptor().getMessageTypes().get( 7 );
+                        internal_static_experiment_protocolgen_Response_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_Response_descriptor,
+                                new java.lang.String[]{"Result", "ErrorDescription", "Login", "MissionShow", "NickNameCheck",} );
+                        internal_static_experiment_protocolgen_Message_descriptor =
+                                getDescriptor().getMessageTypes().get( 8 );
+                        internal_static_experiment_protocolgen_Message_fieldAccessorTable = new
+                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                                internal_static_experiment_protocolgen_Message_descriptor,
+                                new java.lang.String[]{"Type", "Sequence", "Request", "Response",} );
+                        return null;
+                    }
+                };
+        com.google.protobuf.Descriptors.FileDescriptor
+                .internalBuildGeneratedFileFrom( descriptorData,
+                        new com.google.protobuf.Descriptors.FileDescriptor[]{
+                        }, assigner );
+    }
+
+    private MsgProtocol(){
+    }
 
     public static void registerAllExtensions(
             com.google.protobuf.ExtensionRegistry registry ){
@@ -3467,9 +3470,9 @@ public final class MsgProtocol {
 
         /**
          * <code>required int32 protectCount = 1;</code>
-         *
+         * <p/>
          * <pre>
-         *总的保护的次数（最大8次，即3+5）
+         * 总的保护的次数（最大8次，即3+5）
          * </pre>
          */
         public boolean hasProtectCount(){
@@ -3478,9 +3481,9 @@ public final class MsgProtocol {
 
         /**
          * <code>required int32 protectCount = 1;</code>
-         *
+         * <p/>
          * <pre>
-         *总的保护的次数（最大8次，即3+5）
+         * 总的保护的次数（最大8次，即3+5）
          * </pre>
          */
         public int getProtectCount(){
@@ -3489,9 +3492,9 @@ public final class MsgProtocol {
 
         /**
          * <code>required bool isProtect = 2;</code>
-         *
+         * <p/>
          * <pre>
-         *今日是否已保护
+         * 今日是否已保护
          * </pre>
          */
         public boolean hasIsProtect(){
@@ -3500,9 +3503,9 @@ public final class MsgProtocol {
 
         /**
          * <code>required bool isProtect = 2;</code>
-         *
+         * <p/>
          * <pre>
-         *今日是否已保护
+         * 今日是否已保护
          * </pre>
          */
         public boolean getIsProtect(){
@@ -3834,9 +3837,9 @@ public final class MsgProtocol {
 
             /**
              * <code>required int32 protectCount = 1;</code>
-             *
+             * <p/>
              * <pre>
-             *总的保护的次数（最大8次，即3+5）
+             * 总的保护的次数（最大8次，即3+5）
              * </pre>
              */
             public int getProtectCount(){
@@ -3909,9 +3912,9 @@ public final class MsgProtocol {
 
             /**
              * <code>required bool isProtect = 2;</code>
-             *
+             * <p/>
              * <pre>
-             *今日是否已保护
+             * 今日是否已保护
              * </pre>
              */
             public Builder clearIsProtect(){
@@ -3923,9 +3926,9 @@ public final class MsgProtocol {
 
             /**
              * <code>required int32 cd = 3;</code>
-             *
+             * <p/>
              * <pre>
-             *剩余冷却时间（秒）
+             * 剩余冷却时间（秒）
              * </pre>
              */
             public boolean hasCd(){
@@ -5401,9 +5404,9 @@ public final class MsgProtocol {
 
         /**
          * <code>optional string error_description = 2;</code>
-         *
+         * <p/>
          * <pre>
-         *required bool last_block = 3;
+         * required bool last_block = 3;
          * </pre>
          */
         public boolean hasErrorDescription(){
@@ -5412,9 +5415,9 @@ public final class MsgProtocol {
 
         /**
          * <code>optional string error_description = 2;</code>
-         *
+         * <p/>
          * <pre>
-         *required bool last_block = 3;
+         * required bool last_block = 3;
          * </pre>
          */
         public java.lang.String getErrorDescription(){
@@ -5434,9 +5437,9 @@ public final class MsgProtocol {
 
         /**
          * <code>optional string error_description = 2;</code>
-         *
+         * <p/>
          * <pre>
-         *required bool last_block = 3;
+         * required bool last_block = 3;
          * </pre>
          */
         public com.google.protobuf.ByteString
@@ -5874,9 +5877,9 @@ public final class MsgProtocol {
 
             /**
              * <code>optional string error_description = 2;</code>
-             *
+             * <p/>
              * <pre>
-             *required bool last_block = 3;
+             * required bool last_block = 3;
              * </pre>
              */
             public boolean hasErrorDescription(){
@@ -5904,9 +5907,9 @@ public final class MsgProtocol {
 
             /**
              * <code>optional string error_description = 2;</code>
-             *
+             * <p/>
              * <pre>
-             *required bool last_block = 3;
+             * required bool last_block = 3;
              * </pre>
              */
             public Builder setErrorDescription(
@@ -5922,9 +5925,9 @@ public final class MsgProtocol {
 
             /**
              * <code>optional string error_description = 2;</code>
-             *
+             * <p/>
              * <pre>
-             *required bool last_block = 3;
+             * required bool last_block = 3;
              * </pre>
              */
             public com.google.protobuf.ByteString
@@ -5943,9 +5946,9 @@ public final class MsgProtocol {
 
             /**
              * <code>optional string error_description = 2;</code>
-             *
+             * <p/>
              * <pre>
-             *required bool last_block = 3;
+             * required bool last_block = 3;
              * </pre>
              */
             public Builder setErrorDescriptionBytes(
@@ -6645,10 +6648,10 @@ public final class MsgProtocol {
 
         /**
          * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         *
+         * <p/>
          * <pre>
-         *optional Command  command = 5;
-         *optional Indication indication = 6;
+         * optional Command  command = 5;
+         * optional Indication indication = 6;
          * </pre>
          */
         public experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder(){
@@ -7147,10 +7150,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public boolean hasResponse(){
@@ -7159,10 +7162,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public experiment.protocolgen.MsgProtocol.Response getResponse(){
@@ -7175,10 +7178,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public Builder setResponse(
@@ -7195,10 +7198,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public Builder setResponse( experiment.protocolgen.MsgProtocol.Response value ){
@@ -7217,10 +7220,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public Builder mergeResponse( experiment.protocolgen.MsgProtocol.Response value ){
@@ -7242,10 +7245,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public Builder clearResponse(){
@@ -7261,10 +7264,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public experiment.protocolgen.MsgProtocol.Response.Builder getResponseBuilder(){
@@ -7275,10 +7278,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             public experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder(){
@@ -7291,10 +7294,10 @@ public final class MsgProtocol {
 
             /**
              * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             *
+             * <p/>
              * <pre>
-             *optional Command  command = 5;
-             *optional Indication indication = 6;
+             * optional Command  command = 5;
+             * optional Indication indication = 6;
              * </pre>
              */
             private com.google.protobuf.SingleFieldBuilder<
@@ -7303,25 +7306,25 @@ public final class MsgProtocol {
                 if( responseBuilder_ == null ) {
                     responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
                             experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder>(
-                  response_,
-                  getParentForChildren(),
-                  isClean());
-          response_ = null;
+                            response_,
+                            getParentForChildren(),
+                            isClean() );
+                    response_ = null;
+                }
+                return responseBuilder_;
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Message)
         }
-        return responseBuilder_;
-      }
 
+        static{
+            defaultInstance = new Message( true );
+            defaultInstance.initFields();
+        }
 
-      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Message)
+        // @@protoc_insertion_point(class_scope:experiment.protocolgen.Message)
     }
 
-    static {
-      defaultInstance = new Message(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:experiment.protocolgen.Message)
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }

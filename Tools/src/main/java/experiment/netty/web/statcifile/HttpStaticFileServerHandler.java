@@ -142,7 +142,7 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
 //            if (!ALLOWED_FILE_NAME.matcher(name).matches()) {
 //                continue;
 //            }
-                System.out.println( "\"" + name + "\"," );
+                // System.out.println( "\"" + name + "\"," );
                 buf.append( "<li><a href=\"" );
                 buf.append( name );
                 buf.append( "\">" );
@@ -256,11 +256,14 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
         }
 
         final String uri = request.getUri();
+        System.out.println( "ddddd " + uri );
         final String path = sanitizeUri( uri );
         if( path == null ) {
             sendError( ctx, FORBIDDEN );
             return;
         }
+
+        System.out.println( "ddddddddd" + path );
 
         File file = new File( path );
         if( file.isHidden() || !file.exists() ) {

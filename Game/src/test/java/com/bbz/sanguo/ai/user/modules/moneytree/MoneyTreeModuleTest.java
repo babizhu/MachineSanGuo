@@ -22,17 +22,19 @@ public class MoneyTreeModuleTest{
                 module.run();
             }
         } catch( ClientException e ) {
-            System.out.println(  e.getCode() );
+            System.out.println( e.getCode() );
         }
 
     }
 
     /**
      * 采用了UserCounter的摇钱树版本
+     *
      * @throws Exception
      */
     @Test
     public void testRunSpecial() throws Exception{
+
 
         ModuleManager manager = new ModuleManager( D.TEST_USER_NAME );
         MoneyTreeSpecialModule module = new MoneyTreeSpecialModule( manager );
@@ -42,7 +44,7 @@ public class MoneyTreeModuleTest{
                 module.run();
             }
         } catch( ClientException e ) {
-            System.out.println(  e.getCode() );
+            System.out.println( e.getCode() );
         }
 
 

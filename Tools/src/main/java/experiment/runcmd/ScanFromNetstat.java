@@ -23,21 +23,23 @@ public class ScanFromNetstat{
 
     public static void main( String[] args ) throws IOException, InterruptedException{
 
-        ScanFromNetstat scan = new ScanFromNetstat();
-        Map<Integer, String> map = scan.calcResult();
 
-        System.out.println( "总共打开的端口数:" + map.size() );
-        System.out.println( "进程名                      端口号" );
-        System.out.println( "------                      ------" );
-        int nameLen = 28;//对齐的空格长度
-        for( Map.Entry<Integer, String> entry : map.entrySet() ) {
-            String pName = entry.getValue();
-            System.out.print( pName );
-            for( int i = 0; i < nameLen - pName.length(); i++ ) {
-                System.out.print( " " );
-            }
-            System.out.println( "" + entry.getKey() );
-        }
+        ScanFromNetstat scan = new ScanFromNetstat();
+        System.out.println( scan.runCmd( " cmd /c fds aa" ) );
+//        Map<Integer, String> map = scan.calcResult();
+//
+//        System.out.println( "总共打开的端口数:" + map.size() );
+//        System.out.println( "进程名                      端口号" );
+//        System.out.println( "------                      ------" );
+//        int nameLen = 28;//对齐的空格长度
+//        for( Map.Entry<Integer, String> entry : map.entrySet() ) {
+//            String pName = entry.getValue();
+//            System.out.print( pName );
+//            for( int i = 0; i < nameLen - pName.length(); i++ ) {
+//                System.out.print( " " );
+//            }
+//            System.out.println( "" + entry.getKey() );
+//        }
     }
 
     /**
@@ -110,6 +112,7 @@ public class ScanFromNetstat{
      * @return 执行结果按行返回List<String>
      */
     private List<String> runCmd( String cmd ){
+
         List<String> ret = Lists.newArrayList();
         try {
             Process process = Runtime.getRuntime().exec( cmd );
@@ -124,4 +127,6 @@ public class ScanFromNetstat{
         }
         return ret;
     }
+
+
 }
