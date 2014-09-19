@@ -13,6 +13,7 @@ public class RechargeDataProvider extends AbstractDataProviderWithIdentity<Recha
 
     private static final String TABLE_NAME = "recharge";
 
+
     public RechargeDataProvider( String uname ){
         super( TABLE_NAME, uname );
     }
@@ -30,7 +31,7 @@ public class RechargeDataProvider extends AbstractDataProviderWithIdentity<Recha
     protected DBObject encode( RechargeRecord record ){
         DBObject obj = new BasicDBObject();
         obj.put( "_id", record.getId() );
-        obj.put( "uname", getUname() );
+//        obj.put( "uname", getUname() );
         obj.put( "money", record.getMoney() );
         obj.put( "time", record.getTime() );
         return obj;

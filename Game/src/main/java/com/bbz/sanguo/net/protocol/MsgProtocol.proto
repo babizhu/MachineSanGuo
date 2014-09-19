@@ -1,0 +1,226 @@
+package com.bbz.sanguo.net.protobuf;
+
+// How to generate
+// ===============
+// $ cd example
+// $ protoc src/main/java/io/netty/example/worldclock/WorldClockProtocol.proto \
+//          --java_out=src/main/java
+//
+// Add @SuppressWarnings("all") to the generated code not to pollute IDE task list.
+
+option optimize_for = SPEED;
+
+
+enum MSG {
+    Login = 1001;
+
+    /**
+    * 查看闯关信息
+    */
+    MissionShow = 1002;
+    /**
+    * 检测昵称是否重复
+    */
+    NickNameCheck = 1003;
+}
+
+//message EntityData
+//{
+//    optional Terminal terminal = 1;
+//    optional Zone     zone = 2;
+//    optional User     user = 3;
+//}
+//
+//message TraceLevel
+//{
+//    optional bool error = 1;
+//    optional bool warning = 2;
+//    optional bool info    = 3;
+//    optional bool debug   = 4;
+//    optional bool trace   = 5;
+//}
+//message SetTraceRequest
+//{
+//    optional TraceLevel trace_level = 1;
+//    optional bool       log_to_client = 2;
+//
+//}
+//message SetTraceResponse
+//{
+//    optional TraceLevel trace_level = 1;
+//    optional bool       log_to_client = 2;
+//}
+//
+//message GetTraceResponse
+//{
+//    optional TraceLevel trace_level = 1;
+//    optional bool       log_to_client = 2;
+//}
+//message TraceIndication
+//{
+//    required bytes log_record = 1;
+//}
+message LoginRequest {
+    required string userName = 1;
+    required string password = 2;
+}
+
+message LoginResponse {
+    optional int32 ret = 6;
+}
+
+message NickNameCheckRequest {
+    required string nickName = 1; //昵称
+}
+
+message NickNameCheckResponse {
+    required bool isDuplicate = 1; //昵称是否重复
+}
+
+message MissionShowRequest {
+    required int32 missionId = 1;
+}
+
+
+message MissionShowResponse {
+    required int32 protectCount = 1; //总的保护的次数（最大8次，即3+5）
+    required bool isProtect = 2; //今日是否已保护
+    required int32 cd = 3; //剩余冷却时间（秒）
+    required int32 currentMission = 4; //当前关卡
+
+}
+
+//message EntityRequest
+//{
+//    required Entity id = 1;
+//}
+//message EntityResponse
+//{
+//    required EntityData content = 1;
+//}
+//
+//message AppendEntityRequest
+//{
+//    required EntityData content = 1;
+//}
+//message AppendEntityResponse
+//{
+//    required EntityData id = 1;
+//}
+//message ModifyEntityRequest
+//{
+//    required EntityData content = 1;
+//}
+//message ModifyEntityResponse
+//{
+//    required EntityData content = 1;
+//}
+//
+//message DeleteEntityRequest
+//{
+//    required Entity id = 1;
+//}
+//message DeleteEntityResponse
+//{
+//    required EntityData content = 1;
+//}
+//
+//
+//message SnmpRequest
+//{
+//    optional bool set = 1 ;
+//    optional bool get = 2 ;
+//    optional Entity   id = 3;
+//    optional SnmpGroups  content = 4;
+//
+//}
+//
+//message SnmpResponse
+//{
+//    optional Entity  id = 1;
+//    optional SnmpGroups  content = 2;
+//
+//}
+//
+//message MoveZoneRequest
+//{
+//    required Entity id = 1;
+//    required Entity new_zone = 2;
+//}
+//message MoveZoneResponse
+//{
+//    required Entity id = 1;
+//    required Entity old_zone = 2;
+//}
+//
+//message ModifyKeepliveRequest
+//{
+//    required Entity id = 1;
+//    required sfixed32 time_to_live = 2;
+//}
+//
+//enum EntityIndicationType
+//{
+//    APPEND = 0;
+//    UPDATE = 1;
+//    DELETE_ = 2;
+//}
+//message EntityIndication
+//{
+//
+//    required EntityIndicationType type = 1;
+//    required EntityData content = 2;
+//}
+//
+//message MoveZoneIndication
+//{
+//    required Entity id = 1;
+//    required Entity old_zone = 2;
+//}
+message Request {
+    optional LoginRequest login = 1;
+    optional MissionShowRequest missionShow = 2;
+    optional NickNameCheckRequest nickNameCheck = 3;
+}
+
+message Response {
+    required bool result = 1;
+    optional string error_description = 2;
+    //required bool last_block = 3;
+
+
+    optional LoginResponse login = 3;
+    optional MissionShowResponse missionShow = 4;
+    optional NickNameCheckResponse nickNameCheck = 5;
+}
+/*
+message Command
+{
+
+}
+*/
+//message SnmpIndication
+//{
+//    required Entity id = 1;
+//    required SnmpTrapEvent trap_event = 2;
+//
+//
+//}
+//message Indication
+//{
+//    optional EntityIndication entity = 1;
+//    optional SnmpIndication   snmp   =2;
+//    optional TraceIndication  trace  = 3;
+//    optional MoveZoneIndication  move_zone = 4;
+//}
+
+
+message Message {
+    required MSG type = 1;
+    required int32 sequence = 2;
+    optional Request request = 3;
+    optional Response response = 4;
+    //optional Command  command = 5;
+    //optional Indication indication = 6;
+
+}

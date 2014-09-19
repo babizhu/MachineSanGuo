@@ -13,10 +13,10 @@ public class Lanch{
 
     public static void main( String[] args ) throws IOException{
 
-        GameServer server = new GameServer();
-
-        server.start();
-//        IServer srv = new Server(8090, new GameHandler());
+//        GameServer server = new GameServer();
+//
+//        server.start();
+////        IServer srv = new Server(8090, new GameHandler());
 //
 //// run it within the current thread.
 ////        srv.run();  // the call will not return
