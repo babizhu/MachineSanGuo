@@ -53,7 +53,10 @@ public enum HandlerManager{
     }
 
     public static void main( String[] args ){
-        HandlerManager.INSTANCE.buildHandler( MSG.Login );
+//        HandlerManager.INSTANCE.buildHandler( MSG.Login );
+        for( Object o : HandlerManager.INSTANCE.map1.values() ) {
+            System.out.println( o );
+        }
     }
 
     /**
