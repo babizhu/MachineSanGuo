@@ -30,21 +30,21 @@ public enum HandlerManager{
     /**
      * 无需用户登录就能执行的handler
      */
-    private Map<MSG, IHandlerWithoutUser> map1 = Maps.newHashMap();
+    private Map<MSG, INoLoginHandler> map1 = Maps.newHashMap();
 
     /**
      * 必须要用户登录才能执行的handler
      */
-    private Map<MSG, IHandlerWithUser> map2 = Maps.newHashMap();
+    private Map<MSG, IGameHandler> map2 = Maps.newHashMap();
 
     HandlerManager(){
 
         for( MSG msg : MSG.values() ) {
             IHandler handler = buildHandler( msg );
-            if( handler instanceof IHandlerWithoutUser ) {
-                map1.put( msg, (IHandlerWithoutUser) handler );
+            if( handler instanceof INoLoginHandler ) {
+                map1.put( msg, (INoLoginHandler) handler );
             } else {
-                map2.put( msg, (IHandlerWithUser) handler );
+                map2.put( msg, (IGameHandler) handler );
             }
         }
 
@@ -79,11 +79,11 @@ public enum HandlerManager{
         return handler;
     }
 
-    public IHandlerWithUser getHandlerWithUser( MSG msg ){
+    public IGameHandler getHandlerWithUser( MSG msg ){
         return map2.get( msg );
     }
 
-    public IHandlerWithoutUser getHandlerWithoutUser( MSG msg ){
+    public INoLoginHandler getHandlerWithoutUser( MSG msg ){
         return map1.get( msg );
     }
 }

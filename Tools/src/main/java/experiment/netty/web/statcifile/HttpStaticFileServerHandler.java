@@ -77,7 +77,7 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
     public static final String HTTP_DATE_FORMAT = "EEE, dd MMM yyyy HH:mm:ss zzz";
     public static final String HTTP_DATE_GMT_TIMEZONE = "GMT";
     public static final int HTTP_CACHE_SECONDS = 60;
-    private static final String BASE_DIR = "D:\\workspace\\InternetFiles\\策划资料";
+    private static final String BASE_DIR = "e:\\Software\\chrome_download";
     private static final Pattern INSECURE_URI = Pattern.compile( ".*[<>&\"].*" );
 //    private static final Pattern ALLOWED_FILE_NAME = Pattern.compile( "[A-Za-z0-9][-_A-Za-z0-9\\.]*" );
 

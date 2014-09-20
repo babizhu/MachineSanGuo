@@ -18,6 +18,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-shade-plugin:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.0" level="project" />

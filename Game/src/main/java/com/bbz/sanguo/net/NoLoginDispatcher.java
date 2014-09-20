@@ -1,7 +1,7 @@
 package com.bbz.sanguo.net;
 
 import com.bbz.sanguo.net.handler.HandlerManager;
-import com.bbz.sanguo.net.handler.IHandlerWithoutUser;
+import com.bbz.sanguo.net.handler.INoLoginHandler;
 import com.bbz.sanguo.net.protobuf.MsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -14,7 +14,7 @@ import static com.bbz.sanguo.net.protobuf.MsgProtocol.Message;
  * 玩家未登录的时候发送的包在这里进行处理
  */
 
-public class NoLoginHandler extends SimpleChannelInboundHandler<Message>{
+public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
 
     MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
     MsgProtocol.Response.Builder responseBuilder = MsgProtocol.Response.newBuilder();
@@ -24,7 +24,7 @@ public class NoLoginHandler extends SimpleChannelInboundHandler<Message>{
 
         builder.setType( msg.getType() );
         builder.setSequence( msg.getSequence() );
-        IHandlerWithoutUser handler = HandlerManager.INSTANCE.getHandlerWithoutUser( msg.getType() );
+        INoLoginHandler handler = HandlerManager.INSTANCE.getHandlerWithoutUser( msg.getType() );
 
         if( handler == null ) {
             reportError();

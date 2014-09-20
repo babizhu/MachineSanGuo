@@ -10,7 +10,7 @@ import io.netty.channel.ChannelHandlerContext;
  * 所有无需登录就可以执行的处理器的接口
  */
 
-public interface IHandlerWithoutUser extends IHandler{
+public interface INoLoginHandler extends IHandler{
 
     public abstract void run( MsgProtocol.Request request, MsgProtocol.Response.Builder responseBuilder, ChannelHandlerContext ctx );
 }

@@ -12,7 +12,7 @@ import static com.bbz.sanguo.net.protobuf.MsgProtocol.Response.Builder;
  * time         2014-5-29 14:57
  */
 
-public class MissionShowHandler implements IHandlerWithUser{
+public class MissionShowHandler implements IGameHandler{
 
 
     @Override

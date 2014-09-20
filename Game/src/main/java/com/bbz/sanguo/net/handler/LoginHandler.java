@@ -1,7 +1,7 @@
 package com.bbz.sanguo.net.handler;
 
-import com.bbz.sanguo.net.GameServerHandler;
-import com.bbz.sanguo.net.NoLoginHandler;
+import com.bbz.sanguo.net.GameServerDispatcher;
+import com.bbz.sanguo.net.NoLoginDispatcher;
 import com.bbz.sanguo.net.protobuf.MsgProtocol;
 import com.bbz.tool.common.RandomUtil;
 import io.netty.channel.ChannelHandlerContext;
@@ -13,7 +13,7 @@ import io.netty.channel.ChannelPipeline;
  * time         2014-5-28 14:02
  */
 
-public class LoginHandler implements IHandlerWithoutUser{
+public class LoginHandler implements INoLoginHandler{
 
     @Override
     public void run( MsgProtocol.Request request, MsgProtocol.Response.Builder responseBuilder, ChannelHandlerContext ctx ){
@@ -40,8 +40,8 @@ public class LoginHandler implements IHandlerWithoutUser{
 
     private void changeHandler( ChannelHandlerContext ctx ){
         ChannelPipeline pipeline = ctx.pipeline();
-        pipeline.addLast( new GameServerHandler() );
-        pipeline.remove( pipeline.remove( NoLoginHandler.class ) );
+        pipeline.addLast( new GameServerDispatcher() );
+        pipeline.remove( pipeline.remove( NoLoginDispatcher.class ) );
         System.out.println( "登陆成功，转向正常的游戏逻辑处理句柄" );
     }
 }

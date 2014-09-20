@@ -1,7 +1,8 @@
 package com.bbz.sanguo.net.handler;
 
-import experiment.protocolgen.MsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
+
+import static com.bbz.sanguo.net.protobuf.MsgProtocol.*;
 
 /**
  * user         LIUKUN
@@ -9,13 +10,13 @@ import io.netty.channel.ChannelHandlerContext;
  * 检测玩家的昵称是否被占用
  */
 
-public class NickNameCheckHandler implements IHandlerWithoutUser{
+public class NickNameCheckHandler implements INoLoginHandler{
     @Override
-    public void run( MsgProtocol.Request request, MsgProtocol.Response.Builder responseBuilder, ChannelHandlerContext ctx ){
+    public void run( Request request, Response.Builder responseBuilder, ChannelHandlerContext ctx ){
         String nickName = request.getNickNameCheck().getNickName();
 
 
-        MsgProtocol.NickNameCheckResponse.Builder result = MsgProtocol.NickNameCheckResponse.newBuilder();
+        NickNameCheckResponse.Builder result = NickNameCheckResponse.newBuilder();
         result.setIsDuplicate( true );
 
 

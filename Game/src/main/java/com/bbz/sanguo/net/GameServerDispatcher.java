@@ -9,9 +9,9 @@ import io.netty.channel.ChannelHandlerContext;
  * 玩家登录之后的处理逻辑
  */
 
-public class GameServerHandler extends ChannelHandlerAdapter{
+public class GameServerDispatcher extends ChannelHandlerAdapter{
     @Override
     public void channelRead( ChannelHandlerContext ctx, Object msg ) throws Exception{
-        System.out.println( "GameServerHandler.channelRead" );
+        System.out.println( "GameServerDispatcher.channelRead" );
     }
 }
