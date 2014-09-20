@@ -1,6 +1,7 @@
 package com.bbz.sanguo.net.handler;
 
-import experiment.protocolgen.MsgProtocol;
+
+import com.bbz.sanguo.net.protobuf.MsgProtocol;
 
 /**
  * user         LIUKUN
