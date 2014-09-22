@@ -22,6 +22,7 @@ public enum RunTimeDataProvider{
      * 保存所有的服务器单例信息，
      */
     private static final String TABLE_NAME = "runtime";
+    public static final String OPEN_SERVER_SECOND = "openServerSec";
     private final DBCollection collection = MongoUtil.INSTANCE.getDB().getCollection( TABLE_NAME );
     /**
      * 开服时间
@@ -38,9 +39,9 @@ public enum RunTimeDataProvider{
             DBObject obj = collection.findOne();
             if( obj == null ) {
                 openServerSec = SystemTimer.currentTimeSecond();
-                collection.save( new BasicDBObject( "openServerSec", openServerSec ) );//保存到数据库
+                collection.save( new BasicDBObject( OPEN_SERVER_SECOND, openServerSec ) );//保存到数据库
             } else {
-                openServerSec = (int) obj.get( "openServerSec" );
+                openServerSec = (int) obj.get( OPEN_SERVER_SECOND );
             }
         }
         return openServerSec;

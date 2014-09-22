@@ -12,15 +12,18 @@ import com.mongodb.DBObject;
 
 public class MongoSerial{
 
+    public static final String COUNT = "count";
+    public static final String TIME_STAMP = "timeStamp";
+
     public static final DBObject encode( Counter12 counter ){
-        DBObject object = new BasicDBObject( "count", counter.getCount() );
-        object.put( "timeStamp", counter.getSimeStamp() );
+        DBObject object = new BasicDBObject( COUNT, counter.getCount() );
+        object.put( TIME_STAMP, counter.getSimeStamp() );
         return object;
     }
 
     public static final Counter12 decode( Object object ){
         DBObject obj = (DBObject) object;
-        Counter12 counter = new Counter12( (int) obj.get( "count" ), (int) obj.get( "timeStamp" ) );
+        Counter12 counter = new Counter12( (int) obj.get( COUNT ), (int) obj.get( TIME_STAMP ) );
         return counter;
     }
 }

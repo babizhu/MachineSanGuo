@@ -8,13 +8,22 @@ import java.util.Map;
  * time         14-3-26 下午7:50
  */
 public enum ErrorCode{
+
     SUCCESS( 0 ),
-    HERO_NOT_FOUND( 1000 ),
-    EQUPMENT_NOT_FOUND( 2000 ),
+    /**
+     * 尚未登录
+     */
+    NOT_LOGIN(1000),
+    /**
+     * 已经登录
+     */
+    HAS_LOGIN(1001),
+    HERO_NOT_FOUND( 2000 ),
+    EQUPMENT_NOT_FOUND( 3000 ),
     /**
      * 摇钱树今日运行次数超上限
      */
-    MONEY_TREE_RUN_UPPER_LIMIT(3000);
+    MONEY_TREE_RUN_UPPER_LIMIT(4000);
 
     private static final Map<Integer, ErrorCode> numToEnum = new HashMap<>();
 

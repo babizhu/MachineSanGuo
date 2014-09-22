@@ -32,16 +32,16 @@ public class LoginHandler implements INoLoginHandler{
         /****************************设返回值***************************/
         responseBuilder.setLogin( result );
 
-        if( uname.equals( "liukun" ) ) {
-            changeHandler( ctx );
+        if( uname.equals( "bbz" ) ) {
+            changeDispatcher( ctx );
         }
 
     }
 
-    private void changeHandler( ChannelHandlerContext ctx ){
+    private void changeDispatcher( ChannelHandlerContext ctx ){
         ChannelPipeline pipeline = ctx.pipeline();
         pipeline.addLast( new GameServerDispatcher() );
-        pipeline.remove( pipeline.remove( NoLoginDispatcher.class ) );
+        pipeline.remove(  NoLoginDispatcher.class );
         System.out.println( "登陆成功，转向正常的游戏逻辑处理句柄" );
     }
 }

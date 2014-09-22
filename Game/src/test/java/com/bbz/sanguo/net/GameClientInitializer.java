@@ -11,19 +11,23 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
 /**
  * user         LIUKUN
- * time         2014-9-19 16:35
+ * time         2014-5-27 18:28
  */
 
-public class GameServerInitializer extends ChannelInitializer<SocketChannel>{
+public class GameClientInitializer extends ChannelInitializer<SocketChannel>{
+
+    private ProtobufDecoder decoder = new ProtobufDecoder( MsgProtocol.Message.getDefaultInstance() );
+    private ProtobufVarint32LengthFieldPrepender prepender = new ProtobufVarint32LengthFieldPrepender();
+    private ProtobufEncoder encoder = new ProtobufEncoder();
+
     @Override
     protected void initChannel( SocketChannel ch ) throws Exception{
         ChannelPipeline pipeline = ch.pipeline();
+
         pipeline.addLast( new ProtobufVarint32FrameDecoder() );
-        pipeline.addLast( new ProtobufDecoder( MsgProtocol.Message.getDefaultInstance() ) );
-
-        pipeline.addLast( new ProtobufVarint32LengthFieldPrepender() );
-        pipeline.addLast( new ProtobufEncoder() );
-
-        pipeline.addLast( new NoLoginDispatcher() );
+        pipeline.addLast( decoder );
+        pipeline.addLast( prepender );
+        pipeline.addLast( encoder );
+        pipeline.addLast( new GameClientHandler() );
     }
 }

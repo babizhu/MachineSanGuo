@@ -25,7 +25,7 @@ public enum HandlerManager{
     /**
      * handler包的字符串，根据实际情况来调整，后面的"."不要丢了
      */
-    public static final String HANDLER_PACKAGE = "experiment.netty.protowithgame.server.handler.";
+    public static final String HANDLER_PACKAGE = "com.bbz.sanguo.net.handler.";
 
     /**
      * 无需用户登录就能执行的handler

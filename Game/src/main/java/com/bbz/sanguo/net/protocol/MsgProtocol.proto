@@ -184,8 +184,9 @@ message Request {
 }
 
 message Response {
-    required bool result = 1;
-    optional string error_description = 2;
+//    required bool result = 1;
+    required int32  resultCode = 1;//结果指示，0为成功，其他为各种错误码
+    optional string error_description = 2;//可选，如果有些错误不能从配置文件中获取，则在此描述
     //required bool last_block = 3;
 
 

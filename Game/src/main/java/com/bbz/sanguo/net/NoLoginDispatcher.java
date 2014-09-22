@@ -1,5 +1,7 @@
 package com.bbz.sanguo.net;
 
+import com.bbz.sanguo.ai.ClientException;
+import com.bbz.sanguo.ai.ErrorCode;
 import com.bbz.sanguo.net.handler.HandlerManager;
 import com.bbz.sanguo.net.handler.INoLoginHandler;
 import com.bbz.sanguo.net.protobuf.MsgProtocol;
@@ -22,35 +24,42 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, Message msg ) throws Exception{
 
+        System.out.println( msg.getType() + "句柄被调用了" );
+
         builder.setType( msg.getType() );
         builder.setSequence( msg.getSequence() );
         INoLoginHandler handler = HandlerManager.INSTANCE.getHandlerWithoutUser( msg.getType() );
 
         if( handler == null ) {
-            reportError();
+            System.err.println( msg.getType()+"句柄没找到" );
+            reportError( new ClientException( ErrorCode.NOT_LOGIN ) );
         }
 
-        try {
-            handler.run( msg.getRequest(), responseBuilder, ctx );
-            responseBuilder.setResult( true );
+        else {
+            try {
+                handler.run( msg.getRequest(), responseBuilder, ctx );
+//                responseBuilder.setResult( true );看看是否缺省为0
+                responseBuilder.setResultCode( 0 );
 
-        } catch( Exception e ) {
-            reportError();
-            //e.printStackTrace();
+            } catch( ClientException excpetion ){
+                reportError( excpetion );
+            } catch( Exception e ) {
+                e.printStackTrace();
 
+            }
+
+            builder.setResponse( responseBuilder );
+            ctx.writeAndFlush( builder.build() );
         }
-
-        builder.setResponse( responseBuilder );
-        ctx.writeAndFlush( builder.build() );
 
     }
 
     /**
      * 报告客户端，后台执行出现异常
      */
-    private void reportError(){
-        responseBuilder.setResult( false );
-        responseBuilder.setErrorDescription( "error" );
+    private void reportError( ClientException exception ){
+        responseBuilder.setResultCode( exception.getCode().toNum() );
+
     }
 
     @Override
