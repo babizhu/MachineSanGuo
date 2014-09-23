@@ -8,31 +8,29 @@ import com.bbz.sanguo.net.protobuf.MsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
-import static com.bbz.sanguo.net.protobuf.MsgProtocol.Message;
-
 /**
  * user         LIUKUN
  * time         2014-9-19 16:36
  * 玩家登录之后的处理逻辑
  */
 
-public class GameServerDispatcher extends SimpleChannelInboundHandler<Message>{
+public class GameServerDispatcher extends SimpleChannelInboundHandler<MsgProtocol.Request>{
 
-    MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
+//    MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
     MsgProtocol.Response.Builder responseBuilder = MsgProtocol.Response.newBuilder();
 
     @Override
-    protected void messageReceived( ChannelHandlerContext ctx, Message msg ) throws Exception{
+    protected void messageReceived( ChannelHandlerContext ctx, MsgProtocol.Request request ) throws Exception{
 
-        builder.setType( msg.getType() );
-        builder.setSequence( msg.getSequence() );
-        IGameHandler handler = HandlerManager.INSTANCE.getHandlerWithUser( msg.getType() );
+        responseBuilder.setType( request.getType() );
+        responseBuilder.setSequence( request.getSequence() );
+        IGameHandler handler = HandlerManager.INSTANCE.getHandlerWithUser( request.getType() );
 
         if( handler == null ) {
             reportError( new ClientException( ErrorCode.HAS_LOGIN ) );
         } else {
             try {
-                handler.run( msg.getRequest(), responseBuilder, ctx );
+                handler.run( request, responseBuilder, ctx );
 //                responseBuilder.setResult( true );
 
             } catch( ClientException exception ) {
@@ -45,10 +43,9 @@ public class GameServerDispatcher extends SimpleChannelInboundHandler<Message>{
 
 
         }
-        builder.setResponse( responseBuilder );
-        ctx.writeAndFlush( builder.build() );
+        ctx.writeAndFlush( responseBuilder.build() );
 
-        System.out.println( msg.getType() + "(" + msg.getSequence() + "):" +
+        System.out.println( responseBuilder.getType() + "(" + responseBuilder.getSequence() + "):" +
                 ErrorCode.fromNum( responseBuilder.getResultCode() ) +
                 " ["+Thread.currentThread().getName()+"]");
 

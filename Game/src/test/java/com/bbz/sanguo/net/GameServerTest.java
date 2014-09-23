@@ -24,10 +24,13 @@ public class GameServerTest{
 
             GameClientHandler handler = channel.pipeline().get( GameClientHandler.class );
 
-            handler.missionShow();
-            handler.login( "bbz", "pass" );
-            handler.missionShow();
-            handler.login( "bbz", "pass" );
+            for( int i = 0; i < 100000; i++ ) {
+
+                handler.missionShow();
+                handler.login( "bbz", "pass" );
+                handler.missionShow();
+                handler.login( "bbz", "pass" );
+            }
 
         } catch( Exception e ) {
             e.printStackTrace();

@@ -4,11 +4,11 @@ import com.bbz.sanguo.ai.ClientException;
 import com.bbz.sanguo.ai.ErrorCode;
 import com.bbz.sanguo.net.handler.HandlerManager;
 import com.bbz.sanguo.net.handler.INoLoginHandler;
-import com.bbz.sanguo.net.protobuf.MsgProtocol;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
-import static com.bbz.sanguo.net.protobuf.MsgProtocol.Message;
+import static com.bbz.sanguo.net.protobuf.MsgProtocol.Request;
+import static com.bbz.sanguo.net.protobuf.MsgProtocol.Response;
 
 /**
  * user         LIUKUN
@@ -16,19 +16,16 @@ import static com.bbz.sanguo.net.protobuf.MsgProtocol.Message;
  * 玩家未登录的时候发送的包在这里进行处理
  */
 
-public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
+public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
 
-    MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
-    MsgProtocol.Response.Builder responseBuilder = MsgProtocol.Response.newBuilder();
+    Response.Builder responseBuilder = Response.newBuilder();
 
     @Override
-    protected void messageReceived( ChannelHandlerContext ctx, Message msg ) throws Exception{
+    protected void messageReceived( ChannelHandlerContext ctx, Request request ) throws Exception{
 
-
-
-        builder.setType( msg.getType() );
-        builder.setSequence( msg.getSequence() );
-        INoLoginHandler handler = HandlerManager.INSTANCE.getHandlerWithoutUser( msg.getType() );
+        responseBuilder.setType( request.getType() );
+        responseBuilder.setSequence( request.getSequence() );
+        INoLoginHandler handler = HandlerManager.INSTANCE.getHandlerWithoutUser( request.getType() );
 
         if( handler == null ) {
 
@@ -37,7 +34,7 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
 
         else {
             try {
-                handler.run( msg.getRequest(), responseBuilder, ctx );
+                handler.run( request, responseBuilder, ctx );
 
             } catch( ClientException excpetion ){
                 reportError( excpetion );
@@ -45,14 +42,12 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
                 e.printStackTrace();
 
             }
-            responseBuilder.setResultCode(0);//明确表示此次调用成功
-
-
+            responseBuilder.setResultCode( 0 );//明确表示此次调用成功
         }
-        builder.setResponse( responseBuilder );
-        ctx.writeAndFlush( builder.build() );
 
-        System.out.println( msg.getType() + "(" + msg.getSequence() + "):" +
+        ctx.writeAndFlush( responseBuilder.build() );
+
+        System.out.println( responseBuilder.getType() + "(" + responseBuilder.getSequence() + "):" +
                 ErrorCode.fromNum( responseBuilder.getResultCode() ) +
                 " ["+Thread.currentThread().getName()+"]");
 

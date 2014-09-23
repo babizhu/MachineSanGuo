@@ -16,7 +16,7 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
 public class GameClientInitializer extends ChannelInitializer<SocketChannel>{
 
-    private ProtobufDecoder decoder = new ProtobufDecoder( MsgProtocol.Message.getDefaultInstance() );
+    private ProtobufDecoder decoder = new ProtobufDecoder( MsgProtocol.Response.getDefaultInstance() );
     private ProtobufVarint32LengthFieldPrepender prepender = new ProtobufVarint32LengthFieldPrepender();
     private ProtobufEncoder encoder = new ProtobufEncoder();
 

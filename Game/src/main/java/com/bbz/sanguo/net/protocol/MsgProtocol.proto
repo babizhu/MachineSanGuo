@@ -178,21 +178,26 @@ message MissionShowResponse {
 //    required Entity old_zone = 2;
 //}
 message Request {
-    optional LoginRequest login = 1;
-    optional MissionShowRequest missionShow = 2;
-    optional NickNameCheckRequest nickNameCheck = 3;
+    required MSG type = 1;
+    required int32 sequence = 2;
+
+    optional LoginRequest login = 3;
+    optional MissionShowRequest missionShow = 4;
+    optional NickNameCheckRequest nickNameCheck = 5;
 }
 
 message Response {
+    required MSG type = 1;
+    required int32 sequence = 2;
 //    required bool result = 1;
-    required int32  resultCode = 1;//结果指示，0为成功，其他为各种错误码
-    optional string error_description = 2;//可选，如果有些错误不能从配置文件中获取，则在此描述
+    required int32  resultCode = 3;//结果指示，0为成功，其他为各种错误码
+    optional string error_description = 4;//可选，如果有些错误不能从配置文件中获取，则在此描述
     //required bool last_block = 3;
 
 
-    optional LoginResponse login = 3;
-    optional MissionShowResponse missionShow = 4;
-    optional NickNameCheckResponse nickNameCheck = 5;
+    optional LoginResponse login = 5;
+    optional MissionShowResponse missionShow = 6;
+    optional NickNameCheckResponse nickNameCheck = 7;
 }
 /*
 message Command
@@ -216,13 +221,13 @@ message Command
 //}
 
 
-
-message Message {
-    required MSG type = 1;
-    required int32 sequence = 2;
-    optional Request request = 3;
-    optional Response response = 4;
-    //optional Command  command = 5;
-    //optional Indication indication = 6;
-
-}
+//
+//message Message {
+//    required MSG type = 1;
+//    required int32 sequence = 2;
+//    optional Request request = 3;
+//    optional Response response = 4;
+//    //optional Command  command = 5;
+//    //optional Indication indication = 6;
+//
+//}
