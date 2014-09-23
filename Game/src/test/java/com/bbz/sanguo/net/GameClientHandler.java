@@ -16,21 +16,51 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class GameClientHandler extends SimpleChannelInboundHandler<MsgProtocol.Message>{
     private final BlockingQueue<MsgProtocol.Message> answer = new LinkedBlockingQueue<>();
     private volatile Channel channel;
+    private int sequence = 0;
 
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, MsgProtocol.Message msg ) throws Exception{
         answer.add( msg );
     }
 
-    public void MissionShow(){
+    private MsgProtocol.Message.Builder createMsgBuilder( MsgProtocol.MSG msg){
         MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
-        builder.setType( MsgProtocol.MSG.MissionShow );
-        builder.setSequence( 123333 );
+        builder.setType( msg );
+        builder.setSequence( sequence++ );
+        return builder;
+    }
 
+    MsgProtocol.Response waitResult(){
+        boolean interrupted = false;
+        MsgProtocol.Message msg = null;
+        for(; ; ) {
+            try {
+//                System.out.println( "missionShow" );
+                msg = answer.take();
+                System.out.println( "结果码 :" + ErrorCode.fromNum( msg.getResponse().getResultCode() ));
+                System.out.println( "Sequence :" + msg.getSequence() );
+                break;
+            } catch( InterruptedException ignore ) {
+                interrupted = true;
+            }
+        }
+
+        if( interrupted ) {
+            Thread.currentThread().interrupt();
+        }
+        return msg.getResponse();
+
+    }
+
+
+
+    public void missionShow(){
+
+
+        MsgProtocol.Message.Builder builder = createMsgBuilder( MsgProtocol.MSG.MissionShow );
         MsgProtocol.MissionShowRequest.Builder reqeustBuilder = MsgProtocol.MissionShowRequest.newBuilder();
 
         reqeustBuilder.setMissionId( 5 );
-
         builder.setRequest( MsgProtocol.Request.newBuilder().setMissionShow( reqeustBuilder.build() ) );
 
 
@@ -42,12 +72,13 @@ public class GameClientHandler extends SimpleChannelInboundHandler<MsgProtocol.M
 //                System.out.println( future.cause() );
             }
         } );
+
+        MsgProtocol.Response response = waitResult();
+
     }
 
     public int login( String uname, String password ){
-        MsgProtocol.Message.Builder builder = MsgProtocol.Message.newBuilder();
-        builder.setType( MsgProtocol.MSG.Login );
-        builder.setSequence( 12121 );
+        MsgProtocol.Message.Builder builder = createMsgBuilder( MsgProtocol.MSG.Login );
 
         MsgProtocol.LoginRequest.Builder reqeustBuilder = MsgProtocol.LoginRequest.newBuilder();
         reqeustBuilder.setUserName( uname );
@@ -56,29 +87,9 @@ public class GameClientHandler extends SimpleChannelInboundHandler<MsgProtocol.M
         builder.setRequest( MsgProtocol.Request.newBuilder().setLogin( reqeustBuilder.build() ) );
 
 
-        channel.writeAndFlush( builder.build() );
-
-        int ret;
-        boolean interrupted = false;
-        for(; ; ) {
-            try {
-                System.out.println( "等待login的结果" );
-                MsgProtocol.Message msg = answer.take();
-                ret = msg.getResponse().getLogin().getRet();
-                System.out.println( "结果码 :" + ErrorCode.fromNum( msg.getResponse().getResultCode() ));
-                System.out.println( "Sequence " + msg.getSequence() );
-                break;
-            } catch( InterruptedException ignore ) {
-                interrupted = true;
-            }
-        }
-
-        if( interrupted ) {
-            Thread.currentThread().interrupt();
-        }
-
-
-        return ret;
+        channel.writeAndFlush( builder );
+        MsgProtocol.Response response = waitResult();
+        return response.getLogin().getRet();
     }
 
     @Override

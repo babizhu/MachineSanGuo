@@ -15,14 +15,19 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
  */
 
 public class GameServerInitializer extends ChannelInitializer<SocketChannel>{
+//    private static final ProtobufVarint32FrameDecoder VARINT32_FRAME_DECODER = new ProtobufVarint32FrameDecoder();
+    private static final ProtobufDecoder DECODER = new ProtobufDecoder( MsgProtocol.Message.getDefaultInstance() );
+    private static final ProtobufVarint32LengthFieldPrepender VARINT_32_LENGTH_FIELD_PREPENDER = new ProtobufVarint32LengthFieldPrepender();
+    private static final ProtobufEncoder ENCODER = new ProtobufEncoder();
+
     @Override
     protected void initChannel( SocketChannel ch ) throws Exception{
         ChannelPipeline pipeline = ch.pipeline();
-        pipeline.addLast( new ProtobufVarint32FrameDecoder() );
-        pipeline.addLast( new ProtobufDecoder( MsgProtocol.Message.getDefaultInstance() ) );
+        pipeline.addLast( new ProtobufVarint32FrameDecoder()  );
+        pipeline.addLast( DECODER );
 
-        pipeline.addLast( new ProtobufVarint32LengthFieldPrepender() );
-        pipeline.addLast( new ProtobufEncoder() );
+        pipeline.addLast( VARINT_32_LENGTH_FIELD_PREPENDER );
+        pipeline.addLast( ENCODER );
 
         pipeline.addLast( new NoLoginDispatcher() );
     }

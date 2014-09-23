@@ -17,31 +17,17 @@ public class GameServerTest{
         try {
             bootstrap.group( worker );
             bootstrap.channel( NioSocketChannel.class );
+//            bootstrap.channel( OioSocketChannel.class );
             bootstrap.handler( new GameClientInitializer() );
 
             Channel channel = bootstrap.connect( "localhost", ServerCfg.PORT ).sync().channel();
 
             GameClientHandler handler = channel.pipeline().get( GameClientHandler.class );
-//            handler.MissionShow();
 
-
-//            int ret = handler.login( "bbz"+ RandomUtil.getInt( 1000 ), "pass123" );
-
-            //System.out.println( "登录的结果 " + ret );
-
-
+            handler.missionShow();
             handler.login( "bbz", "pass" );
-//            for( int i = 0; i < 0; i++ ) {
-//                Thread.sleep( 10 );
-//            }
-            //channel.close();
-//            System.out.println("4444444444444444444444444444444444444444");
-//            Thread.sleep( 1000 );
-//            handler.login( "bbz", "pass" );
-//            Thread.sleep( 1000 );
-//            handler.MissionShow();
-//            Thread.sleep( 1000 );
-//            handler.login( "bbz", "pass" );
+            handler.missionShow();
+            handler.login( "bbz", "pass" );
 
         } catch( Exception e ) {
             e.printStackTrace();

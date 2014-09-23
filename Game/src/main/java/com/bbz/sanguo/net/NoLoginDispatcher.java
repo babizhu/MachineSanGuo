@@ -24,22 +24,20 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, Message msg ) throws Exception{
 
-        System.out.println( msg.getType() + "句柄被调用了" );
+
 
         builder.setType( msg.getType() );
         builder.setSequence( msg.getSequence() );
         INoLoginHandler handler = HandlerManager.INSTANCE.getHandlerWithoutUser( msg.getType() );
 
         if( handler == null ) {
-            System.err.println( msg.getType()+"句柄没找到" );
+
             reportError( new ClientException( ErrorCode.NOT_LOGIN ) );
         }
 
         else {
             try {
                 handler.run( msg.getRequest(), responseBuilder, ctx );
-//                responseBuilder.setResult( true );看看是否缺省为0
-                responseBuilder.setResultCode( 0 );
 
             } catch( ClientException excpetion ){
                 reportError( excpetion );
@@ -47,10 +45,16 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Message>{
                 e.printStackTrace();
 
             }
+            responseBuilder.setResultCode(0);//明确表示此次调用成功
 
-            builder.setResponse( responseBuilder );
-            ctx.writeAndFlush( builder.build() );
+
         }
+        builder.setResponse( responseBuilder );
+        ctx.writeAndFlush( builder.build() );
+
+        System.out.println( msg.getType() + "(" + msg.getSequence() + "):" +
+                ErrorCode.fromNum( responseBuilder.getResultCode() ) +
+                " ["+Thread.currentThread().getName()+"]");
 
     }
 

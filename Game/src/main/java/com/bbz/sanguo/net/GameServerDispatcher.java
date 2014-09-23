@@ -29,41 +29,44 @@ public class GameServerDispatcher extends SimpleChannelInboundHandler<Message>{
         IGameHandler handler = HandlerManager.INSTANCE.getHandlerWithUser( msg.getType() );
 
         if( handler == null ) {
-            System.err.println( msg.getType()+"句柄没找到" );
-            reportError( new ClientException( ErrorCode.HAS_LOGIN ));
+            reportError( new ClientException( ErrorCode.HAS_LOGIN ) );
         } else {
             try {
                 handler.run( msg.getRequest(), responseBuilder, ctx );
 //                responseBuilder.setResult( true );
 
-            }catch( ClientException exception ){
+            } catch( ClientException exception ) {
                 reportError( exception );
-            }
-            catch( Exception e ) {
+            } catch( Exception e ) {
                 e.printStackTrace();
 
             }
+            responseBuilder.setResultCode(0);//明确表示此次调用成功
 
-            builder.setResponse( responseBuilder );
-            ctx.writeAndFlush( builder.build() );
 
-            System.out.println( msg.getType() + "句柄被调用了" );
         }
+        builder.setResponse( responseBuilder );
+        ctx.writeAndFlush( builder.build() );
+
+        System.out.println( msg.getType() + "(" + msg.getSequence() + "):" +
+                ErrorCode.fromNum( responseBuilder.getResultCode() ) +
+                " ["+Thread.currentThread().getName()+"]");
+
+
     }
 
     /**
      * 报告客户端，后台执行出现异常
      */
-    private void reportError(ClientException exception){
+    private void reportError( ClientException exception ){
         responseBuilder.setResultCode( exception.getCode().toNum() );
     }
-
 
 
     @Override
     public void channelInactive( ChannelHandlerContext ctx ) throws Exception{
         super.channelInactive( ctx );
-        System.out.println( ctx.channel().remoteAddress() + " GameServerDispatcher.channelInactive" +  " 断开了连接");
+        System.out.println( ctx.channel().remoteAddress() + " GameServerDispatcher.channelInactive" + " 断开了连接" );
     }
 
     @Override

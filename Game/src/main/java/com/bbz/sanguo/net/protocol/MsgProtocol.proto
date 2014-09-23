@@ -216,6 +216,7 @@ message Command
 //}
 
 
+
 message Message {
     required MSG type = 1;
     required int32 sequence = 2;
