@@ -13,7 +13,7 @@ import io.netty.channel.ChannelPipeline;
  * time         2014-5-28 14:02
  */
 
-public class LoginHandler implements INoLoginHandler{
+public class UserLoginHandler implements INoLoginHandler{
 
     @Override
     public void run( MsgProtocol.Request request, MsgProtocol.Response.Builder responseBuilder, ChannelHandlerContext ctx ){
@@ -38,6 +38,10 @@ public class LoginHandler implements INoLoginHandler{
 
     }
 
+    /**
+     * 玩家成功登陆后，需要修改dispatcher
+     * @param ctx
+     */
     private void changeDispatcher( ChannelHandlerContext ctx ){
         ChannelPipeline pipeline = ctx.pipeline();
         pipeline.addLast( new GameServerDispatcher() );

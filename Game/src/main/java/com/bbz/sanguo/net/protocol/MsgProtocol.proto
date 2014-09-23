@@ -1,5 +1,7 @@
 package com.bbz.sanguo.net.protobuf;
 
+import "User.proto";
+
 // How to generate
 // ===============
 // $ cd example
@@ -12,83 +14,49 @@ option optimize_for = SPEED;
 
 
 enum MSG {
-    Login = 1001;
+    Login = 100;
+
+    /**
+    * 玩家注册
+    */
+    Registe = 101;
+    /**
+    * 检测昵称是否重复
+    */
+    NickNameCheck = 102;
 
     /**
     * 查看闯关信息
     */
-    MissionShow = 1002;
-    /**
-    * 检测昵称是否重复
-    */
-    NickNameCheck = 1003;
-}
-
-//message EntityData
-//{
-//    optional Terminal terminal = 1;
-//    optional Zone     zone = 2;
-//    optional User     user = 3;
-//}
-//
-//message TraceLevel
-//{
-//    optional bool error = 1;
-//    optional bool warning = 2;
-//    optional bool info    = 3;
-//    optional bool debug   = 4;
-//    optional bool trace   = 5;
-//}
-//message SetTraceRequest
-//{
-//    optional TraceLevel trace_level = 1;
-//    optional bool       log_to_client = 2;
-//
-//}
-//message SetTraceResponse
-//{
-//    optional TraceLevel trace_level = 1;
-//    optional bool       log_to_client = 2;
-//}
-//
-//message GetTraceResponse
-//{
-//    optional TraceLevel trace_level = 1;
-//    optional bool       log_to_client = 2;
-//}
-//message TraceIndication
-//{
-//    required bytes log_record = 1;
-//}
-message LoginRequest {
-    required string userName = 1;
-    required string password = 2;
-}
-
-message LoginResponse {
-    optional int32 ret = 6;
-}
-
-message NickNameCheckRequest {
-    required string nickName = 1; //昵称
-}
-
-message NickNameCheckResponse {
-    required bool isDuplicate = 1; //昵称是否重复
-}
-
-message MissionShowRequest {
-    required int32 missionId = 1;
-}
-
-
-message MissionShowResponse {
-    required int32 protectCount = 1; //总的保护的次数（最大8次，即3+5）
-    required bool isProtect = 2; //今日是否已保护
-    required int32 cd = 3; //剩余冷却时间（秒）
-    required int32 currentMission = 4; //当前关卡
+    MissionShow = 200;
 
 }
+
+
+message Request {
+    required MSG type = 1;
+    required int32 sequence = 2;
+
+    optional LoginRequest login = 3;
+    optional MissionShowRequest missionShow = 4;
+    optional NickNameCheckRequest nickNameCheck = 5;
+    optional RegisterRequest register = 6;
+}
+
+message Response {
+    required MSG                                type = 1;
+    required int32                              sequence = 2;
+    required int32                              resultCode = 3;//结果指示，0为成功，其他为各种错误码
+    optional string                             error_description = 4;//可选，如果有些错误不能从配置文件中获取，则在此描述
+    //required bool last_block = 3;
+
+
+    optional LoginResponse                      login = 5;
+    optional MissionShowResponse                missionShow = 6;
+    optional NickNameCheckResponse              nickNameCheck = 7;
+    optional RegisterResponse                    register = 8;
+}
+
 
 //message EntityRequest
 //{
@@ -177,28 +145,6 @@ message MissionShowResponse {
 //    required Entity id = 1;
 //    required Entity old_zone = 2;
 //}
-message Request {
-    required MSG type = 1;
-    required int32 sequence = 2;
-
-    optional LoginRequest login = 3;
-    optional MissionShowRequest missionShow = 4;
-    optional NickNameCheckRequest nickNameCheck = 5;
-}
-
-message Response {
-    required MSG type = 1;
-    required int32 sequence = 2;
-//    required bool result = 1;
-    required int32  resultCode = 3;//结果指示，0为成功，其他为各种错误码
-    optional string error_description = 4;//可选，如果有些错误不能从配置文件中获取，则在此描述
-    //required bool last_block = 3;
-
-
-    optional LoginResponse login = 5;
-    optional MissionShowResponse missionShow = 6;
-    optional NickNameCheckResponse nickNameCheck = 7;
-}
 /*
 message Command
 {
@@ -230,4 +176,40 @@ message Command
 //    //optional Command  command = 5;
 //    //optional Indication indication = 6;
 //
+//}
+//message EntityData
+//{
+//    optional Terminal terminal = 1;
+//    optional Zone     zone = 2;
+//    optional User     user = 3;
+//}
+//
+//message TraceLevel
+//{
+//    optional bool error = 1;
+//    optional bool warning = 2;
+//    optional bool info    = 3;
+//    optional bool debug   = 4;
+//    optional bool trace   = 5;
+//}
+//message SetTraceRequest
+//{
+//    optional TraceLevel trace_level = 1;
+//    optional bool       log_to_client = 2;
+//
+//}
+//message SetTraceResponse
+//{
+//    optional TraceLevel trace_level = 1;
+//    optional bool       log_to_client = 2;
+//}
+//
+//message GetTraceResponse
+//{
+//    optional TraceLevel trace_level = 1;
+//    optional bool       log_to_client = 2;
+//}
+//message TraceIndication
+//{
+//    required bytes log_record = 1;
 //}

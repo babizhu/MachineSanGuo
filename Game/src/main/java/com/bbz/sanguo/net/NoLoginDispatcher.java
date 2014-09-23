@@ -28,15 +28,12 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
         INoLoginHandler handler = HandlerManager.INSTANCE.getHandlerWithoutUser( request.getType() );
 
         if( handler == null ) {
-
             reportError( new ClientException( ErrorCode.NOT_LOGIN ) );
-        }
-
-        else {
+        } else {
             try {
                 handler.run( request, responseBuilder, ctx );
 
-            } catch( ClientException excpetion ){
+            } catch( ClientException excpetion ) {
                 reportError( excpetion );
             } catch( Exception e ) {
                 e.printStackTrace();
@@ -44,12 +41,11 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
             }
             responseBuilder.setResultCode( 0 );//明确表示此次调用成功
         }
-
         ctx.writeAndFlush( responseBuilder.build() );
 
         System.out.println( responseBuilder.getType() + "(" + responseBuilder.getSequence() + "):" +
                 ErrorCode.fromNum( responseBuilder.getResultCode() ) +
-                " ["+Thread.currentThread().getName()+"]");
+                " [" + Thread.currentThread().getName() + "]" );
 
     }
 
@@ -58,7 +54,6 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
      */
     private void reportError( ClientException exception ){
         responseBuilder.setResultCode( exception.getCode().toNum() );
-
     }
 
     @Override
