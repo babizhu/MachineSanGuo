@@ -1,12 +1,9 @@
 package experiment.netty.protobuf;
 
+import experiment.netty.protobuf.mycodec.codec.GameCodec;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.codec.protobuf.ProtobufDecoder;
-import io.netty.handler.codec.protobuf.ProtobufEncoder;
-
-import static experiment.protocolgen.WorldClockProtocol.Locations.getDefaultInstance;
 
 /**
  * user         LIUKUN
@@ -19,10 +16,12 @@ public class WorldClockServerInitializer extends ChannelInitializer<SocketChanne
         ChannelPipeline pipeline = ch.pipeline();
 
 //        pipeline.addLast( new ProtobufVarint32FrameDecoder() );
-        pipeline.addLast( new ProtobufDecoder( getDefaultInstance() ) );
-
+//        pipeline.addLast( new ProtobufDecoder( getDefaultInstance() ) );
+//
 //        pipeline.addLast( new ProtobufVarint32LengthFieldPrepender() );
-        pipeline.addLast( new ProtobufEncoder() );
+//        pipeline.addLast( new ProtobufEncoder() );
+
+        pipeline.addLast( new GameCodec( true ) );
 
         pipeline.addLast( new WorldClockServerHandler() );
     }

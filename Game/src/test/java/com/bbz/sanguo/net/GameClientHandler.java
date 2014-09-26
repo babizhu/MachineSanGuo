@@ -1,7 +1,9 @@
 package com.bbz.sanguo.net;
 
 import com.bbz.sanguo.ai.ErrorCode;
+import com.bbz.sanguo.net.protobuf.Mission;
 import com.bbz.sanguo.net.protobuf.MsgProtocol;
+import com.bbz.sanguo.net.protobuf.User;
 import io.netty.channel.*;
 
 import java.util.concurrent.BlockingQueue;
@@ -58,9 +60,9 @@ public class GameClientHandler extends SimpleChannelInboundHandler<MsgProtocol.R
 
 
         MsgProtocol.Request.Builder builder = createRequestBuilder( MsgProtocol.MSG.MissionShow );
-        MsgProtocol.MissionShowRequest.Builder reqeustBuilder = MsgProtocol.MissionShowRequest.newBuilder();
+        Mission.MissionShowRequest.Builder reqeustBuilder = Mission.MissionShowRequest.newBuilder();
 
-        reqeustBuilder.setMissionId( 5 );
+        reqeustBuilder.setMissionId( 5000 );
         builder.setMissionShow( reqeustBuilder.build() );
 
 
@@ -82,7 +84,7 @@ public class GameClientHandler extends SimpleChannelInboundHandler<MsgProtocol.R
     public int login( String uname, String password ){
         MsgProtocol.Request.Builder builder = createRequestBuilder( MsgProtocol.MSG.Login );
 
-        MsgProtocol.LoginRequest.Builder reqeustBuilder = MsgProtocol.LoginRequest.newBuilder();
+        User.LoginRequest.Builder reqeustBuilder = User.LoginRequest.newBuilder();
         reqeustBuilder.setUserName( uname );
         reqeustBuilder.setPassword( password );
 

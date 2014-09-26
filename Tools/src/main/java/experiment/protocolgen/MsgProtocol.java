@@ -3,7328 +3,6853 @@
 
 package experiment.protocolgen;
 
-public final class MsgProtocol{
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_LoginRequest_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_LoginResponse_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_Request_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_Request_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_Response_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_Response_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_Message_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_Message_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.FileDescriptor
-            descriptor;
-
-    static{
-        java.lang.String[] descriptorData = {
-                "\n\021MsgProtocol.proto\022\026experiment.protocol" +
-                        "gen\"2\n\014LoginRequest\022\020\n\010userName\030\001 \002(\t\022\020\n" +
-                        "\010password\030\002 \002(\t\"\034\n\rLoginResponse\022\013\n\003ret\030" +
-                        "\006 \001(\005\"(\n\024NickNameCheckRequest\022\020\n\010nickNam" +
-                        "e\030\001 \002(\t\",\n\025NickNameCheckResponse\022\023\n\013isDu" +
-                        "plicate\030\001 \002(\010\"\'\n\022MissionShowRequest\022\021\n\tm" +
-                        "issionId\030\001 \002(\005\"b\n\023MissionShowResponse\022\024\n" +
-                        "\014protectCount\030\001 \002(\005\022\021\n\tisProtect\030\002 \002(\010\022\n" +
-                        "\n\002cd\030\003 \002(\005\022\026\n\016currentMission\030\004 \002(\005\"\304\001\n\007R" +
-                        "equest\0223\n\005login\030\001 \001(\0132$.experiment.proto",
-                "colgen.LoginRequest\022?\n\013missionShow\030\002 \001(\013" +
-                        "2*.experiment.protocolgen.MissionShowReq" +
-                        "uest\022C\n\rnickNameCheck\030\003 \001(\0132,.experiment" +
-                        ".protocolgen.NickNameCheckRequest\"\363\001\n\010Re" +
-                        "sponse\022\016\n\006result\030\001 \002(\010\022\031\n\021error_descript" +
-                        "ion\030\002 \001(\t\0224\n\005login\030\003 \001(\0132%.experiment.pr" +
-                        "otocolgen.LoginResponse\022@\n\013missionShow\030\004" +
-                        " \001(\0132+.experiment.protocolgen.MissionSho" +
-                        "wResponse\022D\n\rnickNameCheck\030\005 \001(\0132-.exper" +
-                        "iment.protocolgen.NickNameCheckResponse\"",
-                "\254\001\n\007Message\022)\n\004type\030\001 \002(\0162\033.experiment.p" +
-                        "rotocolgen.MSG\022\020\n\010sequence\030\002 \002(\005\0220\n\007requ" +
-                        "est\030\003 \001(\0132\037.experiment.protocolgen.Reque" +
-                        "st\0222\n\010response\030\004 \001(\0132 .experiment.protoc" +
-                        "olgen.Response*7\n\003MSG\022\n\n\005Login\020\351\007\022\020\n\013Mis" +
-                        "sionShow\020\352\007\022\022\n\rNickNameCheck\020\353\007B\002H\001"
-        };
-        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-                new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner(){
-                    public com.google.protobuf.ExtensionRegistry assignDescriptors(
-                            com.google.protobuf.Descriptors.FileDescriptor root ){
-                        descriptor = root;
-                        internal_static_experiment_protocolgen_LoginRequest_descriptor =
-                                getDescriptor().getMessageTypes().get( 0 );
-                        internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_LoginRequest_descriptor,
-                                new java.lang.String[]{"UserName", "Password",} );
-                        internal_static_experiment_protocolgen_LoginResponse_descriptor =
-                                getDescriptor().getMessageTypes().get( 1 );
-                        internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_LoginResponse_descriptor,
-                                new java.lang.String[]{"Ret",} );
-                        internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor =
-                                getDescriptor().getMessageTypes().get( 2 );
-                        internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor,
-                                new java.lang.String[]{"NickName",} );
-                        internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor =
-                                getDescriptor().getMessageTypes().get( 3 );
-                        internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor,
-                                new java.lang.String[]{"IsDuplicate",} );
-                        internal_static_experiment_protocolgen_MissionShowRequest_descriptor =
-                                getDescriptor().getMessageTypes().get( 4 );
-                        internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_MissionShowRequest_descriptor,
-                                new java.lang.String[]{"MissionId",} );
-                        internal_static_experiment_protocolgen_MissionShowResponse_descriptor =
-                                getDescriptor().getMessageTypes().get( 5 );
-                        internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_MissionShowResponse_descriptor,
-                                new java.lang.String[]{"ProtectCount", "IsProtect", "Cd", "CurrentMission",} );
-                        internal_static_experiment_protocolgen_Request_descriptor =
-                                getDescriptor().getMessageTypes().get( 6 );
-                        internal_static_experiment_protocolgen_Request_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_Request_descriptor,
-                                new java.lang.String[]{"Login", "MissionShow", "NickNameCheck",} );
-                        internal_static_experiment_protocolgen_Response_descriptor =
-                                getDescriptor().getMessageTypes().get( 7 );
-                        internal_static_experiment_protocolgen_Response_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_Response_descriptor,
-                                new java.lang.String[]{"Result", "ErrorDescription", "Login", "MissionShow", "NickNameCheck",} );
-                        internal_static_experiment_protocolgen_Message_descriptor =
-                                getDescriptor().getMessageTypes().get( 8 );
-                        internal_static_experiment_protocolgen_Message_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_Message_descriptor,
-                                new java.lang.String[]{"Type", "Sequence", "Request", "Response",} );
-                        return null;
-                    }
-                };
-        com.google.protobuf.Descriptors.FileDescriptor
-                .internalBuildGeneratedFileFrom( descriptorData,
-                        new com.google.protobuf.Descriptors.FileDescriptor[]{
-                        }, assigner );
-    }
-
-    private MsgProtocol(){
-    }
-
-    public static void registerAllExtensions(
-            com.google.protobuf.ExtensionRegistry registry ){
-    }
-
-    public static com.google.protobuf.Descriptors.FileDescriptor
-    getDescriptor(){
-        return descriptor;
-    }
+public final class MsgProtocol {
+  private MsgProtocol() {}
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+  }
+  /**
+   * Protobuf enum {@code experiment.protocolgen.MSG}
+   */
+  public enum MSG
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>Login = 1001;</code>
+     */
+    Login(0, 1001),
+    /**
+     * <code>MissionShow = 1002;</code>
+     *
+     * <pre>
+     **
+     * 查看闯关信息
+     * </pre>
+     */
+    MissionShow(1, 1002),
+    /**
+     * <code>NickNameCheck = 1003;</code>
+     *
+     * <pre>
+     **
+     * 检测昵称是否重复
+     * </pre>
+     */
+    NickNameCheck(2, 1003),
+    ;
 
     /**
-     * Protobuf enum {@code experiment.protocolgen.MSG}
+     * <code>Login = 1001;</code>
      */
-    public enum MSG
-            implements com.google.protobuf.ProtocolMessageEnum{
-        /**
-         * <code>Login = 1001;</code>
-         */
-        Login( 0, 1001 ),
-        /**
-         * <code>MissionShow = 1002;</code>
-         * <p/>
-         * <pre>
-         * *
-         * 查看闯关信息
-         * </pre>
-         */
-        MissionShow( 1, 1002 ),
-        /**
-         * <code>NickNameCheck = 1003;</code>
-         * <p/>
-         * <pre>
-         * *
-         * 检测昵称是否重复
-         * </pre>
-         */
-        NickNameCheck( 2, 1003 ),;
+    public static final int Login_VALUE = 1001;
+    /**
+     * <code>MissionShow = 1002;</code>
+     *
+     * <pre>
+     **
+     * 查看闯关信息
+     * </pre>
+     */
+    public static final int MissionShow_VALUE = 1002;
+    /**
+     * <code>NickNameCheck = 1003;</code>
+     *
+     * <pre>
+     **
+     * 检测昵称是否重复
+     * </pre>
+     */
+    public static final int NickNameCheck_VALUE = 1003;
 
-        /**
-         * <code>Login = 1001;</code>
-         */
-        public static final int Login_VALUE = 1001;
-        /**
-         * <code>MissionShow = 1002;</code>
-         * <p/>
-         * <pre>
-         * *
-         * 查看闯关信息
-         * </pre>
-         */
-        public static final int MissionShow_VALUE = 1002;
-        /**
-         * <code>NickNameCheck = 1003;</code>
-         * <p/>
-         * <pre>
-         * *
-         * 检测昵称是否重复
-         * </pre>
-         */
-        public static final int NickNameCheck_VALUE = 1003;
-        private static final MSG[] VALUES = values();
-        private static com.google.protobuf.Internal.EnumLiteMap<MSG>
-                internalValueMap =
-                new com.google.protobuf.Internal.EnumLiteMap<MSG>(){
-                    public MSG findValueByNumber( int number ){
-                        return MSG.valueOf( number );
-                    }
-                };
-        private final int index;
-        private final int value;
 
-        private MSG( int index, int value ){
-            this.index = index;
-            this.value = value;
-        }
+    public final int getNumber() { return value; }
 
-        public static MSG valueOf( int value ){
-            switch( value ) {
-                case 1001:
-                    return Login;
-                case 1002:
-                    return MissionShow;
-                case 1003:
-                    return NickNameCheck;
-                default:
-                    return null;
-            }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<MSG>
-        internalGetValueMap(){
-            return internalValueMap;
-        }
-
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.getDescriptor().getEnumTypes().get( 0 );
-        }
-
-        public static MSG valueOf(
-                com.google.protobuf.Descriptors.EnumValueDescriptor desc ){
-            if( desc.getType() != getDescriptor() ) {
-                throw new java.lang.IllegalArgumentException(
-                        "EnumValueDescriptor is not for this type." );
-            }
-            return VALUES[desc.getIndex()];
-        }
-
-        public final int getNumber(){
-            return value;
-        }
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor(){
-            return getDescriptor().getValues().get( index );
-        }
-
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType(){
-            return getDescriptor();
-        }
-
-        // @@protoc_insertion_point(enum_scope:experiment.protocolgen.MSG)
+    public static MSG valueOf(int value) {
+      switch (value) {
+        case 1001: return Login;
+        case 1002: return MissionShow;
+        case 1003: return NickNameCheck;
+        default: return null;
+      }
     }
 
-    public interface LoginRequestOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
+    public static com.google.protobuf.Internal.EnumLiteMap<MSG>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<MSG>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MSG>() {
+            public MSG findValueByNumber(int number) {
+              return MSG.valueOf(number);
+            }
+          };
 
-        // required string userName = 1;
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.getDescriptor().getEnumTypes().get(0);
+    }
 
-        /**
-         * <code>required string userName = 1;</code>
-         */
-        boolean hasUserName();
+    private static final MSG[] VALUES = values();
 
-        /**
-         * <code>required string userName = 1;</code>
-         */
-        java.lang.String getUserName();
+    public static MSG valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
 
-        /**
-         * <code>required string userName = 1;</code>
-         */
-        com.google.protobuf.ByteString
+    private final int index;
+    private final int value;
+
+    private MSG(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:experiment.protocolgen.MSG)
+  }
+
+  public interface LoginRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string userName = 1;
+    /**
+     * <code>required string userName = 1;</code>
+     */
+    boolean hasUserName();
+    /**
+     * <code>required string userName = 1;</code>
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>required string userName = 1;</code>
+     */
+    com.google.protobuf.ByteString
         getUserNameBytes();
 
-        // required string password = 2;
-
-        /**
-         * <code>required string password = 2;</code>
-         */
-        boolean hasPassword();
-
-        /**
-         * <code>required string password = 2;</code>
-         */
-        java.lang.String getPassword();
-
-        /**
-         * <code>required string password = 2;</code>
-         */
-        com.google.protobuf.ByteString
+    // required string password = 2;
+    /**
+     * <code>required string password = 2;</code>
+     */
+    boolean hasPassword();
+    /**
+     * <code>required string password = 2;</code>
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>required string password = 2;</code>
+     */
+    com.google.protobuf.ByteString
         getPasswordBytes();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.LoginRequest}
+   *
+   * <pre>
+   *message EntityData
+   *{
+   *    optional Terminal terminal = 1;
+   *    optional Zone     zone = 2;
+   *    optional User     user = 3;
+   *}
+   *
+   *message TraceLevel
+   *{
+   *    optional bool error = 1;
+   *    optional bool warning = 2;
+   *    optional bool info    = 3;
+   *    optional bool debug   = 4;
+   *    optional bool trace   = 5;
+   *}
+   *message SetTraceRequest
+   *{
+   *    optional TraceLevel trace_level = 1;
+   *    optional bool       log_to_client = 2;
+   *
+   *}
+   *message SetTraceResponse
+   *{
+   *    optional TraceLevel trace_level = 1;
+   *    optional bool       log_to_client = 2;
+   *}
+   *
+   *message GetTraceResponse
+   *{
+   *    optional TraceLevel trace_level = 1;
+   *    optional bool       log_to_client = 2;
+   *}
+   *message TraceIndication
+   *{
+   *    required bytes log_record = 1;
+   *}
+   * </pre>
+   */
+  public static final class LoginRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements LoginRequestOrBuilder {
+    // Use LoginRequest.newBuilder() to construct.
+    private LoginRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private LoginRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final LoginRequest defaultInstance;
+    public static LoginRequest getDefaultInstance() {
+      return defaultInstance;
     }
 
-    public interface LoginResponseOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // optional int32 ret = 6;
-
-        /**
-         * <code>optional int32 ret = 6;</code>
-         */
-        boolean hasRet();
-
-        /**
-         * <code>optional int32 ret = 6;</code>
-         */
-        int getRet();
+    public LoginRequest getDefaultInstanceForType() {
+      return defaultInstance;
     }
 
-    public interface NickNameCheckRequestOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // required string nickName = 1;
-
-        /**
-         * <code>required string nickName = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称
-         * </pre>
-         */
-        boolean hasNickName();
-
-        /**
-         * <code>required string nickName = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称
-         * </pre>
-         */
-        java.lang.String getNickName();
-
-        /**
-         * <code>required string nickName = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称
-         * </pre>
-         */
-        com.google.protobuf.ByteString
-        getNickNameBytes();
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LoginRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              userName_ = input.readBytes();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              password_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_descriptor;
     }
 
-    public interface NickNameCheckResponseOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // required bool isDuplicate = 1;
-
-        /**
-         * <code>required bool isDuplicate = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称是否重复
-         * </pre>
-         */
-        boolean hasIsDuplicate();
-
-        /**
-         * <code>required bool isDuplicate = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称是否重复
-         * </pre>
-         */
-        boolean getIsDuplicate();
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.LoginRequest.class, experiment.protocolgen.MsgProtocol.LoginRequest.Builder.class);
     }
 
-    public interface MissionShowRequestOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
+    public static com.google.protobuf.Parser<LoginRequest> PARSER =
+        new com.google.protobuf.AbstractParser<LoginRequest>() {
+      public LoginRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LoginRequest(input, extensionRegistry);
+      }
+    };
 
-        // required int32 missionId = 1;
-
-        /**
-         * <code>required int32 missionId = 1;</code>
-         */
-        boolean hasMissionId();
-
-        /**
-         * <code>required int32 missionId = 1;</code>
-         */
-        int getMissionId();
+    @java.lang.Override
+    public com.google.protobuf.Parser<LoginRequest> getParserForType() {
+      return PARSER;
     }
 
-    public interface MissionShowResponseOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // required int32 protectCount = 1;
-
-        /**
-         * <code>required int32 protectCount = 1;</code>
-         * <p/>
-         * <pre>
-         * 总的保护的次数（最大8次，即3+5）
-         * </pre>
-         */
-        boolean hasProtectCount();
-
-        /**
-         * <code>required int32 protectCount = 1;</code>
-         * <p/>
-         * <pre>
-         * 总的保护的次数（最大8次，即3+5）
-         * </pre>
-         */
-        int getProtectCount();
-
-        // required bool isProtect = 2;
-
-        /**
-         * <code>required bool isProtect = 2;</code>
-         * <p/>
-         * <pre>
-         * 今日是否已保护
-         * </pre>
-         */
-        boolean hasIsProtect();
-
-        /**
-         * <code>required bool isProtect = 2;</code>
-         * <p/>
-         * <pre>
-         * 今日是否已保护
-         * </pre>
-         */
-        boolean getIsProtect();
-
-        // required int32 cd = 3;
-
-        /**
-         * <code>required int32 cd = 3;</code>
-         * <p/>
-         * <pre>
-         * 剩余冷却时间（秒）
-         * </pre>
-         */
-        boolean hasCd();
-
-        /**
-         * <code>required int32 cd = 3;</code>
-         * <p/>
-         * <pre>
-         * 剩余冷却时间（秒）
-         * </pre>
-         */
-        int getCd();
-
-        // required int32 currentMission = 4;
-
-        /**
-         * <code>required int32 currentMission = 4;</code>
-         * <p/>
-         * <pre>
-         * 当前关卡
-         * </pre>
-         */
-        boolean hasCurrentMission();
-
-        /**
-         * <code>required int32 currentMission = 4;</code>
-         * <p/>
-         * <pre>
-         * 当前关卡
-         * </pre>
-         */
-        int getCurrentMission();
+    private int bitField0_;
+    // required string userName = 1;
+    public static final int USERNAME_FIELD_NUMBER = 1;
+    private java.lang.Object userName_;
+    /**
+     * <code>required string userName = 1;</code>
+     */
+    public boolean hasUserName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string userName = 1;</code>
+     */
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string userName = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public interface RequestOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // optional .experiment.protocolgen.LoginRequest login = 1;
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-         */
-        boolean hasLogin();
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-         */
-        experiment.protocolgen.MsgProtocol.LoginRequest getLogin();
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-         */
-        experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder();
-
-        // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-         */
-        boolean hasMissionShow();
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-         */
-        experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow();
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-         */
-        experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder();
-
-        // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-         */
-        boolean hasNickNameCheck();
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-         */
-        experiment.protocolgen.MsgProtocol.NickNameCheckRequest getNickNameCheck();
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-         */
-        experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder getNickNameCheckOrBuilder();
+    // required string password = 2;
+    public static final int PASSWORD_FIELD_NUMBER = 2;
+    private java.lang.Object password_;
+    /**
+     * <code>required string password = 2;</code>
+     */
+    public boolean hasPassword() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string password = 2;</code>
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          password_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string password = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public interface ResponseOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
+    private void initFields() {
+      userName_ = "";
+      password_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
 
-        // required bool result = 1;
-
-        /**
-         * <code>required bool result = 1;</code>
-         */
-        boolean hasResult();
-
-        /**
-         * <code>required bool result = 1;</code>
-         */
-        boolean getResult();
-
-        // optional string error_description = 2;
-
-        /**
-         * <code>optional string error_description = 2;</code>
-         * <p/>
-         * <pre>
-         * required bool last_block = 3;
-         * </pre>
-         */
-        boolean hasErrorDescription();
-
-        /**
-         * <code>optional string error_description = 2;</code>
-         * <p/>
-         * <pre>
-         * required bool last_block = 3;
-         * </pre>
-         */
-        java.lang.String getErrorDescription();
-
-        /**
-         * <code>optional string error_description = 2;</code>
-         * <p/>
-         * <pre>
-         * required bool last_block = 3;
-         * </pre>
-         */
-        com.google.protobuf.ByteString
-        getErrorDescriptionBytes();
-
-        // optional .experiment.protocolgen.LoginResponse login = 3;
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-         */
-        boolean hasLogin();
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-         */
-        experiment.protocolgen.MsgProtocol.LoginResponse getLogin();
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-         */
-        experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder getLoginOrBuilder();
-
-        // optional .experiment.protocolgen.MissionShowResponse missionShow = 4;
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-         */
-        boolean hasMissionShow();
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-         */
-        experiment.protocolgen.MsgProtocol.MissionShowResponse getMissionShow();
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-         */
-        experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder getMissionShowOrBuilder();
-
-        // optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-         */
-        boolean hasNickNameCheck();
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-         */
-        experiment.protocolgen.MsgProtocol.NickNameCheckResponse getNickNameCheck();
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-         */
-        experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder getNickNameCheckOrBuilder();
+      if (!hasUserName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPassword()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
     }
 
-    public interface MessageOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // required .experiment.protocolgen.MSG type = 1;
-
-        /**
-         * <code>required .experiment.protocolgen.MSG type = 1;</code>
-         */
-        boolean hasType();
-
-        /**
-         * <code>required .experiment.protocolgen.MSG type = 1;</code>
-         */
-        experiment.protocolgen.MsgProtocol.MSG getType();
-
-        // required int32 sequence = 2;
-
-        /**
-         * <code>required int32 sequence = 2;</code>
-         */
-        boolean hasSequence();
-
-        /**
-         * <code>required int32 sequence = 2;</code>
-         */
-        int getSequence();
-
-        // optional .experiment.protocolgen.Request request = 3;
-
-        /**
-         * <code>optional .experiment.protocolgen.Request request = 3;</code>
-         */
-        boolean hasRequest();
-
-        /**
-         * <code>optional .experiment.protocolgen.Request request = 3;</code>
-         */
-        experiment.protocolgen.MsgProtocol.Request getRequest();
-
-        /**
-         * <code>optional .experiment.protocolgen.Request request = 3;</code>
-         */
-        experiment.protocolgen.MsgProtocol.RequestOrBuilder getRequestOrBuilder();
-
-        // optional .experiment.protocolgen.Response response = 4;
-
-        /**
-         * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         * <p/>
-         * <pre>
-         * optional Command  command = 5;
-         * optional Indication indication = 6;
-         * </pre>
-         */
-        boolean hasResponse();
-
-        /**
-         * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         * <p/>
-         * <pre>
-         * optional Command  command = 5;
-         * optional Indication indication = 6;
-         * </pre>
-         */
-        experiment.protocolgen.MsgProtocol.Response getResponse();
-
-        /**
-         * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         * <p/>
-         * <pre>
-         * optional Command  command = 5;
-         * optional Indication indication = 6;
-         * </pre>
-         */
-        experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder();
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getUserNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getPasswordBytes());
+      }
+      getUnknownFields().writeTo(output);
     }
 
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getUserNameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getPasswordBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.LoginRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.LoginRequest}
-     * <p/>
+     *
      * <pre>
-     * message EntityData
-     * {
+     *message EntityData
+     *{
      *    optional Terminal terminal = 1;
      *    optional Zone     zone = 2;
      *    optional User     user = 3;
-     * }
+     *}
      *
-     * message TraceLevel
-     * {
+     *message TraceLevel
+     *{
      *    optional bool error = 1;
      *    optional bool warning = 2;
      *    optional bool info    = 3;
      *    optional bool debug   = 4;
      *    optional bool trace   = 5;
-     * }
-     * message SetTraceRequest
-     * {
+     *}
+     *message SetTraceRequest
+     *{
      *    optional TraceLevel trace_level = 1;
      *    optional bool       log_to_client = 2;
      *
-     * }
-     * message SetTraceResponse
-     * {
+     *}
+     *message SetTraceResponse
+     *{
      *    optional TraceLevel trace_level = 1;
      *    optional bool       log_to_client = 2;
-     * }
+     *}
      *
-     * message GetTraceResponse
-     * {
+     *message GetTraceResponse
+     *{
      *    optional TraceLevel trace_level = 1;
      *    optional bool       log_to_client = 2;
-     * }
-     * message TraceIndication
-     * {
+     *}
+     *message TraceIndication
+     *{
      *    required bytes log_record = 1;
-     * }
+     *}
      * </pre>
      */
-    public static final class LoginRequest extends
-            com.google.protobuf.GeneratedMessage
-            implements LoginRequestOrBuilder{
-        // required string userName = 1;
-        public static final int USERNAME_FIELD_NUMBER = 1;
-        // required string password = 2;
-        public static final int PASSWORD_FIELD_NUMBER = 2;
-        private static final LoginRequest defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<LoginRequest> PARSER =
-                new com.google.protobuf.AbstractParser<LoginRequest>(){
-                    public LoginRequest parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new LoginRequest( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private java.lang.Object userName_;
-        private java.lang.Object password_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_descriptor;
+      }
 
-        // Use LoginRequest.newBuilder() to construct.
-        private LoginRequest( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.LoginRequest.class, experiment.protocolgen.MsgProtocol.LoginRequest.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.LoginRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private LoginRequest( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        userName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        password_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.LoginRequest getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.LoginRequest build() {
+        experiment.protocolgen.MsgProtocol.LoginRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private LoginRequest(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 10: {
-                            bitField0_ |= 0x00000001;
-                            userName_ = input.readBytes();
-                            break;
-                        }
-                        case 18: {
-                            bitField0_ |= 0x00000002;
-                            password_ = input.readBytes();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.MsgProtocol.LoginRequest buildPartial() {
+        experiment.protocolgen.MsgProtocol.LoginRequest result = new experiment.protocolgen.MsgProtocol.LoginRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static LoginRequest getDefaultInstance(){
-            return defaultInstance;
+        result.userName_ = userName_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
+        result.password_ = password_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_descriptor;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.LoginRequest) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.LoginRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.LoginRequest other) {
+        if (other == experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance()) return this;
+        if (other.hasUserName()) {
+          bitField0_ |= 0x00000001;
+          userName_ = other.userName_;
+          onChanged();
         }
-
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (other.hasPassword()) {
+          bitField0_ |= 0x00000002;
+          password_ = other.password_;
+          onChanged();
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public final boolean isInitialized() {
+        if (!hasUserName()) {
+          
+          return false;
         }
-
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (!hasPassword()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.LoginRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.LoginRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      // required string userName = 1;
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>required string userName = 1;</code>
+       */
+      public boolean hasUserName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string userName = 1;</code>
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          userName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      }
+      /**
+       * <code>required string userName = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>required string userName = 1;</code>
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string userName = 1;</code>
+       */
+      public Builder clearUserName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string userName = 1;</code>
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+      // required string password = 2;
+      private java.lang.Object password_ = "";
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public boolean hasPassword() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public Builder clearPassword() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        password_ = value;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginRequest parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static Builder newBuilder(){
-            return Builder.create();
-        }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.LoginRequest prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
-
-        public LoginRequest getDefaultInstanceForType(){
-            return defaultInstance;
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.LoginRequest.class, experiment.protocolgen.MsgProtocol.LoginRequest.Builder.class );
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<LoginRequest> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>required string userName = 1;</code>
-         */
-        public boolean hasUserName(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>required string userName = 1;</code>
-         */
-        public java.lang.String getUserName(){
-            java.lang.Object ref = userName_;
-            if( ref instanceof java.lang.String ) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                if( bs.isValidUtf8() ) {
-                    userName_ = s;
-                }
-                return s;
-            }
-        }
-
-        /**
-         * <code>required string userName = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-        getUserNameBytes(){
-            java.lang.Object ref = userName_;
-            if( ref instanceof java.lang.String ) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref );
-                userName_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        /**
-         * <code>required string password = 2;</code>
-         */
-        public boolean hasPassword(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-
-        /**
-         * <code>required string password = 2;</code>
-         */
-        public java.lang.String getPassword(){
-            java.lang.Object ref = password_;
-            if( ref instanceof java.lang.String ) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                if( bs.isValidUtf8() ) {
-                    password_ = s;
-                }
-                return s;
-            }
-        }
-
-        /**
-         * <code>required string password = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-        getPasswordBytes(){
-            java.lang.Object ref = password_;
-            if( ref instanceof java.lang.String ) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref );
-                password_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        private void initFields(){
-            userName_ = "";
-            password_ = "";
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasUserName() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasPassword() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeBytes( 1, getUserNameBytes() );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeBytes( 2, getPasswordBytes() );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBytesSize( 1, getUserNameBytes() );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBytesSize( 2, getPasswordBytes() );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.LoginRequest}
-         * <p/>
-         * <pre>
-         * message EntityData
-         * {
-         *    optional Terminal terminal = 1;
-         *    optional Zone     zone = 2;
-         *    optional User     user = 3;
-         * }
-         *
-         * message TraceLevel
-         * {
-         *    optional bool error = 1;
-         *    optional bool warning = 2;
-         *    optional bool info    = 3;
-         *    optional bool debug   = 4;
-         *    optional bool trace   = 5;
-         * }
-         * message SetTraceRequest
-         * {
-         *    optional TraceLevel trace_level = 1;
-         *    optional bool       log_to_client = 2;
-         *
-         * }
-         * message SetTraceResponse
-         * {
-         *    optional TraceLevel trace_level = 1;
-         *    optional bool       log_to_client = 2;
-         * }
-         *
-         * message GetTraceResponse
-         * {
-         *    optional TraceLevel trace_level = 1;
-         *    optional bool       log_to_client = 2;
-         * }
-         * message TraceIndication
-         * {
-         *    required bytes log_record = 1;
-         * }
-         * </pre>
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder{
-            private int bitField0_;
-            // required string userName = 1;
-            private java.lang.Object userName_ = "";
-            // required string password = 2;
-            private java.lang.Object password_ = "";
-
-            // Construct using experiment.protocolgen.MsgProtocol.LoginRequest.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.LoginRequest.class, experiment.protocolgen.MsgProtocol.LoginRequest.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                userName_ = "";
-                bitField0_ = (bitField0_ & ~0x00000001);
-                password_ = "";
-                bitField0_ = (bitField0_ & ~0x00000002);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginRequest_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.LoginRequest getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.LoginRequest build(){
-                experiment.protocolgen.MsgProtocol.LoginRequest result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.LoginRequest buildPartial(){
-                experiment.protocolgen.MsgProtocol.LoginRequest result = new experiment.protocolgen.MsgProtocol.LoginRequest( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.userName_ = userName_;
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                result.password_ = password_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.LoginRequest ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.LoginRequest) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.LoginRequest other ){
-                if( other == experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance() ) return this;
-                if( other.hasUserName() ) {
-                    bitField0_ |= 0x00000001;
-                    userName_ = other.userName_;
-                    onChanged();
-                }
-                if( other.hasPassword() ) {
-                    bitField0_ |= 0x00000002;
-                    password_ = other.password_;
-                    onChanged();
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasUserName() ) {
-
-                    return false;
-                }
-                if( !hasPassword() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.LoginRequest parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.LoginRequest) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required string userName = 1;</code>
-             */
-            public boolean hasUserName(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required string userName = 1;</code>
-             */
-            public java.lang.String getUserName(){
-                java.lang.Object ref = userName_;
-                if( !(ref instanceof java.lang.String) ) {
-                    java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                            .toStringUtf8();
-                    userName_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>required string userName = 1;</code>
-             */
-            public Builder setUserName(
-                    java.lang.String value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000001;
-                userName_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string userName = 1;</code>
-             */
-            public com.google.protobuf.ByteString
-            getUserNameBytes(){
-                java.lang.Object ref = userName_;
-                if( ref instanceof String ) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref );
-                    userName_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>required string userName = 1;</code>
-             */
-            public Builder setUserNameBytes(
-                    com.google.protobuf.ByteString value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000001;
-                userName_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string userName = 1;</code>
-             */
-            public Builder clearUserName(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                userName_ = getDefaultInstance().getUserName();
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string password = 2;</code>
-             */
-            public boolean hasPassword(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>required string password = 2;</code>
-             */
-            public java.lang.String getPassword(){
-                java.lang.Object ref = password_;
-                if( !(ref instanceof java.lang.String) ) {
-                    java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                            .toStringUtf8();
-                    password_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>required string password = 2;</code>
-             */
-            public Builder setPassword(
-                    java.lang.String value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000002;
-                password_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string password = 2;</code>
-             */
-            public com.google.protobuf.ByteString
-            getPasswordBytes(){
-                java.lang.Object ref = password_;
-                if( ref instanceof String ) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref );
-                    password_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>required string password = 2;</code>
-             */
-            public Builder setPasswordBytes(
-                    com.google.protobuf.ByteString value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000002;
-                password_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string password = 2;</code>
-             */
-            public Builder clearPassword(){
-                bitField0_ = (bitField0_ & ~0x00000002);
-                password_ = getDefaultInstance().getPassword();
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LoginRequest)
-        }
-
-        static{
-            defaultInstance = new LoginRequest( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.LoginRequest)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LoginRequest)
     }
 
+    static {
+      defaultInstance = new LoginRequest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.LoginRequest)
+  }
+
+  public interface LoginResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional int32 ret = 6;
+    /**
+     * <code>optional int32 ret = 6;</code>
+     */
+    boolean hasRet();
+    /**
+     * <code>optional int32 ret = 6;</code>
+     */
+    int getRet();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.LoginResponse}
+   */
+  public static final class LoginResponse extends
+      com.google.protobuf.GeneratedMessage
+      implements LoginResponseOrBuilder {
+    // Use LoginResponse.newBuilder() to construct.
+    private LoginResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private LoginResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final LoginResponse defaultInstance;
+    public static LoginResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public LoginResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LoginResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000001;
+              ret_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.LoginResponse.class, experiment.protocolgen.MsgProtocol.LoginResponse.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<LoginResponse> PARSER =
+        new com.google.protobuf.AbstractParser<LoginResponse>() {
+      public LoginResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LoginResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LoginResponse> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional int32 ret = 6;
+    public static final int RET_FIELD_NUMBER = 6;
+    private int ret_;
+    /**
+     * <code>optional int32 ret = 6;</code>
+     */
+    public boolean hasRet() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 ret = 6;</code>
+     */
+    public int getRet() {
+      return ret_;
+    }
+
+    private void initFields() {
+      ret_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(6, ret_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, ret_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.LoginResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.LoginResponse}
      */
-    public static final class LoginResponse extends
-            com.google.protobuf.GeneratedMessage
-            implements LoginResponseOrBuilder{
-        // optional int32 ret = 6;
-        public static final int RET_FIELD_NUMBER = 6;
-        private static final LoginResponse defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<LoginResponse> PARSER =
-                new com.google.protobuf.AbstractParser<LoginResponse>(){
-                    public LoginResponse parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new LoginResponse( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private int ret_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_descriptor;
+      }
 
-        // Use LoginResponse.newBuilder() to construct.
-        private LoginResponse( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.LoginResponse.class, experiment.protocolgen.MsgProtocol.LoginResponse.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.LoginResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private LoginResponse( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        ret_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.LoginResponse getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.LoginResponse build() {
+        experiment.protocolgen.MsgProtocol.LoginResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private LoginResponse(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 48: {
-                            bitField0_ |= 0x00000001;
-                            ret_ = input.readInt32();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.MsgProtocol.LoginResponse buildPartial() {
+        experiment.protocolgen.MsgProtocol.LoginResponse result = new experiment.protocolgen.MsgProtocol.LoginResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
+        result.ret_ = ret_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static LoginResponse getDefaultInstance(){
-            return defaultInstance;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.LoginResponse) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.LoginResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_descriptor;
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.LoginResponse other) {
+        if (other == experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance()) return this;
+        if (other.hasRet()) {
+          setRet(other.getRet());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.LoginResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.LoginResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
-        }
+      // optional int32 ret = 6;
+      private int ret_ ;
+      /**
+       * <code>optional int32 ret = 6;</code>
+       */
+      public boolean hasRet() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 ret = 6;</code>
+       */
+      public int getRet() {
+        return ret_;
+      }
+      /**
+       * <code>optional int32 ret = 6;</code>
+       */
+      public Builder setRet(int value) {
+        bitField0_ |= 0x00000001;
+        ret_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ret = 6;</code>
+       */
+      public Builder clearRet() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ret_ = 0;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.LoginResponse parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static Builder newBuilder(){
-            return Builder.create();
-        }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.LoginResponse prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
-
-        public LoginResponse getDefaultInstanceForType(){
-            return defaultInstance;
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.LoginResponse.class, experiment.protocolgen.MsgProtocol.LoginResponse.Builder.class );
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<LoginResponse> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>optional int32 ret = 6;</code>
-         */
-        public boolean hasRet(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>optional int32 ret = 6;</code>
-         */
-        public int getRet(){
-            return ret_;
-        }
-
-        private void initFields(){
-            ret_ = 0;
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeInt32( 6, ret_ );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeInt32Size( 6, ret_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.LoginResponse}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder{
-            private int bitField0_;
-            // optional int32 ret = 6;
-            private int ret_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.LoginResponse.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.LoginResponse.class, experiment.protocolgen.MsgProtocol.LoginResponse.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                ret_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_LoginResponse_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.LoginResponse getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.LoginResponse build(){
-                experiment.protocolgen.MsgProtocol.LoginResponse result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.LoginResponse buildPartial(){
-                experiment.protocolgen.MsgProtocol.LoginResponse result = new experiment.protocolgen.MsgProtocol.LoginResponse( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.ret_ = ret_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.LoginResponse ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.LoginResponse) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.LoginResponse other ){
-                if( other == experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance() ) return this;
-                if( other.hasRet() ) {
-                    setRet( other.getRet() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.LoginResponse parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.LoginResponse) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>optional int32 ret = 6;</code>
-             */
-            public boolean hasRet(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>optional int32 ret = 6;</code>
-             */
-            public int getRet(){
-                return ret_;
-            }
-
-            /**
-             * <code>optional int32 ret = 6;</code>
-             */
-            public Builder setRet( int value ){
-                bitField0_ |= 0x00000001;
-                ret_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>optional int32 ret = 6;</code>
-             */
-            public Builder clearRet(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                ret_ = 0;
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LoginResponse)
-        }
-
-        static{
-            defaultInstance = new LoginResponse( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.LoginResponse)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LoginResponse)
     }
 
+    static {
+      defaultInstance = new LoginResponse(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.LoginResponse)
+  }
+
+  public interface NickNameCheckRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string nickName = 1;
+    /**
+     * <code>required string nickName = 1;</code>
+     *
+     * <pre>
+     *昵称
+     * </pre>
+     */
+    boolean hasNickName();
+    /**
+     * <code>required string nickName = 1;</code>
+     *
+     * <pre>
+     *昵称
+     * </pre>
+     */
+    java.lang.String getNickName();
+    /**
+     * <code>required string nickName = 1;</code>
+     *
+     * <pre>
+     *昵称
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNickNameBytes();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.NickNameCheckRequest}
+   */
+  public static final class NickNameCheckRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements NickNameCheckRequestOrBuilder {
+    // Use NickNameCheckRequest.newBuilder() to construct.
+    private NickNameCheckRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private NickNameCheckRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final NickNameCheckRequest defaultInstance;
+    public static NickNameCheckRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public NickNameCheckRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NickNameCheckRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              nickName_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.NickNameCheckRequest.class, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<NickNameCheckRequest> PARSER =
+        new com.google.protobuf.AbstractParser<NickNameCheckRequest>() {
+      public NickNameCheckRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NickNameCheckRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NickNameCheckRequest> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required string nickName = 1;
+    public static final int NICKNAME_FIELD_NUMBER = 1;
+    private java.lang.Object nickName_;
+    /**
+     * <code>required string nickName = 1;</code>
+     *
+     * <pre>
+     *昵称
+     * </pre>
+     */
+    public boolean hasNickName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string nickName = 1;</code>
+     *
+     * <pre>
+     *昵称
+     * </pre>
+     */
+    public java.lang.String getNickName() {
+      java.lang.Object ref = nickName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          nickName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string nickName = 1;</code>
+     *
+     * <pre>
+     *昵称
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNickNameBytes() {
+      java.lang.Object ref = nickName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nickName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      nickName_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasNickName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNickNameBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNickNameBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.NickNameCheckRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.NickNameCheckRequest}
      */
-    public static final class NickNameCheckRequest extends
-            com.google.protobuf.GeneratedMessage
-            implements NickNameCheckRequestOrBuilder{
-        // required string nickName = 1;
-        public static final int NICKNAME_FIELD_NUMBER = 1;
-        private static final NickNameCheckRequest defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<NickNameCheckRequest> PARSER =
-                new com.google.protobuf.AbstractParser<NickNameCheckRequest>(){
-                    public NickNameCheckRequest parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new NickNameCheckRequest( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private java.lang.Object nickName_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
+      }
 
-        // Use NickNameCheckRequest.newBuilder() to construct.
-        private NickNameCheckRequest( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.NickNameCheckRequest.class, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.NickNameCheckRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private NickNameCheckRequest( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        nickName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.NickNameCheckRequest getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.NickNameCheckRequest build() {
+        experiment.protocolgen.MsgProtocol.NickNameCheckRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private NickNameCheckRequest(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 10: {
-                            bitField0_ |= 0x00000001;
-                            nickName_ = input.readBytes();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.MsgProtocol.NickNameCheckRequest buildPartial() {
+        experiment.protocolgen.MsgProtocol.NickNameCheckRequest result = new experiment.protocolgen.MsgProtocol.NickNameCheckRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
+        result.nickName_ = nickName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static NickNameCheckRequest getDefaultInstance(){
-            return defaultInstance;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.NickNameCheckRequest) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.NickNameCheckRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.NickNameCheckRequest other) {
+        if (other == experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance()) return this;
+        if (other.hasNickName()) {
+          bitField0_ |= 0x00000001;
+          nickName_ = other.nickName_;
+          onChanged();
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public final boolean isInitialized() {
+        if (!hasNickName()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.NickNameCheckRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.NickNameCheckRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      // required string nickName = 1;
+      private java.lang.Object nickName_ = "";
+      /**
+       * <code>required string nickName = 1;</code>
+       *
+       * <pre>
+       *昵称
+       * </pre>
+       */
+      public boolean hasNickName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string nickName = 1;</code>
+       *
+       * <pre>
+       *昵称
+       * </pre>
+       */
+      public java.lang.String getNickName() {
+        java.lang.Object ref = nickName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          nickName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      }
+      /**
+       * <code>required string nickName = 1;</code>
+       *
+       * <pre>
+       *昵称
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNickNameBytes() {
+        java.lang.Object ref = nickName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nickName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>required string nickName = 1;</code>
+       *
+       * <pre>
+       *昵称
+       * </pre>
+       */
+      public Builder setNickName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        nickName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string nickName = 1;</code>
+       *
+       * <pre>
+       *昵称
+       * </pre>
+       */
+      public Builder clearNickName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nickName_ = getDefaultInstance().getNickName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string nickName = 1;</code>
+       *
+       * <pre>
+       *昵称
+       * </pre>
+       */
+      public Builder setNickNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        nickName_ = value;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckRequest parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static Builder newBuilder(){
-            return Builder.create();
-        }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.NickNameCheckRequest prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
-
-        public NickNameCheckRequest getDefaultInstanceForType(){
-            return defaultInstance;
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.NickNameCheckRequest.class, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder.class );
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<NickNameCheckRequest> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>required string nickName = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称
-         * </pre>
-         */
-        public boolean hasNickName(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>required string nickName = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称
-         * </pre>
-         */
-        public java.lang.String getNickName(){
-            java.lang.Object ref = nickName_;
-            if( ref instanceof java.lang.String ) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                if( bs.isValidUtf8() ) {
-                    nickName_ = s;
-                }
-                return s;
-            }
-        }
-
-        /**
-         * <code>required string nickName = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-        getNickNameBytes(){
-            java.lang.Object ref = nickName_;
-            if( ref instanceof java.lang.String ) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref );
-                nickName_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        private void initFields(){
-            nickName_ = "";
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasNickName() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeBytes( 1, getNickNameBytes() );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBytesSize( 1, getNickNameBytes() );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.NickNameCheckRequest}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder{
-            private int bitField0_;
-            // required string nickName = 1;
-            private java.lang.Object nickName_ = "";
-
-            // Construct using experiment.protocolgen.MsgProtocol.NickNameCheckRequest.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.NickNameCheckRequest.class, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                nickName_ = "";
-                bitField0_ = (bitField0_ & ~0x00000001);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.NickNameCheckRequest getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.NickNameCheckRequest build(){
-                experiment.protocolgen.MsgProtocol.NickNameCheckRequest result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.NickNameCheckRequest buildPartial(){
-                experiment.protocolgen.MsgProtocol.NickNameCheckRequest result = new experiment.protocolgen.MsgProtocol.NickNameCheckRequest( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.nickName_ = nickName_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.NickNameCheckRequest ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.NickNameCheckRequest) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.NickNameCheckRequest other ){
-                if( other == experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance() ) return this;
-                if( other.hasNickName() ) {
-                    bitField0_ |= 0x00000001;
-                    nickName_ = other.nickName_;
-                    onChanged();
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasNickName() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.NickNameCheckRequest parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.NickNameCheckRequest) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required string nickName = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称
-             * </pre>
-             */
-            public boolean hasNickName(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required string nickName = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称
-             * </pre>
-             */
-            public java.lang.String getNickName(){
-                java.lang.Object ref = nickName_;
-                if( !(ref instanceof java.lang.String) ) {
-                    java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                            .toStringUtf8();
-                    nickName_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>required string nickName = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称
-             * </pre>
-             */
-            public Builder setNickName(
-                    java.lang.String value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000001;
-                nickName_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string nickName = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称
-             * </pre>
-             */
-            public com.google.protobuf.ByteString
-            getNickNameBytes(){
-                java.lang.Object ref = nickName_;
-                if( ref instanceof String ) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref );
-                    nickName_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>required string nickName = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称
-             * </pre>
-             */
-            public Builder setNickNameBytes(
-                    com.google.protobuf.ByteString value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000001;
-                nickName_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string nickName = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称
-             * </pre>
-             */
-            public Builder clearNickName(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                nickName_ = getDefaultInstance().getNickName();
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.NickNameCheckRequest)
-        }
-
-        static{
-            defaultInstance = new NickNameCheckRequest( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.NickNameCheckRequest)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.NickNameCheckRequest)
     }
 
+    static {
+      defaultInstance = new NickNameCheckRequest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.NickNameCheckRequest)
+  }
+
+  public interface NickNameCheckResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required bool isDuplicate = 1;
+    /**
+     * <code>required bool isDuplicate = 1;</code>
+     *
+     * <pre>
+     *昵称是否重复
+     * </pre>
+     */
+    boolean hasIsDuplicate();
+    /**
+     * <code>required bool isDuplicate = 1;</code>
+     *
+     * <pre>
+     *昵称是否重复
+     * </pre>
+     */
+    boolean getIsDuplicate();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.NickNameCheckResponse}
+   */
+  public static final class NickNameCheckResponse extends
+      com.google.protobuf.GeneratedMessage
+      implements NickNameCheckResponseOrBuilder {
+    // Use NickNameCheckResponse.newBuilder() to construct.
+    private NickNameCheckResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private NickNameCheckResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final NickNameCheckResponse defaultInstance;
+    public static NickNameCheckResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public NickNameCheckResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NickNameCheckResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              isDuplicate_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.NickNameCheckResponse.class, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<NickNameCheckResponse> PARSER =
+        new com.google.protobuf.AbstractParser<NickNameCheckResponse>() {
+      public NickNameCheckResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NickNameCheckResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NickNameCheckResponse> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required bool isDuplicate = 1;
+    public static final int ISDUPLICATE_FIELD_NUMBER = 1;
+    private boolean isDuplicate_;
+    /**
+     * <code>required bool isDuplicate = 1;</code>
+     *
+     * <pre>
+     *昵称是否重复
+     * </pre>
+     */
+    public boolean hasIsDuplicate() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required bool isDuplicate = 1;</code>
+     *
+     * <pre>
+     *昵称是否重复
+     * </pre>
+     */
+    public boolean getIsDuplicate() {
+      return isDuplicate_;
+    }
+
+    private void initFields() {
+      isDuplicate_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasIsDuplicate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, isDuplicate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isDuplicate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.NickNameCheckResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.NickNameCheckResponse}
      */
-    public static final class NickNameCheckResponse extends
-            com.google.protobuf.GeneratedMessage
-            implements NickNameCheckResponseOrBuilder{
-        // required bool isDuplicate = 1;
-        public static final int ISDUPLICATE_FIELD_NUMBER = 1;
-        private static final NickNameCheckResponse defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<NickNameCheckResponse> PARSER =
-                new com.google.protobuf.AbstractParser<NickNameCheckResponse>(){
-                    public NickNameCheckResponse parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new NickNameCheckResponse( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private boolean isDuplicate_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
+      }
 
-        // Use NickNameCheckResponse.newBuilder() to construct.
-        private NickNameCheckResponse( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.NickNameCheckResponse.class, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.NickNameCheckResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private NickNameCheckResponse( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        isDuplicate_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.NickNameCheckResponse getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.NickNameCheckResponse build() {
+        experiment.protocolgen.MsgProtocol.NickNameCheckResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private NickNameCheckResponse(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            bitField0_ |= 0x00000001;
-                            isDuplicate_ = input.readBool();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.MsgProtocol.NickNameCheckResponse buildPartial() {
+        experiment.protocolgen.MsgProtocol.NickNameCheckResponse result = new experiment.protocolgen.MsgProtocol.NickNameCheckResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
+        result.isDuplicate_ = isDuplicate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static NickNameCheckResponse getDefaultInstance(){
-            return defaultInstance;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.NickNameCheckResponse) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.NickNameCheckResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.NickNameCheckResponse other) {
+        if (other == experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance()) return this;
+        if (other.hasIsDuplicate()) {
+          setIsDuplicate(other.getIsDuplicate());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public final boolean isInitialized() {
+        if (!hasIsDuplicate()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.NickNameCheckResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.NickNameCheckResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
-        }
+      // required bool isDuplicate = 1;
+      private boolean isDuplicate_ ;
+      /**
+       * <code>required bool isDuplicate = 1;</code>
+       *
+       * <pre>
+       *昵称是否重复
+       * </pre>
+       */
+      public boolean hasIsDuplicate() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required bool isDuplicate = 1;</code>
+       *
+       * <pre>
+       *昵称是否重复
+       * </pre>
+       */
+      public boolean getIsDuplicate() {
+        return isDuplicate_;
+      }
+      /**
+       * <code>required bool isDuplicate = 1;</code>
+       *
+       * <pre>
+       *昵称是否重复
+       * </pre>
+       */
+      public Builder setIsDuplicate(boolean value) {
+        bitField0_ |= 0x00000001;
+        isDuplicate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool isDuplicate = 1;</code>
+       *
+       * <pre>
+       *昵称是否重复
+       * </pre>
+       */
+      public Builder clearIsDuplicate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isDuplicate_ = false;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.NickNameCheckResponse parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static Builder newBuilder(){
-            return Builder.create();
-        }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.NickNameCheckResponse prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
-
-        public NickNameCheckResponse getDefaultInstanceForType(){
-            return defaultInstance;
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.NickNameCheckResponse.class, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder.class );
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<NickNameCheckResponse> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>required bool isDuplicate = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称是否重复
-         * </pre>
-         */
-        public boolean hasIsDuplicate(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>required bool isDuplicate = 1;</code>
-         * <p/>
-         * <pre>
-         * 昵称是否重复
-         * </pre>
-         */
-        public boolean getIsDuplicate(){
-            return isDuplicate_;
-        }
-
-        private void initFields(){
-            isDuplicate_ = false;
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasIsDuplicate() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeBool( 1, isDuplicate_ );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBoolSize( 1, isDuplicate_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.NickNameCheckResponse}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder{
-            private int bitField0_;
-            // required bool isDuplicate = 1;
-            private boolean isDuplicate_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.NickNameCheckResponse.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.NickNameCheckResponse.class, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                isDuplicate_ = false;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.NickNameCheckResponse getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.NickNameCheckResponse build(){
-                experiment.protocolgen.MsgProtocol.NickNameCheckResponse result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.NickNameCheckResponse buildPartial(){
-                experiment.protocolgen.MsgProtocol.NickNameCheckResponse result = new experiment.protocolgen.MsgProtocol.NickNameCheckResponse( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.isDuplicate_ = isDuplicate_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.NickNameCheckResponse ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.NickNameCheckResponse) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.NickNameCheckResponse other ){
-                if( other == experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance() )
-                    return this;
-                if( other.hasIsDuplicate() ) {
-                    setIsDuplicate( other.getIsDuplicate() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasIsDuplicate() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.NickNameCheckResponse parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.NickNameCheckResponse) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required bool isDuplicate = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称是否重复
-             * </pre>
-             */
-            public boolean hasIsDuplicate(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required bool isDuplicate = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称是否重复
-             * </pre>
-             */
-            public boolean getIsDuplicate(){
-                return isDuplicate_;
-            }
-
-            /**
-             * <code>required bool isDuplicate = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称是否重复
-             * </pre>
-             */
-            public Builder setIsDuplicate( boolean value ){
-                bitField0_ |= 0x00000001;
-                isDuplicate_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required bool isDuplicate = 1;</code>
-             * <p/>
-             * <pre>
-             * 昵称是否重复
-             * </pre>
-             */
-            public Builder clearIsDuplicate(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                isDuplicate_ = false;
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.NickNameCheckResponse)
-        }
-
-        static{
-            defaultInstance = new NickNameCheckResponse( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.NickNameCheckResponse)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.NickNameCheckResponse)
     }
 
+    static {
+      defaultInstance = new NickNameCheckResponse(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.NickNameCheckResponse)
+  }
+
+  public interface MissionShowRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 missionId = 1;
+    /**
+     * <code>required int32 missionId = 1;</code>
+     */
+    boolean hasMissionId();
+    /**
+     * <code>required int32 missionId = 1;</code>
+     */
+    int getMissionId();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.MissionShowRequest}
+   */
+  public static final class MissionShowRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements MissionShowRequestOrBuilder {
+    // Use MissionShowRequest.newBuilder() to construct.
+    private MissionShowRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private MissionShowRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final MissionShowRequest defaultInstance;
+    public static MissionShowRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public MissionShowRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MissionShowRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              missionId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.MissionShowRequest.class, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<MissionShowRequest> PARSER =
+        new com.google.protobuf.AbstractParser<MissionShowRequest>() {
+      public MissionShowRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MissionShowRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MissionShowRequest> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 missionId = 1;
+    public static final int MISSIONID_FIELD_NUMBER = 1;
+    private int missionId_;
+    /**
+     * <code>required int32 missionId = 1;</code>
+     */
+    public boolean hasMissionId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 missionId = 1;</code>
+     */
+    public int getMissionId() {
+      return missionId_;
+    }
+
+    private void initFields() {
+      missionId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasMissionId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, missionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, missionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.MissionShowRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.MissionShowRequest}
      */
-    public static final class MissionShowRequest extends
-            com.google.protobuf.GeneratedMessage
-            implements MissionShowRequestOrBuilder{
-        // required int32 missionId = 1;
-        public static final int MISSIONID_FIELD_NUMBER = 1;
-        private static final MissionShowRequest defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<MissionShowRequest> PARSER =
-                new com.google.protobuf.AbstractParser<MissionShowRequest>(){
-                    public MissionShowRequest parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new MissionShowRequest( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private int missionId_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
+      }
 
-        // Use MissionShowRequest.newBuilder() to construct.
-        private MissionShowRequest( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.MissionShowRequest.class, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.MissionShowRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private MissionShowRequest( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        missionId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.MissionShowRequest getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.MissionShowRequest build() {
+        experiment.protocolgen.MsgProtocol.MissionShowRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private MissionShowRequest(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            bitField0_ |= 0x00000001;
-                            missionId_ = input.readInt32();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.MsgProtocol.MissionShowRequest buildPartial() {
+        experiment.protocolgen.MsgProtocol.MissionShowRequest result = new experiment.protocolgen.MsgProtocol.MissionShowRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
+        result.missionId_ = missionId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static MissionShowRequest getDefaultInstance(){
-            return defaultInstance;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.MissionShowRequest) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.MissionShowRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.MissionShowRequest other) {
+        if (other == experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance()) return this;
+        if (other.hasMissionId()) {
+          setMissionId(other.getMissionId());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public final boolean isInitialized() {
+        if (!hasMissionId()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.MissionShowRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.MissionShowRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
-        }
+      // required int32 missionId = 1;
+      private int missionId_ ;
+      /**
+       * <code>required int32 missionId = 1;</code>
+       */
+      public boolean hasMissionId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 missionId = 1;</code>
+       */
+      public int getMissionId() {
+        return missionId_;
+      }
+      /**
+       * <code>required int32 missionId = 1;</code>
+       */
+      public Builder setMissionId(int value) {
+        bitField0_ |= 0x00000001;
+        missionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 missionId = 1;</code>
+       */
+      public Builder clearMissionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        missionId_ = 0;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowRequest parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static Builder newBuilder(){
-            return Builder.create();
-        }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.MissionShowRequest prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
-
-        public MissionShowRequest getDefaultInstanceForType(){
-            return defaultInstance;
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.MissionShowRequest.class, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder.class );
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<MissionShowRequest> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>required int32 missionId = 1;</code>
-         */
-        public boolean hasMissionId(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>required int32 missionId = 1;</code>
-         */
-        public int getMissionId(){
-            return missionId_;
-        }
-
-        private void initFields(){
-            missionId_ = 0;
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasMissionId() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeInt32( 1, missionId_ );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeInt32Size( 1, missionId_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.MissionShowRequest}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder{
-            private int bitField0_;
-            // required int32 missionId = 1;
-            private int missionId_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.MissionShowRequest.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.MissionShowRequest.class, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                missionId_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest build(){
-                experiment.protocolgen.MsgProtocol.MissionShowRequest result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest buildPartial(){
-                experiment.protocolgen.MsgProtocol.MissionShowRequest result = new experiment.protocolgen.MsgProtocol.MissionShowRequest( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.missionId_ = missionId_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.MissionShowRequest ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.MissionShowRequest) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.MissionShowRequest other ){
-                if( other == experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance() ) return this;
-                if( other.hasMissionId() ) {
-                    setMissionId( other.getMissionId() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasMissionId() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.MissionShowRequest parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.MissionShowRequest) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required int32 missionId = 1;</code>
-             */
-            public boolean hasMissionId(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required int32 missionId = 1;</code>
-             */
-            public int getMissionId(){
-                return missionId_;
-            }
-
-            /**
-             * <code>required int32 missionId = 1;</code>
-             */
-            public Builder setMissionId( int value ){
-                bitField0_ |= 0x00000001;
-                missionId_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 missionId = 1;</code>
-             */
-            public Builder clearMissionId(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                missionId_ = 0;
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.MissionShowRequest)
-        }
-
-        static{
-            defaultInstance = new MissionShowRequest( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.MissionShowRequest)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.MissionShowRequest)
     }
 
+    static {
+      defaultInstance = new MissionShowRequest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.MissionShowRequest)
+  }
+
+  public interface MissionShowResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 protectCount = 1;
+    /**
+     * <code>required int32 protectCount = 1;</code>
+     *
+     * <pre>
+     *总的保护的次数（最大8次，即3+5）
+     * </pre>
+     */
+    boolean hasProtectCount();
+    /**
+     * <code>required int32 protectCount = 1;</code>
+     *
+     * <pre>
+     *总的保护的次数（最大8次，即3+5）
+     * </pre>
+     */
+    int getProtectCount();
+
+    // required bool isProtect = 2;
+    /**
+     * <code>required bool isProtect = 2;</code>
+     *
+     * <pre>
+     *今日是否已保护
+     * </pre>
+     */
+    boolean hasIsProtect();
+    /**
+     * <code>required bool isProtect = 2;</code>
+     *
+     * <pre>
+     *今日是否已保护
+     * </pre>
+     */
+    boolean getIsProtect();
+
+    // required int32 cd = 3;
+    /**
+     * <code>required int32 cd = 3;</code>
+     *
+     * <pre>
+     *剩余冷却时间（秒）
+     * </pre>
+     */
+    boolean hasCd();
+    /**
+     * <code>required int32 cd = 3;</code>
+     *
+     * <pre>
+     *剩余冷却时间（秒）
+     * </pre>
+     */
+    int getCd();
+
+    // required int32 currentMission = 4;
+    /**
+     * <code>required int32 currentMission = 4;</code>
+     *
+     * <pre>
+     *当前关卡
+     * </pre>
+     */
+    boolean hasCurrentMission();
+    /**
+     * <code>required int32 currentMission = 4;</code>
+     *
+     * <pre>
+     *当前关卡
+     * </pre>
+     */
+    int getCurrentMission();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.MissionShowResponse}
+   */
+  public static final class MissionShowResponse extends
+      com.google.protobuf.GeneratedMessage
+      implements MissionShowResponseOrBuilder {
+    // Use MissionShowResponse.newBuilder() to construct.
+    private MissionShowResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private MissionShowResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final MissionShowResponse defaultInstance;
+    public static MissionShowResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public MissionShowResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MissionShowResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              protectCount_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              isProtect_ = input.readBool();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              cd_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              currentMission_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.MissionShowResponse.class, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<MissionShowResponse> PARSER =
+        new com.google.protobuf.AbstractParser<MissionShowResponse>() {
+      public MissionShowResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MissionShowResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MissionShowResponse> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 protectCount = 1;
+    public static final int PROTECTCOUNT_FIELD_NUMBER = 1;
+    private int protectCount_;
+    /**
+     * <code>required int32 protectCount = 1;</code>
+     *
+     * <pre>
+     *总的保护的次数（最大8次，即3+5）
+     * </pre>
+     */
+    public boolean hasProtectCount() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 protectCount = 1;</code>
+     *
+     * <pre>
+     *总的保护的次数（最大8次，即3+5）
+     * </pre>
+     */
+    public int getProtectCount() {
+      return protectCount_;
+    }
+
+    // required bool isProtect = 2;
+    public static final int ISPROTECT_FIELD_NUMBER = 2;
+    private boolean isProtect_;
+    /**
+     * <code>required bool isProtect = 2;</code>
+     *
+     * <pre>
+     *今日是否已保护
+     * </pre>
+     */
+    public boolean hasIsProtect() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required bool isProtect = 2;</code>
+     *
+     * <pre>
+     *今日是否已保护
+     * </pre>
+     */
+    public boolean getIsProtect() {
+      return isProtect_;
+    }
+
+    // required int32 cd = 3;
+    public static final int CD_FIELD_NUMBER = 3;
+    private int cd_;
+    /**
+     * <code>required int32 cd = 3;</code>
+     *
+     * <pre>
+     *剩余冷却时间（秒）
+     * </pre>
+     */
+    public boolean hasCd() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 cd = 3;</code>
+     *
+     * <pre>
+     *剩余冷却时间（秒）
+     * </pre>
+     */
+    public int getCd() {
+      return cd_;
+    }
+
+    // required int32 currentMission = 4;
+    public static final int CURRENTMISSION_FIELD_NUMBER = 4;
+    private int currentMission_;
+    /**
+     * <code>required int32 currentMission = 4;</code>
+     *
+     * <pre>
+     *当前关卡
+     * </pre>
+     */
+    public boolean hasCurrentMission() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required int32 currentMission = 4;</code>
+     *
+     * <pre>
+     *当前关卡
+     * </pre>
+     */
+    public int getCurrentMission() {
+      return currentMission_;
+    }
+
+    private void initFields() {
+      protectCount_ = 0;
+      isProtect_ = false;
+      cd_ = 0;
+      currentMission_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasProtectCount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIsProtect()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCd()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCurrentMission()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, protectCount_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBool(2, isProtect_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, cd_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, currentMission_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, protectCount_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isProtect_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, cd_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, currentMission_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.MissionShowResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.MissionShowResponse}
      */
-    public static final class MissionShowResponse extends
-            com.google.protobuf.GeneratedMessage
-            implements MissionShowResponseOrBuilder{
-        // required int32 protectCount = 1;
-        public static final int PROTECTCOUNT_FIELD_NUMBER = 1;
-        // required bool isProtect = 2;
-        public static final int ISPROTECT_FIELD_NUMBER = 2;
-        // required int32 cd = 3;
-        public static final int CD_FIELD_NUMBER = 3;
-        // required int32 currentMission = 4;
-        public static final int CURRENTMISSION_FIELD_NUMBER = 4;
-        private static final MissionShowResponse defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<MissionShowResponse> PARSER =
-                new com.google.protobuf.AbstractParser<MissionShowResponse>(){
-                    public MissionShowResponse parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new MissionShowResponse( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private int protectCount_;
-        private boolean isProtect_;
-        private int cd_;
-        private int currentMission_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
+      }
 
-        // Use MissionShowResponse.newBuilder() to construct.
-        private MissionShowResponse( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.MissionShowResponse.class, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.MissionShowResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private MissionShowResponse( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        protectCount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isProtect_ = false;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cd_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        currentMission_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.MissionShowResponse getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.MissionShowResponse build() {
+        experiment.protocolgen.MsgProtocol.MissionShowResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private MissionShowResponse(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            bitField0_ |= 0x00000001;
-                            protectCount_ = input.readInt32();
-                            break;
-                        }
-                        case 16: {
-                            bitField0_ |= 0x00000002;
-                            isProtect_ = input.readBool();
-                            break;
-                        }
-                        case 24: {
-                            bitField0_ |= 0x00000004;
-                            cd_ = input.readInt32();
-                            break;
-                        }
-                        case 32: {
-                            bitField0_ |= 0x00000008;
-                            currentMission_ = input.readInt32();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.MsgProtocol.MissionShowResponse buildPartial() {
+        experiment.protocolgen.MsgProtocol.MissionShowResponse result = new experiment.protocolgen.MsgProtocol.MissionShowResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static MissionShowResponse getDefaultInstance(){
-            return defaultInstance;
+        result.protectCount_ = protectCount_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
-
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
+        result.isProtect_ = isProtect_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        result.cd_ = cd_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
+        result.currentMission_ = currentMission_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.MissionShowResponse) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.MissionShowResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.MissionShowResponse other) {
+        if (other == experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance()) return this;
+        if (other.hasProtectCount()) {
+          setProtectCount(other.getProtectCount());
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (other.hasIsProtect()) {
+          setIsProtect(other.getIsProtect());
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (other.hasCd()) {
+          setCd(other.getCd());
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (other.hasCurrentMission()) {
+          setCurrentMission(other.getCurrentMission());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      public final boolean isInitialized() {
+        if (!hasProtectCount()) {
+          
+          return false;
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+        if (!hasIsProtect()) {
+          
+          return false;
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (!hasCd()) {
+          
+          return false;
         }
-
-        public static experiment.protocolgen.MsgProtocol.MissionShowResponse parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (!hasCurrentMission()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        public static Builder newBuilder(){
-            return Builder.create();
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.MissionShowResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.MissionShowResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.MissionShowResponse prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
+      // required int32 protectCount = 1;
+      private int protectCount_ ;
+      /**
+       * <code>required int32 protectCount = 1;</code>
+       *
+       * <pre>
+       *总的保护的次数（最大8次，即3+5）
+       * </pre>
+       */
+      public boolean hasProtectCount() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 protectCount = 1;</code>
+       *
+       * <pre>
+       *总的保护的次数（最大8次，即3+5）
+       * </pre>
+       */
+      public int getProtectCount() {
+        return protectCount_;
+      }
+      /**
+       * <code>required int32 protectCount = 1;</code>
+       *
+       * <pre>
+       *总的保护的次数（最大8次，即3+5）
+       * </pre>
+       */
+      public Builder setProtectCount(int value) {
+        bitField0_ |= 0x00000001;
+        protectCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 protectCount = 1;</code>
+       *
+       * <pre>
+       *总的保护的次数（最大8次，即3+5）
+       * </pre>
+       */
+      public Builder clearProtectCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        protectCount_ = 0;
+        onChanged();
+        return this;
+      }
 
-        public MissionShowResponse getDefaultInstanceForType(){
-            return defaultInstance;
-        }
+      // required bool isProtect = 2;
+      private boolean isProtect_ ;
+      /**
+       * <code>required bool isProtect = 2;</code>
+       *
+       * <pre>
+       *今日是否已保护
+       * </pre>
+       */
+      public boolean hasIsProtect() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required bool isProtect = 2;</code>
+       *
+       * <pre>
+       *今日是否已保护
+       * </pre>
+       */
+      public boolean getIsProtect() {
+        return isProtect_;
+      }
+      /**
+       * <code>required bool isProtect = 2;</code>
+       *
+       * <pre>
+       *今日是否已保护
+       * </pre>
+       */
+      public Builder setIsProtect(boolean value) {
+        bitField0_ |= 0x00000002;
+        isProtect_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool isProtect = 2;</code>
+       *
+       * <pre>
+       *今日是否已保护
+       * </pre>
+       */
+      public Builder clearIsProtect() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        isProtect_ = false;
+        onChanged();
+        return this;
+      }
 
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
+      // required int32 cd = 3;
+      private int cd_ ;
+      /**
+       * <code>required int32 cd = 3;</code>
+       *
+       * <pre>
+       *剩余冷却时间（秒）
+       * </pre>
+       */
+      public boolean hasCd() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 cd = 3;</code>
+       *
+       * <pre>
+       *剩余冷却时间（秒）
+       * </pre>
+       */
+      public int getCd() {
+        return cd_;
+      }
+      /**
+       * <code>required int32 cd = 3;</code>
+       *
+       * <pre>
+       *剩余冷却时间（秒）
+       * </pre>
+       */
+      public Builder setCd(int value) {
+        bitField0_ |= 0x00000004;
+        cd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 cd = 3;</code>
+       *
+       * <pre>
+       *剩余冷却时间（秒）
+       * </pre>
+       */
+      public Builder clearCd() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cd_ = 0;
+        onChanged();
+        return this;
+      }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.MissionShowResponse.class, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder.class );
-        }
+      // required int32 currentMission = 4;
+      private int currentMission_ ;
+      /**
+       * <code>required int32 currentMission = 4;</code>
+       *
+       * <pre>
+       *当前关卡
+       * </pre>
+       */
+      public boolean hasCurrentMission() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 currentMission = 4;</code>
+       *
+       * <pre>
+       *当前关卡
+       * </pre>
+       */
+      public int getCurrentMission() {
+        return currentMission_;
+      }
+      /**
+       * <code>required int32 currentMission = 4;</code>
+       *
+       * <pre>
+       *当前关卡
+       * </pre>
+       */
+      public Builder setCurrentMission(int value) {
+        bitField0_ |= 0x00000008;
+        currentMission_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 currentMission = 4;</code>
+       *
+       * <pre>
+       *当前关卡
+       * </pre>
+       */
+      public Builder clearCurrentMission() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currentMission_ = 0;
+        onChanged();
+        return this;
+      }
 
-        @java.lang.Override
-        public com.google.protobuf.Parser<MissionShowResponse> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>required int32 protectCount = 1;</code>
-         * <p/>
-         * <pre>
-         * 总的保护的次数（最大8次，即3+5）
-         * </pre>
-         */
-        public boolean hasProtectCount(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>required int32 protectCount = 1;</code>
-         * <p/>
-         * <pre>
-         * 总的保护的次数（最大8次，即3+5）
-         * </pre>
-         */
-        public int getProtectCount(){
-            return protectCount_;
-        }
-
-        /**
-         * <code>required bool isProtect = 2;</code>
-         * <p/>
-         * <pre>
-         * 今日是否已保护
-         * </pre>
-         */
-        public boolean hasIsProtect(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-
-        /**
-         * <code>required bool isProtect = 2;</code>
-         * <p/>
-         * <pre>
-         * 今日是否已保护
-         * </pre>
-         */
-        public boolean getIsProtect(){
-            return isProtect_;
-        }
-
-        /**
-         * <code>required int32 cd = 3;</code>
-         * <p/>
-         * <pre>
-         * 剩余冷却时间（秒）
-         * </pre>
-         */
-        public boolean hasCd(){
-            return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-
-        /**
-         * <code>required int32 cd = 3;</code>
-         * <p/>
-         * <pre>
-         * 剩余冷却时间（秒）
-         * </pre>
-         */
-        public int getCd(){
-            return cd_;
-        }
-
-        /**
-         * <code>required int32 currentMission = 4;</code>
-         * <p/>
-         * <pre>
-         * 当前关卡
-         * </pre>
-         */
-        public boolean hasCurrentMission(){
-            return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-
-        /**
-         * <code>required int32 currentMission = 4;</code>
-         * <p/>
-         * <pre>
-         * 当前关卡
-         * </pre>
-         */
-        public int getCurrentMission(){
-            return currentMission_;
-        }
-
-        private void initFields(){
-            protectCount_ = 0;
-            isProtect_ = false;
-            cd_ = 0;
-            currentMission_ = 0;
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasProtectCount() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasIsProtect() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasCd() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasCurrentMission() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeInt32( 1, protectCount_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeBool( 2, isProtect_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                output.writeInt32( 3, cd_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                output.writeInt32( 4, currentMission_ );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeInt32Size( 1, protectCount_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBoolSize( 2, isProtect_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeInt32Size( 3, cd_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeInt32Size( 4, currentMission_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.MissionShowResponse}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder{
-            private int bitField0_;
-            // required int32 protectCount = 1;
-            private int protectCount_;
-            // required bool isProtect = 2;
-            private boolean isProtect_;
-            // required int32 cd = 3;
-            private int cd_;
-            // required int32 currentMission = 4;
-            private int currentMission_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.MissionShowResponse.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.MissionShowResponse.class, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                protectCount_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                isProtect_ = false;
-                bitField0_ = (bitField0_ & ~0x00000002);
-                cd_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000004);
-                currentMission_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000008);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.MissionShowResponse getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.MissionShowResponse build(){
-                experiment.protocolgen.MsgProtocol.MissionShowResponse result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.MissionShowResponse buildPartial(){
-                experiment.protocolgen.MsgProtocol.MissionShowResponse result = new experiment.protocolgen.MsgProtocol.MissionShowResponse( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.protectCount_ = protectCount_;
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                result.isProtect_ = isProtect_;
-                if( ((from_bitField0_ & 0x00000004) == 0x00000004) ) {
-                    to_bitField0_ |= 0x00000004;
-                }
-                result.cd_ = cd_;
-                if( ((from_bitField0_ & 0x00000008) == 0x00000008) ) {
-                    to_bitField0_ |= 0x00000008;
-                }
-                result.currentMission_ = currentMission_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.MissionShowResponse ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.MissionShowResponse) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.MissionShowResponse other ){
-                if( other == experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance() ) return this;
-                if( other.hasProtectCount() ) {
-                    setProtectCount( other.getProtectCount() );
-                }
-                if( other.hasIsProtect() ) {
-                    setIsProtect( other.getIsProtect() );
-                }
-                if( other.hasCd() ) {
-                    setCd( other.getCd() );
-                }
-                if( other.hasCurrentMission() ) {
-                    setCurrentMission( other.getCurrentMission() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasProtectCount() ) {
-
-                    return false;
-                }
-                if( !hasIsProtect() ) {
-
-                    return false;
-                }
-                if( !hasCd() ) {
-
-                    return false;
-                }
-                if( !hasCurrentMission() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.MissionShowResponse parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.MissionShowResponse) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required int32 protectCount = 1;</code>
-             * <p/>
-             * <pre>
-             * 总的保护的次数（最大8次，即3+5）
-             * </pre>
-             */
-            public boolean hasProtectCount(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required int32 protectCount = 1;</code>
-             * <p/>
-             * <pre>
-             * 总的保护的次数（最大8次，即3+5）
-             * </pre>
-             */
-            public int getProtectCount(){
-                return protectCount_;
-            }
-
-            /**
-             * <code>required int32 protectCount = 1;</code>
-             * <p/>
-             * <pre>
-             * 总的保护的次数（最大8次，即3+5）
-             * </pre>
-             */
-            public Builder setProtectCount( int value ){
-                bitField0_ |= 0x00000001;
-                protectCount_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 protectCount = 1;</code>
-             * <p/>
-             * <pre>
-             * 总的保护的次数（最大8次，即3+5）
-             * </pre>
-             */
-            public Builder clearProtectCount(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                protectCount_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required bool isProtect = 2;</code>
-             * <p/>
-             * <pre>
-             * 今日是否已保护
-             * </pre>
-             */
-            public boolean hasIsProtect(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>required bool isProtect = 2;</code>
-             * <p/>
-             * <pre>
-             * 今日是否已保护
-             * </pre>
-             */
-            public boolean getIsProtect(){
-                return isProtect_;
-            }
-
-            /**
-             * <code>required bool isProtect = 2;</code>
-             * <p/>
-             * <pre>
-             * 今日是否已保护
-             * </pre>
-             */
-            public Builder setIsProtect( boolean value ){
-                bitField0_ |= 0x00000002;
-                isProtect_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required bool isProtect = 2;</code>
-             * <p/>
-             * <pre>
-             * 今日是否已保护
-             * </pre>
-             */
-            public Builder clearIsProtect(){
-                bitField0_ = (bitField0_ & ~0x00000002);
-                isProtect_ = false;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 cd = 3;</code>
-             * <p/>
-             * <pre>
-             * 剩余冷却时间（秒）
-             * </pre>
-             */
-            public boolean hasCd(){
-                return ((bitField0_ & 0x00000004) == 0x00000004);
-            }
-
-            /**
-             * <code>required int32 cd = 3;</code>
-             * <p/>
-             * <pre>
-             * 剩余冷却时间（秒）
-             * </pre>
-             */
-            public int getCd(){
-                return cd_;
-            }
-
-            /**
-             * <code>required int32 cd = 3;</code>
-             * <p/>
-             * <pre>
-             * 剩余冷却时间（秒）
-             * </pre>
-             */
-            public Builder setCd( int value ){
-                bitField0_ |= 0x00000004;
-                cd_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 cd = 3;</code>
-             * <p/>
-             * <pre>
-             * 剩余冷却时间（秒）
-             * </pre>
-             */
-            public Builder clearCd(){
-                bitField0_ = (bitField0_ & ~0x00000004);
-                cd_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 currentMission = 4;</code>
-             * <p/>
-             * <pre>
-             * 当前关卡
-             * </pre>
-             */
-            public boolean hasCurrentMission(){
-                return ((bitField0_ & 0x00000008) == 0x00000008);
-            }
-
-            /**
-             * <code>required int32 currentMission = 4;</code>
-             * <p/>
-             * <pre>
-             * 当前关卡
-             * </pre>
-             */
-            public int getCurrentMission(){
-                return currentMission_;
-            }
-
-            /**
-             * <code>required int32 currentMission = 4;</code>
-             * <p/>
-             * <pre>
-             * 当前关卡
-             * </pre>
-             */
-            public Builder setCurrentMission( int value ){
-                bitField0_ |= 0x00000008;
-                currentMission_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 currentMission = 4;</code>
-             * <p/>
-             * <pre>
-             * 当前关卡
-             * </pre>
-             */
-            public Builder clearCurrentMission(){
-                bitField0_ = (bitField0_ & ~0x00000008);
-                currentMission_ = 0;
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.MissionShowResponse)
-        }
-
-        static{
-            defaultInstance = new MissionShowResponse( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.MissionShowResponse)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.MissionShowResponse)
     }
 
+    static {
+      defaultInstance = new MissionShowResponse(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.MissionShowResponse)
+  }
+
+  public interface RequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .experiment.protocolgen.LoginRequest login = 1;
+    /**
+     * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+     */
+    boolean hasLogin();
+    /**
+     * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+     */
+    experiment.protocolgen.MsgProtocol.LoginRequest getLogin();
+    /**
+     * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+     */
+    experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder();
+
+    // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+     */
+    boolean hasMissionShow();
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+     */
+    experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow();
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+     */
+    experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder();
+
+    // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+     */
+    boolean hasNickNameCheck();
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+     */
+    experiment.protocolgen.MsgProtocol.NickNameCheckRequest getNickNameCheck();
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+     */
+    experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder getNickNameCheckOrBuilder();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.Request}
+   *
+   * <pre>
+   *message EntityRequest
+   *{
+   *    required Entity id = 1;
+   *}
+   *message EntityResponse
+   *{
+   *    required EntityData content = 1;
+   *}
+   *
+   *message AppendEntityRequest
+   *{
+   *    required EntityData content = 1;
+   *}
+   *message AppendEntityResponse
+   *{
+   *    required EntityData id = 1;
+   *}
+   *message ModifyEntityRequest
+   *{
+   *    required EntityData content = 1;
+   *}
+   *message ModifyEntityResponse
+   *{
+   *    required EntityData content = 1;
+   *}
+   *
+   *message DeleteEntityRequest
+   *{
+   *    required Entity id = 1;
+   *}
+   *message DeleteEntityResponse
+   *{
+   *    required EntityData content = 1;
+   *}
+   *
+   *
+   *message SnmpRequest
+   *{
+   *    optional bool set = 1 ;
+   *    optional bool get = 2 ;
+   *    optional Entity   id = 3;
+   *    optional SnmpGroups  content = 4;
+   *
+   *}
+   *
+   *message SnmpResponse
+   *{
+   *    optional Entity  id = 1;
+   *    optional SnmpGroups  content = 2;
+   *
+   *}
+   *
+   *message MoveZoneRequest
+   *{
+   *    required Entity id = 1;
+   *    required Entity new_zone = 2;
+   *}
+   *message MoveZoneResponse
+   *{
+   *    required Entity id = 1;
+   *    required Entity old_zone = 2;
+   *}
+   *
+   *message ModifyKeepliveRequest
+   *{
+   *    required Entity id = 1;
+   *    required sfixed32 time_to_live = 2;
+   *}
+   *
+   *enum EntityIndicationType
+   *{
+   *    APPEND = 0;
+   *    UPDATE = 1;
+   *    DELETE_ = 2;
+   *}
+   *message EntityIndication
+   *{
+   *
+   *    required EntityIndicationType type = 1;
+   *    required EntityData content = 2;
+   *}
+   *
+   *message MoveZoneIndication
+   *{
+   *    required Entity id = 1;
+   *    required Entity old_zone = 2;
+   *}
+   * </pre>
+   */
+  public static final class Request extends
+      com.google.protobuf.GeneratedMessage
+      implements RequestOrBuilder {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Request(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Request defaultInstance;
+    public static Request getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Request getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Request(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              experiment.protocolgen.MsgProtocol.LoginRequest.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = login_.toBuilder();
+              }
+              login_ = input.readMessage(experiment.protocolgen.MsgProtocol.LoginRequest.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(login_);
+                login_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = missionShow_.toBuilder();
+              }
+              missionShow_ = input.readMessage(experiment.protocolgen.MsgProtocol.MissionShowRequest.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(missionShow_);
+                missionShow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = nickNameCheck_.toBuilder();
+              }
+              nickNameCheck_ = input.readMessage(experiment.protocolgen.MsgProtocol.NickNameCheckRequest.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nickNameCheck_);
+                nickNameCheck_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.Request.class, experiment.protocolgen.MsgProtocol.Request.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Request> PARSER =
+        new com.google.protobuf.AbstractParser<Request>() {
+      public Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Request(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Request> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .experiment.protocolgen.LoginRequest login = 1;
+    public static final int LOGIN_FIELD_NUMBER = 1;
+    private experiment.protocolgen.MsgProtocol.LoginRequest login_;
+    /**
+     * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+     */
+    public boolean hasLogin() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.LoginRequest getLogin() {
+      return login_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder() {
+      return login_;
+    }
+
+    // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
+    public static final int MISSIONSHOW_FIELD_NUMBER = 2;
+    private experiment.protocolgen.MsgProtocol.MissionShowRequest missionShow_;
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+     */
+    public boolean hasMissionShow() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow() {
+      return missionShow_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder() {
+      return missionShow_;
+    }
+
+    // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
+    public static final int NICKNAMECHECK_FIELD_NUMBER = 3;
+    private experiment.protocolgen.MsgProtocol.NickNameCheckRequest nickNameCheck_;
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+     */
+    public boolean hasNickNameCheck() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.NickNameCheckRequest getNickNameCheck() {
+      return nickNameCheck_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder getNickNameCheckOrBuilder() {
+      return nickNameCheck_;
+    }
+
+    private void initFields() {
+      login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
+      missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+      nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (hasLogin()) {
+        if (!getLogin().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasMissionShow()) {
+        if (!getMissionShow().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasNickNameCheck()) {
+        if (!getNickNameCheck().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, login_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, missionShow_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, nickNameCheck_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, login_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, missionShow_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, nickNameCheck_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.Request prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.Request}
-     * <p/>
+     *
      * <pre>
-     * message EntityRequest
-     * {
+     *message EntityRequest
+     *{
      *    required Entity id = 1;
-     * }
-     * message EntityResponse
-     * {
+     *}
+     *message EntityResponse
+     *{
      *    required EntityData content = 1;
-     * }
+     *}
      *
-     * message AppendEntityRequest
-     * {
+     *message AppendEntityRequest
+     *{
      *    required EntityData content = 1;
-     * }
-     * message AppendEntityResponse
-     * {
+     *}
+     *message AppendEntityResponse
+     *{
      *    required EntityData id = 1;
-     * }
-     * message ModifyEntityRequest
-     * {
+     *}
+     *message ModifyEntityRequest
+     *{
      *    required EntityData content = 1;
-     * }
-     * message ModifyEntityResponse
-     * {
+     *}
+     *message ModifyEntityResponse
+     *{
      *    required EntityData content = 1;
-     * }
+     *}
      *
-     * message DeleteEntityRequest
-     * {
+     *message DeleteEntityRequest
+     *{
      *    required Entity id = 1;
-     * }
-     * message DeleteEntityResponse
-     * {
+     *}
+     *message DeleteEntityResponse
+     *{
      *    required EntityData content = 1;
-     * }
+     *}
      *
      *
-     * message SnmpRequest
-     * {
+     *message SnmpRequest
+     *{
      *    optional bool set = 1 ;
      *    optional bool get = 2 ;
      *    optional Entity   id = 3;
      *    optional SnmpGroups  content = 4;
      *
-     * }
+     *}
      *
-     * message SnmpResponse
-     * {
+     *message SnmpResponse
+     *{
      *    optional Entity  id = 1;
      *    optional SnmpGroups  content = 2;
      *
-     * }
+     *}
      *
-     * message MoveZoneRequest
-     * {
+     *message MoveZoneRequest
+     *{
      *    required Entity id = 1;
      *    required Entity new_zone = 2;
-     * }
-     * message MoveZoneResponse
-     * {
+     *}
+     *message MoveZoneResponse
+     *{
      *    required Entity id = 1;
      *    required Entity old_zone = 2;
-     * }
+     *}
      *
-     * message ModifyKeepliveRequest
-     * {
+     *message ModifyKeepliveRequest
+     *{
      *    required Entity id = 1;
      *    required sfixed32 time_to_live = 2;
-     * }
+     *}
      *
-     * enum EntityIndicationType
-     * {
+     *enum EntityIndicationType
+     *{
      *    APPEND = 0;
      *    UPDATE = 1;
      *    DELETE_ = 2;
-     * }
-     * message EntityIndication
-     * {
+     *}
+     *message EntityIndication
+     *{
      *
      *    required EntityIndicationType type = 1;
      *    required EntityData content = 2;
-     * }
+     *}
      *
-     * message MoveZoneIndication
-     * {
+     *message MoveZoneIndication
+     *{
      *    required Entity id = 1;
      *    required Entity old_zone = 2;
-     * }
+     *}
      * </pre>
      */
-    public static final class Request extends
-            com.google.protobuf.GeneratedMessage
-            implements RequestOrBuilder{
-        // optional .experiment.protocolgen.LoginRequest login = 1;
-        public static final int LOGIN_FIELD_NUMBER = 1;
-        // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
-        public static final int MISSIONSHOW_FIELD_NUMBER = 2;
-        // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
-        public static final int NICKNAMECHECK_FIELD_NUMBER = 3;
-        private static final Request defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<Request> PARSER =
-                new com.google.protobuf.AbstractParser<Request>(){
-                    public Request parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new Request( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private experiment.protocolgen.MsgProtocol.LoginRequest login_;
-        private experiment.protocolgen.MsgProtocol.MissionShowRequest missionShow_;
-        private experiment.protocolgen.MsgProtocol.NickNameCheckRequest nickNameCheck_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_descriptor;
+      }
 
-        // Use Request.newBuilder() to construct.
-        private Request( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.Request.class, experiment.protocolgen.MsgProtocol.Request.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.Request.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLoginFieldBuilder();
+          getMissionShowFieldBuilder();
+          getNickNameCheckFieldBuilder();
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private Request( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        if (loginBuilder_ == null) {
+          login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
+        } else {
+          loginBuilder_.clear();
         }
-
-        private Request(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 10: {
-                            experiment.protocolgen.MsgProtocol.LoginRequest.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                                subBuilder = login_.toBuilder();
-                            }
-                            login_ = input.readMessage( experiment.protocolgen.MsgProtocol.LoginRequest.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( login_ );
-                                login_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000001;
-                            break;
-                        }
-                        case 18: {
-                            experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                                subBuilder = missionShow_.toBuilder();
-                            }
-                            missionShow_ = input.readMessage( experiment.protocolgen.MsgProtocol.MissionShowRequest.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( missionShow_ );
-                                missionShow_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000002;
-                            break;
-                        }
-                        case 26: {
-                            experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                                subBuilder = nickNameCheck_.toBuilder();
-                            }
-                            nickNameCheck_ = input.readMessage( experiment.protocolgen.MsgProtocol.NickNameCheckRequest.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( nickNameCheck_ );
-                                nickNameCheck_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000004;
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (missionShowBuilder_ == null) {
+          missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+        } else {
+          missionShowBuilder_.clear();
         }
-
-        public static Request getDefaultInstance(){
-            return defaultInstance;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
+        } else {
+          nickNameCheckBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_descriptor;
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.Request getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.Request build() {
+        experiment.protocolgen.MsgProtocol.Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public experiment.protocolgen.MsgProtocol.Request buildPartial() {
+        experiment.protocolgen.MsgProtocol.Request result = new experiment.protocolgen.MsgProtocol.Request(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (loginBuilder_ == null) {
+          result.login_ = login_;
+        } else {
+          result.login_ = loginBuilder_.build();
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (missionShowBuilder_ == null) {
+          result.missionShow_ = missionShow_;
+        } else {
+          result.missionShow_ = missionShowBuilder_.build();
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (nickNameCheckBuilder_ == null) {
+          result.nickNameCheck_ = nickNameCheck_;
+        } else {
+          result.nickNameCheck_ = nickNameCheckBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Request parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.Request) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Request parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.Request other) {
+        if (other == experiment.protocolgen.MsgProtocol.Request.getDefaultInstance()) return this;
+        if (other.hasLogin()) {
+          mergeLogin(other.getLogin());
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (other.hasMissionShow()) {
+          mergeMissionShow(other.getMissionShow());
         }
-
-        public static experiment.protocolgen.MsgProtocol.Request parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (other.hasNickNameCheck()) {
+          mergeNickNameCheck(other.getNickNameCheck());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static Builder newBuilder(){
-            return Builder.create();
+      public final boolean isInitialized() {
+        if (hasLogin()) {
+          if (!getLogin().isInitialized()) {
+            
+            return false;
+          }
         }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.Request prototype ){
-            return newBuilder().mergeFrom( prototype );
+        if (hasMissionShow()) {
+          if (!getMissionShow().isInitialized()) {
+            
+            return false;
+          }
         }
-
-        public Request getDefaultInstanceForType(){
-            return defaultInstance;
+        if (hasNickNameCheck()) {
+          if (!getNickNameCheck().isInitialized()) {
+            
+            return false;
+          }
         }
+        return true;
+      }
 
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.Request) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.Request.class, experiment.protocolgen.MsgProtocol.Request.Builder.class );
+      // optional .experiment.protocolgen.LoginRequest login = 1;
+      private experiment.protocolgen.MsgProtocol.LoginRequest login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder> loginBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public boolean hasLogin() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.LoginRequest getLogin() {
+        if (loginBuilder_ == null) {
+          return login_;
+        } else {
+          return loginBuilder_.getMessage();
         }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<Request> getParserForType(){
-            return PARSER;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public Builder setLogin(experiment.protocolgen.MsgProtocol.LoginRequest value) {
+        if (loginBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          login_ = value;
+          onChanged();
+        } else {
+          loginBuilder_.setMessage(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-         */
-        public boolean hasLogin(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public Builder setLogin(
+          experiment.protocolgen.MsgProtocol.LoginRequest.Builder builderForValue) {
+        if (loginBuilder_ == null) {
+          login_ = builderForValue.build();
+          onChanged();
+        } else {
+          loginBuilder_.setMessage(builderForValue.build());
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.LoginRequest getLogin(){
-            return login_;
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public Builder mergeLogin(experiment.protocolgen.MsgProtocol.LoginRequest value) {
+        if (loginBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              login_ != experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance()) {
+            login_ =
+              experiment.protocolgen.MsgProtocol.LoginRequest.newBuilder(login_).mergeFrom(value).buildPartial();
+          } else {
+            login_ = value;
+          }
+          onChanged();
+        } else {
+          loginBuilder_.mergeFrom(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder(){
-            return login_;
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public Builder clearLogin() {
+        if (loginBuilder_ == null) {
+          login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
+          onChanged();
+        } else {
+          loginBuilder_.clear();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-         */
-        public boolean hasMissionShow(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.LoginRequest.Builder getLoginBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLoginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder() {
+        if (loginBuilder_ != null) {
+          return loginBuilder_.getMessageOrBuilder();
+        } else {
+          return login_;
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow(){
-            return missionShow_;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder> 
+          getLoginFieldBuilder() {
+        if (loginBuilder_ == null) {
+          loginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder>(
+                  login_,
+                  getParentForChildren(),
+                  isClean());
+          login_ = null;
         }
+        return loginBuilder_;
+      }
 
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder(){
-            return missionShow_;
+      // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
+      private experiment.protocolgen.MsgProtocol.MissionShowRequest missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder> missionShowBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public boolean hasMissionShow() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow() {
+        if (missionShowBuilder_ == null) {
+          return missionShow_;
+        } else {
+          return missionShowBuilder_.getMessage();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-         */
-        public boolean hasNickNameCheck(){
-            return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public Builder setMissionShow(experiment.protocolgen.MsgProtocol.MissionShowRequest value) {
+        if (missionShowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          missionShow_ = value;
+          onChanged();
+        } else {
+          missionShowBuilder_.setMessage(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.NickNameCheckRequest getNickNameCheck(){
-            return nickNameCheck_;
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public Builder setMissionShow(
+          experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder builderForValue) {
+        if (missionShowBuilder_ == null) {
+          missionShow_ = builderForValue.build();
+          onChanged();
+        } else {
+          missionShowBuilder_.setMessage(builderForValue.build());
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder getNickNameCheckOrBuilder(){
-            return nickNameCheck_;
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public Builder mergeMissionShow(experiment.protocolgen.MsgProtocol.MissionShowRequest value) {
+        if (missionShowBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              missionShow_ != experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance()) {
+            missionShow_ =
+              experiment.protocolgen.MsgProtocol.MissionShowRequest.newBuilder(missionShow_).mergeFrom(value).buildPartial();
+          } else {
+            missionShow_ = value;
+          }
+          onChanged();
+        } else {
+          missionShowBuilder_.mergeFrom(value);
         }
-
-        private void initFields(){
-            login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
-            missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
-            nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public Builder clearMissionShow() {
+        if (missionShowBuilder_ == null) {
+          missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
+          onChanged();
+        } else {
+          missionShowBuilder_.clear();
         }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( hasLogin() ) {
-                if( !getLogin().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            if( hasMissionShow() ) {
-                if( !getMissionShow().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            if( hasNickNameCheck() ) {
-                if( !getNickNameCheck().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            memoizedIsInitialized = 1;
-            return true;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder getMissionShowBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getMissionShowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder() {
+        if (missionShowBuilder_ != null) {
+          return missionShowBuilder_.getMessageOrBuilder();
+        } else {
+          return missionShow_;
         }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeMessage( 1, login_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeMessage( 2, missionShow_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                output.writeMessage( 3, nickNameCheck_ );
-            }
-            getUnknownFields().writeTo( output );
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder> 
+          getMissionShowFieldBuilder() {
+        if (missionShowBuilder_ == null) {
+          missionShowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder>(
+                  missionShow_,
+                  getParentForChildren(),
+                  isClean());
+          missionShow_ = null;
         }
+        return missionShowBuilder_;
+      }
 
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 1, login_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 2, missionShow_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 3, nickNameCheck_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
+      // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
+      private experiment.protocolgen.MsgProtocol.NickNameCheckRequest nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.NickNameCheckRequest, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder> nickNameCheckBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public boolean hasNickNameCheck() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.NickNameCheckRequest getNickNameCheck() {
+        if (nickNameCheckBuilder_ == null) {
+          return nickNameCheck_;
+        } else {
+          return nickNameCheckBuilder_.getMessage();
         }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public Builder setNickNameCheck(experiment.protocolgen.MsgProtocol.NickNameCheckRequest value) {
+        if (nickNameCheckBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nickNameCheck_ = value;
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.setMessage(value);
         }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public Builder setNickNameCheck(
+          experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder builderForValue) {
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheck_ = builderForValue.build();
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.setMessage(builderForValue.build());
         }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public Builder mergeNickNameCheck(experiment.protocolgen.MsgProtocol.NickNameCheckRequest value) {
+        if (nickNameCheckBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              nickNameCheck_ != experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance()) {
+            nickNameCheck_ =
+              experiment.protocolgen.MsgProtocol.NickNameCheckRequest.newBuilder(nickNameCheck_).mergeFrom(value).buildPartial();
+          } else {
+            nickNameCheck_ = value;
+          }
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.mergeFrom(value);
         }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public Builder clearNickNameCheck() {
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.clear();
         }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.Request}
-         * <p/>
-         * <pre>
-         * message EntityRequest
-         * {
-         *    required Entity id = 1;
-         * }
-         * message EntityResponse
-         * {
-         *    required EntityData content = 1;
-         * }
-         *
-         * message AppendEntityRequest
-         * {
-         *    required EntityData content = 1;
-         * }
-         * message AppendEntityResponse
-         * {
-         *    required EntityData id = 1;
-         * }
-         * message ModifyEntityRequest
-         * {
-         *    required EntityData content = 1;
-         * }
-         * message ModifyEntityResponse
-         * {
-         *    required EntityData content = 1;
-         * }
-         *
-         * message DeleteEntityRequest
-         * {
-         *    required Entity id = 1;
-         * }
-         * message DeleteEntityResponse
-         * {
-         *    required EntityData content = 1;
-         * }
-         *
-         *
-         * message SnmpRequest
-         * {
-         *    optional bool set = 1 ;
-         *    optional bool get = 2 ;
-         *    optional Entity   id = 3;
-         *    optional SnmpGroups  content = 4;
-         *
-         * }
-         *
-         * message SnmpResponse
-         * {
-         *    optional Entity  id = 1;
-         *    optional SnmpGroups  content = 2;
-         *
-         * }
-         *
-         * message MoveZoneRequest
-         * {
-         *    required Entity id = 1;
-         *    required Entity new_zone = 2;
-         * }
-         * message MoveZoneResponse
-         * {
-         *    required Entity id = 1;
-         *    required Entity old_zone = 2;
-         * }
-         *
-         * message ModifyKeepliveRequest
-         * {
-         *    required Entity id = 1;
-         *    required sfixed32 time_to_live = 2;
-         * }
-         *
-         * enum EntityIndicationType
-         * {
-         *    APPEND = 0;
-         *    UPDATE = 1;
-         *    DELETE_ = 2;
-         * }
-         * message EntityIndication
-         * {
-         *
-         *    required EntityIndicationType type = 1;
-         *    required EntityData content = 2;
-         * }
-         *
-         * message MoveZoneIndication
-         * {
-         *    required Entity id = 1;
-         *    required Entity old_zone = 2;
-         * }
-         * </pre>
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.RequestOrBuilder{
-            private int bitField0_;
-            // optional .experiment.protocolgen.LoginRequest login = 1;
-            private experiment.protocolgen.MsgProtocol.LoginRequest login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder> loginBuilder_;
-            // optional .experiment.protocolgen.MissionShowRequest missionShow = 2;
-            private experiment.protocolgen.MsgProtocol.MissionShowRequest missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder> missionShowBuilder_;
-            // optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;
-            private experiment.protocolgen.MsgProtocol.NickNameCheckRequest nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.NickNameCheckRequest, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder> nickNameCheckBuilder_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.Request.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.Request.class, experiment.protocolgen.MsgProtocol.Request.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                    getLoginFieldBuilder();
-                    getMissionShowFieldBuilder();
-                    getNickNameCheckFieldBuilder();
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                if( loginBuilder_ == null ) {
-                    login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
-                } else {
-                    loginBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000001);
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
-                } else {
-                    missionShowBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000002);
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
-                } else {
-                    nickNameCheckBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000004);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Request_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.Request getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.Request build(){
-                experiment.protocolgen.MsgProtocol.Request result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.Request buildPartial(){
-                experiment.protocolgen.MsgProtocol.Request result = new experiment.protocolgen.MsgProtocol.Request( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                if( loginBuilder_ == null ) {
-                    result.login_ = login_;
-                } else {
-                    result.login_ = loginBuilder_.build();
-                }
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                if( missionShowBuilder_ == null ) {
-                    result.missionShow_ = missionShow_;
-                } else {
-                    result.missionShow_ = missionShowBuilder_.build();
-                }
-                if( ((from_bitField0_ & 0x00000004) == 0x00000004) ) {
-                    to_bitField0_ |= 0x00000004;
-                }
-                if( nickNameCheckBuilder_ == null ) {
-                    result.nickNameCheck_ = nickNameCheck_;
-                } else {
-                    result.nickNameCheck_ = nickNameCheckBuilder_.build();
-                }
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.Request ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.Request) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.Request other ){
-                if( other == experiment.protocolgen.MsgProtocol.Request.getDefaultInstance() ) return this;
-                if( other.hasLogin() ) {
-                    mergeLogin( other.getLogin() );
-                }
-                if( other.hasMissionShow() ) {
-                    mergeMissionShow( other.getMissionShow() );
-                }
-                if( other.hasNickNameCheck() ) {
-                    mergeNickNameCheck( other.getNickNameCheck() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( hasLogin() ) {
-                    if( !getLogin().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                if( hasMissionShow() ) {
-                    if( !getMissionShow().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                if( hasNickNameCheck() ) {
-                    if( !getNickNameCheck().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.Request parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.Request) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public boolean hasLogin(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.LoginRequest getLogin(){
-                if( loginBuilder_ == null ) {
-                    return login_;
-                } else {
-                    return loginBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public Builder setLogin(
-                    experiment.protocolgen.MsgProtocol.LoginRequest.Builder builderForValue ){
-                if( loginBuilder_ == null ) {
-                    login_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    loginBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000001;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public Builder setLogin( experiment.protocolgen.MsgProtocol.LoginRequest value ){
-                if( loginBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    login_ = value;
-                    onChanged();
-                } else {
-                    loginBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000001;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public Builder mergeLogin( experiment.protocolgen.MsgProtocol.LoginRequest value ){
-                if( loginBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000001) == 0x00000001) &&
-                            login_ != experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance() ) {
-                        login_ =
-                                experiment.protocolgen.MsgProtocol.LoginRequest.newBuilder( login_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        login_ = value;
-                    }
-                    onChanged();
-                } else {
-                    loginBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000001;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public Builder clearLogin(){
-                if( loginBuilder_ == null ) {
-                    login_ = experiment.protocolgen.MsgProtocol.LoginRequest.getDefaultInstance();
-                    onChanged();
-                } else {
-                    loginBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000001);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.LoginRequest.Builder getLoginBuilder(){
-                bitField0_ |= 0x00000001;
-                onChanged();
-                return getLoginFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder getLoginOrBuilder(){
-                if( loginBuilder_ != null ) {
-                    return loginBuilder_.getMessageOrBuilder();
-                } else {
-                    return login_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginRequest login = 1;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder>
-            getLoginFieldBuilder(){
-                if( loginBuilder_ == null ) {
-                    loginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.LoginRequest, experiment.protocolgen.MsgProtocol.LoginRequest.Builder, experiment.protocolgen.MsgProtocol.LoginRequestOrBuilder>(
-                            login_,
-                            getParentForChildren(),
-                            isClean() );
-                    login_ = null;
-                }
-                return loginBuilder_;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public boolean hasMissionShow(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest getMissionShow(){
-                if( missionShowBuilder_ == null ) {
-                    return missionShow_;
-                } else {
-                    return missionShowBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public Builder setMissionShow(
-                    experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder builderForValue ){
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    missionShowBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000002;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public Builder setMissionShow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
-                if( missionShowBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    missionShow_ = value;
-                    onChanged();
-                } else {
-                    missionShowBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000002;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public Builder mergeMissionShow( experiment.protocolgen.MsgProtocol.MissionShowRequest value ){
-                if( missionShowBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000002) == 0x00000002) &&
-                            missionShow_ != experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance() ) {
-                        missionShow_ =
-                                experiment.protocolgen.MsgProtocol.MissionShowRequest.newBuilder( missionShow_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        missionShow_ = value;
-                    }
-                    onChanged();
-                } else {
-                    missionShowBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000002;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public Builder clearMissionShow(){
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowRequest.getDefaultInstance();
-                    onChanged();
-                } else {
-                    missionShowBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000002);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder getMissionShowBuilder(){
-                bitField0_ |= 0x00000002;
-                onChanged();
-                return getMissionShowFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder getMissionShowOrBuilder(){
-                if( missionShowBuilder_ != null ) {
-                    return missionShowBuilder_.getMessageOrBuilder();
-                } else {
-                    return missionShow_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowRequest missionShow = 2;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder>
-            getMissionShowFieldBuilder(){
-                if( missionShowBuilder_ == null ) {
-                    missionShowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.MissionShowRequest, experiment.protocolgen.MsgProtocol.MissionShowRequest.Builder, experiment.protocolgen.MsgProtocol.MissionShowRequestOrBuilder>(
-                            missionShow_,
-                            getParentForChildren(),
-                            isClean() );
-                    missionShow_ = null;
-                }
-                return missionShowBuilder_;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public boolean hasNickNameCheck(){
-                return ((bitField0_ & 0x00000004) == 0x00000004);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.NickNameCheckRequest getNickNameCheck(){
-                if( nickNameCheckBuilder_ == null ) {
-                    return nickNameCheck_;
-                } else {
-                    return nickNameCheckBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public Builder setNickNameCheck(
-                    experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder builderForValue ){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public Builder setNickNameCheck( experiment.protocolgen.MsgProtocol.NickNameCheckRequest value ){
-                if( nickNameCheckBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    nickNameCheck_ = value;
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public Builder mergeNickNameCheck( experiment.protocolgen.MsgProtocol.NickNameCheckRequest value ){
-                if( nickNameCheckBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000004) == 0x00000004) &&
-                            nickNameCheck_ != experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance() ) {
-                        nickNameCheck_ =
-                                experiment.protocolgen.MsgProtocol.NickNameCheckRequest.newBuilder( nickNameCheck_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        nickNameCheck_ = value;
-                    }
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public Builder clearNickNameCheck(){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckRequest.getDefaultInstance();
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000004);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder getNickNameCheckBuilder(){
-                bitField0_ |= 0x00000004;
-                onChanged();
-                return getNickNameCheckFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder getNickNameCheckOrBuilder(){
-                if( nickNameCheckBuilder_ != null ) {
-                    return nickNameCheckBuilder_.getMessageOrBuilder();
-                } else {
-                    return nickNameCheck_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.NickNameCheckRequest, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder>
-            getNickNameCheckFieldBuilder(){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheckBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.NickNameCheckRequest, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder>(
-                            nickNameCheck_,
-                            getParentForChildren(),
-                            isClean() );
-                    nickNameCheck_ = null;
-                }
-                return nickNameCheckBuilder_;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Request)
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder getNickNameCheckBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getNickNameCheckFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder getNickNameCheckOrBuilder() {
+        if (nickNameCheckBuilder_ != null) {
+          return nickNameCheckBuilder_.getMessageOrBuilder();
+        } else {
+          return nickNameCheck_;
         }
-
-        static{
-            defaultInstance = new Request( true );
-            defaultInstance.initFields();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckRequest nickNameCheck = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.NickNameCheckRequest, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder> 
+          getNickNameCheckFieldBuilder() {
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheckBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.NickNameCheckRequest, experiment.protocolgen.MsgProtocol.NickNameCheckRequest.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckRequestOrBuilder>(
+                  nickNameCheck_,
+                  getParentForChildren(),
+                  isClean());
+          nickNameCheck_ = null;
         }
+        return nickNameCheckBuilder_;
+      }
 
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.Request)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Request)
     }
 
+    static {
+      defaultInstance = new Request(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.Request)
+  }
+
+  public interface ResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required bool result = 1;
+    /**
+     * <code>required bool result = 1;</code>
+     */
+    boolean hasResult();
+    /**
+     * <code>required bool result = 1;</code>
+     */
+    boolean getResult();
+
+    // optional string error_description = 2;
+    /**
+     * <code>optional string error_description = 2;</code>
+     *
+     * <pre>
+     *required bool last_block = 3;
+     * </pre>
+     */
+    boolean hasErrorDescription();
+    /**
+     * <code>optional string error_description = 2;</code>
+     *
+     * <pre>
+     *required bool last_block = 3;
+     * </pre>
+     */
+    java.lang.String getErrorDescription();
+    /**
+     * <code>optional string error_description = 2;</code>
+     *
+     * <pre>
+     *required bool last_block = 3;
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getErrorDescriptionBytes();
+
+    // optional .experiment.protocolgen.LoginResponse login = 3;
+    /**
+     * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+     */
+    boolean hasLogin();
+    /**
+     * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+     */
+    experiment.protocolgen.MsgProtocol.LoginResponse getLogin();
+    /**
+     * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+     */
+    experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder getLoginOrBuilder();
+
+    // optional .experiment.protocolgen.MissionShowResponse missionShow = 4;
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+     */
+    boolean hasMissionShow();
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+     */
+    experiment.protocolgen.MsgProtocol.MissionShowResponse getMissionShow();
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+     */
+    experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder getMissionShowOrBuilder();
+
+    // optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+     */
+    boolean hasNickNameCheck();
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+     */
+    experiment.protocolgen.MsgProtocol.NickNameCheckResponse getNickNameCheck();
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+     */
+    experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder getNickNameCheckOrBuilder();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.Response}
+   */
+  public static final class Response extends
+      com.google.protobuf.GeneratedMessage
+      implements ResponseOrBuilder {
+    // Use Response.newBuilder() to construct.
+    private Response(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Response(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Response defaultInstance;
+    public static Response getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Response getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              result_ = input.readBool();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              errorDescription_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              experiment.protocolgen.MsgProtocol.LoginResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = login_.toBuilder();
+              }
+              login_ = input.readMessage(experiment.protocolgen.MsgProtocol.LoginResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(login_);
+                login_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = missionShow_.toBuilder();
+              }
+              missionShow_ = input.readMessage(experiment.protocolgen.MsgProtocol.MissionShowResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(missionShow_);
+                missionShow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = nickNameCheck_.toBuilder();
+              }
+              nickNameCheck_ = input.readMessage(experiment.protocolgen.MsgProtocol.NickNameCheckResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nickNameCheck_);
+                nickNameCheck_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.Response.class, experiment.protocolgen.MsgProtocol.Response.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Response> PARSER =
+        new com.google.protobuf.AbstractParser<Response>() {
+      public Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Response(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Response> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required bool result = 1;
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private boolean result_;
+    /**
+     * <code>required bool result = 1;</code>
+     */
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required bool result = 1;</code>
+     */
+    public boolean getResult() {
+      return result_;
+    }
+
+    // optional string error_description = 2;
+    public static final int ERROR_DESCRIPTION_FIELD_NUMBER = 2;
+    private java.lang.Object errorDescription_;
+    /**
+     * <code>optional string error_description = 2;</code>
+     *
+     * <pre>
+     *required bool last_block = 3;
+     * </pre>
+     */
+    public boolean hasErrorDescription() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string error_description = 2;</code>
+     *
+     * <pre>
+     *required bool last_block = 3;
+     * </pre>
+     */
+    public java.lang.String getErrorDescription() {
+      java.lang.Object ref = errorDescription_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          errorDescription_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string error_description = 2;</code>
+     *
+     * <pre>
+     *required bool last_block = 3;
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getErrorDescriptionBytes() {
+      java.lang.Object ref = errorDescription_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errorDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional .experiment.protocolgen.LoginResponse login = 3;
+    public static final int LOGIN_FIELD_NUMBER = 3;
+    private experiment.protocolgen.MsgProtocol.LoginResponse login_;
+    /**
+     * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+     */
+    public boolean hasLogin() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.LoginResponse getLogin() {
+      return login_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder getLoginOrBuilder() {
+      return login_;
+    }
+
+    // optional .experiment.protocolgen.MissionShowResponse missionShow = 4;
+    public static final int MISSIONSHOW_FIELD_NUMBER = 4;
+    private experiment.protocolgen.MsgProtocol.MissionShowResponse missionShow_;
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+     */
+    public boolean hasMissionShow() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.MissionShowResponse getMissionShow() {
+      return missionShow_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder getMissionShowOrBuilder() {
+      return missionShow_;
+    }
+
+    // optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;
+    public static final int NICKNAMECHECK_FIELD_NUMBER = 5;
+    private experiment.protocolgen.MsgProtocol.NickNameCheckResponse nickNameCheck_;
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+     */
+    public boolean hasNickNameCheck() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.NickNameCheckResponse getNickNameCheck() {
+      return nickNameCheck_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder getNickNameCheckOrBuilder() {
+      return nickNameCheck_;
+    }
+
+    private void initFields() {
+      result_ = false;
+      errorDescription_ = "";
+      login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
+      missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
+      nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResult()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasMissionShow()) {
+        if (!getMissionShow().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasNickNameCheck()) {
+        if (!getNickNameCheck().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getErrorDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, login_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, missionShow_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, nickNameCheck_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, result_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getErrorDescriptionBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, login_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, missionShow_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, nickNameCheck_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.Response prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.Response}
      */
-    public static final class Response extends
-            com.google.protobuf.GeneratedMessage
-            implements ResponseOrBuilder{
-        // required bool result = 1;
-        public static final int RESULT_FIELD_NUMBER = 1;
-        // optional string error_description = 2;
-        public static final int ERROR_DESCRIPTION_FIELD_NUMBER = 2;
-        // optional .experiment.protocolgen.LoginResponse login = 3;
-        public static final int LOGIN_FIELD_NUMBER = 3;
-        // optional .experiment.protocolgen.MissionShowResponse missionShow = 4;
-        public static final int MISSIONSHOW_FIELD_NUMBER = 4;
-        // optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;
-        public static final int NICKNAMECHECK_FIELD_NUMBER = 5;
-        private static final Response defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<Response> PARSER =
-                new com.google.protobuf.AbstractParser<Response>(){
-                    public Response parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new Response( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private boolean result_;
-        private java.lang.Object errorDescription_;
-        private experiment.protocolgen.MsgProtocol.LoginResponse login_;
-        private experiment.protocolgen.MsgProtocol.MissionShowResponse missionShow_;
-        private experiment.protocolgen.MsgProtocol.NickNameCheckResponse nickNameCheck_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_descriptor;
+      }
 
-        // Use Response.newBuilder() to construct.
-        private Response( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.Response.class, experiment.protocolgen.MsgProtocol.Response.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLoginFieldBuilder();
+          getMissionShowFieldBuilder();
+          getNickNameCheckFieldBuilder();
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private Response( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        result_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        errorDescription_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (loginBuilder_ == null) {
+          login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
+        } else {
+          loginBuilder_.clear();
         }
-
-        private Response(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            bitField0_ |= 0x00000001;
-                            result_ = input.readBool();
-                            break;
-                        }
-                        case 18: {
-                            bitField0_ |= 0x00000002;
-                            errorDescription_ = input.readBytes();
-                            break;
-                        }
-                        case 26: {
-                            experiment.protocolgen.MsgProtocol.LoginResponse.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                                subBuilder = login_.toBuilder();
-                            }
-                            login_ = input.readMessage( experiment.protocolgen.MsgProtocol.LoginResponse.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( login_ );
-                                login_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000004;
-                            break;
-                        }
-                        case 34: {
-                            experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                                subBuilder = missionShow_.toBuilder();
-                            }
-                            missionShow_ = input.readMessage( experiment.protocolgen.MsgProtocol.MissionShowResponse.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( missionShow_ );
-                                missionShow_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000008;
-                            break;
-                        }
-                        case 42: {
-                            experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000010) == 0x00000010) ) {
-                                subBuilder = nickNameCheck_.toBuilder();
-                            }
-                            nickNameCheck_ = input.readMessage( experiment.protocolgen.MsgProtocol.NickNameCheckResponse.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( nickNameCheck_ );
-                                nickNameCheck_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000010;
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (missionShowBuilder_ == null) {
+          missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
+        } else {
+          missionShowBuilder_.clear();
         }
-
-        public static Response getDefaultInstance(){
-            return defaultInstance;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
+        } else {
+          nickNameCheckBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_descriptor;
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.Response getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.Response build() {
+        experiment.protocolgen.MsgProtocol.Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public experiment.protocolgen.MsgProtocol.Response buildPartial() {
+        experiment.protocolgen.MsgProtocol.Response result = new experiment.protocolgen.MsgProtocol.Response(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        result.result_ = result_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        result.errorDescription_ = errorDescription_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (loginBuilder_ == null) {
+          result.login_ = login_;
+        } else {
+          result.login_ = loginBuilder_.build();
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (missionShowBuilder_ == null) {
+          result.missionShow_ = missionShow_;
+        } else {
+          result.missionShow_ = missionShowBuilder_.build();
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Response parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+        if (nickNameCheckBuilder_ == null) {
+          result.nickNameCheck_ = nickNameCheck_;
+        } else {
+          result.nickNameCheck_ = nickNameCheckBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.Response) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Response parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.Response other) {
+        if (other == experiment.protocolgen.MsgProtocol.Response.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          setResult(other.getResult());
         }
-
-        public static Builder newBuilder(){
-            return Builder.create();
+        if (other.hasErrorDescription()) {
+          bitField0_ |= 0x00000002;
+          errorDescription_ = other.errorDescription_;
+          onChanged();
         }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.Response prototype ){
-            return newBuilder().mergeFrom( prototype );
+        if (other.hasLogin()) {
+          mergeLogin(other.getLogin());
         }
-
-        public Response getDefaultInstanceForType(){
-            return defaultInstance;
+        if (other.hasMissionShow()) {
+          mergeMissionShow(other.getMissionShow());
         }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
+        if (other.hasNickNameCheck()) {
+          mergeNickNameCheck(other.getNickNameCheck());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.Response.class, experiment.protocolgen.MsgProtocol.Response.Builder.class );
+      public final boolean isInitialized() {
+        if (!hasResult()) {
+          
+          return false;
         }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<Response> getParserForType(){
-            return PARSER;
+        if (hasMissionShow()) {
+          if (!getMissionShow().isInitialized()) {
+            
+            return false;
+          }
         }
-
-        /**
-         * <code>required bool result = 1;</code>
-         */
-        public boolean hasResult(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
+        if (hasNickNameCheck()) {
+          if (!getNickNameCheck().isInitialized()) {
+            
+            return false;
+          }
         }
+        return true;
+      }
 
-        /**
-         * <code>required bool result = 1;</code>
-         */
-        public boolean getResult(){
-            return result_;
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.Response) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        /**
-         * <code>optional string error_description = 2;</code>
-         * <p/>
-         * <pre>
-         * required bool last_block = 3;
-         * </pre>
-         */
-        public boolean hasErrorDescription(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
+      // required bool result = 1;
+      private boolean result_ ;
+      /**
+       * <code>required bool result = 1;</code>
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required bool result = 1;</code>
+       */
+      public boolean getResult() {
+        return result_;
+      }
+      /**
+       * <code>required bool result = 1;</code>
+       */
+      public Builder setResult(boolean value) {
+        bitField0_ |= 0x00000001;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool result = 1;</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = false;
+        onChanged();
+        return this;
+      }
+
+      // optional string error_description = 2;
+      private java.lang.Object errorDescription_ = "";
+      /**
+       * <code>optional string error_description = 2;</code>
+       *
+       * <pre>
+       *required bool last_block = 3;
+       * </pre>
+       */
+      public boolean hasErrorDescription() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string error_description = 2;</code>
+       *
+       * <pre>
+       *required bool last_block = 3;
+       * </pre>
+       */
+      public java.lang.String getErrorDescription() {
+        java.lang.Object ref = errorDescription_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          errorDescription_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-
-        /**
-         * <code>optional string error_description = 2;</code>
-         * <p/>
-         * <pre>
-         * required bool last_block = 3;
-         * </pre>
-         */
-        public java.lang.String getErrorDescription(){
-            java.lang.Object ref = errorDescription_;
-            if( ref instanceof java.lang.String ) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                if( bs.isValidUtf8() ) {
-                    errorDescription_ = s;
-                }
-                return s;
-            }
+      }
+      /**
+       * <code>optional string error_description = 2;</code>
+       *
+       * <pre>
+       *required bool last_block = 3;
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getErrorDescriptionBytes() {
+        java.lang.Object ref = errorDescription_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorDescription_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>optional string error_description = 2;</code>
+       *
+       * <pre>
+       *required bool last_block = 3;
+       * </pre>
+       */
+      public Builder setErrorDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        errorDescription_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string error_description = 2;</code>
+       *
+       * <pre>
+       *required bool last_block = 3;
+       * </pre>
+       */
+      public Builder clearErrorDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        errorDescription_ = getDefaultInstance().getErrorDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string error_description = 2;</code>
+       *
+       * <pre>
+       *required bool last_block = 3;
+       * </pre>
+       */
+      public Builder setErrorDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        errorDescription_ = value;
+        onChanged();
+        return this;
+      }
 
-        /**
-         * <code>optional string error_description = 2;</code>
-         * <p/>
-         * <pre>
-         * required bool last_block = 3;
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-        getErrorDescriptionBytes(){
-            java.lang.Object ref = errorDescription_;
-            if( ref instanceof java.lang.String ) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref );
-                errorDescription_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
+      // optional .experiment.protocolgen.LoginResponse login = 3;
+      private experiment.protocolgen.MsgProtocol.LoginResponse login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.LoginResponse, experiment.protocolgen.MsgProtocol.LoginResponse.Builder, experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder> loginBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public boolean hasLogin() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.LoginResponse getLogin() {
+        if (loginBuilder_ == null) {
+          return login_;
+        } else {
+          return loginBuilder_.getMessage();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-         */
-        public boolean hasLogin(){
-            return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public Builder setLogin(experiment.protocolgen.MsgProtocol.LoginResponse value) {
+        if (loginBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          login_ = value;
+          onChanged();
+        } else {
+          loginBuilder_.setMessage(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.LoginResponse getLogin(){
-            return login_;
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public Builder setLogin(
+          experiment.protocolgen.MsgProtocol.LoginResponse.Builder builderForValue) {
+        if (loginBuilder_ == null) {
+          login_ = builderForValue.build();
+          onChanged();
+        } else {
+          loginBuilder_.setMessage(builderForValue.build());
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder getLoginOrBuilder(){
-            return login_;
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public Builder mergeLogin(experiment.protocolgen.MsgProtocol.LoginResponse value) {
+        if (loginBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              login_ != experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance()) {
+            login_ =
+              experiment.protocolgen.MsgProtocol.LoginResponse.newBuilder(login_).mergeFrom(value).buildPartial();
+          } else {
+            login_ = value;
+          }
+          onChanged();
+        } else {
+          loginBuilder_.mergeFrom(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-         */
-        public boolean hasMissionShow(){
-            return ((bitField0_ & 0x00000008) == 0x00000008);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public Builder clearLogin() {
+        if (loginBuilder_ == null) {
+          login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          loginBuilder_.clear();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.MissionShowResponse getMissionShow(){
-            return missionShow_;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.LoginResponse.Builder getLoginBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getLoginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder getLoginOrBuilder() {
+        if (loginBuilder_ != null) {
+          return loginBuilder_.getMessageOrBuilder();
+        } else {
+          return login_;
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder getMissionShowOrBuilder(){
-            return missionShow_;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.LoginResponse, experiment.protocolgen.MsgProtocol.LoginResponse.Builder, experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder> 
+          getLoginFieldBuilder() {
+        if (loginBuilder_ == null) {
+          loginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.LoginResponse, experiment.protocolgen.MsgProtocol.LoginResponse.Builder, experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder>(
+                  login_,
+                  getParentForChildren(),
+                  isClean());
+          login_ = null;
         }
+        return loginBuilder_;
+      }
 
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-         */
-        public boolean hasNickNameCheck(){
-            return ((bitField0_ & 0x00000010) == 0x00000010);
+      // optional .experiment.protocolgen.MissionShowResponse missionShow = 4;
+      private experiment.protocolgen.MsgProtocol.MissionShowResponse missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.MissionShowResponse, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder, experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder> missionShowBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public boolean hasMissionShow() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MissionShowResponse getMissionShow() {
+        if (missionShowBuilder_ == null) {
+          return missionShow_;
+        } else {
+          return missionShowBuilder_.getMessage();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.NickNameCheckResponse getNickNameCheck(){
-            return nickNameCheck_;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public Builder setMissionShow(experiment.protocolgen.MsgProtocol.MissionShowResponse value) {
+        if (missionShowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          missionShow_ = value;
+          onChanged();
+        } else {
+          missionShowBuilder_.setMessage(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder getNickNameCheckOrBuilder(){
-            return nickNameCheck_;
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public Builder setMissionShow(
+          experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder builderForValue) {
+        if (missionShowBuilder_ == null) {
+          missionShow_ = builderForValue.build();
+          onChanged();
+        } else {
+          missionShowBuilder_.setMessage(builderForValue.build());
         }
-
-        private void initFields(){
-            result_ = false;
-            errorDescription_ = "";
-            login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
-            missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
-            nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public Builder mergeMissionShow(experiment.protocolgen.MsgProtocol.MissionShowResponse value) {
+        if (missionShowBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              missionShow_ != experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance()) {
+            missionShow_ =
+              experiment.protocolgen.MsgProtocol.MissionShowResponse.newBuilder(missionShow_).mergeFrom(value).buildPartial();
+          } else {
+            missionShow_ = value;
+          }
+          onChanged();
+        } else {
+          missionShowBuilder_.mergeFrom(value);
         }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasResult() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( hasMissionShow() ) {
-                if( !getMissionShow().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            if( hasNickNameCheck() ) {
-                if( !getNickNameCheck().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            memoizedIsInitialized = 1;
-            return true;
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public Builder clearMissionShow() {
+        if (missionShowBuilder_ == null) {
+          missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          missionShowBuilder_.clear();
         }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeBool( 1, result_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeBytes( 2, getErrorDescriptionBytes() );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                output.writeMessage( 3, login_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                output.writeMessage( 4, missionShow_ );
-            }
-            if( ((bitField0_ & 0x00000010) == 0x00000010) ) {
-                output.writeMessage( 5, nickNameCheck_ );
-            }
-            getUnknownFields().writeTo( output );
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder getMissionShowBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMissionShowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder getMissionShowOrBuilder() {
+        if (missionShowBuilder_ != null) {
+          return missionShowBuilder_.getMessageOrBuilder();
+        } else {
+          return missionShow_;
         }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBoolSize( 1, result_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBytesSize( 2, getErrorDescriptionBytes() );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 3, login_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 4, missionShow_ );
-            }
-            if( ((bitField0_ & 0x00000010) == 0x00000010) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 5, nickNameCheck_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.MissionShowResponse, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder, experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder> 
+          getMissionShowFieldBuilder() {
+        if (missionShowBuilder_ == null) {
+          missionShowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.MissionShowResponse, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder, experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder>(
+                  missionShow_,
+                  getParentForChildren(),
+                  isClean());
+          missionShow_ = null;
         }
+        return missionShowBuilder_;
+      }
 
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
+      // optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;
+      private experiment.protocolgen.MsgProtocol.NickNameCheckResponse nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.NickNameCheckResponse, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder> nickNameCheckBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public boolean hasNickNameCheck() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.NickNameCheckResponse getNickNameCheck() {
+        if (nickNameCheckBuilder_ == null) {
+          return nickNameCheck_;
+        } else {
+          return nickNameCheckBuilder_.getMessage();
         }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public Builder setNickNameCheck(experiment.protocolgen.MsgProtocol.NickNameCheckResponse value) {
+        if (nickNameCheckBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nickNameCheck_ = value;
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.setMessage(value);
         }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public Builder setNickNameCheck(
+          experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder builderForValue) {
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheck_ = builderForValue.build();
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.setMessage(builderForValue.build());
         }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public Builder mergeNickNameCheck(experiment.protocolgen.MsgProtocol.NickNameCheckResponse value) {
+        if (nickNameCheckBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              nickNameCheck_ != experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance()) {
+            nickNameCheck_ =
+              experiment.protocolgen.MsgProtocol.NickNameCheckResponse.newBuilder(nickNameCheck_).mergeFrom(value).buildPartial();
+          } else {
+            nickNameCheck_ = value;
+          }
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.mergeFrom(value);
         }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.Response}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.ResponseOrBuilder{
-            private int bitField0_;
-            // required bool result = 1;
-            private boolean result_;
-            // optional string error_description = 2;
-            private java.lang.Object errorDescription_ = "";
-            // optional .experiment.protocolgen.LoginResponse login = 3;
-            private experiment.protocolgen.MsgProtocol.LoginResponse login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.LoginResponse, experiment.protocolgen.MsgProtocol.LoginResponse.Builder, experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder> loginBuilder_;
-            // optional .experiment.protocolgen.MissionShowResponse missionShow = 4;
-            private experiment.protocolgen.MsgProtocol.MissionShowResponse missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.MissionShowResponse, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder, experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder> missionShowBuilder_;
-            // optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;
-            private experiment.protocolgen.MsgProtocol.NickNameCheckResponse nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.NickNameCheckResponse, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder> nickNameCheckBuilder_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.Response.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.Response.class, experiment.protocolgen.MsgProtocol.Response.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                    getLoginFieldBuilder();
-                    getMissionShowFieldBuilder();
-                    getNickNameCheckFieldBuilder();
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                result_ = false;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                errorDescription_ = "";
-                bitField0_ = (bitField0_ & ~0x00000002);
-                if( loginBuilder_ == null ) {
-                    login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
-                } else {
-                    loginBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000004);
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
-                } else {
-                    missionShowBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000008);
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
-                } else {
-                    nickNameCheckBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000010);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Response_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.Response getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.Response build(){
-                experiment.protocolgen.MsgProtocol.Response result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.Response buildPartial(){
-                experiment.protocolgen.MsgProtocol.Response result = new experiment.protocolgen.MsgProtocol.Response( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.result_ = result_;
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                result.errorDescription_ = errorDescription_;
-                if( ((from_bitField0_ & 0x00000004) == 0x00000004) ) {
-                    to_bitField0_ |= 0x00000004;
-                }
-                if( loginBuilder_ == null ) {
-                    result.login_ = login_;
-                } else {
-                    result.login_ = loginBuilder_.build();
-                }
-                if( ((from_bitField0_ & 0x00000008) == 0x00000008) ) {
-                    to_bitField0_ |= 0x00000008;
-                }
-                if( missionShowBuilder_ == null ) {
-                    result.missionShow_ = missionShow_;
-                } else {
-                    result.missionShow_ = missionShowBuilder_.build();
-                }
-                if( ((from_bitField0_ & 0x00000010) == 0x00000010) ) {
-                    to_bitField0_ |= 0x00000010;
-                }
-                if( nickNameCheckBuilder_ == null ) {
-                    result.nickNameCheck_ = nickNameCheck_;
-                } else {
-                    result.nickNameCheck_ = nickNameCheckBuilder_.build();
-                }
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.Response ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.Response) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.Response other ){
-                if( other == experiment.protocolgen.MsgProtocol.Response.getDefaultInstance() ) return this;
-                if( other.hasResult() ) {
-                    setResult( other.getResult() );
-                }
-                if( other.hasErrorDescription() ) {
-                    bitField0_ |= 0x00000002;
-                    errorDescription_ = other.errorDescription_;
-                    onChanged();
-                }
-                if( other.hasLogin() ) {
-                    mergeLogin( other.getLogin() );
-                }
-                if( other.hasMissionShow() ) {
-                    mergeMissionShow( other.getMissionShow() );
-                }
-                if( other.hasNickNameCheck() ) {
-                    mergeNickNameCheck( other.getNickNameCheck() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasResult() ) {
-
-                    return false;
-                }
-                if( hasMissionShow() ) {
-                    if( !getMissionShow().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                if( hasNickNameCheck() ) {
-                    if( !getNickNameCheck().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.Response parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.Response) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required bool result = 1;</code>
-             */
-            public boolean hasResult(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required bool result = 1;</code>
-             */
-            public boolean getResult(){
-                return result_;
-            }
-
-            /**
-             * <code>required bool result = 1;</code>
-             */
-            public Builder setResult( boolean value ){
-                bitField0_ |= 0x00000001;
-                result_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required bool result = 1;</code>
-             */
-            public Builder clearResult(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                result_ = false;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>optional string error_description = 2;</code>
-             * <p/>
-             * <pre>
-             * required bool last_block = 3;
-             * </pre>
-             */
-            public boolean hasErrorDescription(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>optional string error_description = 2;</code>
-             * <p/>
-             * <pre>
-             * required bool last_block = 3;
-             * </pre>
-             */
-            public java.lang.String getErrorDescription(){
-                java.lang.Object ref = errorDescription_;
-                if( !(ref instanceof java.lang.String) ) {
-                    java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                            .toStringUtf8();
-                    errorDescription_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>optional string error_description = 2;</code>
-             * <p/>
-             * <pre>
-             * required bool last_block = 3;
-             * </pre>
-             */
-            public Builder setErrorDescription(
-                    java.lang.String value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000002;
-                errorDescription_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>optional string error_description = 2;</code>
-             * <p/>
-             * <pre>
-             * required bool last_block = 3;
-             * </pre>
-             */
-            public com.google.protobuf.ByteString
-            getErrorDescriptionBytes(){
-                java.lang.Object ref = errorDescription_;
-                if( ref instanceof String ) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref );
-                    errorDescription_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>optional string error_description = 2;</code>
-             * <p/>
-             * <pre>
-             * required bool last_block = 3;
-             * </pre>
-             */
-            public Builder setErrorDescriptionBytes(
-                    com.google.protobuf.ByteString value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000002;
-                errorDescription_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>optional string error_description = 2;</code>
-             * <p/>
-             * <pre>
-             * required bool last_block = 3;
-             * </pre>
-             */
-            public Builder clearErrorDescription(){
-                bitField0_ = (bitField0_ & ~0x00000002);
-                errorDescription_ = getDefaultInstance().getErrorDescription();
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public boolean hasLogin(){
-                return ((bitField0_ & 0x00000004) == 0x00000004);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.LoginResponse getLogin(){
-                if( loginBuilder_ == null ) {
-                    return login_;
-                } else {
-                    return loginBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public Builder setLogin(
-                    experiment.protocolgen.MsgProtocol.LoginResponse.Builder builderForValue ){
-                if( loginBuilder_ == null ) {
-                    login_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    loginBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public Builder setLogin( experiment.protocolgen.MsgProtocol.LoginResponse value ){
-                if( loginBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    login_ = value;
-                    onChanged();
-                } else {
-                    loginBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public Builder mergeLogin( experiment.protocolgen.MsgProtocol.LoginResponse value ){
-                if( loginBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000004) == 0x00000004) &&
-                            login_ != experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance() ) {
-                        login_ =
-                                experiment.protocolgen.MsgProtocol.LoginResponse.newBuilder( login_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        login_ = value;
-                    }
-                    onChanged();
-                } else {
-                    loginBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public Builder clearLogin(){
-                if( loginBuilder_ == null ) {
-                    login_ = experiment.protocolgen.MsgProtocol.LoginResponse.getDefaultInstance();
-                    onChanged();
-                } else {
-                    loginBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000004);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.LoginResponse.Builder getLoginBuilder(){
-                bitField0_ |= 0x00000004;
-                onChanged();
-                return getLoginFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder getLoginOrBuilder(){
-                if( loginBuilder_ != null ) {
-                    return loginBuilder_.getMessageOrBuilder();
-                } else {
-                    return login_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.LoginResponse login = 3;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.LoginResponse, experiment.protocolgen.MsgProtocol.LoginResponse.Builder, experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder>
-            getLoginFieldBuilder(){
-                if( loginBuilder_ == null ) {
-                    loginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.LoginResponse, experiment.protocolgen.MsgProtocol.LoginResponse.Builder, experiment.protocolgen.MsgProtocol.LoginResponseOrBuilder>(
-                            login_,
-                            getParentForChildren(),
-                            isClean() );
-                    login_ = null;
-                }
-                return loginBuilder_;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public boolean hasMissionShow(){
-                return ((bitField0_ & 0x00000008) == 0x00000008);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MissionShowResponse getMissionShow(){
-                if( missionShowBuilder_ == null ) {
-                    return missionShow_;
-                } else {
-                    return missionShowBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public Builder setMissionShow(
-                    experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder builderForValue ){
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    missionShowBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public Builder setMissionShow( experiment.protocolgen.MsgProtocol.MissionShowResponse value ){
-                if( missionShowBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    missionShow_ = value;
-                    onChanged();
-                } else {
-                    missionShowBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public Builder mergeMissionShow( experiment.protocolgen.MsgProtocol.MissionShowResponse value ){
-                if( missionShowBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000008) == 0x00000008) &&
-                            missionShow_ != experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance() ) {
-                        missionShow_ =
-                                experiment.protocolgen.MsgProtocol.MissionShowResponse.newBuilder( missionShow_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        missionShow_ = value;
-                    }
-                    onChanged();
-                } else {
-                    missionShowBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public Builder clearMissionShow(){
-                if( missionShowBuilder_ == null ) {
-                    missionShow_ = experiment.protocolgen.MsgProtocol.MissionShowResponse.getDefaultInstance();
-                    onChanged();
-                } else {
-                    missionShowBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000008);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder getMissionShowBuilder(){
-                bitField0_ |= 0x00000008;
-                onChanged();
-                return getMissionShowFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder getMissionShowOrBuilder(){
-                if( missionShowBuilder_ != null ) {
-                    return missionShowBuilder_.getMessageOrBuilder();
-                } else {
-                    return missionShow_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.MissionShowResponse missionShow = 4;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.MissionShowResponse, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder, experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder>
-            getMissionShowFieldBuilder(){
-                if( missionShowBuilder_ == null ) {
-                    missionShowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.MissionShowResponse, experiment.protocolgen.MsgProtocol.MissionShowResponse.Builder, experiment.protocolgen.MsgProtocol.MissionShowResponseOrBuilder>(
-                            missionShow_,
-                            getParentForChildren(),
-                            isClean() );
-                    missionShow_ = null;
-                }
-                return missionShowBuilder_;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public boolean hasNickNameCheck(){
-                return ((bitField0_ & 0x00000010) == 0x00000010);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.NickNameCheckResponse getNickNameCheck(){
-                if( nickNameCheckBuilder_ == null ) {
-                    return nickNameCheck_;
-                } else {
-                    return nickNameCheckBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public Builder setNickNameCheck(
-                    experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder builderForValue ){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000010;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public Builder setNickNameCheck( experiment.protocolgen.MsgProtocol.NickNameCheckResponse value ){
-                if( nickNameCheckBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    nickNameCheck_ = value;
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000010;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public Builder mergeNickNameCheck( experiment.protocolgen.MsgProtocol.NickNameCheckResponse value ){
-                if( nickNameCheckBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000010) == 0x00000010) &&
-                            nickNameCheck_ != experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance() ) {
-                        nickNameCheck_ =
-                                experiment.protocolgen.MsgProtocol.NickNameCheckResponse.newBuilder( nickNameCheck_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        nickNameCheck_ = value;
-                    }
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000010;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public Builder clearNickNameCheck(){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
-                    onChanged();
-                } else {
-                    nickNameCheckBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000010);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder getNickNameCheckBuilder(){
-                bitField0_ |= 0x00000010;
-                onChanged();
-                return getNickNameCheckFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder getNickNameCheckOrBuilder(){
-                if( nickNameCheckBuilder_ != null ) {
-                    return nickNameCheckBuilder_.getMessageOrBuilder();
-                } else {
-                    return nickNameCheck_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.NickNameCheckResponse, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder>
-            getNickNameCheckFieldBuilder(){
-                if( nickNameCheckBuilder_ == null ) {
-                    nickNameCheckBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.NickNameCheckResponse, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder>(
-                            nickNameCheck_,
-                            getParentForChildren(),
-                            isClean() );
-                    nickNameCheck_ = null;
-                }
-                return nickNameCheckBuilder_;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Response)
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public Builder clearNickNameCheck() {
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheck_ = experiment.protocolgen.MsgProtocol.NickNameCheckResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          nickNameCheckBuilder_.clear();
         }
-
-        static{
-            defaultInstance = new Response( true );
-            defaultInstance.initFields();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder getNickNameCheckBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getNickNameCheckFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder getNickNameCheckOrBuilder() {
+        if (nickNameCheckBuilder_ != null) {
+          return nickNameCheckBuilder_.getMessageOrBuilder();
+        } else {
+          return nickNameCheck_;
         }
+      }
+      /**
+       * <code>optional .experiment.protocolgen.NickNameCheckResponse nickNameCheck = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.NickNameCheckResponse, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder> 
+          getNickNameCheckFieldBuilder() {
+        if (nickNameCheckBuilder_ == null) {
+          nickNameCheckBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.NickNameCheckResponse, experiment.protocolgen.MsgProtocol.NickNameCheckResponse.Builder, experiment.protocolgen.MsgProtocol.NickNameCheckResponseOrBuilder>(
+                  nickNameCheck_,
+                  getParentForChildren(),
+                  isClean());
+          nickNameCheck_ = null;
+        }
+        return nickNameCheckBuilder_;
+      }
 
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.Response)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Response)
     }
 
+    static {
+      defaultInstance = new Response(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.Response)
+  }
+
+  public interface MessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .experiment.protocolgen.MSG type = 1;
+    /**
+     * <code>required .experiment.protocolgen.MSG type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .experiment.protocolgen.MSG type = 1;</code>
+     */
+    experiment.protocolgen.MsgProtocol.MSG getType();
+
+    // required int32 sequence = 2;
+    /**
+     * <code>required int32 sequence = 2;</code>
+     */
+    boolean hasSequence();
+    /**
+     * <code>required int32 sequence = 2;</code>
+     */
+    int getSequence();
+
+    // optional .experiment.protocolgen.Request request = 3;
+    /**
+     * <code>optional .experiment.protocolgen.Request request = 3;</code>
+     */
+    boolean hasRequest();
+    /**
+     * <code>optional .experiment.protocolgen.Request request = 3;</code>
+     */
+    experiment.protocolgen.MsgProtocol.Request getRequest();
+    /**
+     * <code>optional .experiment.protocolgen.Request request = 3;</code>
+     */
+    experiment.protocolgen.MsgProtocol.RequestOrBuilder getRequestOrBuilder();
+
+    // optional .experiment.protocolgen.Response response = 4;
+    /**
+     * <code>optional .experiment.protocolgen.Response response = 4;</code>
+     *
+     * <pre>
+     *optional Command  command = 5;
+     *optional Indication indication = 6;
+     * </pre>
+     */
+    boolean hasResponse();
+    /**
+     * <code>optional .experiment.protocolgen.Response response = 4;</code>
+     *
+     * <pre>
+     *optional Command  command = 5;
+     *optional Indication indication = 6;
+     * </pre>
+     */
+    experiment.protocolgen.MsgProtocol.Response getResponse();
+    /**
+     * <code>optional .experiment.protocolgen.Response response = 4;</code>
+     *
+     * <pre>
+     *optional Command  command = 5;
+     *optional Indication indication = 6;
+     * </pre>
+     */
+    experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.Message}
+   */
+  public static final class Message extends
+      com.google.protobuf.GeneratedMessage
+      implements MessageOrBuilder {
+    // Use Message.newBuilder() to construct.
+    private Message(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Message(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Message defaultInstance;
+    public static Message getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Message getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Message(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              experiment.protocolgen.MsgProtocol.MSG value = experiment.protocolgen.MsgProtocol.MSG.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = value;
+              }
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              sequence_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              experiment.protocolgen.MsgProtocol.Request.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = request_.toBuilder();
+              }
+              request_ = input.readMessage(experiment.protocolgen.MsgProtocol.Request.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(request_);
+                request_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              experiment.protocolgen.MsgProtocol.Response.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(experiment.protocolgen.MsgProtocol.Response.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.MsgProtocol.Message.class, experiment.protocolgen.MsgProtocol.Message.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Message> PARSER =
+        new com.google.protobuf.AbstractParser<Message>() {
+      public Message parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Message(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Message> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .experiment.protocolgen.MSG type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private experiment.protocolgen.MsgProtocol.MSG type_;
+    /**
+     * <code>required .experiment.protocolgen.MSG type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .experiment.protocolgen.MSG type = 1;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.MSG getType() {
+      return type_;
+    }
+
+    // required int32 sequence = 2;
+    public static final int SEQUENCE_FIELD_NUMBER = 2;
+    private int sequence_;
+    /**
+     * <code>required int32 sequence = 2;</code>
+     */
+    public boolean hasSequence() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 sequence = 2;</code>
+     */
+    public int getSequence() {
+      return sequence_;
+    }
+
+    // optional .experiment.protocolgen.Request request = 3;
+    public static final int REQUEST_FIELD_NUMBER = 3;
+    private experiment.protocolgen.MsgProtocol.Request request_;
+    /**
+     * <code>optional .experiment.protocolgen.Request request = 3;</code>
+     */
+    public boolean hasRequest() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.Request request = 3;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.Request getRequest() {
+      return request_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.Request request = 3;</code>
+     */
+    public experiment.protocolgen.MsgProtocol.RequestOrBuilder getRequestOrBuilder() {
+      return request_;
+    }
+
+    // optional .experiment.protocolgen.Response response = 4;
+    public static final int RESPONSE_FIELD_NUMBER = 4;
+    private experiment.protocolgen.MsgProtocol.Response response_;
+    /**
+     * <code>optional .experiment.protocolgen.Response response = 4;</code>
+     *
+     * <pre>
+     *optional Command  command = 5;
+     *optional Indication indication = 6;
+     * </pre>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .experiment.protocolgen.Response response = 4;</code>
+     *
+     * <pre>
+     *optional Command  command = 5;
+     *optional Indication indication = 6;
+     * </pre>
+     */
+    public experiment.protocolgen.MsgProtocol.Response getResponse() {
+      return response_;
+    }
+    /**
+     * <code>optional .experiment.protocolgen.Response response = 4;</code>
+     *
+     * <pre>
+     *optional Command  command = 5;
+     *optional Indication indication = 6;
+     * </pre>
+     */
+    public experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
+      sequence_ = 0;
+      request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
+      response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSequence()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasRequest()) {
+        if (!getRequest().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasResponse()) {
+        if (!getResponse().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, sequence_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, request_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, sequence_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, request_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.MsgProtocol.Message parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.MsgProtocol.Message prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.Message}
      */
-    public static final class Message extends
-            com.google.protobuf.GeneratedMessage
-            implements MessageOrBuilder{
-        // required .experiment.protocolgen.MSG type = 1;
-        public static final int TYPE_FIELD_NUMBER = 1;
-        // required int32 sequence = 2;
-        public static final int SEQUENCE_FIELD_NUMBER = 2;
-        // optional .experiment.protocolgen.Request request = 3;
-        public static final int REQUEST_FIELD_NUMBER = 3;
-        // optional .experiment.protocolgen.Response response = 4;
-        public static final int RESPONSE_FIELD_NUMBER = 4;
-        private static final Message defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<Message> PARSER =
-                new com.google.protobuf.AbstractParser<Message>(){
-                    public Message parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new Message( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private experiment.protocolgen.MsgProtocol.MSG type_;
-        private int sequence_;
-        private experiment.protocolgen.MsgProtocol.Request request_;
-        private experiment.protocolgen.MsgProtocol.Response response_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.MsgProtocol.MessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_descriptor;
+      }
 
-        // Use Message.newBuilder() to construct.
-        private Message( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.MsgProtocol.Message.class, experiment.protocolgen.MsgProtocol.Message.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.MsgProtocol.Message.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRequestFieldBuilder();
+          getResponseFieldBuilder();
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private Message( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sequence_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (requestBuilder_ == null) {
+          request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
+        } else {
+          requestBuilder_.clear();
         }
-
-        private Message(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            int rawValue = input.readEnum();
-                            experiment.protocolgen.MsgProtocol.MSG value = experiment.protocolgen.MsgProtocol.MSG.valueOf( rawValue );
-                            if( value == null ) {
-                                unknownFields.mergeVarintField( 1, rawValue );
-                            } else {
-                                bitField0_ |= 0x00000001;
-                                type_ = value;
-                            }
-                            break;
-                        }
-                        case 16: {
-                            bitField0_ |= 0x00000002;
-                            sequence_ = input.readInt32();
-                            break;
-                        }
-                        case 26: {
-                            experiment.protocolgen.MsgProtocol.Request.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                                subBuilder = request_.toBuilder();
-                            }
-                            request_ = input.readMessage( experiment.protocolgen.MsgProtocol.Request.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( request_ );
-                                request_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000004;
-                            break;
-                        }
-                        case 34: {
-                            experiment.protocolgen.MsgProtocol.Response.Builder subBuilder = null;
-                            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                                subBuilder = response_.toBuilder();
-                            }
-                            response_ = input.readMessage( experiment.protocolgen.MsgProtocol.Response.PARSER, extensionRegistry );
-                            if( subBuilder != null ) {
-                                subBuilder.mergeFrom( response_ );
-                                response_ = subBuilder.buildPartial();
-                            }
-                            bitField0_ |= 0x00000008;
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (responseBuilder_ == null) {
+          response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
 
-        public static Message getDefaultInstance(){
-            return defaultInstance;
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_descriptor;
+      }
+
+      public experiment.protocolgen.MsgProtocol.Message getDefaultInstanceForType() {
+        return experiment.protocolgen.MsgProtocol.Message.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.MsgProtocol.Message build() {
+        experiment.protocolgen.MsgProtocol.Message result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_descriptor;
+      public experiment.protocolgen.MsgProtocol.Message buildPartial() {
+        experiment.protocolgen.MsgProtocol.Message result = new experiment.protocolgen.MsgProtocol.Message(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        result.sequence_ = sequence_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        if (requestBuilder_ == null) {
+          result.request_ = request_;
+        } else {
+          result.request_ = requestBuilder_.build();
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.MsgProtocol.Message) {
+          return mergeFrom((experiment.protocolgen.MsgProtocol.Message)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.MsgProtocol.Message parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      public Builder mergeFrom(experiment.protocolgen.MsgProtocol.Message other) {
+        if (other == experiment.protocolgen.MsgProtocol.Message.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+        if (other.hasSequence()) {
+          setSequence(other.getSequence());
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (other.hasRequest()) {
+          mergeRequest(other.getRequest());
         }
-
-        public static experiment.protocolgen.MsgProtocol.Message parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static Builder newBuilder(){
-            return Builder.create();
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
         }
-
-        public static Builder newBuilder( experiment.protocolgen.MsgProtocol.Message prototype ){
-            return newBuilder().mergeFrom( prototype );
+        if (!hasSequence()) {
+          
+          return false;
         }
-
-        public Message getDefaultInstanceForType(){
-            return defaultInstance;
+        if (hasRequest()) {
+          if (!getRequest().isInitialized()) {
+            
+            return false;
+          }
         }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
+        if (hasResponse()) {
+          if (!getResponse().isInitialized()) {
+            
+            return false;
+          }
         }
+        return true;
+      }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.MsgProtocol.Message.class, experiment.protocolgen.MsgProtocol.Message.Builder.class );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.MsgProtocol.Message parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.MsgProtocol.Message) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        @java.lang.Override
-        public com.google.protobuf.Parser<Message> getParserForType(){
-            return PARSER;
+      // required .experiment.protocolgen.MSG type = 1;
+      private experiment.protocolgen.MsgProtocol.MSG type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
+      /**
+       * <code>required .experiment.protocolgen.MSG type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .experiment.protocolgen.MSG type = 1;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.MSG getType() {
+        return type_;
+      }
+      /**
+       * <code>required .experiment.protocolgen.MSG type = 1;</code>
+       */
+      public Builder setType(experiment.protocolgen.MsgProtocol.MSG value) {
+        if (value == null) {
+          throw new NullPointerException();
         }
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .experiment.protocolgen.MSG type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
+        onChanged();
+        return this;
+      }
 
-        /**
-         * <code>required .experiment.protocolgen.MSG type = 1;</code>
-         */
-        public boolean hasType(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
+      // required int32 sequence = 2;
+      private int sequence_ ;
+      /**
+       * <code>required int32 sequence = 2;</code>
+       */
+      public boolean hasSequence() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 sequence = 2;</code>
+       */
+      public int getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>required int32 sequence = 2;</code>
+       */
+      public Builder setSequence(int value) {
+        bitField0_ |= 0x00000002;
+        sequence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 sequence = 2;</code>
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sequence_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional .experiment.protocolgen.Request request = 3;
+      private experiment.protocolgen.MsgProtocol.Request request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.Request, experiment.protocolgen.MsgProtocol.Request.Builder, experiment.protocolgen.MsgProtocol.RequestOrBuilder> requestBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public boolean hasRequest() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.Request getRequest() {
+        if (requestBuilder_ == null) {
+          return request_;
+        } else {
+          return requestBuilder_.getMessage();
         }
-
-        /**
-         * <code>required .experiment.protocolgen.MSG type = 1;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.MSG getType(){
-            return type_;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public Builder setRequest(experiment.protocolgen.MsgProtocol.Request value) {
+        if (requestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          request_ = value;
+          onChanged();
+        } else {
+          requestBuilder_.setMessage(value);
         }
-
-        /**
-         * <code>required int32 sequence = 2;</code>
-         */
-        public boolean hasSequence(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public Builder setRequest(
+          experiment.protocolgen.MsgProtocol.Request.Builder builderForValue) {
+        if (requestBuilder_ == null) {
+          request_ = builderForValue.build();
+          onChanged();
+        } else {
+          requestBuilder_.setMessage(builderForValue.build());
         }
-
-        /**
-         * <code>required int32 sequence = 2;</code>
-         */
-        public int getSequence(){
-            return sequence_;
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public Builder mergeRequest(experiment.protocolgen.MsgProtocol.Request value) {
+        if (requestBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              request_ != experiment.protocolgen.MsgProtocol.Request.getDefaultInstance()) {
+            request_ =
+              experiment.protocolgen.MsgProtocol.Request.newBuilder(request_).mergeFrom(value).buildPartial();
+          } else {
+            request_ = value;
+          }
+          onChanged();
+        } else {
+          requestBuilder_.mergeFrom(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.Request request = 3;</code>
-         */
-        public boolean hasRequest(){
-            return ((bitField0_ & 0x00000004) == 0x00000004);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public Builder clearRequest() {
+        if (requestBuilder_ == null) {
+          request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
+          onChanged();
+        } else {
+          requestBuilder_.clear();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.Request request = 3;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.Request getRequest(){
-            return request_;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.Request.Builder getRequestBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      public experiment.protocolgen.MsgProtocol.RequestOrBuilder getRequestOrBuilder() {
+        if (requestBuilder_ != null) {
+          return requestBuilder_.getMessageOrBuilder();
+        } else {
+          return request_;
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.Request request = 3;</code>
-         */
-        public experiment.protocolgen.MsgProtocol.RequestOrBuilder getRequestOrBuilder(){
-            return request_;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Request request = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.Request, experiment.protocolgen.MsgProtocol.Request.Builder, experiment.protocolgen.MsgProtocol.RequestOrBuilder> 
+          getRequestFieldBuilder() {
+        if (requestBuilder_ == null) {
+          requestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.Request, experiment.protocolgen.MsgProtocol.Request.Builder, experiment.protocolgen.MsgProtocol.RequestOrBuilder>(
+                  request_,
+                  getParentForChildren(),
+                  isClean());
+          request_ = null;
         }
+        return requestBuilder_;
+      }
 
-        /**
-         * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         * <p/>
-         * <pre>
-         * optional Command  command = 5;
-         * optional Indication indication = 6;
-         * </pre>
-         */
-        public boolean hasResponse(){
-            return ((bitField0_ & 0x00000008) == 0x00000008);
+      // optional .experiment.protocolgen.Response response = 4;
+      private experiment.protocolgen.MsgProtocol.Response response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public experiment.protocolgen.MsgProtocol.Response getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         * <p/>
-         * <pre>
-         * optional Command  command = 5;
-         * optional Indication indication = 6;
-         * </pre>
-         */
-        public experiment.protocolgen.MsgProtocol.Response getResponse(){
-            return response_;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public Builder setResponse(experiment.protocolgen.MsgProtocol.Response value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
         }
-
-        /**
-         * <code>optional .experiment.protocolgen.Response response = 4;</code>
-         * <p/>
-         * <pre>
-         * optional Command  command = 5;
-         * optional Indication indication = 6;
-         * </pre>
-         */
-        public experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder(){
-            return response_;
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public Builder setResponse(
+          experiment.protocolgen.MsgProtocol.Response.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
         }
-
-        private void initFields(){
-            type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
-            sequence_ = 0;
-            request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
-            response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public Builder mergeResponse(experiment.protocolgen.MsgProtocol.Response value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              response_ != experiment.protocolgen.MsgProtocol.Response.getDefaultInstance()) {
+            response_ =
+              experiment.protocolgen.MsgProtocol.Response.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
         }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasType() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasSequence() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( hasRequest() ) {
-                if( !getRequest().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            if( hasResponse() ) {
-                if( !getResponse().isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            memoizedIsInitialized = 1;
-            return true;
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
         }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeEnum( 1, type_.getNumber() );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeInt32( 2, sequence_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                output.writeMessage( 3, request_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                output.writeMessage( 4, response_ );
-            }
-            getUnknownFields().writeTo( output );
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public experiment.protocolgen.MsgProtocol.Response.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      public experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
         }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeEnumSize( 1, type_.getNumber() );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeInt32Size( 2, sequence_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 3, request_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 4, response_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
+      }
+      /**
+       * <code>optional .experiment.protocolgen.Response response = 4;</code>
+       *
+       * <pre>
+       *optional Command  command = 5;
+       *optional Indication indication = 6;
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
         }
+        return responseBuilder_;
+      }
 
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.Message}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.MsgProtocol.MessageOrBuilder{
-            private int bitField0_;
-            // required int32 sequence = 2;
-            private int sequence_;
-            // optional .experiment.protocolgen.Request request = 3;
-            private experiment.protocolgen.MsgProtocol.Request request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.Request, experiment.protocolgen.MsgProtocol.Request.Builder, experiment.protocolgen.MsgProtocol.RequestOrBuilder> requestBuilder_;
-            // optional .experiment.protocolgen.Response response = 4;
-            private experiment.protocolgen.MsgProtocol.Response response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder> responseBuilder_;
-
-            // Construct using experiment.protocolgen.MsgProtocol.Message.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.MsgProtocol.Message.class, experiment.protocolgen.MsgProtocol.Message.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                    getRequestFieldBuilder();
-                    getResponseFieldBuilder();
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                sequence_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000002);
-                if( requestBuilder_ == null ) {
-                    request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
-                } else {
-                    requestBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000004);
-                if( responseBuilder_ == null ) {
-                    response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
-                } else {
-                    responseBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000008);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.MsgProtocol.internal_static_experiment_protocolgen_Message_descriptor;
-            }
-
-            public experiment.protocolgen.MsgProtocol.Message getDefaultInstanceForType(){
-                return experiment.protocolgen.MsgProtocol.Message.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.MsgProtocol.Message build(){
-                experiment.protocolgen.MsgProtocol.Message result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.MsgProtocol.Message buildPartial(){
-                experiment.protocolgen.MsgProtocol.Message result = new experiment.protocolgen.MsgProtocol.Message( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.type_ = type_;
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                result.sequence_ = sequence_;
-                if( ((from_bitField0_ & 0x00000004) == 0x00000004) ) {
-                    to_bitField0_ |= 0x00000004;
-                }
-                if( requestBuilder_ == null ) {
-                    result.request_ = request_;
-                } else {
-                    result.request_ = requestBuilder_.build();
-                }
-                if( ((from_bitField0_ & 0x00000008) == 0x00000008) ) {
-                    to_bitField0_ |= 0x00000008;
-                }
-                if( responseBuilder_ == null ) {
-                    result.response_ = response_;
-                } else {
-                    result.response_ = responseBuilder_.build();
-                }
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }      // required .experiment.protocolgen.MSG type = 1;
-
-            private experiment.protocolgen.MsgProtocol.MSG type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.MsgProtocol.Message ) {
-                    return mergeFrom( (experiment.protocolgen.MsgProtocol.Message) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.MsgProtocol.Message other ){
-                if( other == experiment.protocolgen.MsgProtocol.Message.getDefaultInstance() ) return this;
-                if( other.hasType() ) {
-                    setType( other.getType() );
-                }
-                if( other.hasSequence() ) {
-                    setSequence( other.getSequence() );
-                }
-                if( other.hasRequest() ) {
-                    mergeRequest( other.getRequest() );
-                }
-                if( other.hasResponse() ) {
-                    mergeResponse( other.getResponse() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasType() ) {
-
-                    return false;
-                }
-                if( !hasSequence() ) {
-
-                    return false;
-                }
-                if( hasRequest() ) {
-                    if( !getRequest().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                if( hasResponse() ) {
-                    if( !getResponse().isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.MsgProtocol.Message parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.MsgProtocol.Message) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.MSG type = 1;</code>
-             */
-            public boolean hasType(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.MSG type = 1;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.MSG getType(){
-                return type_;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.MSG type = 1;</code>
-             */
-            public Builder setType( experiment.protocolgen.MsgProtocol.MSG value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000001;
-                type_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.MSG type = 1;</code>
-             */
-            public Builder clearType(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                type_ = experiment.protocolgen.MsgProtocol.MSG.Login;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 sequence = 2;</code>
-             */
-            public boolean hasSequence(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>required int32 sequence = 2;</code>
-             */
-            public int getSequence(){
-                return sequence_;
-            }
-
-            /**
-             * <code>required int32 sequence = 2;</code>
-             */
-            public Builder setSequence( int value ){
-                bitField0_ |= 0x00000002;
-                sequence_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required int32 sequence = 2;</code>
-             */
-            public Builder clearSequence(){
-                bitField0_ = (bitField0_ & ~0x00000002);
-                sequence_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public boolean hasRequest(){
-                return ((bitField0_ & 0x00000004) == 0x00000004);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.Request getRequest(){
-                if( requestBuilder_ == null ) {
-                    return request_;
-                } else {
-                    return requestBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public Builder setRequest(
-                    experiment.protocolgen.MsgProtocol.Request.Builder builderForValue ){
-                if( requestBuilder_ == null ) {
-                    request_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    requestBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public Builder setRequest( experiment.protocolgen.MsgProtocol.Request value ){
-                if( requestBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    request_ = value;
-                    onChanged();
-                } else {
-                    requestBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public Builder mergeRequest( experiment.protocolgen.MsgProtocol.Request value ){
-                if( requestBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000004) == 0x00000004) &&
-                            request_ != experiment.protocolgen.MsgProtocol.Request.getDefaultInstance() ) {
-                        request_ =
-                                experiment.protocolgen.MsgProtocol.Request.newBuilder( request_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        request_ = value;
-                    }
-                    onChanged();
-                } else {
-                    requestBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000004;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public Builder clearRequest(){
-                if( requestBuilder_ == null ) {
-                    request_ = experiment.protocolgen.MsgProtocol.Request.getDefaultInstance();
-                    onChanged();
-                } else {
-                    requestBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000004);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.Request.Builder getRequestBuilder(){
-                bitField0_ |= 0x00000004;
-                onChanged();
-                return getRequestFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            public experiment.protocolgen.MsgProtocol.RequestOrBuilder getRequestOrBuilder(){
-                if( requestBuilder_ != null ) {
-                    return requestBuilder_.getMessageOrBuilder();
-                } else {
-                    return request_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Request request = 3;</code>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.Request, experiment.protocolgen.MsgProtocol.Request.Builder, experiment.protocolgen.MsgProtocol.RequestOrBuilder>
-            getRequestFieldBuilder(){
-                if( requestBuilder_ == null ) {
-                    requestBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.Request, experiment.protocolgen.MsgProtocol.Request.Builder, experiment.protocolgen.MsgProtocol.RequestOrBuilder>(
-                            request_,
-                            getParentForChildren(),
-                            isClean() );
-                    request_ = null;
-                }
-                return requestBuilder_;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public boolean hasResponse(){
-                return ((bitField0_ & 0x00000008) == 0x00000008);
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public experiment.protocolgen.MsgProtocol.Response getResponse(){
-                if( responseBuilder_ == null ) {
-                    return response_;
-                } else {
-                    return responseBuilder_.getMessage();
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public Builder setResponse(
-                    experiment.protocolgen.MsgProtocol.Response.Builder builderForValue ){
-                if( responseBuilder_ == null ) {
-                    response_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    responseBuilder_.setMessage( builderForValue.build() );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public Builder setResponse( experiment.protocolgen.MsgProtocol.Response value ){
-                if( responseBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    response_ = value;
-                    onChanged();
-                } else {
-                    responseBuilder_.setMessage( value );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public Builder mergeResponse( experiment.protocolgen.MsgProtocol.Response value ){
-                if( responseBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000008) == 0x00000008) &&
-                            response_ != experiment.protocolgen.MsgProtocol.Response.getDefaultInstance() ) {
-                        response_ =
-                                experiment.protocolgen.MsgProtocol.Response.newBuilder( response_ ).mergeFrom( value ).buildPartial();
-                    } else {
-                        response_ = value;
-                    }
-                    onChanged();
-                } else {
-                    responseBuilder_.mergeFrom( value );
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public Builder clearResponse(){
-                if( responseBuilder_ == null ) {
-                    response_ = experiment.protocolgen.MsgProtocol.Response.getDefaultInstance();
-                    onChanged();
-                } else {
-                    responseBuilder_.clear();
-                }
-                bitField0_ = (bitField0_ & ~0x00000008);
-                return this;
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public experiment.protocolgen.MsgProtocol.Response.Builder getResponseBuilder(){
-                bitField0_ |= 0x00000008;
-                onChanged();
-                return getResponseFieldBuilder().getBuilder();
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            public experiment.protocolgen.MsgProtocol.ResponseOrBuilder getResponseOrBuilder(){
-                if( responseBuilder_ != null ) {
-                    return responseBuilder_.getMessageOrBuilder();
-                } else {
-                    return response_;
-                }
-            }
-
-            /**
-             * <code>optional .experiment.protocolgen.Response response = 4;</code>
-             * <p/>
-             * <pre>
-             * optional Command  command = 5;
-             * optional Indication indication = 6;
-             * </pre>
-             */
-            private com.google.protobuf.SingleFieldBuilder<
-                    experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder>
-            getResponseFieldBuilder(){
-                if( responseBuilder_ == null ) {
-                    responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                            experiment.protocolgen.MsgProtocol.Response, experiment.protocolgen.MsgProtocol.Response.Builder, experiment.protocolgen.MsgProtocol.ResponseOrBuilder>(
-                            response_,
-                            getParentForChildren(),
-                            isClean() );
-                    response_ = null;
-                }
-                return responseBuilder_;
-            }
-
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Message)
-        }
-
-        static{
-            defaultInstance = new Message( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.Message)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Message)
     }
 
-    // @@protoc_insertion_point(outer_class_scope)
+    static {
+      defaultInstance = new Message(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.Message)
+  }
+
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_LoginRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_LoginResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_MissionShowRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_MissionShowResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_Request_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_Request_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_Response_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_Response_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_Message_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_Message_fieldAccessorTable;
+
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
+    return descriptor;
+  }
+  private static com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
+  static {
+    java.lang.String[] descriptorData = {
+      "\n\021MsgProtocol.proto\022\026experiment.protocol" +
+      "gen\"2\n\014LoginRequest\022\020\n\010userName\030\001 \002(\t\022\020\n" +
+      "\010password\030\002 \002(\t\"\034\n\rLoginResponse\022\013\n\003ret\030" +
+      "\006 \001(\005\"(\n\024NickNameCheckRequest\022\020\n\010nickNam" +
+      "e\030\001 \002(\t\",\n\025NickNameCheckResponse\022\023\n\013isDu" +
+      "plicate\030\001 \002(\010\"\'\n\022MissionShowRequest\022\021\n\tm" +
+      "issionId\030\001 \002(\005\"b\n\023MissionShowResponse\022\024\n" +
+      "\014protectCount\030\001 \002(\005\022\021\n\tisProtect\030\002 \002(\010\022\n" +
+      "\n\002cd\030\003 \002(\005\022\026\n\016currentMission\030\004 \002(\005\"\304\001\n\007R" +
+      "equest\0223\n\005login\030\001 \001(\0132$.experiment.proto",
+      "colgen.LoginRequest\022?\n\013missionShow\030\002 \001(\013" +
+      "2*.experiment.protocolgen.MissionShowReq" +
+      "uest\022C\n\rnickNameCheck\030\003 \001(\0132,.experiment" +
+      ".protocolgen.NickNameCheckRequest\"\363\001\n\010Re" +
+      "sponse\022\016\n\006result\030\001 \002(\010\022\031\n\021error_descript" +
+      "ion\030\002 \001(\t\0224\n\005login\030\003 \001(\0132%.experiment.pr" +
+      "otocolgen.LoginResponse\022@\n\013missionShow\030\004" +
+      " \001(\0132+.experiment.protocolgen.MissionSho" +
+      "wResponse\022D\n\rnickNameCheck\030\005 \001(\0132-.exper" +
+      "iment.protocolgen.NickNameCheckResponse\"",
+      "\254\001\n\007Message\022)\n\004type\030\001 \002(\0162\033.experiment.p" +
+      "rotocolgen.MSG\022\020\n\010sequence\030\002 \002(\005\0220\n\007requ" +
+      "est\030\003 \001(\0132\037.experiment.protocolgen.Reque" +
+      "st\0222\n\010response\030\004 \001(\0132 .experiment.protoc" +
+      "olgen.Response*7\n\003MSG\022\n\n\005Login\020\351\007\022\020\n\013Mis" +
+      "sionShow\020\352\007\022\022\n\rNickNameCheck\020\353\007B\002H\001"
+    };
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+        public com.google.protobuf.ExtensionRegistry assignDescriptors(
+            com.google.protobuf.Descriptors.FileDescriptor root) {
+          descriptor = root;
+          internal_static_experiment_protocolgen_LoginRequest_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+          internal_static_experiment_protocolgen_LoginRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_LoginRequest_descriptor,
+              new java.lang.String[] { "UserName", "Password", });
+          internal_static_experiment_protocolgen_LoginResponse_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+          internal_static_experiment_protocolgen_LoginResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_LoginResponse_descriptor,
+              new java.lang.String[] { "Ret", });
+          internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_experiment_protocolgen_NickNameCheckRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_NickNameCheckRequest_descriptor,
+              new java.lang.String[] { "NickName", });
+          internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_experiment_protocolgen_NickNameCheckResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_NickNameCheckResponse_descriptor,
+              new java.lang.String[] { "IsDuplicate", });
+          internal_static_experiment_protocolgen_MissionShowRequest_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+          internal_static_experiment_protocolgen_MissionShowRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_MissionShowRequest_descriptor,
+              new java.lang.String[] { "MissionId", });
+          internal_static_experiment_protocolgen_MissionShowResponse_descriptor =
+            getDescriptor().getMessageTypes().get(5);
+          internal_static_experiment_protocolgen_MissionShowResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_MissionShowResponse_descriptor,
+              new java.lang.String[] { "ProtectCount", "IsProtect", "Cd", "CurrentMission", });
+          internal_static_experiment_protocolgen_Request_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+          internal_static_experiment_protocolgen_Request_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_Request_descriptor,
+              new java.lang.String[] { "Login", "MissionShow", "NickNameCheck", });
+          internal_static_experiment_protocolgen_Response_descriptor =
+            getDescriptor().getMessageTypes().get(7);
+          internal_static_experiment_protocolgen_Response_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_Response_descriptor,
+              new java.lang.String[] { "Result", "ErrorDescription", "Login", "MissionShow", "NickNameCheck", });
+          internal_static_experiment_protocolgen_Message_descriptor =
+            getDescriptor().getMessageTypes().get(8);
+          internal_static_experiment_protocolgen_Message_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_Message_descriptor,
+              new java.lang.String[] { "Type", "Sequence", "Request", "Response", });
+          return null;
+        }
+      };
+    com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        }, assigner);
+  }
+
+  // @@protoc_insertion_point(outer_class_scope)
 }

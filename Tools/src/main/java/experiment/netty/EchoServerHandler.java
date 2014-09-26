@@ -5,6 +5,7 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.util.CharsetUtil;
 
 import java.net.InetAddress;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -25,7 +26,21 @@ public class EchoServerHandler extends ChannelHandlerAdapter{
 
     @Override
     public void channelRead( ChannelHandlerContext ctx, Object msg ) throws Exception{
+        ByteBuf in = (ByteBuf) msg;
+        System.out.println( in.toString( CharsetUtil.US_ASCII ) );
         ctx.writeAndFlush( msg );
+//
+//        while( in.isReadable() ){
+//            System.out.println( in.readableBytes() );
+//            in.readByte();
+//            System.out.println( in.readableBytes() );
+//            in.writeByte( 2 );
+//            System.out.println( "写了之后" + in.readableBytes() );
+//            byte b = in.readByte();
+//            System.out.println( "b=" + b );
+//            System.out.println( "写了之后" + in.readableBytes() );
+//        }
+
     }
 
 
@@ -42,7 +57,7 @@ public class EchoServerHandler extends ChannelHandlerAdapter{
         System.out.println( "RemoteAddress : " + ctx.channel().remoteAddress() + " active !" );
         ByteBuf buffer = ctx.alloc().buffer();
         buffer.writeBytes( ("Welcome to " + InetAddress.getLocalHost().getHostName() + " service!\n").getBytes() );
-        ctx.writeAndFlush( buffer );
+        //ctx.writeAndFlush( buffer );
 
 //        ctx.writeAndFlush( "Welcome to " + InetAddress.getLocalHost().getHostName() + " service!\n" );
 //        ctx.write( 65 );

@@ -24,7 +24,7 @@ public class GameServerTest{
 
             GameClientHandler handler = channel.pipeline().get( GameClientHandler.class );
 
-            for( int i = 0; i < 100000; i++ ) {
+            for( int i = 0; i < 1; i++ ) {
 
                 handler.missionShow();
                 handler.login( "bbz", "pass" );
@@ -35,8 +35,10 @@ public class GameServerTest{
         } catch( Exception e ) {
             e.printStackTrace();
         } finally {
+            Thread.sleep( 1000000 );
             worker.shutdownGracefully();
         }
+
 
     }
 }

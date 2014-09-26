@@ -1,8 +1,10 @@
 package com.bbz.sanguo.net.handler;
 
+import com.bbz.sanguo.net.protobuf.User;
 import io.netty.channel.ChannelHandlerContext;
 
-import static com.bbz.sanguo.net.protobuf.MsgProtocol.*;
+import static com.bbz.sanguo.net.protobuf.MsgProtocol.Request;
+import static com.bbz.sanguo.net.protobuf.MsgProtocol.Response;
 
 /**
  * user         LIUKUN
@@ -16,7 +18,7 @@ public class NickNameCheckHandler implements INoLoginHandler{
         String nickName = request.getNickNameCheck().getNickName();
 
 
-        NickNameCheckResponse.Builder result = NickNameCheckResponse.newBuilder();
+        User.NickNameCheckResponse.Builder result = User.NickNameCheckResponse.newBuilder();
         result.setIsDuplicate( true );
 
 

@@ -1,0 +1,24 @@
+package com.bbz.sanguo.net.protobuf;
+
+
+// How to generate
+// ===============
+// $ cd example
+// $ protoc src/main/java/io/netty/example/worldclock/WorldClockProtocol.proto \
+//          --java_out=src/main/java
+//
+// Add @SuppressWarnings("all") to the generated code not to pollute IDE task list.
+
+option optimize_for = SPEED;
+
+message MissionShowRequest {
+    required int32 missionId = 1;
+}
+
+message MissionShowResponse {
+    required int32 protectCount = 1; //总的保护的次数（最大8次，即3+5）
+    required bool isProtect = 2; //今日是否已保护
+    required int32 cd = 3; //剩余冷却时间（秒）
+    required int32 currentMission = 4; //当前关卡
+
+}

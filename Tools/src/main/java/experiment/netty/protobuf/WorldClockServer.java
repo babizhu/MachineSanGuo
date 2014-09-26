@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 
 public class WorldClockServer{
-    public static final int PORT = 8000;
+    public static final int PORT = 8001;
 
     private void run(){
         EventLoopGroup boss = new NioEventLoopGroup( 1 );

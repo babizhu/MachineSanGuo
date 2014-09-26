@@ -44,6 +44,7 @@ public class WorldClockServerHandler extends SimpleChannelInboundHandler<WorldCl
                     setSecond( calendar.get( SECOND ) ).build() );
         }
 
+//        System.out.println( "WorldClockServerHandler.messageReceived" );
         ctx.write( builder.build() );
     }
 

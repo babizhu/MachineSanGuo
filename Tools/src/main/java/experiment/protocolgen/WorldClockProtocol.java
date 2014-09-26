@@ -3,3535 +3,3282 @@
 
 package experiment.protocolgen;
 
-public final class WorldClockProtocol{
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_Location_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_Location_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_Locations_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_Locations_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_LocalTime_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.Descriptor
-            internal_static_experiment_protocolgen_LocalTimes_descriptor;
-    private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable;
-    private static com.google.protobuf.Descriptors.FileDescriptor
-            descriptor;
-
-    static{
-        java.lang.String[] descriptorData = {
-                "\n\030WorldClockProtocol.proto\022\026experiment.p" +
-                        "rotocolgen\"N\n\010Location\0224\n\tcontinent\030\001 \002(" +
-                        "\0162!.experiment.protocolgen.Continent\022\014\n\004" +
-                        "city\030\002 \002(\t\"?\n\tLocations\0222\n\010location\030\001 \003(" +
-                        "\0132 .experiment.protocolgen.Location\"\240\001\n\t" +
-                        "LocalTime\022\014\n\004year\030\001 \002(\r\022\r\n\005month\030\002 \002(\r\022\022" +
-                        "\n\ndayOfMonth\030\004 \002(\r\0224\n\tdayOfWeek\030\005 \002(\0162!." +
-                        "experiment.protocolgen.DayOfWeek\022\014\n\004hour" +
-                        "\030\006 \002(\r\022\016\n\006minute\030\007 \002(\r\022\016\n\006second\030\010 \002(\r\"B" +
-                        "\n\nLocalTimes\0224\n\tlocalTime\030\001 \003(\0132!.experi",
-                "ment.protocolgen.LocalTime*\231\001\n\tContinent" +
-                        "\022\n\n\006AFRICA\020\000\022\013\n\007AMERICA\020\001\022\016\n\nANTARCTICA\020" +
-                        "\002\022\n\n\006ARCTIC\020\003\022\010\n\004ASIA\020\004\022\014\n\010ATLANTIC\020\005\022\r\n" +
-                        "\tAUSTRALIA\020\006\022\n\n\006EUROPE\020\007\022\n\n\006INDIAN\020\010\022\013\n\007" +
-                        "MIDEAST\020\t\022\013\n\007PACIFIC\020\n*g\n\tDayOfWeek\022\n\n\006S" +
-                        "UNDAY\020\001\022\n\n\006MONDAY\020\002\022\013\n\007TUESDAY\020\003\022\r\n\tWEDN" +
-                        "ESDAY\020\004\022\014\n\010THURSDAY\020\005\022\n\n\006FRIDAY\020\006\022\014\n\010SAT" +
-                        "URDAY\020\007B\002H\001"
-        };
-        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-                new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner(){
-                    public com.google.protobuf.ExtensionRegistry assignDescriptors(
-                            com.google.protobuf.Descriptors.FileDescriptor root ){
-                        descriptor = root;
-                        internal_static_experiment_protocolgen_Location_descriptor =
-                                getDescriptor().getMessageTypes().get( 0 );
-                        internal_static_experiment_protocolgen_Location_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_Location_descriptor,
-                                new java.lang.String[]{"Continent", "City",} );
-                        internal_static_experiment_protocolgen_Locations_descriptor =
-                                getDescriptor().getMessageTypes().get( 1 );
-                        internal_static_experiment_protocolgen_Locations_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_Locations_descriptor,
-                                new java.lang.String[]{"Location",} );
-                        internal_static_experiment_protocolgen_LocalTime_descriptor =
-                                getDescriptor().getMessageTypes().get( 2 );
-                        internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_LocalTime_descriptor,
-                                new java.lang.String[]{"Year", "Month", "DayOfMonth", "DayOfWeek", "Hour", "Minute", "Second",} );
-                        internal_static_experiment_protocolgen_LocalTimes_descriptor =
-                                getDescriptor().getMessageTypes().get( 3 );
-                        internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable = new
-                                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-                                internal_static_experiment_protocolgen_LocalTimes_descriptor,
-                                new java.lang.String[]{"LocalTime",} );
-                        return null;
-                    }
-                };
-        com.google.protobuf.Descriptors.FileDescriptor
-                .internalBuildGeneratedFileFrom( descriptorData,
-                        new com.google.protobuf.Descriptors.FileDescriptor[]{
-                        }, assigner );
-    }
-
-    private WorldClockProtocol(){
-    }
-
-    public static void registerAllExtensions(
-            com.google.protobuf.ExtensionRegistry registry ){
-    }
-
-    public static com.google.protobuf.Descriptors.FileDescriptor
-    getDescriptor(){
-        return descriptor;
-    }
+public final class WorldClockProtocol {
+  private WorldClockProtocol() {}
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+  }
+  /**
+   * Protobuf enum {@code experiment.protocolgen.Continent}
+   */
+  public enum Continent
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>AFRICA = 0;</code>
+     */
+    AFRICA(0, 0),
+    /**
+     * <code>AMERICA = 1;</code>
+     */
+    AMERICA(1, 1),
+    /**
+     * <code>ANTARCTICA = 2;</code>
+     */
+    ANTARCTICA(2, 2),
+    /**
+     * <code>ARCTIC = 3;</code>
+     */
+    ARCTIC(3, 3),
+    /**
+     * <code>ASIA = 4;</code>
+     */
+    ASIA(4, 4),
+    /**
+     * <code>ATLANTIC = 5;</code>
+     */
+    ATLANTIC(5, 5),
+    /**
+     * <code>AUSTRALIA = 6;</code>
+     */
+    AUSTRALIA(6, 6),
+    /**
+     * <code>EUROPE = 7;</code>
+     */
+    EUROPE(7, 7),
+    /**
+     * <code>INDIAN = 8;</code>
+     */
+    INDIAN(8, 8),
+    /**
+     * <code>MIDEAST = 9;</code>
+     */
+    MIDEAST(9, 9),
+    /**
+     * <code>PACIFIC = 10;</code>
+     */
+    PACIFIC(10, 10),
+    ;
 
     /**
-     * Protobuf enum {@code experiment.protocolgen.Continent}
+     * <code>AFRICA = 0;</code>
      */
-    public enum Continent
-            implements com.google.protobuf.ProtocolMessageEnum{
-        /**
-         * <code>AFRICA = 0;</code>
-         */
-        AFRICA( 0, 0 ),
-        /**
-         * <code>AMERICA = 1;</code>
-         */
-        AMERICA( 1, 1 ),
-        /**
-         * <code>ANTARCTICA = 2;</code>
-         */
-        ANTARCTICA( 2, 2 ),
-        /**
-         * <code>ARCTIC = 3;</code>
-         */
-        ARCTIC( 3, 3 ),
-        /**
-         * <code>ASIA = 4;</code>
-         */
-        ASIA( 4, 4 ),
-        /**
-         * <code>ATLANTIC = 5;</code>
-         */
-        ATLANTIC( 5, 5 ),
-        /**
-         * <code>AUSTRALIA = 6;</code>
-         */
-        AUSTRALIA( 6, 6 ),
-        /**
-         * <code>EUROPE = 7;</code>
-         */
-        EUROPE( 7, 7 ),
-        /**
-         * <code>INDIAN = 8;</code>
-         */
-        INDIAN( 8, 8 ),
-        /**
-         * <code>MIDEAST = 9;</code>
-         */
-        MIDEAST( 9, 9 ),
-        /**
-         * <code>PACIFIC = 10;</code>
-         */
-        PACIFIC( 10, 10 ),;
+    public static final int AFRICA_VALUE = 0;
+    /**
+     * <code>AMERICA = 1;</code>
+     */
+    public static final int AMERICA_VALUE = 1;
+    /**
+     * <code>ANTARCTICA = 2;</code>
+     */
+    public static final int ANTARCTICA_VALUE = 2;
+    /**
+     * <code>ARCTIC = 3;</code>
+     */
+    public static final int ARCTIC_VALUE = 3;
+    /**
+     * <code>ASIA = 4;</code>
+     */
+    public static final int ASIA_VALUE = 4;
+    /**
+     * <code>ATLANTIC = 5;</code>
+     */
+    public static final int ATLANTIC_VALUE = 5;
+    /**
+     * <code>AUSTRALIA = 6;</code>
+     */
+    public static final int AUSTRALIA_VALUE = 6;
+    /**
+     * <code>EUROPE = 7;</code>
+     */
+    public static final int EUROPE_VALUE = 7;
+    /**
+     * <code>INDIAN = 8;</code>
+     */
+    public static final int INDIAN_VALUE = 8;
+    /**
+     * <code>MIDEAST = 9;</code>
+     */
+    public static final int MIDEAST_VALUE = 9;
+    /**
+     * <code>PACIFIC = 10;</code>
+     */
+    public static final int PACIFIC_VALUE = 10;
 
-        /**
-         * <code>AFRICA = 0;</code>
-         */
-        public static final int AFRICA_VALUE = 0;
-        /**
-         * <code>AMERICA = 1;</code>
-         */
-        public static final int AMERICA_VALUE = 1;
-        /**
-         * <code>ANTARCTICA = 2;</code>
-         */
-        public static final int ANTARCTICA_VALUE = 2;
-        /**
-         * <code>ARCTIC = 3;</code>
-         */
-        public static final int ARCTIC_VALUE = 3;
-        /**
-         * <code>ASIA = 4;</code>
-         */
-        public static final int ASIA_VALUE = 4;
-        /**
-         * <code>ATLANTIC = 5;</code>
-         */
-        public static final int ATLANTIC_VALUE = 5;
-        /**
-         * <code>AUSTRALIA = 6;</code>
-         */
-        public static final int AUSTRALIA_VALUE = 6;
-        /**
-         * <code>EUROPE = 7;</code>
-         */
-        public static final int EUROPE_VALUE = 7;
-        /**
-         * <code>INDIAN = 8;</code>
-         */
-        public static final int INDIAN_VALUE = 8;
-        /**
-         * <code>MIDEAST = 9;</code>
-         */
-        public static final int MIDEAST_VALUE = 9;
-        /**
-         * <code>PACIFIC = 10;</code>
-         */
-        public static final int PACIFIC_VALUE = 10;
-        private static final Continent[] VALUES = values();
-        private static com.google.protobuf.Internal.EnumLiteMap<Continent>
-                internalValueMap =
-                new com.google.protobuf.Internal.EnumLiteMap<Continent>(){
-                    public Continent findValueByNumber( int number ){
-                        return Continent.valueOf( number );
-                    }
-                };
-        private final int index;
-        private final int value;
 
-        private Continent( int index, int value ){
-            this.index = index;
-            this.value = value;
-        }
+    public final int getNumber() { return value; }
 
-        public static Continent valueOf( int value ){
-            switch( value ) {
-                case 0:
-                    return AFRICA;
-                case 1:
-                    return AMERICA;
-                case 2:
-                    return ANTARCTICA;
-                case 3:
-                    return ARCTIC;
-                case 4:
-                    return ASIA;
-                case 5:
-                    return ATLANTIC;
-                case 6:
-                    return AUSTRALIA;
-                case 7:
-                    return EUROPE;
-                case 8:
-                    return INDIAN;
-                case 9:
-                    return MIDEAST;
-                case 10:
-                    return PACIFIC;
-                default:
-                    return null;
-            }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<Continent>
-        internalGetValueMap(){
-            return internalValueMap;
-        }
-
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor(){
-            return experiment.protocolgen.WorldClockProtocol.getDescriptor().getEnumTypes().get( 0 );
-        }
-
-        public static Continent valueOf(
-                com.google.protobuf.Descriptors.EnumValueDescriptor desc ){
-            if( desc.getType() != getDescriptor() ) {
-                throw new java.lang.IllegalArgumentException(
-                        "EnumValueDescriptor is not for this type." );
-            }
-            return VALUES[desc.getIndex()];
-        }
-
-        public final int getNumber(){
-            return value;
-        }
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor(){
-            return getDescriptor().getValues().get( index );
-        }
-
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType(){
-            return getDescriptor();
-        }
-
-        // @@protoc_insertion_point(enum_scope:experiment.protocolgen.Continent)
+    public static Continent valueOf(int value) {
+      switch (value) {
+        case 0: return AFRICA;
+        case 1: return AMERICA;
+        case 2: return ANTARCTICA;
+        case 3: return ARCTIC;
+        case 4: return ASIA;
+        case 5: return ATLANTIC;
+        case 6: return AUSTRALIA;
+        case 7: return EUROPE;
+        case 8: return INDIAN;
+        case 9: return MIDEAST;
+        case 10: return PACIFIC;
+        default: return null;
+      }
     }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Continent>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<Continent>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Continent>() {
+            public Continent findValueByNumber(int number) {
+              return Continent.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return experiment.protocolgen.WorldClockProtocol.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Continent[] VALUES = values();
+
+    public static Continent valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Continent(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:experiment.protocolgen.Continent)
+  }
+
+  /**
+   * Protobuf enum {@code experiment.protocolgen.DayOfWeek}
+   */
+  public enum DayOfWeek
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SUNDAY = 1;</code>
+     */
+    SUNDAY(0, 1),
+    /**
+     * <code>MONDAY = 2;</code>
+     */
+    MONDAY(1, 2),
+    /**
+     * <code>TUESDAY = 3;</code>
+     */
+    TUESDAY(2, 3),
+    /**
+     * <code>WEDNESDAY = 4;</code>
+     */
+    WEDNESDAY(3, 4),
+    /**
+     * <code>THURSDAY = 5;</code>
+     */
+    THURSDAY(4, 5),
+    /**
+     * <code>FRIDAY = 6;</code>
+     */
+    FRIDAY(5, 6),
+    /**
+     * <code>SATURDAY = 7;</code>
+     */
+    SATURDAY(6, 7),
+    ;
 
     /**
-     * Protobuf enum {@code experiment.protocolgen.DayOfWeek}
+     * <code>SUNDAY = 1;</code>
      */
-    public enum DayOfWeek
-            implements com.google.protobuf.ProtocolMessageEnum{
-        /**
-         * <code>SUNDAY = 1;</code>
-         */
-        SUNDAY( 0, 1 ),
-        /**
-         * <code>MONDAY = 2;</code>
-         */
-        MONDAY( 1, 2 ),
-        /**
-         * <code>TUESDAY = 3;</code>
-         */
-        TUESDAY( 2, 3 ),
-        /**
-         * <code>WEDNESDAY = 4;</code>
-         */
-        WEDNESDAY( 3, 4 ),
-        /**
-         * <code>THURSDAY = 5;</code>
-         */
-        THURSDAY( 4, 5 ),
-        /**
-         * <code>FRIDAY = 6;</code>
-         */
-        FRIDAY( 5, 6 ),
-        /**
-         * <code>SATURDAY = 7;</code>
-         */
-        SATURDAY( 6, 7 ),;
+    public static final int SUNDAY_VALUE = 1;
+    /**
+     * <code>MONDAY = 2;</code>
+     */
+    public static final int MONDAY_VALUE = 2;
+    /**
+     * <code>TUESDAY = 3;</code>
+     */
+    public static final int TUESDAY_VALUE = 3;
+    /**
+     * <code>WEDNESDAY = 4;</code>
+     */
+    public static final int WEDNESDAY_VALUE = 4;
+    /**
+     * <code>THURSDAY = 5;</code>
+     */
+    public static final int THURSDAY_VALUE = 5;
+    /**
+     * <code>FRIDAY = 6;</code>
+     */
+    public static final int FRIDAY_VALUE = 6;
+    /**
+     * <code>SATURDAY = 7;</code>
+     */
+    public static final int SATURDAY_VALUE = 7;
 
-        /**
-         * <code>SUNDAY = 1;</code>
-         */
-        public static final int SUNDAY_VALUE = 1;
-        /**
-         * <code>MONDAY = 2;</code>
-         */
-        public static final int MONDAY_VALUE = 2;
-        /**
-         * <code>TUESDAY = 3;</code>
-         */
-        public static final int TUESDAY_VALUE = 3;
-        /**
-         * <code>WEDNESDAY = 4;</code>
-         */
-        public static final int WEDNESDAY_VALUE = 4;
-        /**
-         * <code>THURSDAY = 5;</code>
-         */
-        public static final int THURSDAY_VALUE = 5;
-        /**
-         * <code>FRIDAY = 6;</code>
-         */
-        public static final int FRIDAY_VALUE = 6;
-        /**
-         * <code>SATURDAY = 7;</code>
-         */
-        public static final int SATURDAY_VALUE = 7;
-        private static final DayOfWeek[] VALUES = values();
-        private static com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>
-                internalValueMap =
-                new com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>(){
-                    public DayOfWeek findValueByNumber( int number ){
-                        return DayOfWeek.valueOf( number );
-                    }
-                };
-        private final int index;
-        private final int value;
 
-        private DayOfWeek( int index, int value ){
-            this.index = index;
-            this.value = value;
-        }
+    public final int getNumber() { return value; }
 
-        public static DayOfWeek valueOf( int value ){
-            switch( value ) {
-                case 1:
-                    return SUNDAY;
-                case 2:
-                    return MONDAY;
-                case 3:
-                    return TUESDAY;
-                case 4:
-                    return WEDNESDAY;
-                case 5:
-                    return THURSDAY;
-                case 6:
-                    return FRIDAY;
-                case 7:
-                    return SATURDAY;
-                default:
-                    return null;
-            }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>
-        internalGetValueMap(){
-            return internalValueMap;
-        }
-
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor(){
-            return experiment.protocolgen.WorldClockProtocol.getDescriptor().getEnumTypes().get( 1 );
-        }
-
-        public static DayOfWeek valueOf(
-                com.google.protobuf.Descriptors.EnumValueDescriptor desc ){
-            if( desc.getType() != getDescriptor() ) {
-                throw new java.lang.IllegalArgumentException(
-                        "EnumValueDescriptor is not for this type." );
-            }
-            return VALUES[desc.getIndex()];
-        }
-
-        public final int getNumber(){
-            return value;
-        }
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor(){
-            return getDescriptor().getValues().get( index );
-        }
-
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType(){
-            return getDescriptor();
-        }
-
-        // @@protoc_insertion_point(enum_scope:experiment.protocolgen.DayOfWeek)
+    public static DayOfWeek valueOf(int value) {
+      switch (value) {
+        case 1: return SUNDAY;
+        case 2: return MONDAY;
+        case 3: return TUESDAY;
+        case 4: return WEDNESDAY;
+        case 5: return THURSDAY;
+        case 6: return FRIDAY;
+        case 7: return SATURDAY;
+        default: return null;
+      }
     }
 
-    public interface LocationOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
+    public static com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>() {
+            public DayOfWeek findValueByNumber(int number) {
+              return DayOfWeek.valueOf(number);
+            }
+          };
 
-        // required .experiment.protocolgen.Continent continent = 1;
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return experiment.protocolgen.WorldClockProtocol.getDescriptor().getEnumTypes().get(1);
+    }
 
-        /**
-         * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-         */
-        boolean hasContinent();
+    private static final DayOfWeek[] VALUES = values();
 
-        /**
-         * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-         */
-        experiment.protocolgen.WorldClockProtocol.Continent getContinent();
+    public static DayOfWeek valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
 
-        // required string city = 2;
+    private final int index;
+    private final int value;
 
-        /**
-         * <code>required string city = 2;</code>
-         */
-        boolean hasCity();
+    private DayOfWeek(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
 
-        /**
-         * <code>required string city = 2;</code>
-         */
-        java.lang.String getCity();
+    // @@protoc_insertion_point(enum_scope:experiment.protocolgen.DayOfWeek)
+  }
 
-        /**
-         * <code>required string city = 2;</code>
-         */
-        com.google.protobuf.ByteString
+  public interface LocationOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .experiment.protocolgen.Continent continent = 1;
+    /**
+     * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+     */
+    boolean hasContinent();
+    /**
+     * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+     */
+    experiment.protocolgen.WorldClockProtocol.Continent getContinent();
+
+    // required string city = 2;
+    /**
+     * <code>required string city = 2;</code>
+     */
+    boolean hasCity();
+    /**
+     * <code>required string city = 2;</code>
+     */
+    java.lang.String getCity();
+    /**
+     * <code>required string city = 2;</code>
+     */
+    com.google.protobuf.ByteString
         getCityBytes();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.Location}
+   */
+  public static final class Location extends
+      com.google.protobuf.GeneratedMessage
+      implements LocationOrBuilder {
+    // Use Location.newBuilder() to construct.
+    private Location(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Location(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Location defaultInstance;
+    public static Location getDefaultInstance() {
+      return defaultInstance;
     }
 
-    public interface LocationsOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // repeated .experiment.protocolgen.Location location = 1;
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        java.util.List<experiment.protocolgen.WorldClockProtocol.Location>
-        getLocationList();
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        experiment.protocolgen.WorldClockProtocol.Location getLocation( int index );
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        int getLocationCount();
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocationOrBuilder>
-        getLocationOrBuilderList();
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        experiment.protocolgen.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
-                int index );
+    public Location getDefaultInstanceForType() {
+      return defaultInstance;
     }
 
-    public interface LocalTimeOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // required uint32 year = 1;
-
-        /**
-         * <code>required uint32 year = 1;</code>
-         */
-        boolean hasYear();
-
-        /**
-         * <code>required uint32 year = 1;</code>
-         */
-        int getYear();
-
-        // required uint32 month = 2;
-
-        /**
-         * <code>required uint32 month = 2;</code>
-         */
-        boolean hasMonth();
-
-        /**
-         * <code>required uint32 month = 2;</code>
-         */
-        int getMonth();
-
-        // required uint32 dayOfMonth = 4;
-
-        /**
-         * <code>required uint32 dayOfMonth = 4;</code>
-         */
-        boolean hasDayOfMonth();
-
-        /**
-         * <code>required uint32 dayOfMonth = 4;</code>
-         */
-        int getDayOfMonth();
-
-        // required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;
-
-        /**
-         * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-         */
-        boolean hasDayOfWeek();
-
-        /**
-         * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-         */
-        experiment.protocolgen.WorldClockProtocol.DayOfWeek getDayOfWeek();
-
-        // required uint32 hour = 6;
-
-        /**
-         * <code>required uint32 hour = 6;</code>
-         */
-        boolean hasHour();
-
-        /**
-         * <code>required uint32 hour = 6;</code>
-         */
-        int getHour();
-
-        // required uint32 minute = 7;
-
-        /**
-         * <code>required uint32 minute = 7;</code>
-         */
-        boolean hasMinute();
-
-        /**
-         * <code>required uint32 minute = 7;</code>
-         */
-        int getMinute();
-
-        // required uint32 second = 8;
-
-        /**
-         * <code>required uint32 second = 8;</code>
-         */
-        boolean hasSecond();
-
-        /**
-         * <code>required uint32 second = 8;</code>
-         */
-        int getSecond();
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Location(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              experiment.protocolgen.WorldClockProtocol.Continent value = experiment.protocolgen.WorldClockProtocol.Continent.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                continent_ = value;
+              }
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              city_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_descriptor;
     }
 
-    public interface LocalTimesOrBuilder
-            extends com.google.protobuf.MessageOrBuilder{
-
-        // repeated .experiment.protocolgen.LocalTime localTime = 1;
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime>
-        getLocalTimeList();
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        experiment.protocolgen.WorldClockProtocol.LocalTime getLocalTime( int index );
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        int getLocalTimeCount();
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder>
-        getLocalTimeOrBuilderList();
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
-                int index );
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.WorldClockProtocol.Location.class, experiment.protocolgen.WorldClockProtocol.Location.Builder.class);
     }
 
+    public static com.google.protobuf.Parser<Location> PARSER =
+        new com.google.protobuf.AbstractParser<Location>() {
+      public Location parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Location(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Location> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .experiment.protocolgen.Continent continent = 1;
+    public static final int CONTINENT_FIELD_NUMBER = 1;
+    private experiment.protocolgen.WorldClockProtocol.Continent continent_;
+    /**
+     * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+     */
+    public boolean hasContinent() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+     */
+    public experiment.protocolgen.WorldClockProtocol.Continent getContinent() {
+      return continent_;
+    }
+
+    // required string city = 2;
+    public static final int CITY_FIELD_NUMBER = 2;
+    private java.lang.Object city_;
+    /**
+     * <code>required string city = 2;</code>
+     */
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string city = 2;</code>
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          city_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string city = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
+      city_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasContinent()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCity()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, continent_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getCityBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, continent_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCityBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.WorldClockProtocol.Location prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.Location}
      */
-    public static final class Location extends
-            com.google.protobuf.GeneratedMessage
-            implements LocationOrBuilder{
-        // required .experiment.protocolgen.Continent continent = 1;
-        public static final int CONTINENT_FIELD_NUMBER = 1;
-        // required string city = 2;
-        public static final int CITY_FIELD_NUMBER = 2;
-        private static final Location defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<Location> PARSER =
-                new com.google.protobuf.AbstractParser<Location>(){
-                    public Location parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new Location( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private experiment.protocolgen.WorldClockProtocol.Continent continent_;
-        private java.lang.Object city_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.WorldClockProtocol.LocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_descriptor;
+      }
 
-        // Use Location.newBuilder() to construct.
-        private Location( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.WorldClockProtocol.Location.class, experiment.protocolgen.WorldClockProtocol.Location.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.WorldClockProtocol.Location.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private Location( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        city_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_descriptor;
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.Location getDefaultInstanceForType() {
+        return experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.Location build() {
+        experiment.protocolgen.WorldClockProtocol.Location result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private Location(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            int rawValue = input.readEnum();
-                            experiment.protocolgen.WorldClockProtocol.Continent value = experiment.protocolgen.WorldClockProtocol.Continent.valueOf( rawValue );
-                            if( value == null ) {
-                                unknownFields.mergeVarintField( 1, rawValue );
-                            } else {
-                                bitField0_ |= 0x00000001;
-                                continent_ = value;
-                            }
-                            break;
-                        }
-                        case 18: {
-                            bitField0_ |= 0x00000002;
-                            city_ = input.readBytes();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.WorldClockProtocol.Location buildPartial() {
+        experiment.protocolgen.WorldClockProtocol.Location result = new experiment.protocolgen.WorldClockProtocol.Location(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static Location getDefaultInstance(){
-            return defaultInstance;
+        result.continent_ = continent_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
+        result.city_ = city_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_descriptor;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.WorldClockProtocol.Location) {
+          return mergeFrom((experiment.protocolgen.WorldClockProtocol.Location)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(experiment.protocolgen.WorldClockProtocol.Location other) {
+        if (other == experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance()) return this;
+        if (other.hasContinent()) {
+          setContinent(other.getContinent());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (other.hasCity()) {
+          bitField0_ |= 0x00000002;
+          city_ = other.city_;
+          onChanged();
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public final boolean isInitialized() {
+        if (!hasContinent()) {
+          
+          return false;
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        if (!hasCity()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.WorldClockProtocol.Location parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.WorldClockProtocol.Location) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      // required .experiment.protocolgen.Continent continent = 1;
+      private experiment.protocolgen.WorldClockProtocol.Continent continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
+      /**
+       * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+       */
+      public boolean hasContinent() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.Continent getContinent() {
+        return continent_;
+      }
+      /**
+       * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+       */
+      public Builder setContinent(experiment.protocolgen.WorldClockProtocol.Continent value) {
+        if (value == null) {
+          throw new NullPointerException();
         }
+        bitField0_ |= 0x00000001;
+        continent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .experiment.protocolgen.Continent continent = 1;</code>
+       */
+      public Builder clearContinent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Location parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      // required string city = 2;
+      private java.lang.Object city_ = "";
+      /**
+       * <code>required string city = 2;</code>
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string city = 2;</code>
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          city_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Location parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+      }
+      /**
+       * <code>required string city = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>required string city = 2;</code>
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string city = 2;</code>
+       */
+      public Builder clearCity() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string city = 2;</code>
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        city_ = value;
+        onChanged();
+        return this;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
-        }
-
-        public static experiment.protocolgen.WorldClockProtocol.Location parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
-        }
-
-        public static Builder newBuilder(){
-            return Builder.create();
-        }
-
-        public static Builder newBuilder( experiment.protocolgen.WorldClockProtocol.Location prototype ){
-            return newBuilder().mergeFrom( prototype );
-        }
-
-        public Location getDefaultInstanceForType(){
-            return defaultInstance;
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.WorldClockProtocol.Location.class, experiment.protocolgen.WorldClockProtocol.Location.Builder.class );
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<Location> getParserForType(){
-            return PARSER;
-        }
-
-        /**
-         * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-         */
-        public boolean hasContinent(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-
-        /**
-         * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-         */
-        public experiment.protocolgen.WorldClockProtocol.Continent getContinent(){
-            return continent_;
-        }
-
-        /**
-         * <code>required string city = 2;</code>
-         */
-        public boolean hasCity(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-
-        /**
-         * <code>required string city = 2;</code>
-         */
-        public java.lang.String getCity(){
-            java.lang.Object ref = city_;
-            if( ref instanceof java.lang.String ) {
-                return (java.lang.String) ref;
-            } else {
-                com.google.protobuf.ByteString bs =
-                        (com.google.protobuf.ByteString) ref;
-                java.lang.String s = bs.toStringUtf8();
-                if( bs.isValidUtf8() ) {
-                    city_ = s;
-                }
-                return s;
-            }
-        }
-
-        /**
-         * <code>required string city = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-        getCityBytes(){
-            java.lang.Object ref = city_;
-            if( ref instanceof java.lang.String ) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref );
-                city_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
-        }
-
-        private void initFields(){
-            continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
-            city_ = "";
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasContinent() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasCity() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeEnum( 1, continent_.getNumber() );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeBytes( 2, getCityBytes() );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeEnumSize( 1, continent_.getNumber() );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeBytesSize( 2, getCityBytes() );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.Location}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.WorldClockProtocol.LocationOrBuilder{
-            private int bitField0_;
-            // required string city = 2;
-            private java.lang.Object city_ = "";
-
-            // Construct using experiment.protocolgen.WorldClockProtocol.Location.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.WorldClockProtocol.Location.class, experiment.protocolgen.WorldClockProtocol.Location.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                city_ = "";
-                bitField0_ = (bitField0_ & ~0x00000002);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Location_descriptor;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.Location getDefaultInstanceForType(){
-                return experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.Location build(){
-                experiment.protocolgen.WorldClockProtocol.Location result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.Location buildPartial(){
-                experiment.protocolgen.WorldClockProtocol.Location result = new experiment.protocolgen.WorldClockProtocol.Location( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.continent_ = continent_;
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                result.city_ = city_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.WorldClockProtocol.Location ) {
-                    return mergeFrom( (experiment.protocolgen.WorldClockProtocol.Location) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.WorldClockProtocol.Location other ){
-                if( other == experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance() ) return this;
-                if( other.hasContinent() ) {
-                    setContinent( other.getContinent() );
-                }
-                if( other.hasCity() ) {
-                    bitField0_ |= 0x00000002;
-                    city_ = other.city_;
-                    onChanged();
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasContinent() ) {
-
-                    return false;
-                }
-                if( !hasCity() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.WorldClockProtocol.Location parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.WorldClockProtocol.Location) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }      // required .experiment.protocolgen.Continent continent = 1;
-
-            private experiment.protocolgen.WorldClockProtocol.Continent continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
-
-            /**
-             * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-             */
-            public boolean hasContinent(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.Continent getContinent(){
-                return continent_;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-             */
-            public Builder setContinent( experiment.protocolgen.WorldClockProtocol.Continent value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000001;
-                continent_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.Continent continent = 1;</code>
-             */
-            public Builder clearContinent(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                continent_ = experiment.protocolgen.WorldClockProtocol.Continent.AFRICA;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string city = 2;</code>
-             */
-            public boolean hasCity(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>required string city = 2;</code>
-             */
-            public java.lang.String getCity(){
-                java.lang.Object ref = city_;
-                if( !(ref instanceof java.lang.String) ) {
-                    java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                            .toStringUtf8();
-                    city_ = s;
-                    return s;
-                } else {
-                    return (java.lang.String) ref;
-                }
-            }
-
-            /**
-             * <code>required string city = 2;</code>
-             */
-            public Builder setCity(
-                    java.lang.String value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000002;
-                city_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string city = 2;</code>
-             */
-            public com.google.protobuf.ByteString
-            getCityBytes(){
-                java.lang.Object ref = city_;
-                if( ref instanceof String ) {
-                    com.google.protobuf.ByteString b =
-                            com.google.protobuf.ByteString.copyFromUtf8(
-                                    (java.lang.String) ref );
-                    city_ = b;
-                    return b;
-                } else {
-                    return (com.google.protobuf.ByteString) ref;
-                }
-            }
-
-            /**
-             * <code>required string city = 2;</code>
-             */
-            public Builder setCityBytes(
-                    com.google.protobuf.ByteString value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000002;
-                city_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required string city = 2;</code>
-             */
-            public Builder clearCity(){
-                bitField0_ = (bitField0_ & ~0x00000002);
-                city_ = getDefaultInstance().getCity();
-                onChanged();
-                return this;
-            }
-
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Location)
-        }
-
-        static{
-            defaultInstance = new Location( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.Location)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Location)
     }
 
+    static {
+      defaultInstance = new Location(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.Location)
+  }
+
+  public interface LocationsOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated .experiment.protocolgen.Location location = 1;
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    java.util.List<experiment.protocolgen.WorldClockProtocol.Location> 
+        getLocationList();
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    experiment.protocolgen.WorldClockProtocol.Location getLocation(int index);
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    int getLocationCount();
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocationOrBuilder> 
+        getLocationOrBuilderList();
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    experiment.protocolgen.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.Locations}
+   */
+  public static final class Locations extends
+      com.google.protobuf.GeneratedMessage
+      implements LocationsOrBuilder {
+    // Use Locations.newBuilder() to construct.
+    private Locations(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Locations(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Locations defaultInstance;
+    public static Locations getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Locations getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Locations(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                location_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.Location>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              location_.add(input.readMessage(experiment.protocolgen.WorldClockProtocol.Location.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          location_ = java.util.Collections.unmodifiableList(location_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.WorldClockProtocol.Locations.class, experiment.protocolgen.WorldClockProtocol.Locations.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Locations> PARSER =
+        new com.google.protobuf.AbstractParser<Locations>() {
+      public Locations parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Locations(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Locations> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated .experiment.protocolgen.Location location = 1;
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private java.util.List<experiment.protocolgen.WorldClockProtocol.Location> location_;
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    public java.util.List<experiment.protocolgen.WorldClockProtocol.Location> getLocationList() {
+      return location_;
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocationOrBuilder> 
+        getLocationOrBuilderList() {
+      return location_;
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    public int getLocationCount() {
+      return location_.size();
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    public experiment.protocolgen.WorldClockProtocol.Location getLocation(int index) {
+      return location_.get(index);
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+     */
+    public experiment.protocolgen.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
+        int index) {
+      return location_.get(index);
+    }
+
+    private void initFields() {
+      location_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      for (int i = 0; i < getLocationCount(); i++) {
+        if (!getLocation(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < location_.size(); i++) {
+        output.writeMessage(1, location_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < location_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, location_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.WorldClockProtocol.Locations prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.Locations}
      */
-    public static final class Locations extends
-            com.google.protobuf.GeneratedMessage
-            implements LocationsOrBuilder{
-        // repeated .experiment.protocolgen.Location location = 1;
-        public static final int LOCATION_FIELD_NUMBER = 1;
-        private static final Locations defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<Locations> PARSER =
-                new com.google.protobuf.AbstractParser<Locations>(){
-                    public Locations parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new Locations( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private java.util.List<experiment.protocolgen.WorldClockProtocol.Location> location_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.WorldClockProtocol.LocationsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_descriptor;
+      }
 
-        // Use Locations.newBuilder() to construct.
-        private Locations( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.WorldClockProtocol.Locations.class, experiment.protocolgen.WorldClockProtocol.Locations.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.WorldClockProtocol.Locations.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLocationFieldBuilder();
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private Locations( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        if (locationBuilder_ == null) {
+          location_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          locationBuilder_.clear();
         }
+        return this;
+      }
 
-        private Locations(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 10: {
-                            if( !((mutable_bitField0_ & 0x00000001) == 0x00000001) ) {
-                                location_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.Location>();
-                                mutable_bitField0_ |= 0x00000001;
-                            }
-                            location_.add( input.readMessage( experiment.protocolgen.WorldClockProtocol.Location.PARSER, extensionRegistry ) );
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                if( ((mutable_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    location_ = java.util.Collections.unmodifiableList( location_ );
-                }
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_descriptor;
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.Locations getDefaultInstanceForType() {
+        return experiment.protocolgen.WorldClockProtocol.Locations.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.Locations build() {
+        experiment.protocolgen.WorldClockProtocol.Locations result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        public static Locations getDefaultInstance(){
-            return defaultInstance;
+      public experiment.protocolgen.WorldClockProtocol.Locations buildPartial() {
+        experiment.protocolgen.WorldClockProtocol.Locations result = new experiment.protocolgen.WorldClockProtocol.Locations(this);
+        int from_bitField0_ = bitField0_;
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            location_ = java.util.Collections.unmodifiableList(location_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.location_ = location_;
+        } else {
+          result.location_ = locationBuilder_.build();
         }
+        onBuilt();
+        return result;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_descriptor;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.WorldClockProtocol.Locations) {
+          return mergeFrom((experiment.protocolgen.WorldClockProtocol.Locations)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(experiment.protocolgen.WorldClockProtocol.Locations other) {
+        if (other == experiment.protocolgen.WorldClockProtocol.Locations.getDefaultInstance()) return this;
+        if (locationBuilder_ == null) {
+          if (!other.location_.isEmpty()) {
+            if (location_.isEmpty()) {
+              location_ = other.location_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLocationIsMutable();
+              location_.addAll(other.location_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.location_.isEmpty()) {
+            if (locationBuilder_.isEmpty()) {
+              locationBuilder_.dispose();
+              locationBuilder_ = null;
+              location_ = other.location_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              locationBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getLocationFieldBuilder() : null;
+            } else {
+              locationBuilder_.addAllMessages(other.location_);
+            }
+          }
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      public final boolean isInitialized() {
+        for (int i = 0; i < getLocationCount(); i++) {
+          if (!getLocation(i).isInitialized()) {
+            
+            return false;
+          }
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.WorldClockProtocol.Locations parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.WorldClockProtocol.Locations) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      // repeated .experiment.protocolgen.Location location = 1;
+      private java.util.List<experiment.protocolgen.WorldClockProtocol.Location> location_ =
+        java.util.Collections.emptyList();
+      private void ensureLocationIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          location_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.Location>(location_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          experiment.protocolgen.WorldClockProtocol.Location, experiment.protocolgen.WorldClockProtocol.Location.Builder, experiment.protocolgen.WorldClockProtocol.LocationOrBuilder> locationBuilder_;
+
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public java.util.List<experiment.protocolgen.WorldClockProtocol.Location> getLocationList() {
+        if (locationBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(location_);
+        } else {
+          return locationBuilder_.getMessageList();
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public int getLocationCount() {
+        if (locationBuilder_ == null) {
+          return location_.size();
+        } else {
+          return locationBuilder_.getCount();
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.Location getLocation(int index) {
+        if (locationBuilder_ == null) {
+          return location_.get(index);
+        } else {
+          return locationBuilder_.getMessage(index);
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder setLocation(
+          int index, experiment.protocolgen.WorldClockProtocol.Location value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationIsMutable();
+          location_.set(index, value);
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(index, value);
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder setLocation(
+          int index, experiment.protocolgen.WorldClockProtocol.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          ensureLocationIsMutable();
+          location_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(index, builderForValue.build());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder addLocation(experiment.protocolgen.WorldClockProtocol.Location value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationIsMutable();
+          location_.add(value);
+          onChanged();
+        } else {
+          locationBuilder_.addMessage(value);
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.Locations parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder addLocation(
+          int index, experiment.protocolgen.WorldClockProtocol.Location value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationIsMutable();
+          location_.add(index, value);
+          onChanged();
+        } else {
+          locationBuilder_.addMessage(index, value);
         }
-
-        public static Builder newBuilder(){
-            return Builder.create();
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder addLocation(
+          experiment.protocolgen.WorldClockProtocol.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          ensureLocationIsMutable();
+          location_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locationBuilder_.addMessage(builderForValue.build());
         }
-
-        public static Builder newBuilder( experiment.protocolgen.WorldClockProtocol.Locations prototype ){
-            return newBuilder().mergeFrom( prototype );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder addLocation(
+          int index, experiment.protocolgen.WorldClockProtocol.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          ensureLocationIsMutable();
+          location_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationBuilder_.addMessage(index, builderForValue.build());
         }
-
-        public Locations getDefaultInstanceForType(){
-            return defaultInstance;
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder addAllLocation(
+          java.lang.Iterable<? extends experiment.protocolgen.WorldClockProtocol.Location> values) {
+        if (locationBuilder_ == null) {
+          ensureLocationIsMutable();
+          super.addAll(values, location_);
+          onChanged();
+        } else {
+          locationBuilder_.addAllMessages(values);
         }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder clearLocation() {
+        if (locationBuilder_ == null) {
+          location_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          locationBuilder_.clear();
         }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.WorldClockProtocol.Locations.class, experiment.protocolgen.WorldClockProtocol.Locations.Builder.class );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public Builder removeLocation(int index) {
+        if (locationBuilder_ == null) {
+          ensureLocationIsMutable();
+          location_.remove(index);
+          onChanged();
+        } else {
+          locationBuilder_.remove(index);
         }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<Locations> getParserForType(){
-            return PARSER;
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.Location.Builder getLocationBuilder(
+          int index) {
+        return getLocationFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
+          int index) {
+        if (locationBuilder_ == null) {
+          return location_.get(index);  } else {
+          return locationBuilder_.getMessageOrBuilder(index);
         }
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        public java.util.List<experiment.protocolgen.WorldClockProtocol.Location> getLocationList(){
-            return location_;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocationOrBuilder> 
+           getLocationOrBuilderList() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(location_);
         }
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocationOrBuilder>
-        getLocationOrBuilderList(){
-            return location_;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.Location.Builder addLocationBuilder() {
+        return getLocationFieldBuilder().addBuilder(
+            experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.Location.Builder addLocationBuilder(
+          int index) {
+        return getLocationFieldBuilder().addBuilder(
+            index, experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.Location location = 1;</code>
+       */
+      public java.util.List<experiment.protocolgen.WorldClockProtocol.Location.Builder> 
+           getLocationBuilderList() {
+        return getLocationFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          experiment.protocolgen.WorldClockProtocol.Location, experiment.protocolgen.WorldClockProtocol.Location.Builder, experiment.protocolgen.WorldClockProtocol.LocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              experiment.protocolgen.WorldClockProtocol.Location, experiment.protocolgen.WorldClockProtocol.Location.Builder, experiment.protocolgen.WorldClockProtocol.LocationOrBuilder>(
+                  location_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
         }
+        return locationBuilder_;
+      }
 
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        public int getLocationCount(){
-            return location_.size();
-        }
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        public experiment.protocolgen.WorldClockProtocol.Location getLocation( int index ){
-            return location_.get( index );
-        }
-
-        /**
-         * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-         */
-        public experiment.protocolgen.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
-                int index ){
-            return location_.get( index );
-        }
-
-        private void initFields(){
-            location_ = java.util.Collections.emptyList();
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            for( int i = 0; i < getLocationCount(); i++ ) {
-                if( !getLocation( i ).isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            for( int i = 0; i < location_.size(); i++ ) {
-                output.writeMessage( 1, location_.get( i ) );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            for( int i = 0; i < location_.size(); i++ ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 1, location_.get( i ) );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.Locations}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.WorldClockProtocol.LocationsOrBuilder{
-            private int bitField0_;
-            // repeated .experiment.protocolgen.Location location = 1;
-            private java.util.List<experiment.protocolgen.WorldClockProtocol.Location> location_ =
-                    java.util.Collections.emptyList();
-            private com.google.protobuf.RepeatedFieldBuilder<
-                    experiment.protocolgen.WorldClockProtocol.Location, experiment.protocolgen.WorldClockProtocol.Location.Builder, experiment.protocolgen.WorldClockProtocol.LocationOrBuilder> locationBuilder_;
-
-            // Construct using experiment.protocolgen.WorldClockProtocol.Locations.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.WorldClockProtocol.Locations.class, experiment.protocolgen.WorldClockProtocol.Locations.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                    getLocationFieldBuilder();
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                if( locationBuilder_ == null ) {
-                    location_ = java.util.Collections.emptyList();
-                    bitField0_ = (bitField0_ & ~0x00000001);
-                } else {
-                    locationBuilder_.clear();
-                }
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_Locations_descriptor;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.Locations getDefaultInstanceForType(){
-                return experiment.protocolgen.WorldClockProtocol.Locations.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.Locations build(){
-                experiment.protocolgen.WorldClockProtocol.Locations result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.Locations buildPartial(){
-                experiment.protocolgen.WorldClockProtocol.Locations result = new experiment.protocolgen.WorldClockProtocol.Locations( this );
-                int from_bitField0_ = bitField0_;
-                if( locationBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                        location_ = java.util.Collections.unmodifiableList( location_ );
-                        bitField0_ = (bitField0_ & ~0x00000001);
-                    }
-                    result.location_ = location_;
-                } else {
-                    result.location_ = locationBuilder_.build();
-                }
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.WorldClockProtocol.Locations ) {
-                    return mergeFrom( (experiment.protocolgen.WorldClockProtocol.Locations) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.WorldClockProtocol.Locations other ){
-                if( other == experiment.protocolgen.WorldClockProtocol.Locations.getDefaultInstance() ) return this;
-                if( locationBuilder_ == null ) {
-                    if( !other.location_.isEmpty() ) {
-                        if( location_.isEmpty() ) {
-                            location_ = other.location_;
-                            bitField0_ = (bitField0_ & ~0x00000001);
-                        } else {
-                            ensureLocationIsMutable();
-                            location_.addAll( other.location_ );
-                        }
-                        onChanged();
-                    }
-                } else {
-                    if( !other.location_.isEmpty() ) {
-                        if( locationBuilder_.isEmpty() ) {
-                            locationBuilder_.dispose();
-                            locationBuilder_ = null;
-                            location_ = other.location_;
-                            bitField0_ = (bitField0_ & ~0x00000001);
-                            locationBuilder_ =
-                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                                            getLocationFieldBuilder() : null;
-                        } else {
-                            locationBuilder_.addAllMessages( other.location_ );
-                        }
-                    }
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                for( int i = 0; i < getLocationCount(); i++ ) {
-                    if( !getLocation( i ).isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.WorldClockProtocol.Locations parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.WorldClockProtocol.Locations) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            private void ensureLocationIsMutable(){
-                if( !((bitField0_ & 0x00000001) == 0x00000001) ) {
-                    location_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.Location>( location_ );
-                    bitField0_ |= 0x00000001;
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public java.util.List<experiment.protocolgen.WorldClockProtocol.Location> getLocationList(){
-                if( locationBuilder_ == null ) {
-                    return java.util.Collections.unmodifiableList( location_ );
-                } else {
-                    return locationBuilder_.getMessageList();
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public int getLocationCount(){
-                if( locationBuilder_ == null ) {
-                    return location_.size();
-                } else {
-                    return locationBuilder_.getCount();
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.Location getLocation( int index ){
-                if( locationBuilder_ == null ) {
-                    return location_.get( index );
-                } else {
-                    return locationBuilder_.getMessage( index );
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder setLocation(
-                    int index, experiment.protocolgen.WorldClockProtocol.Location value ){
-                if( locationBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    ensureLocationIsMutable();
-                    location_.set( index, value );
-                    onChanged();
-                } else {
-                    locationBuilder_.setMessage( index, value );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder setLocation(
-                    int index, experiment.protocolgen.WorldClockProtocol.Location.Builder builderForValue ){
-                if( locationBuilder_ == null ) {
-                    ensureLocationIsMutable();
-                    location_.set( index, builderForValue.build() );
-                    onChanged();
-                } else {
-                    locationBuilder_.setMessage( index, builderForValue.build() );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder addLocation( experiment.protocolgen.WorldClockProtocol.Location value ){
-                if( locationBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    ensureLocationIsMutable();
-                    location_.add( value );
-                    onChanged();
-                } else {
-                    locationBuilder_.addMessage( value );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder addLocation(
-                    int index, experiment.protocolgen.WorldClockProtocol.Location value ){
-                if( locationBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    ensureLocationIsMutable();
-                    location_.add( index, value );
-                    onChanged();
-                } else {
-                    locationBuilder_.addMessage( index, value );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder addLocation(
-                    experiment.protocolgen.WorldClockProtocol.Location.Builder builderForValue ){
-                if( locationBuilder_ == null ) {
-                    ensureLocationIsMutable();
-                    location_.add( builderForValue.build() );
-                    onChanged();
-                } else {
-                    locationBuilder_.addMessage( builderForValue.build() );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder addLocation(
-                    int index, experiment.protocolgen.WorldClockProtocol.Location.Builder builderForValue ){
-                if( locationBuilder_ == null ) {
-                    ensureLocationIsMutable();
-                    location_.add( index, builderForValue.build() );
-                    onChanged();
-                } else {
-                    locationBuilder_.addMessage( index, builderForValue.build() );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder addAllLocation(
-                    java.lang.Iterable<? extends experiment.protocolgen.WorldClockProtocol.Location> values ){
-                if( locationBuilder_ == null ) {
-                    ensureLocationIsMutable();
-                    super.addAll( values, location_ );
-                    onChanged();
-                } else {
-                    locationBuilder_.addAllMessages( values );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder clearLocation(){
-                if( locationBuilder_ == null ) {
-                    location_ = java.util.Collections.emptyList();
-                    bitField0_ = (bitField0_ & ~0x00000001);
-                    onChanged();
-                } else {
-                    locationBuilder_.clear();
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public Builder removeLocation( int index ){
-                if( locationBuilder_ == null ) {
-                    ensureLocationIsMutable();
-                    location_.remove( index );
-                    onChanged();
-                } else {
-                    locationBuilder_.remove( index );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.Location.Builder getLocationBuilder(
-                    int index ){
-                return getLocationFieldBuilder().getBuilder( index );
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
-                    int index ){
-                if( locationBuilder_ == null ) {
-                    return location_.get( index );
-                } else {
-                    return locationBuilder_.getMessageOrBuilder( index );
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocationOrBuilder>
-            getLocationOrBuilderList(){
-                if( locationBuilder_ != null ) {
-                    return locationBuilder_.getMessageOrBuilderList();
-                } else {
-                    return java.util.Collections.unmodifiableList( location_ );
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.Location.Builder addLocationBuilder(){
-                return getLocationFieldBuilder().addBuilder(
-                        experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance() );
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.Location.Builder addLocationBuilder(
-                    int index ){
-                return getLocationFieldBuilder().addBuilder(
-                        index, experiment.protocolgen.WorldClockProtocol.Location.getDefaultInstance() );
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.Location location = 1;</code>
-             */
-            public java.util.List<experiment.protocolgen.WorldClockProtocol.Location.Builder>
-            getLocationBuilderList(){
-                return getLocationFieldBuilder().getBuilderList();
-            }
-
-            private com.google.protobuf.RepeatedFieldBuilder<
-                    experiment.protocolgen.WorldClockProtocol.Location, experiment.protocolgen.WorldClockProtocol.Location.Builder, experiment.protocolgen.WorldClockProtocol.LocationOrBuilder>
-            getLocationFieldBuilder(){
-                if( locationBuilder_ == null ) {
-                    locationBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-                            experiment.protocolgen.WorldClockProtocol.Location, experiment.protocolgen.WorldClockProtocol.Location.Builder, experiment.protocolgen.WorldClockProtocol.LocationOrBuilder>(
-                            location_,
-                            ((bitField0_ & 0x00000001) == 0x00000001),
-                            getParentForChildren(),
-                            isClean() );
-                    location_ = null;
-                }
-                return locationBuilder_;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Locations)
-        }
-
-        static{
-            defaultInstance = new Locations( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.Locations)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.Locations)
     }
 
+    static {
+      defaultInstance = new Locations(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.Locations)
+  }
+
+  public interface LocalTimeOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required uint32 year = 1;
+    /**
+     * <code>required uint32 year = 1;</code>
+     */
+    boolean hasYear();
+    /**
+     * <code>required uint32 year = 1;</code>
+     */
+    int getYear();
+
+    // required uint32 month = 2;
+    /**
+     * <code>required uint32 month = 2;</code>
+     */
+    boolean hasMonth();
+    /**
+     * <code>required uint32 month = 2;</code>
+     */
+    int getMonth();
+
+    // required uint32 dayOfMonth = 4;
+    /**
+     * <code>required uint32 dayOfMonth = 4;</code>
+     */
+    boolean hasDayOfMonth();
+    /**
+     * <code>required uint32 dayOfMonth = 4;</code>
+     */
+    int getDayOfMonth();
+
+    // required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;
+    /**
+     * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+     */
+    boolean hasDayOfWeek();
+    /**
+     * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+     */
+    experiment.protocolgen.WorldClockProtocol.DayOfWeek getDayOfWeek();
+
+    // required uint32 hour = 6;
+    /**
+     * <code>required uint32 hour = 6;</code>
+     */
+    boolean hasHour();
+    /**
+     * <code>required uint32 hour = 6;</code>
+     */
+    int getHour();
+
+    // required uint32 minute = 7;
+    /**
+     * <code>required uint32 minute = 7;</code>
+     */
+    boolean hasMinute();
+    /**
+     * <code>required uint32 minute = 7;</code>
+     */
+    int getMinute();
+
+    // required uint32 second = 8;
+    /**
+     * <code>required uint32 second = 8;</code>
+     */
+    boolean hasSecond();
+    /**
+     * <code>required uint32 second = 8;</code>
+     */
+    int getSecond();
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.LocalTime}
+   */
+  public static final class LocalTime extends
+      com.google.protobuf.GeneratedMessage
+      implements LocalTimeOrBuilder {
+    // Use LocalTime.newBuilder() to construct.
+    private LocalTime(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private LocalTime(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final LocalTime defaultInstance;
+    public static LocalTime getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public LocalTime getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LocalTime(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              year_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              month_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              dayOfMonth_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              experiment.protocolgen.WorldClockProtocol.DayOfWeek value = experiment.protocolgen.WorldClockProtocol.DayOfWeek.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                dayOfWeek_ = value;
+              }
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              hour_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000020;
+              minute_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000040;
+              second_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.WorldClockProtocol.LocalTime.class, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<LocalTime> PARSER =
+        new com.google.protobuf.AbstractParser<LocalTime>() {
+      public LocalTime parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LocalTime(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LocalTime> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required uint32 year = 1;
+    public static final int YEAR_FIELD_NUMBER = 1;
+    private int year_;
+    /**
+     * <code>required uint32 year = 1;</code>
+     */
+    public boolean hasYear() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required uint32 year = 1;</code>
+     */
+    public int getYear() {
+      return year_;
+    }
+
+    // required uint32 month = 2;
+    public static final int MONTH_FIELD_NUMBER = 2;
+    private int month_;
+    /**
+     * <code>required uint32 month = 2;</code>
+     */
+    public boolean hasMonth() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required uint32 month = 2;</code>
+     */
+    public int getMonth() {
+      return month_;
+    }
+
+    // required uint32 dayOfMonth = 4;
+    public static final int DAYOFMONTH_FIELD_NUMBER = 4;
+    private int dayOfMonth_;
+    /**
+     * <code>required uint32 dayOfMonth = 4;</code>
+     */
+    public boolean hasDayOfMonth() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required uint32 dayOfMonth = 4;</code>
+     */
+    public int getDayOfMonth() {
+      return dayOfMonth_;
+    }
+
+    // required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;
+    public static final int DAYOFWEEK_FIELD_NUMBER = 5;
+    private experiment.protocolgen.WorldClockProtocol.DayOfWeek dayOfWeek_;
+    /**
+     * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+     */
+    public boolean hasDayOfWeek() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+     */
+    public experiment.protocolgen.WorldClockProtocol.DayOfWeek getDayOfWeek() {
+      return dayOfWeek_;
+    }
+
+    // required uint32 hour = 6;
+    public static final int HOUR_FIELD_NUMBER = 6;
+    private int hour_;
+    /**
+     * <code>required uint32 hour = 6;</code>
+     */
+    public boolean hasHour() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required uint32 hour = 6;</code>
+     */
+    public int getHour() {
+      return hour_;
+    }
+
+    // required uint32 minute = 7;
+    public static final int MINUTE_FIELD_NUMBER = 7;
+    private int minute_;
+    /**
+     * <code>required uint32 minute = 7;</code>
+     */
+    public boolean hasMinute() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required uint32 minute = 7;</code>
+     */
+    public int getMinute() {
+      return minute_;
+    }
+
+    // required uint32 second = 8;
+    public static final int SECOND_FIELD_NUMBER = 8;
+    private int second_;
+    /**
+     * <code>required uint32 second = 8;</code>
+     */
+    public boolean hasSecond() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>required uint32 second = 8;</code>
+     */
+    public int getSecond() {
+      return second_;
+    }
+
+    private void initFields() {
+      year_ = 0;
+      month_ = 0;
+      dayOfMonth_ = 0;
+      dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
+      hour_ = 0;
+      minute_ = 0;
+      second_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasYear()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMonth()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDayOfMonth()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDayOfWeek()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasHour()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMinute()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasSecond()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, year_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, month_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(4, dayOfMonth_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(5, dayOfWeek_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeUInt32(6, hour_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeUInt32(7, minute_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt32(8, second_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, year_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, month_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, dayOfMonth_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, dayOfWeek_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, hour_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, minute_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, second_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.WorldClockProtocol.LocalTime prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.LocalTime}
      */
-    public static final class LocalTime extends
-            com.google.protobuf.GeneratedMessage
-            implements LocalTimeOrBuilder{
-        // required uint32 year = 1;
-        public static final int YEAR_FIELD_NUMBER = 1;
-        // required uint32 month = 2;
-        public static final int MONTH_FIELD_NUMBER = 2;
-        // required uint32 dayOfMonth = 4;
-        public static final int DAYOFMONTH_FIELD_NUMBER = 4;
-        // required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;
-        public static final int DAYOFWEEK_FIELD_NUMBER = 5;
-        // required uint32 hour = 6;
-        public static final int HOUR_FIELD_NUMBER = 6;
-        // required uint32 minute = 7;
-        public static final int MINUTE_FIELD_NUMBER = 7;
-        // required uint32 second = 8;
-        public static final int SECOND_FIELD_NUMBER = 8;
-        private static final LocalTime defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<LocalTime> PARSER =
-                new com.google.protobuf.AbstractParser<LocalTime>(){
-                    public LocalTime parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new LocalTime( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private int bitField0_;
-        private int year_;
-        private int month_;
-        private int dayOfMonth_;
-        private experiment.protocolgen.WorldClockProtocol.DayOfWeek dayOfWeek_;
-        private int hour_;
-        private int minute_;
-        private int second_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_descriptor;
+      }
 
-        // Use LocalTime.newBuilder() to construct.
-        private LocalTime( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.WorldClockProtocol.LocalTime.class, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.WorldClockProtocol.LocalTime.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private LocalTime( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        year_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        month_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dayOfMonth_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        hour_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        minute_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        second_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_descriptor;
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.LocalTime getDefaultInstanceForType() {
+        return experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.LocalTime build() {
+        experiment.protocolgen.WorldClockProtocol.LocalTime result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        private LocalTime(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 8: {
-                            bitField0_ |= 0x00000001;
-                            year_ = input.readUInt32();
-                            break;
-                        }
-                        case 16: {
-                            bitField0_ |= 0x00000002;
-                            month_ = input.readUInt32();
-                            break;
-                        }
-                        case 32: {
-                            bitField0_ |= 0x00000004;
-                            dayOfMonth_ = input.readUInt32();
-                            break;
-                        }
-                        case 40: {
-                            int rawValue = input.readEnum();
-                            experiment.protocolgen.WorldClockProtocol.DayOfWeek value = experiment.protocolgen.WorldClockProtocol.DayOfWeek.valueOf( rawValue );
-                            if( value == null ) {
-                                unknownFields.mergeVarintField( 5, rawValue );
-                            } else {
-                                bitField0_ |= 0x00000008;
-                                dayOfWeek_ = value;
-                            }
-                            break;
-                        }
-                        case 48: {
-                            bitField0_ |= 0x00000010;
-                            hour_ = input.readUInt32();
-                            break;
-                        }
-                        case 56: {
-                            bitField0_ |= 0x00000020;
-                            minute_ = input.readUInt32();
-                            break;
-                        }
-                        case 64: {
-                            bitField0_ |= 0x00000040;
-                            second_ = input.readUInt32();
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public experiment.protocolgen.WorldClockProtocol.LocalTime buildPartial() {
+        experiment.protocolgen.WorldClockProtocol.LocalTime result = new experiment.protocolgen.WorldClockProtocol.LocalTime(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
         }
-
-        public static LocalTime getDefaultInstance(){
-            return defaultInstance;
+        result.year_ = year_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
-
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_descriptor;
+        result.month_ = month_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        result.dayOfMonth_ = dayOfMonth_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        result.dayOfWeek_ = dayOfWeek_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+        result.hour_ = hour_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+        result.minute_ = minute_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
         }
+        result.second_ = second_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.WorldClockProtocol.LocalTime) {
+          return mergeFrom((experiment.protocolgen.WorldClockProtocol.LocalTime)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      public Builder mergeFrom(experiment.protocolgen.WorldClockProtocol.LocalTime other) {
+        if (other == experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance()) return this;
+        if (other.hasYear()) {
+          setYear(other.getYear());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+        if (other.hasMonth()) {
+          setMonth(other.getMonth());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+        if (other.hasDayOfMonth()) {
+          setDayOfMonth(other.getDayOfMonth());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        if (other.hasDayOfWeek()) {
+          setDayOfWeek(other.getDayOfWeek());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTime parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        if (other.hasHour()) {
+          setHour(other.getHour());
         }
-
-        public static Builder newBuilder(){
-            return Builder.create();
+        if (other.hasMinute()) {
+          setMinute(other.getMinute());
         }
-
-        public static Builder newBuilder( experiment.protocolgen.WorldClockProtocol.LocalTime prototype ){
-            return newBuilder().mergeFrom( prototype );
+        if (other.hasSecond()) {
+          setSecond(other.getSecond());
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public LocalTime getDefaultInstanceForType(){
-            return defaultInstance;
+      public final boolean isInitialized() {
+        if (!hasYear()) {
+          
+          return false;
         }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
+        if (!hasMonth()) {
+          
+          return false;
         }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.WorldClockProtocol.LocalTime.class, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder.class );
+        if (!hasDayOfMonth()) {
+          
+          return false;
         }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<LocalTime> getParserForType(){
-            return PARSER;
+        if (!hasDayOfWeek()) {
+          
+          return false;
         }
-
-        /**
-         * <code>required uint32 year = 1;</code>
-         */
-        public boolean hasYear(){
-            return ((bitField0_ & 0x00000001) == 0x00000001);
+        if (!hasHour()) {
+          
+          return false;
         }
-
-        /**
-         * <code>required uint32 year = 1;</code>
-         */
-        public int getYear(){
-            return year_;
+        if (!hasMinute()) {
+          
+          return false;
         }
-
-        /**
-         * <code>required uint32 month = 2;</code>
-         */
-        public boolean hasMonth(){
-            return ((bitField0_ & 0x00000002) == 0x00000002);
+        if (!hasSecond()) {
+          
+          return false;
         }
+        return true;
+      }
 
-        /**
-         * <code>required uint32 month = 2;</code>
-         */
-        public int getMonth(){
-            return month_;
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.WorldClockProtocol.LocalTime parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.WorldClockProtocol.LocalTime) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        /**
-         * <code>required uint32 dayOfMonth = 4;</code>
-         */
-        public boolean hasDayOfMonth(){
-            return ((bitField0_ & 0x00000004) == 0x00000004);
+      // required uint32 year = 1;
+      private int year_ ;
+      /**
+       * <code>required uint32 year = 1;</code>
+       */
+      public boolean hasYear() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required uint32 year = 1;</code>
+       */
+      public int getYear() {
+        return year_;
+      }
+      /**
+       * <code>required uint32 year = 1;</code>
+       */
+      public Builder setYear(int value) {
+        bitField0_ |= 0x00000001;
+        year_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 year = 1;</code>
+       */
+      public Builder clearYear() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        year_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required uint32 month = 2;
+      private int month_ ;
+      /**
+       * <code>required uint32 month = 2;</code>
+       */
+      public boolean hasMonth() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required uint32 month = 2;</code>
+       */
+      public int getMonth() {
+        return month_;
+      }
+      /**
+       * <code>required uint32 month = 2;</code>
+       */
+      public Builder setMonth(int value) {
+        bitField0_ |= 0x00000002;
+        month_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 month = 2;</code>
+       */
+      public Builder clearMonth() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        month_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required uint32 dayOfMonth = 4;
+      private int dayOfMonth_ ;
+      /**
+       * <code>required uint32 dayOfMonth = 4;</code>
+       */
+      public boolean hasDayOfMonth() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required uint32 dayOfMonth = 4;</code>
+       */
+      public int getDayOfMonth() {
+        return dayOfMonth_;
+      }
+      /**
+       * <code>required uint32 dayOfMonth = 4;</code>
+       */
+      public Builder setDayOfMonth(int value) {
+        bitField0_ |= 0x00000004;
+        dayOfMonth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 dayOfMonth = 4;</code>
+       */
+      public Builder clearDayOfMonth() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dayOfMonth_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;
+      private experiment.protocolgen.WorldClockProtocol.DayOfWeek dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
+      /**
+       * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+       */
+      public boolean hasDayOfWeek() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.DayOfWeek getDayOfWeek() {
+        return dayOfWeek_;
+      }
+      /**
+       * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+       */
+      public Builder setDayOfWeek(experiment.protocolgen.WorldClockProtocol.DayOfWeek value) {
+        if (value == null) {
+          throw new NullPointerException();
         }
-
-        /**
-         * <code>required uint32 dayOfMonth = 4;</code>
-         */
-        public int getDayOfMonth(){
-            return dayOfMonth_;
-        }
-
-        /**
-         * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-         */
-        public boolean hasDayOfWeek(){
-            return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-
-        /**
-         * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-         */
-        public experiment.protocolgen.WorldClockProtocol.DayOfWeek getDayOfWeek(){
-            return dayOfWeek_;
-        }
-
-        /**
-         * <code>required uint32 hour = 6;</code>
-         */
-        public boolean hasHour(){
-            return ((bitField0_ & 0x00000010) == 0x00000010);
-        }
-
-        /**
-         * <code>required uint32 hour = 6;</code>
-         */
-        public int getHour(){
-            return hour_;
-        }
-
-        /**
-         * <code>required uint32 minute = 7;</code>
-         */
-        public boolean hasMinute(){
-            return ((bitField0_ & 0x00000020) == 0x00000020);
-        }
-
-        /**
-         * <code>required uint32 minute = 7;</code>
-         */
-        public int getMinute(){
-            return minute_;
-        }
-
-        /**
-         * <code>required uint32 second = 8;</code>
-         */
-        public boolean hasSecond(){
-            return ((bitField0_ & 0x00000040) == 0x00000040);
-        }
-
-        /**
-         * <code>required uint32 second = 8;</code>
-         */
-        public int getSecond(){
-            return second_;
-        }
-
-        private void initFields(){
-            year_ = 0;
-            month_ = 0;
-            dayOfMonth_ = 0;
-            dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
-            hour_ = 0;
-            minute_ = 0;
-            second_ = 0;
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            if( !hasYear() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasMonth() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasDayOfMonth() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasDayOfWeek() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasHour() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasMinute() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            if( !hasSecond() ) {
-                memoizedIsInitialized = 0;
-                return false;
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                output.writeUInt32( 1, year_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                output.writeUInt32( 2, month_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                output.writeUInt32( 4, dayOfMonth_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                output.writeEnum( 5, dayOfWeek_.getNumber() );
-            }
-            if( ((bitField0_ & 0x00000010) == 0x00000010) ) {
-                output.writeUInt32( 6, hour_ );
-            }
-            if( ((bitField0_ & 0x00000020) == 0x00000020) ) {
-                output.writeUInt32( 7, minute_ );
-            }
-            if( ((bitField0_ & 0x00000040) == 0x00000040) ) {
-                output.writeUInt32( 8, second_ );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeUInt32Size( 1, year_ );
-            }
-            if( ((bitField0_ & 0x00000002) == 0x00000002) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeUInt32Size( 2, month_ );
-            }
-            if( ((bitField0_ & 0x00000004) == 0x00000004) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeUInt32Size( 4, dayOfMonth_ );
-            }
-            if( ((bitField0_ & 0x00000008) == 0x00000008) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeEnumSize( 5, dayOfWeek_.getNumber() );
-            }
-            if( ((bitField0_ & 0x00000010) == 0x00000010) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeUInt32Size( 6, hour_ );
-            }
-            if( ((bitField0_ & 0x00000020) == 0x00000020) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeUInt32Size( 7, minute_ );
-            }
-            if( ((bitField0_ & 0x00000040) == 0x00000040) ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeUInt32Size( 8, second_ );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.LocalTime}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder{
-            private int bitField0_;
-            // required uint32 year = 1;
-            private int year_;
-            // required uint32 month = 2;
-            private int month_;
-            // required uint32 dayOfMonth = 4;
-            private int dayOfMonth_;
-            // required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;
-            private experiment.protocolgen.WorldClockProtocol.DayOfWeek dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
-            // required uint32 hour = 6;
-            private int hour_;
-            // required uint32 minute = 7;
-            private int minute_;
-            // required uint32 second = 8;
-            private int second_;
-
-            // Construct using experiment.protocolgen.WorldClockProtocol.LocalTime.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.WorldClockProtocol.LocalTime.class, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                year_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                month_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000002);
-                dayOfMonth_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000004);
-                dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
-                bitField0_ = (bitField0_ & ~0x00000008);
-                hour_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000010);
-                minute_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000020);
-                second_ = 0;
-                bitField0_ = (bitField0_ & ~0x00000040);
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTime_descriptor;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.LocalTime getDefaultInstanceForType(){
-                return experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.LocalTime build(){
-                experiment.protocolgen.WorldClockProtocol.LocalTime result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.LocalTime buildPartial(){
-                experiment.protocolgen.WorldClockProtocol.LocalTime result = new experiment.protocolgen.WorldClockProtocol.LocalTime( this );
-                int from_bitField0_ = bitField0_;
-                int to_bitField0_ = 0;
-                if( ((from_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    to_bitField0_ |= 0x00000001;
-                }
-                result.year_ = year_;
-                if( ((from_bitField0_ & 0x00000002) == 0x00000002) ) {
-                    to_bitField0_ |= 0x00000002;
-                }
-                result.month_ = month_;
-                if( ((from_bitField0_ & 0x00000004) == 0x00000004) ) {
-                    to_bitField0_ |= 0x00000004;
-                }
-                result.dayOfMonth_ = dayOfMonth_;
-                if( ((from_bitField0_ & 0x00000008) == 0x00000008) ) {
-                    to_bitField0_ |= 0x00000008;
-                }
-                result.dayOfWeek_ = dayOfWeek_;
-                if( ((from_bitField0_ & 0x00000010) == 0x00000010) ) {
-                    to_bitField0_ |= 0x00000010;
-                }
-                result.hour_ = hour_;
-                if( ((from_bitField0_ & 0x00000020) == 0x00000020) ) {
-                    to_bitField0_ |= 0x00000020;
-                }
-                result.minute_ = minute_;
-                if( ((from_bitField0_ & 0x00000040) == 0x00000040) ) {
-                    to_bitField0_ |= 0x00000040;
-                }
-                result.second_ = second_;
-                result.bitField0_ = to_bitField0_;
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.WorldClockProtocol.LocalTime ) {
-                    return mergeFrom( (experiment.protocolgen.WorldClockProtocol.LocalTime) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.WorldClockProtocol.LocalTime other ){
-                if( other == experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance() ) return this;
-                if( other.hasYear() ) {
-                    setYear( other.getYear() );
-                }
-                if( other.hasMonth() ) {
-                    setMonth( other.getMonth() );
-                }
-                if( other.hasDayOfMonth() ) {
-                    setDayOfMonth( other.getDayOfMonth() );
-                }
-                if( other.hasDayOfWeek() ) {
-                    setDayOfWeek( other.getDayOfWeek() );
-                }
-                if( other.hasHour() ) {
-                    setHour( other.getHour() );
-                }
-                if( other.hasMinute() ) {
-                    setMinute( other.getMinute() );
-                }
-                if( other.hasSecond() ) {
-                    setSecond( other.getSecond() );
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                if( !hasYear() ) {
-
-                    return false;
-                }
-                if( !hasMonth() ) {
-
-                    return false;
-                }
-                if( !hasDayOfMonth() ) {
-
-                    return false;
-                }
-                if( !hasDayOfWeek() ) {
-
-                    return false;
-                }
-                if( !hasHour() ) {
-
-                    return false;
-                }
-                if( !hasMinute() ) {
-
-                    return false;
-                }
-                if( !hasSecond() ) {
-
-                    return false;
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.WorldClockProtocol.LocalTime parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.WorldClockProtocol.LocalTime) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            /**
-             * <code>required uint32 year = 1;</code>
-             */
-            public boolean hasYear(){
-                return ((bitField0_ & 0x00000001) == 0x00000001);
-            }
-
-            /**
-             * <code>required uint32 year = 1;</code>
-             */
-            public int getYear(){
-                return year_;
-            }
-
-            /**
-             * <code>required uint32 year = 1;</code>
-             */
-            public Builder setYear( int value ){
-                bitField0_ |= 0x00000001;
-                year_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 year = 1;</code>
-             */
-            public Builder clearYear(){
-                bitField0_ = (bitField0_ & ~0x00000001);
-                year_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 month = 2;</code>
-             */
-            public boolean hasMonth(){
-                return ((bitField0_ & 0x00000002) == 0x00000002);
-            }
-
-            /**
-             * <code>required uint32 month = 2;</code>
-             */
-            public int getMonth(){
-                return month_;
-            }
-
-            /**
-             * <code>required uint32 month = 2;</code>
-             */
-            public Builder setMonth( int value ){
-                bitField0_ |= 0x00000002;
-                month_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 month = 2;</code>
-             */
-            public Builder clearMonth(){
-                bitField0_ = (bitField0_ & ~0x00000002);
-                month_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 dayOfMonth = 4;</code>
-             */
-            public boolean hasDayOfMonth(){
-                return ((bitField0_ & 0x00000004) == 0x00000004);
-            }
-
-            /**
-             * <code>required uint32 dayOfMonth = 4;</code>
-             */
-            public int getDayOfMonth(){
-                return dayOfMonth_;
-            }
-
-            /**
-             * <code>required uint32 dayOfMonth = 4;</code>
-             */
-            public Builder setDayOfMonth( int value ){
-                bitField0_ |= 0x00000004;
-                dayOfMonth_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 dayOfMonth = 4;</code>
-             */
-            public Builder clearDayOfMonth(){
-                bitField0_ = (bitField0_ & ~0x00000004);
-                dayOfMonth_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-             */
-            public boolean hasDayOfWeek(){
-                return ((bitField0_ & 0x00000008) == 0x00000008);
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.DayOfWeek getDayOfWeek(){
-                return dayOfWeek_;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-             */
-            public Builder setDayOfWeek( experiment.protocolgen.WorldClockProtocol.DayOfWeek value ){
-                if( value == null ) {
-                    throw new NullPointerException();
-                }
-                bitField0_ |= 0x00000008;
-                dayOfWeek_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
-             */
-            public Builder clearDayOfWeek(){
-                bitField0_ = (bitField0_ & ~0x00000008);
-                dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 hour = 6;</code>
-             */
-            public boolean hasHour(){
-                return ((bitField0_ & 0x00000010) == 0x00000010);
-            }
-
-            /**
-             * <code>required uint32 hour = 6;</code>
-             */
-            public int getHour(){
-                return hour_;
-            }
-
-            /**
-             * <code>required uint32 hour = 6;</code>
-             */
-            public Builder setHour( int value ){
-                bitField0_ |= 0x00000010;
-                hour_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 hour = 6;</code>
-             */
-            public Builder clearHour(){
-                bitField0_ = (bitField0_ & ~0x00000010);
-                hour_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 minute = 7;</code>
-             */
-            public boolean hasMinute(){
-                return ((bitField0_ & 0x00000020) == 0x00000020);
-            }
-
-            /**
-             * <code>required uint32 minute = 7;</code>
-             */
-            public int getMinute(){
-                return minute_;
-            }
-
-            /**
-             * <code>required uint32 minute = 7;</code>
-             */
-            public Builder setMinute( int value ){
-                bitField0_ |= 0x00000020;
-                minute_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 minute = 7;</code>
-             */
-            public Builder clearMinute(){
-                bitField0_ = (bitField0_ & ~0x00000020);
-                minute_ = 0;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 second = 8;</code>
-             */
-            public boolean hasSecond(){
-                return ((bitField0_ & 0x00000040) == 0x00000040);
-            }
-
-            /**
-             * <code>required uint32 second = 8;</code>
-             */
-            public int getSecond(){
-                return second_;
-            }
-
-            /**
-             * <code>required uint32 second = 8;</code>
-             */
-            public Builder setSecond( int value ){
-                bitField0_ |= 0x00000040;
-                second_ = value;
-                onChanged();
-                return this;
-            }
-
-            /**
-             * <code>required uint32 second = 8;</code>
-             */
-            public Builder clearSecond(){
-                bitField0_ = (bitField0_ & ~0x00000040);
-                second_ = 0;
-                onChanged();
-                return this;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LocalTime)
-        }
-
-        static{
-            defaultInstance = new LocalTime( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.LocalTime)
+        bitField0_ |= 0x00000008;
+        dayOfWeek_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .experiment.protocolgen.DayOfWeek dayOfWeek = 5;</code>
+       */
+      public Builder clearDayOfWeek() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dayOfWeek_ = experiment.protocolgen.WorldClockProtocol.DayOfWeek.SUNDAY;
+        onChanged();
+        return this;
+      }
+
+      // required uint32 hour = 6;
+      private int hour_ ;
+      /**
+       * <code>required uint32 hour = 6;</code>
+       */
+      public boolean hasHour() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required uint32 hour = 6;</code>
+       */
+      public int getHour() {
+        return hour_;
+      }
+      /**
+       * <code>required uint32 hour = 6;</code>
+       */
+      public Builder setHour(int value) {
+        bitField0_ |= 0x00000010;
+        hour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 hour = 6;</code>
+       */
+      public Builder clearHour() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        hour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required uint32 minute = 7;
+      private int minute_ ;
+      /**
+       * <code>required uint32 minute = 7;</code>
+       */
+      public boolean hasMinute() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required uint32 minute = 7;</code>
+       */
+      public int getMinute() {
+        return minute_;
+      }
+      /**
+       * <code>required uint32 minute = 7;</code>
+       */
+      public Builder setMinute(int value) {
+        bitField0_ |= 0x00000020;
+        minute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 minute = 7;</code>
+       */
+      public Builder clearMinute() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        minute_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required uint32 second = 8;
+      private int second_ ;
+      /**
+       * <code>required uint32 second = 8;</code>
+       */
+      public boolean hasSecond() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>required uint32 second = 8;</code>
+       */
+      public int getSecond() {
+        return second_;
+      }
+      /**
+       * <code>required uint32 second = 8;</code>
+       */
+      public Builder setSecond(int value) {
+        bitField0_ |= 0x00000040;
+        second_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required uint32 second = 8;</code>
+       */
+      public Builder clearSecond() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        second_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LocalTime)
     }
 
+    static {
+      defaultInstance = new LocalTime(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.LocalTime)
+  }
+
+  public interface LocalTimesOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // repeated .experiment.protocolgen.LocalTime localTime = 1;
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> 
+        getLocalTimeList();
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    experiment.protocolgen.WorldClockProtocol.LocalTime getLocalTime(int index);
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    int getLocalTimeCount();
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder> 
+        getLocalTimeOrBuilderList();
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code experiment.protocolgen.LocalTimes}
+   */
+  public static final class LocalTimes extends
+      com.google.protobuf.GeneratedMessage
+      implements LocalTimesOrBuilder {
+    // Use LocalTimes.newBuilder() to construct.
+    private LocalTimes(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private LocalTimes(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final LocalTimes defaultInstance;
+    public static LocalTimes getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public LocalTimes getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LocalTimes(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                localTime_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.LocalTime>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              localTime_.add(input.readMessage(experiment.protocolgen.WorldClockProtocol.LocalTime.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          localTime_ = java.util.Collections.unmodifiableList(localTime_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              experiment.protocolgen.WorldClockProtocol.LocalTimes.class, experiment.protocolgen.WorldClockProtocol.LocalTimes.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<LocalTimes> PARSER =
+        new com.google.protobuf.AbstractParser<LocalTimes>() {
+      public LocalTimes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LocalTimes(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LocalTimes> getParserForType() {
+      return PARSER;
+    }
+
+    // repeated .experiment.protocolgen.LocalTime localTime = 1;
+    public static final int LOCALTIME_FIELD_NUMBER = 1;
+    private java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> localTime_;
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    public java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> getLocalTimeList() {
+      return localTime_;
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder> 
+        getLocalTimeOrBuilderList() {
+      return localTime_;
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    public int getLocalTimeCount() {
+      return localTime_.size();
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    public experiment.protocolgen.WorldClockProtocol.LocalTime getLocalTime(int index) {
+      return localTime_.get(index);
+    }
+    /**
+     * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+     */
+    public experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
+        int index) {
+      return localTime_.get(index);
+    }
+
+    private void initFields() {
+      localTime_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      for (int i = 0; i < getLocalTimeCount(); i++) {
+        if (!getLocalTime(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < localTime_.size(); i++) {
+        output.writeMessage(1, localTime_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < localTime_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, localTime_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(experiment.protocolgen.WorldClockProtocol.LocalTimes prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
      * Protobuf type {@code experiment.protocolgen.LocalTimes}
      */
-    public static final class LocalTimes extends
-            com.google.protobuf.GeneratedMessage
-            implements LocalTimesOrBuilder{
-        // repeated .experiment.protocolgen.LocalTime localTime = 1;
-        public static final int LOCALTIME_FIELD_NUMBER = 1;
-        private static final LocalTimes defaultInstance;
-        private static final long serialVersionUID = 0L;
-        public static com.google.protobuf.Parser<LocalTimes> PARSER =
-                new com.google.protobuf.AbstractParser<LocalTimes>(){
-                    public LocalTimes parsePartialFrom(
-                            com.google.protobuf.CodedInputStream input,
-                            com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                            throws com.google.protobuf.InvalidProtocolBufferException{
-                        return new LocalTimes( input, extensionRegistry );
-                    }
-                };
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
-        private java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> localTime_;
-        private byte memoizedIsInitialized = -1;
-        private int memoizedSerializedSize = -1;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements experiment.protocolgen.WorldClockProtocol.LocalTimesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_descriptor;
+      }
 
-        // Use LocalTimes.newBuilder() to construct.
-        private LocalTimes( com.google.protobuf.GeneratedMessage.Builder<?> builder ){
-            super( builder );
-            this.unknownFields = builder.getUnknownFields();
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                experiment.protocolgen.WorldClockProtocol.LocalTimes.class, experiment.protocolgen.WorldClockProtocol.LocalTimes.Builder.class);
+      }
+
+      // Construct using experiment.protocolgen.WorldClockProtocol.LocalTimes.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLocalTimeFieldBuilder();
         }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
 
-        private LocalTimes( boolean noInit ){
-            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      public Builder clear() {
+        super.clear();
+        if (localTimeBuilder_ == null) {
+          localTime_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          localTimeBuilder_.clear();
         }
+        return this;
+      }
 
-        private LocalTimes(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            initFields();
-            int mutable_bitField0_ = 0;
-            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-                    com.google.protobuf.UnknownFieldSet.newBuilder();
-            try {
-                boolean done = false;
-                while( !done ) {
-                    int tag = input.readTag();
-                    switch( tag ) {
-                        case 0:
-                            done = true;
-                            break;
-                        default: {
-                            if( !parseUnknownField( input, unknownFields,
-                                    extensionRegistry, tag ) ) {
-                                done = true;
-                            }
-                            break;
-                        }
-                        case 10: {
-                            if( !((mutable_bitField0_ & 0x00000001) == 0x00000001) ) {
-                                localTime_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.LocalTime>();
-                                mutable_bitField0_ |= 0x00000001;
-                            }
-                            localTime_.add( input.readMessage( experiment.protocolgen.WorldClockProtocol.LocalTime.PARSER, extensionRegistry ) );
-                            break;
-                        }
-                    }
-                }
-            } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                throw e.setUnfinishedMessage( this );
-            } catch( java.io.IOException e ) {
-                throw new com.google.protobuf.InvalidProtocolBufferException(
-                        e.getMessage() ).setUnfinishedMessage( this );
-            } finally {
-                if( ((mutable_bitField0_ & 0x00000001) == 0x00000001) ) {
-                    localTime_ = java.util.Collections.unmodifiableList( localTime_ );
-                }
-                this.unknownFields = unknownFields.build();
-                makeExtensionsImmutable();
-            }
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_descriptor;
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.LocalTimes getDefaultInstanceForType() {
+        return experiment.protocolgen.WorldClockProtocol.LocalTimes.getDefaultInstance();
+      }
+
+      public experiment.protocolgen.WorldClockProtocol.LocalTimes build() {
+        experiment.protocolgen.WorldClockProtocol.LocalTimes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
         }
+        return result;
+      }
 
-        public static LocalTimes getDefaultInstance(){
-            return defaultInstance;
+      public experiment.protocolgen.WorldClockProtocol.LocalTimes buildPartial() {
+        experiment.protocolgen.WorldClockProtocol.LocalTimes result = new experiment.protocolgen.WorldClockProtocol.LocalTimes(this);
+        int from_bitField0_ = bitField0_;
+        if (localTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            localTime_ = java.util.Collections.unmodifiableList(localTime_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.localTime_ = localTime_;
+        } else {
+          result.localTime_ = localTimeBuilder_.build();
         }
+        onBuilt();
+        return result;
+      }
 
-        public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_descriptor;
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof experiment.protocolgen.WorldClockProtocol.LocalTimes) {
+          return mergeFrom((experiment.protocolgen.WorldClockProtocol.LocalTimes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
         }
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
-                com.google.protobuf.ByteString data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(experiment.protocolgen.WorldClockProtocol.LocalTimes other) {
+        if (other == experiment.protocolgen.WorldClockProtocol.LocalTimes.getDefaultInstance()) return this;
+        if (localTimeBuilder_ == null) {
+          if (!other.localTime_.isEmpty()) {
+            if (localTime_.isEmpty()) {
+              localTime_ = other.localTime_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLocalTimeIsMutable();
+              localTime_.addAll(other.localTime_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.localTime_.isEmpty()) {
+            if (localTimeBuilder_.isEmpty()) {
+              localTimeBuilder_.dispose();
+              localTimeBuilder_ = null;
+              localTime_ = other.localTime_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              localTimeBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getLocalTimeFieldBuilder() : null;
+            } else {
+              localTimeBuilder_.addAllMessages(other.localTime_);
+            }
+          }
         }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
-                com.google.protobuf.ByteString data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      public final boolean isInitialized() {
+        for (int i = 0; i < getLocalTimeCount(); i++) {
+          if (!getLocalTime(i).isInitialized()) {
+            
+            return false;
+          }
         }
+        return true;
+      }
 
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom( byte[] data )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data );
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        experiment.protocolgen.WorldClockProtocol.LocalTimes parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (experiment.protocolgen.WorldClockProtocol.LocalTimes) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
+        return this;
+      }
+      private int bitField0_;
 
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
-                byte[] data,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws com.google.protobuf.InvalidProtocolBufferException{
-            return PARSER.parseFrom( data, extensionRegistry );
+      // repeated .experiment.protocolgen.LocalTime localTime = 1;
+      private java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> localTime_ =
+        java.util.Collections.emptyList();
+      private void ensureLocalTimeIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          localTime_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.LocalTime>(localTime_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          experiment.protocolgen.WorldClockProtocol.LocalTime, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder, experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder> localTimeBuilder_;
+
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> getLocalTimeList() {
+        if (localTimeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(localTime_);
+        } else {
+          return localTimeBuilder_.getMessageList();
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public int getLocalTimeCount() {
+        if (localTimeBuilder_ == null) {
+          return localTime_.size();
+        } else {
+          return localTimeBuilder_.getCount();
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.LocalTime getLocalTime(int index) {
+        if (localTimeBuilder_ == null) {
+          return localTime_.get(index);
+        } else {
+          return localTimeBuilder_.getMessage(index);
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseDelimitedFrom( java.io.InputStream input )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input );
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder setLocalTime(
+          int index, experiment.protocolgen.WorldClockProtocol.LocalTime value) {
+        if (localTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocalTimeIsMutable();
+          localTime_.set(index, value);
+          onChanged();
+        } else {
+          localTimeBuilder_.setMessage(index, value);
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseDelimitedFrom(
-                java.io.InputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseDelimitedFrom( input, extensionRegistry );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder setLocalTime(
+          int index, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder builderForValue) {
+        if (localTimeBuilder_ == null) {
+          ensureLocalTimeIsMutable();
+          localTime_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          localTimeBuilder_.setMessage(index, builderForValue.build());
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
-                com.google.protobuf.CodedInputStream input )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder addLocalTime(experiment.protocolgen.WorldClockProtocol.LocalTime value) {
+        if (localTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocalTimeIsMutable();
+          localTime_.add(value);
+          onChanged();
+        } else {
+          localTimeBuilder_.addMessage(value);
         }
-
-        public static experiment.protocolgen.WorldClockProtocol.LocalTimes parseFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                throws java.io.IOException{
-            return PARSER.parseFrom( input, extensionRegistry );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder addLocalTime(
+          int index, experiment.protocolgen.WorldClockProtocol.LocalTime value) {
+        if (localTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocalTimeIsMutable();
+          localTime_.add(index, value);
+          onChanged();
+        } else {
+          localTimeBuilder_.addMessage(index, value);
         }
-
-        public static Builder newBuilder(){
-            return Builder.create();
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder addLocalTime(
+          experiment.protocolgen.WorldClockProtocol.LocalTime.Builder builderForValue) {
+        if (localTimeBuilder_ == null) {
+          ensureLocalTimeIsMutable();
+          localTime_.add(builderForValue.build());
+          onChanged();
+        } else {
+          localTimeBuilder_.addMessage(builderForValue.build());
         }
-
-        public static Builder newBuilder( experiment.protocolgen.WorldClockProtocol.LocalTimes prototype ){
-            return newBuilder().mergeFrom( prototype );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder addLocalTime(
+          int index, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder builderForValue) {
+        if (localTimeBuilder_ == null) {
+          ensureLocalTimeIsMutable();
+          localTime_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          localTimeBuilder_.addMessage(index, builderForValue.build());
         }
-
-        public LocalTimes getDefaultInstanceForType(){
-            return defaultInstance;
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder addAllLocalTime(
+          java.lang.Iterable<? extends experiment.protocolgen.WorldClockProtocol.LocalTime> values) {
+        if (localTimeBuilder_ == null) {
+          ensureLocalTimeIsMutable();
+          super.addAll(values, localTime_);
+          onChanged();
+        } else {
+          localTimeBuilder_.addAllMessages(values);
         }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields(){
-            return this.unknownFields;
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder clearLocalTime() {
+        if (localTimeBuilder_ == null) {
+          localTime_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          localTimeBuilder_.clear();
         }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable(){
-            return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            experiment.protocolgen.WorldClockProtocol.LocalTimes.class, experiment.protocolgen.WorldClockProtocol.LocalTimes.Builder.class );
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public Builder removeLocalTime(int index) {
+        if (localTimeBuilder_ == null) {
+          ensureLocalTimeIsMutable();
+          localTime_.remove(index);
+          onChanged();
+        } else {
+          localTimeBuilder_.remove(index);
         }
-
-        @java.lang.Override
-        public com.google.protobuf.Parser<LocalTimes> getParserForType(){
-            return PARSER;
+        return this;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.LocalTime.Builder getLocalTimeBuilder(
+          int index) {
+        return getLocalTimeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
+          int index) {
+        if (localTimeBuilder_ == null) {
+          return localTime_.get(index);  } else {
+          return localTimeBuilder_.getMessageOrBuilder(index);
         }
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        public java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> getLocalTimeList(){
-            return localTime_;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder> 
+           getLocalTimeOrBuilderList() {
+        if (localTimeBuilder_ != null) {
+          return localTimeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(localTime_);
         }
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder>
-        getLocalTimeOrBuilderList(){
-            return localTime_;
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.LocalTime.Builder addLocalTimeBuilder() {
+        return getLocalTimeFieldBuilder().addBuilder(
+            experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public experiment.protocolgen.WorldClockProtocol.LocalTime.Builder addLocalTimeBuilder(
+          int index) {
+        return getLocalTimeFieldBuilder().addBuilder(
+            index, experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
+       */
+      public java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime.Builder> 
+           getLocalTimeBuilderList() {
+        return getLocalTimeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          experiment.protocolgen.WorldClockProtocol.LocalTime, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder, experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder> 
+          getLocalTimeFieldBuilder() {
+        if (localTimeBuilder_ == null) {
+          localTimeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              experiment.protocolgen.WorldClockProtocol.LocalTime, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder, experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder>(
+                  localTime_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          localTime_ = null;
         }
+        return localTimeBuilder_;
+      }
 
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        public int getLocalTimeCount(){
-            return localTime_.size();
-        }
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        public experiment.protocolgen.WorldClockProtocol.LocalTime getLocalTime( int index ){
-            return localTime_.get( index );
-        }
-
-        /**
-         * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-         */
-        public experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
-                int index ){
-            return localTime_.get( index );
-        }
-
-        private void initFields(){
-            localTime_ = java.util.Collections.emptyList();
-        }
-
-        public final boolean isInitialized(){
-            byte isInitialized = memoizedIsInitialized;
-            if( isInitialized != -1 ) return isInitialized == 1;
-
-            for( int i = 0; i < getLocalTimeCount(); i++ ) {
-                if( !getLocalTime( i ).isInitialized() ) {
-                    memoizedIsInitialized = 0;
-                    return false;
-                }
-            }
-            memoizedIsInitialized = 1;
-            return true;
-        }
-
-        public void writeTo( com.google.protobuf.CodedOutputStream output )
-                throws java.io.IOException{
-            getSerializedSize();
-            for( int i = 0; i < localTime_.size(); i++ ) {
-                output.writeMessage( 1, localTime_.get( i ) );
-            }
-            getUnknownFields().writeTo( output );
-        }
-
-        public int getSerializedSize(){
-            int size = memoizedSerializedSize;
-            if( size != -1 ) return size;
-
-            size = 0;
-            for( int i = 0; i < localTime_.size(); i++ ) {
-                size += com.google.protobuf.CodedOutputStream
-                        .computeMessageSize( 1, localTime_.get( i ) );
-            }
-            size += getUnknownFields().getSerializedSize();
-            memoizedSerializedSize = size;
-            return size;
-        }
-
-        @java.lang.Override
-        protected java.lang.Object writeReplace()
-                throws java.io.ObjectStreamException{
-            return super.writeReplace();
-        }
-
-        public Builder newBuilderForType(){
-            return newBuilder();
-        }
-
-        public Builder toBuilder(){
-            return newBuilder( this );
-        }
-
-        @java.lang.Override
-        protected Builder newBuilderForType(
-                com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-            Builder builder = new Builder( parent );
-            return builder;
-        }
-
-        /**
-         * Protobuf type {@code experiment.protocolgen.LocalTimes}
-         */
-        public static final class Builder extends
-                com.google.protobuf.GeneratedMessage.Builder<Builder>
-                implements experiment.protocolgen.WorldClockProtocol.LocalTimesOrBuilder{
-            private int bitField0_;
-            // repeated .experiment.protocolgen.LocalTime localTime = 1;
-            private java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> localTime_ =
-                    java.util.Collections.emptyList();
-            private com.google.protobuf.RepeatedFieldBuilder<
-                    experiment.protocolgen.WorldClockProtocol.LocalTime, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder, experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder> localTimeBuilder_;
-
-            // Construct using experiment.protocolgen.WorldClockProtocol.LocalTimes.newBuilder()
-            private Builder(){
-                maybeForceBuilderInitialization();
-            }
-
-            private Builder(
-                    com.google.protobuf.GeneratedMessage.BuilderParent parent ){
-                super( parent );
-                maybeForceBuilderInitialization();
-            }
-
-            public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_descriptor;
-            }
-
-            private static Builder create(){
-                return new Builder();
-            }
-
-            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable
-                        .ensureFieldAccessorsInitialized(
-                                experiment.protocolgen.WorldClockProtocol.LocalTimes.class, experiment.protocolgen.WorldClockProtocol.LocalTimes.Builder.class );
-            }
-
-            private void maybeForceBuilderInitialization(){
-                if( com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ) {
-                    getLocalTimeFieldBuilder();
-                }
-            }
-
-            public Builder clear(){
-                super.clear();
-                if( localTimeBuilder_ == null ) {
-                    localTime_ = java.util.Collections.emptyList();
-                    bitField0_ = (bitField0_ & ~0x00000001);
-                } else {
-                    localTimeBuilder_.clear();
-                }
-                return this;
-            }
-
-            public Builder clone(){
-                return create().mergeFrom( buildPartial() );
-            }
-
-            public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType(){
-                return experiment.protocolgen.WorldClockProtocol.internal_static_experiment_protocolgen_LocalTimes_descriptor;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.LocalTimes getDefaultInstanceForType(){
-                return experiment.protocolgen.WorldClockProtocol.LocalTimes.getDefaultInstance();
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.LocalTimes build(){
-                experiment.protocolgen.WorldClockProtocol.LocalTimes result = buildPartial();
-                if( !result.isInitialized() ) {
-                    throw newUninitializedMessageException( result );
-                }
-                return result;
-            }
-
-            public experiment.protocolgen.WorldClockProtocol.LocalTimes buildPartial(){
-                experiment.protocolgen.WorldClockProtocol.LocalTimes result = new experiment.protocolgen.WorldClockProtocol.LocalTimes( this );
-                int from_bitField0_ = bitField0_;
-                if( localTimeBuilder_ == null ) {
-                    if( ((bitField0_ & 0x00000001) == 0x00000001) ) {
-                        localTime_ = java.util.Collections.unmodifiableList( localTime_ );
-                        bitField0_ = (bitField0_ & ~0x00000001);
-                    }
-                    result.localTime_ = localTime_;
-                } else {
-                    result.localTime_ = localTimeBuilder_.build();
-                }
-                onBuilt();
-                return result;
-            }
-
-            public Builder mergeFrom( com.google.protobuf.Message other ){
-                if( other instanceof experiment.protocolgen.WorldClockProtocol.LocalTimes ) {
-                    return mergeFrom( (experiment.protocolgen.WorldClockProtocol.LocalTimes) other );
-                } else {
-                    super.mergeFrom( other );
-                    return this;
-                }
-            }
-
-            public Builder mergeFrom( experiment.protocolgen.WorldClockProtocol.LocalTimes other ){
-                if( other == experiment.protocolgen.WorldClockProtocol.LocalTimes.getDefaultInstance() ) return this;
-                if( localTimeBuilder_ == null ) {
-                    if( !other.localTime_.isEmpty() ) {
-                        if( localTime_.isEmpty() ) {
-                            localTime_ = other.localTime_;
-                            bitField0_ = (bitField0_ & ~0x00000001);
-                        } else {
-                            ensureLocalTimeIsMutable();
-                            localTime_.addAll( other.localTime_ );
-                        }
-                        onChanged();
-                    }
-                } else {
-                    if( !other.localTime_.isEmpty() ) {
-                        if( localTimeBuilder_.isEmpty() ) {
-                            localTimeBuilder_.dispose();
-                            localTimeBuilder_ = null;
-                            localTime_ = other.localTime_;
-                            bitField0_ = (bitField0_ & ~0x00000001);
-                            localTimeBuilder_ =
-                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                                            getLocalTimeFieldBuilder() : null;
-                        } else {
-                            localTimeBuilder_.addAllMessages( other.localTime_ );
-                        }
-                    }
-                }
-                this.mergeUnknownFields( other.getUnknownFields() );
-                return this;
-            }
-
-            public final boolean isInitialized(){
-                for( int i = 0; i < getLocalTimeCount(); i++ ) {
-                    if( !getLocalTime( i ).isInitialized() ) {
-
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            public Builder mergeFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry )
-                    throws java.io.IOException{
-                experiment.protocolgen.WorldClockProtocol.LocalTimes parsedMessage = null;
-                try {
-                    parsedMessage = PARSER.parsePartialFrom( input, extensionRegistry );
-                } catch( com.google.protobuf.InvalidProtocolBufferException e ) {
-                    parsedMessage = (experiment.protocolgen.WorldClockProtocol.LocalTimes) e.getUnfinishedMessage();
-                    throw e;
-                } finally {
-                    if( parsedMessage != null ) {
-                        mergeFrom( parsedMessage );
-                    }
-                }
-                return this;
-            }
-
-            private void ensureLocalTimeIsMutable(){
-                if( !((bitField0_ & 0x00000001) == 0x00000001) ) {
-                    localTime_ = new java.util.ArrayList<experiment.protocolgen.WorldClockProtocol.LocalTime>( localTime_ );
-                    bitField0_ |= 0x00000001;
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime> getLocalTimeList(){
-                if( localTimeBuilder_ == null ) {
-                    return java.util.Collections.unmodifiableList( localTime_ );
-                } else {
-                    return localTimeBuilder_.getMessageList();
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public int getLocalTimeCount(){
-                if( localTimeBuilder_ == null ) {
-                    return localTime_.size();
-                } else {
-                    return localTimeBuilder_.getCount();
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.LocalTime getLocalTime( int index ){
-                if( localTimeBuilder_ == null ) {
-                    return localTime_.get( index );
-                } else {
-                    return localTimeBuilder_.getMessage( index );
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder setLocalTime(
-                    int index, experiment.protocolgen.WorldClockProtocol.LocalTime value ){
-                if( localTimeBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    ensureLocalTimeIsMutable();
-                    localTime_.set( index, value );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.setMessage( index, value );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder setLocalTime(
-                    int index, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder builderForValue ){
-                if( localTimeBuilder_ == null ) {
-                    ensureLocalTimeIsMutable();
-                    localTime_.set( index, builderForValue.build() );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.setMessage( index, builderForValue.build() );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder addLocalTime( experiment.protocolgen.WorldClockProtocol.LocalTime value ){
-                if( localTimeBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    ensureLocalTimeIsMutable();
-                    localTime_.add( value );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.addMessage( value );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder addLocalTime(
-                    int index, experiment.protocolgen.WorldClockProtocol.LocalTime value ){
-                if( localTimeBuilder_ == null ) {
-                    if( value == null ) {
-                        throw new NullPointerException();
-                    }
-                    ensureLocalTimeIsMutable();
-                    localTime_.add( index, value );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.addMessage( index, value );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder addLocalTime(
-                    experiment.protocolgen.WorldClockProtocol.LocalTime.Builder builderForValue ){
-                if( localTimeBuilder_ == null ) {
-                    ensureLocalTimeIsMutable();
-                    localTime_.add( builderForValue.build() );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.addMessage( builderForValue.build() );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder addLocalTime(
-                    int index, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder builderForValue ){
-                if( localTimeBuilder_ == null ) {
-                    ensureLocalTimeIsMutable();
-                    localTime_.add( index, builderForValue.build() );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.addMessage( index, builderForValue.build() );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder addAllLocalTime(
-                    java.lang.Iterable<? extends experiment.protocolgen.WorldClockProtocol.LocalTime> values ){
-                if( localTimeBuilder_ == null ) {
-                    ensureLocalTimeIsMutable();
-                    super.addAll( values, localTime_ );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.addAllMessages( values );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder clearLocalTime(){
-                if( localTimeBuilder_ == null ) {
-                    localTime_ = java.util.Collections.emptyList();
-                    bitField0_ = (bitField0_ & ~0x00000001);
-                    onChanged();
-                } else {
-                    localTimeBuilder_.clear();
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public Builder removeLocalTime( int index ){
-                if( localTimeBuilder_ == null ) {
-                    ensureLocalTimeIsMutable();
-                    localTime_.remove( index );
-                    onChanged();
-                } else {
-                    localTimeBuilder_.remove( index );
-                }
-                return this;
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.LocalTime.Builder getLocalTimeBuilder(
-                    int index ){
-                return getLocalTimeFieldBuilder().getBuilder( index );
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
-                    int index ){
-                if( localTimeBuilder_ == null ) {
-                    return localTime_.get( index );
-                } else {
-                    return localTimeBuilder_.getMessageOrBuilder( index );
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public java.util.List<? extends experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder>
-            getLocalTimeOrBuilderList(){
-                if( localTimeBuilder_ != null ) {
-                    return localTimeBuilder_.getMessageOrBuilderList();
-                } else {
-                    return java.util.Collections.unmodifiableList( localTime_ );
-                }
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.LocalTime.Builder addLocalTimeBuilder(){
-                return getLocalTimeFieldBuilder().addBuilder(
-                        experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance() );
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public experiment.protocolgen.WorldClockProtocol.LocalTime.Builder addLocalTimeBuilder(
-                    int index ){
-                return getLocalTimeFieldBuilder().addBuilder(
-                        index, experiment.protocolgen.WorldClockProtocol.LocalTime.getDefaultInstance() );
-            }
-
-            /**
-             * <code>repeated .experiment.protocolgen.LocalTime localTime = 1;</code>
-             */
-            public java.util.List<experiment.protocolgen.WorldClockProtocol.LocalTime.Builder>
-            getLocalTimeBuilderList(){
-                return getLocalTimeFieldBuilder().getBuilderList();
-            }
-
-            private com.google.protobuf.RepeatedFieldBuilder<
-                    experiment.protocolgen.WorldClockProtocol.LocalTime, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder, experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder>
-            getLocalTimeFieldBuilder(){
-                if( localTimeBuilder_ == null ) {
-                    localTimeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-                            experiment.protocolgen.WorldClockProtocol.LocalTime, experiment.protocolgen.WorldClockProtocol.LocalTime.Builder, experiment.protocolgen.WorldClockProtocol.LocalTimeOrBuilder>(
-                            localTime_,
-                            ((bitField0_ & 0x00000001) == 0x00000001),
-                            getParentForChildren(),
-                            isClean() );
-                    localTime_ = null;
-                }
-                return localTimeBuilder_;
-            }
-
-            // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LocalTimes)
-        }
-
-        static{
-            defaultInstance = new LocalTimes( true );
-            defaultInstance.initFields();
-        }
-
-        // @@protoc_insertion_point(class_scope:experiment.protocolgen.LocalTimes)
+      // @@protoc_insertion_point(builder_scope:experiment.protocolgen.LocalTimes)
     }
 
-    // @@protoc_insertion_point(outer_class_scope)
+    static {
+      defaultInstance = new LocalTimes(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:experiment.protocolgen.LocalTimes)
+  }
+
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_Location_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_Location_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_Locations_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_Locations_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_LocalTime_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_experiment_protocolgen_LocalTimes_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable;
+
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
+    return descriptor;
+  }
+  private static com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
+  static {
+    java.lang.String[] descriptorData = {
+      "\n\030WorldClockProtocol.proto\022\026experiment.p" +
+      "rotocolgen\"N\n\010Location\0224\n\tcontinent\030\001 \002(" +
+      "\0162!.experiment.protocolgen.Continent\022\014\n\004" +
+      "city\030\002 \002(\t\"?\n\tLocations\0222\n\010location\030\001 \003(" +
+      "\0132 .experiment.protocolgen.Location\"\240\001\n\t" +
+      "LocalTime\022\014\n\004year\030\001 \002(\r\022\r\n\005month\030\002 \002(\r\022\022" +
+      "\n\ndayOfMonth\030\004 \002(\r\0224\n\tdayOfWeek\030\005 \002(\0162!." +
+      "experiment.protocolgen.DayOfWeek\022\014\n\004hour" +
+      "\030\006 \002(\r\022\016\n\006minute\030\007 \002(\r\022\016\n\006second\030\010 \002(\r\"B" +
+      "\n\nLocalTimes\0224\n\tlocalTime\030\001 \003(\0132!.experi",
+      "ment.protocolgen.LocalTime*\231\001\n\tContinent" +
+      "\022\n\n\006AFRICA\020\000\022\013\n\007AMERICA\020\001\022\016\n\nANTARCTICA\020" +
+      "\002\022\n\n\006ARCTIC\020\003\022\010\n\004ASIA\020\004\022\014\n\010ATLANTIC\020\005\022\r\n" +
+      "\tAUSTRALIA\020\006\022\n\n\006EUROPE\020\007\022\n\n\006INDIAN\020\010\022\013\n\007" +
+      "MIDEAST\020\t\022\013\n\007PACIFIC\020\n*g\n\tDayOfWeek\022\n\n\006S" +
+      "UNDAY\020\001\022\n\n\006MONDAY\020\002\022\013\n\007TUESDAY\020\003\022\r\n\tWEDN" +
+      "ESDAY\020\004\022\014\n\010THURSDAY\020\005\022\n\n\006FRIDAY\020\006\022\014\n\010SAT" +
+      "URDAY\020\007B\002H\001"
+    };
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+        public com.google.protobuf.ExtensionRegistry assignDescriptors(
+            com.google.protobuf.Descriptors.FileDescriptor root) {
+          descriptor = root;
+          internal_static_experiment_protocolgen_Location_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+          internal_static_experiment_protocolgen_Location_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_Location_descriptor,
+              new java.lang.String[] { "Continent", "City", });
+          internal_static_experiment_protocolgen_Locations_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+          internal_static_experiment_protocolgen_Locations_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_Locations_descriptor,
+              new java.lang.String[] { "Location", });
+          internal_static_experiment_protocolgen_LocalTime_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_experiment_protocolgen_LocalTime_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_LocalTime_descriptor,
+              new java.lang.String[] { "Year", "Month", "DayOfMonth", "DayOfWeek", "Hour", "Minute", "Second", });
+          internal_static_experiment_protocolgen_LocalTimes_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_experiment_protocolgen_LocalTimes_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_experiment_protocolgen_LocalTimes_descriptor,
+              new java.lang.String[] { "LocalTime", });
+          return null;
+        }
+      };
+    com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        }, assigner);
+  }
+
+  // @@protoc_insertion_point(outer_class_scope)
 }

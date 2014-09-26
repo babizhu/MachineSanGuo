@@ -4,6 +4,7 @@ import com.bbz.sanguo.ai.ClientException;
 import com.bbz.sanguo.ai.ErrorCode;
 import com.bbz.sanguo.net.handler.HandlerManager;
 import com.bbz.sanguo.net.handler.INoLoginHandler;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
@@ -14,11 +15,14 @@ import static com.bbz.sanguo.net.protobuf.MsgProtocol.Response;
  * user         LIUKUN
  * time         2014-9-19 16:36
  * 玩家未登录的时候发送的包在这里进行处理
+ * 每个连接会new一个此类的实例
  */
 
 public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
 
     Response.Builder responseBuilder = Response.newBuilder();
+
+
 
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, Request request ) throws Exception{
@@ -50,7 +54,7 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
     }
 
     /**
-     * 报告客户端，后台执行出现异常
+     * 报告客户端，服务端执行出现异常
      */
     private void reportError( ClientException exception ){
         responseBuilder.setResultCode( exception.getCode().toNum() );
@@ -59,6 +63,7 @@ public class NoLoginDispatcher extends SimpleChannelInboundHandler<Request>{
     @Override
     public void exceptionCaught( ChannelHandlerContext ctx, Throwable cause ) throws Exception{
         System.out.println( "cause:" + cause );
+        ChannelFuture close = ctx.close();
     }
 }
 

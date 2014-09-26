@@ -44,7 +44,7 @@ public class WorldClockClientHandler extends SimpleChannelInboundHandler<LocalTi
         }
 
         channel.writeAndFlush( builder.build() );
-        System.out.println( "WorldClockClientHandler.getLocalTimes" );
+//        System.out.println( "WorldClockClientHandler.getLocalTimes" );
 
         LocalTimes localTimes;
         boolean interrupted = false;

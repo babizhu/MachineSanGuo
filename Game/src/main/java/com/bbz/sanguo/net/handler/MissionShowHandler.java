@@ -1,6 +1,6 @@
 package com.bbz.sanguo.net.handler;
 
-import com.bbz.sanguo.net.protobuf.MsgProtocol;
+import com.bbz.sanguo.net.protobuf.Mission;
 import com.bbz.tool.common.RandomUtil;
 
 import static com.bbz.sanguo.net.protobuf.MsgProtocol.Request;
@@ -20,7 +20,7 @@ public class MissionShowHandler implements IGameHandler{
         int missionId = request.getMissionShow().getMissionId();
 
         /****************************逻辑处理***************************/
-        MsgProtocol.MissionShowResponse.Builder builder = MsgProtocol.MissionShowResponse.newBuilder();
+        Mission.MissionShowResponse.Builder builder = Mission.MissionShowResponse.newBuilder();
         builder.setCd( 3 ).setCurrentMission( missionId ).setIsProtect( true ).setProtectCount( RandomUtil.getInt( 50 ) );
 
         /****************************设返回值***************************/

@@ -21,6 +21,7 @@ public class WorldClockClient{
 //    static final int PORT = Integer.parseInt( System.getProperty( "port", "8463" ) );
     static final List<String> CITIES = Arrays.asList( System.getProperty(
             "cities", "Asia/Seoul,Europe/Berlin,America/Los_Angeles" ).split( "," ) );
+//            "cities", "Asia/Seoul" ).split( "," ) );
 
     public static void main( String[] args ){
         EventLoopGroup worker = new NioEventLoopGroup();
@@ -30,12 +31,13 @@ public class WorldClockClient{
             bootstrap.channel( NioSocketChannel.class );
             bootstrap.handler( new WorldClockClientInitializer() );
 
-            Channel channel = bootstrap.connect( "localhost", 8000 ).sync().channel();
+            Channel channel = bootstrap.connect( "localhost", 8001 ).sync().channel();
 
 
             WorldClockClientHandler handler = channel.pipeline().get( WorldClockClientHandler.class );
 
             List<String> response = handler.getLocalTimes( CITIES );
+            System.out.println( "response.size() :" + response.size() );
             channel.close();
             for( int i = 0; i < CITIES.size(); i++ ) {
                 System.out.format( "%28s: %s%n", CITIES.get( i ), response.get( i ) );
