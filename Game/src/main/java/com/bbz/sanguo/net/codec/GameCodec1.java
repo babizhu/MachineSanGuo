@@ -2,24 +2,16 @@ package com.bbz.sanguo.net.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageCodec;
+import io.netty.handler.codec.ByteToMessageDecoder;
 
 import java.util.List;
 
 /**
  * user         LIUKUN
- * time         2014-9-26 11:29
+ * time         2014-9-28 15:33
  */
 
-public class GameCodec extends ByteToMessageCodec<Student>{
-    @Override
-    protected void encode( ChannelHandlerContext ctx, Student msg, ByteBuf out ) throws Exception{
-        out.writeInt( msg.getName().getBytes().length );
-        out.writeBytes( msg.getName().getBytes() );
-        out.writeInt( msg.getAge() );
-
-    }
-
+public class GameCodec1 extends ByteToMessageDecoder{
     @Override
     protected void decode( ChannelHandlerContext ctx, ByteBuf in, List<Object> out ) throws Exception{
         in.markReaderIndex();
@@ -42,6 +34,10 @@ public class GameCodec extends ByteToMessageCodec<Student>{
         age = in.readInt();
 
         out.add( new Student( name, age ) );
+    }
 
+    @Override
+    protected void decodeLast( ChannelHandlerContext ctx, ByteBuf in, List<Object> out ) throws Exception{
+        System.out.println( "GameCodec1.decodeLast:" + ctx.channel().remoteAddress() );
     }
 }
