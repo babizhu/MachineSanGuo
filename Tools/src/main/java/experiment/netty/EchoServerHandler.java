@@ -5,7 +5,6 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.util.CharsetUtil;
 
 import java.net.InetAddress;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -27,8 +26,22 @@ public class EchoServerHandler extends ChannelHandlerAdapter{
     @Override
     public void channelRead( ChannelHandlerContext ctx, Object msg ) throws Exception{
         ByteBuf in = (ByteBuf) msg;
-        System.out.println( in.toString( CharsetUtil.US_ASCII ) );
+        in.markReaderIndex();
+
+//            System.out.println( in.readInt() );
+//            byte[] str = new byte[50];
+//            in.readBytes( str );
+//            System.out.println( new String (str));
+//            in.readBytes( str );
+//            System.out.println( new String (str));
+
+
+        in.resetReaderIndex();
+
         ctx.writeAndFlush( msg );
+
+//        System.out.println( in.toString( CharsetUtil.US_ASCII ) );
+
 //
 //        while( in.isReadable() ){
 //            System.out.println( in.readableBytes() );

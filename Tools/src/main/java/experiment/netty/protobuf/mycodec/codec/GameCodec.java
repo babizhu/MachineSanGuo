@@ -12,6 +12,8 @@ import java.util.List;
 /**
  * user         LIUKUN
  * time         2014-9-26 11:59
+ *
+ * 自定义的一个protobuf的解码器
  */
 
 public class GameCodec extends ByteToMessageCodec<MessageLite>{
@@ -33,6 +35,7 @@ public class GameCodec extends ByteToMessageCodec<MessageLite>{
         System.out.println();
         out.writeInt( content.length );
         out.writeBytes( content );
+
 
     }
 

@@ -18,7 +18,6 @@ public class GameServer{
 
     public static void main( String[] args ){
         new GameServer().run();
-        System.out.println("tesfdsaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffft");
     }
 
     public ChannelFuture run(){

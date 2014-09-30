@@ -13,7 +13,7 @@ public class CodecClientInitializer extends ChannelInitializer<SocketChannel>{
     @Override
     protected void initChannel( SocketChannel ch ) throws Exception{
 
-        ch.pipeline().addLast( new GameCodec() );
-        ch.pipeline().addLast( new CodecClientHandler() );
+//        ch.pipeline().addLast( new GameCodec() );
+        ch.pipeline().addLast( new CodecClientHandler1() );
     }
 }

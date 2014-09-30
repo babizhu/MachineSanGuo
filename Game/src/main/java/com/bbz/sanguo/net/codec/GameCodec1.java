@@ -14,8 +14,9 @@ import java.util.List;
 public class GameCodec1 extends ByteToMessageDecoder{
     @Override
     protected void decode( ChannelHandlerContext ctx, ByteBuf in, List<Object> out ) throws Exception{
+        System.out.println( "GameCodec1.decode" );
         in.markReaderIndex();
-        if( in.readableBytes() < 4+4){
+        if( in.readableBytes() < 4){
             return;
         }
         int nameLen = in.readInt();

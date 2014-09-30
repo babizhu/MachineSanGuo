@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class CodecClient{
 
-    void run(){
+    void run() throws InterruptedException{
         EventLoopGroup worker = new NioEventLoopGroup();
         Bootstrap bootstrap = new Bootstrap();
         try {
@@ -24,7 +24,7 @@ public class CodecClient{
 
             Channel channel = bootstrap.connect( "localhost", CodecServer.PORT ).sync().channel();
 
-            CodecClientHandler handler = channel.pipeline().get( CodecClientHandler.class );
+            CodecClientHandler1 handler = channel.pipeline().get( CodecClientHandler1.class );
 
             for( int i = 0; i < 1; i++ ) {
 
@@ -34,13 +34,13 @@ public class CodecClient{
         } catch( Exception e ) {
             e.printStackTrace();
         } finally {
-//            Thread.sleep( 1000000 );
+            Thread.sleep( 1000000 );
             worker.shutdownGracefully();
         }
 
     }
 
-    public static void main( String[] args ){
+    public static void main( String[] args ) throws InterruptedException{
         new CodecClient().run();
     }
 }

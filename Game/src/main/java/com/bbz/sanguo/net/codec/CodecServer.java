@@ -14,7 +14,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 
 public class CodecServer{
-    public static final int PORT = 9000;
+    public static final int PORT = 5000;
     void run(){
         EventLoopGroup boss = new NioEventLoopGroup( 1 );
         EventLoopGroup work = new NioEventLoopGroup( 1 );
@@ -26,6 +26,7 @@ public class CodecServer{
             ServerBootstrap b = new ServerBootstrap();
             b.group( bossGroup, workerGroup )
                     .channel( NioServerSocketChannel.class )
+//                    .handler( new LoggingHandler( LogLevel.ERROR ) )
                     .childHandler( new CodecServerInitializer() )
                     .option( ChannelOption.SO_BACKLOG, 128 )
 

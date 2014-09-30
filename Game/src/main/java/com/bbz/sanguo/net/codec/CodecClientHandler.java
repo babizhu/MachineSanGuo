@@ -27,6 +27,7 @@ public class CodecClientHandler extends SimpleChannelInboundHandler<Student>{
     @Override
     protected void messageReceived( ChannelHandlerContext ctx, Student msg ) throws Exception{
 
+
     }
 
     public void send(){
