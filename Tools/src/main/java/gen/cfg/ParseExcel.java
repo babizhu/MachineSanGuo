@@ -79,6 +79,7 @@ class ParseExcel{
         new GenTempletCfg( path, sheet ).gen();
 
         new GenXml( path, sheet ).generate();
+        new GenJson( path, sheet ).generate();
     }
 
 }

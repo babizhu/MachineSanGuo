@@ -28,7 +28,7 @@ class PropertyDataProvider extends AbstractDataProviderWithUserName<UserProperty
         property.setExp( (int) obj.get( "exp" ) );
         property.setGold( (int) obj.get( "gold" ) );
         property.setCash( (int) obj.get( "cash" ) );
-        property.setExp( (int) obj.get( "exp" ) );
+
         property.setAdult( (Boolean) obj.get( "isAdult" ) );
         property.setNickName( (String) obj.get( "nickName" ) );
         return property;

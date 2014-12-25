@@ -77,7 +77,7 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
     public static final String HTTP_DATE_FORMAT = "EEE, dd MMM yyyy HH:mm:ss zzz";
     public static final String HTTP_DATE_GMT_TIMEZONE = "GMT";
     public static final int HTTP_CACHE_SECONDS = 60;
-    private static final String BASE_DIR = "e:\\Software\\chrome_download";
+    private static final String BASE_DIR = "e:\\robotwalk";
     private static final Pattern INSECURE_URI = Pattern.compile( ".*[<>&\"].*" );
 //    private static final Pattern ALLOWED_FILE_NAME = Pattern.compile( "[A-Za-z0-9][-_A-Za-z0-9\\.]*" );
 
@@ -234,9 +234,11 @@ public class HttpStaticFileServerHandler extends SimpleChannelInboundHandler<Ful
      */
     private static void setContentTypeHeader( HttpResponse response, File file ){
         MimetypesFileTypeMap mimeTypesMap = new MimetypesFileTypeMap();
-//        response.headers().set( CONTENT_TYPE, mimeTypesMap.getContentType( file.getPath() ) );
+        response.headers().set( CONTENT_TYPE, mimeTypesMap.getContentType( file.getPath() ) );
 //        response.headers().set( CONTENT_TYPE, "application/msexcel" );
-        response.headers().set( CONTENT_TYPE, "application/vnd.ms-excel" );
+        //response.headers().set( CONTENT_TYPE, "application/vnd.ms-excel" );
+        response.headers().set( CONTENT_TYPE, "text/html" );
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
 ////        response.headers().set( "Content-Disposition: attachment; filename=" + file.getName() );
 //        response.headers().set( "Content-Disposition", "inline; filename=" + file.getName() );

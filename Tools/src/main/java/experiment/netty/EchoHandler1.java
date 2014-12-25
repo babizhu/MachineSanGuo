@@ -30,4 +30,11 @@ public class EchoHandler1 extends ChannelHandlerAdapter{
     public void disconnect( ChannelHandlerContext ctx, ChannelPromise promise ) throws Exception{
         System.out.println( "EchoHandler1.disconnect,ctx=" + ctx );
     }
+
+    @Override
+    public void exceptionCaught( ChannelHandlerContext ctx, Throwable cause ) throws Exception{
+        System.out.println( "EchoHandler1.exceptionCaught" );
+        System.err.println( cause );
+        super.exceptionCaught( ctx, cause );
+    }
 }

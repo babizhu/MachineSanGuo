@@ -27,6 +27,19 @@ public class EchoServerHandler extends ChannelHandlerAdapter{
     public void channelRead( ChannelHandlerContext ctx, Object msg ) throws Exception{
         ByteBuf in = (ByteBuf) msg;
         in.markReaderIndex();
+        int len = in.readInt();
+        System.out.println( "len:" + len );
+        byte[] str = new byte[100];
+        for( int i = 0; i < 100; i++ ) {
+            str[i] = 0;
+        }
+        in.readBytes( str );
+        int strLen = 0;
+        for( int i = 0; i < 100; i++ ) {
+
+        }
+        String s = new String( str );
+        System.out.println( s );
 
 //            System.out.println( in.readInt() );
 //            byte[] str = new byte[50];
