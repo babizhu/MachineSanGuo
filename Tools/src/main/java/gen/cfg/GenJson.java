@@ -53,7 +53,7 @@ class GenJson{
         sb.append( "]}" );
         //System.out.println( sb.toString() );
 
-        String path = D.XML_RESOURCE_DIR + packageName + "/" + Util.firstToLowCase( className ) + ".json";
+        String path = D.JSON_RESOURCE_DIR + packageName + "/" + Util.firstToLowCase( className ) + ".json";
 
         FileUtil.writeTextFile( path, sb.toString() );
 //        06911523

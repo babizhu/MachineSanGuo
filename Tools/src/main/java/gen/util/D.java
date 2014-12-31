@@ -19,6 +19,7 @@ public final class D{
     public static final String OUTPUT_DB_DTO_DIR = "com/bbz/game/db/gen";
     public static final String OUTPUT_DB_PROVIDER_DIR = "com/bbz/game/db/gen";
     public static final String XML_RESOURCE_DIR = "./resource/xml/";
+    public static final String JSON_RESOURCE_DIR = "./resource/json/";
     /**
      * *********************************TAG*****************************
      */

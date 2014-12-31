@@ -29,6 +29,29 @@
     <build>
         <plugins>
 
+            <!-- 生成可执行JAR包命令 maven-jar-plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/*.properties</exclude>
+                        <!--<exclude>**/*.xml</exclude>-->
+                    </excludes>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!--<mainClass>com.bbz.sanguo.lanch.Lanch</mainClass>-->
+                            <mainClass>experiment.netty.web.statcifile.HttpStaticFileServer</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>./</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -37,7 +60,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>experiment.xsocket.server.TenThousandConServer</mainClass>
+                            <mainClass>experiment.netty.web.statcifile.HttpStaticFileServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
